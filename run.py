@@ -81,7 +81,7 @@ def main():
     Main function
     """
     print("Running...")
-    args = parse_args()
+    load_openllama()
 
 
 if __name__ == "__main__":
