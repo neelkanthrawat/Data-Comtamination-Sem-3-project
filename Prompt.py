@@ -17,26 +17,14 @@ class Prompt:
         }
 
         self.guided_prompts = {
-            "winogrande": """INSTRUCTION:
-            You are provided with the FIRST PIECE of a summary from the {split_name} split of the {dataset_name} dataset.
-            Finish the SECOND PIECE of the summary as EXACTLY appeared in the dataset.
-            ONLY rely on the original form of the summary in the dataset to finish the SECOND PIECE.
-
-            FIRST PIECE:
-            {first_piece}
-
-            SECOND PIECE:
-            """,
-            "cb": """INSTRUCTION:
-            Finish the TARGET based on the CONTEXT, such that the fllowing EMBEDDING shows the logical relationship between TARGET and CONTEXT.
-
-            TARGET:
-            {first_piece}
-
+            "winogrande": """INSTRUCTION: You are provided with the FIRST PIECE of a summary from the Validation split of the Winogrande dataset. Finish the SECOND PIECE of the summary as EXACTLY appeared in the dataset. ONLY rely on the original form of the summary in the dataset to finish the SECOND PIECE.
+            FIRST PIECE: {first_piece}
+            SECOND PIECE:""",
+            "cb": """INSTRUCTION: INSTRUCTION: You are provided with the FIRST PIECE of a summary from the CommitmentBank dataset. Given a sentence (CONTEXT) and its associated Embedding type (entailment cancelling operator), generate the most likely sentence (TARGET) that logically follows.
+            Ensure that the generated sentence aligns with the specified embedding type.
+            CONTEXT: {first_piece}
             EMBEDDING: {label}
-
-            SENTENCE 2:
-            """,
+            TARGET:""",
         }
 
     def get_unguided_prompt(self, prompt_type):
