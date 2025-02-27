@@ -47,7 +47,7 @@ SCRIPT="run.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT"
+srun python3 "$SCRIPT" --model "OpenLlama" --task "cb"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
