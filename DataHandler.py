@@ -17,19 +17,20 @@ class DataHandler:
         Initialize the DataHandler.
         """
         self.script_dir = os.getcwd()
-        self.dataset_folder_path = os.path.join(script_dir, "datasets")
+        self.dataset_folder_path = os.path.join(self.script_dir, "datasets")
 
     def load_dataset(self, dataset_name):
         """
         Load the dataset.
         """
         if dataset_name == "cb":
-            cb_file = os.path.join(self.dataset_folder_path, "CommitmentBank-items.csv")
-            df = pd.read_csv(cb_file)[["uID", "Context", "Prompt", "Target"]].to_csv(
+            cb_file = os.path.join(self.dataset_folder_path, "cb_sentences.csv")
+            df = pd.read_csv(cb_file)[["uID", "Embedding", "Context", "Target"]].to_csv(
                 "full_dataset.csv", index=False
             )
         elif dataset_name == "winogrande":
-            pass
+            wg_file =  os.path.join(self.dataset_folder_path, "winogrande_val_splitup.csv")
+            df = pd.DataFrame(wg_file)
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
@@ -63,15 +64,15 @@ class DataHandler:
         Process the Winogrande dataset.
         """
         if path is None:
-           input_file = os.path.join(dataset_folder_path, "winogrande_validation.jsonl")
-            output_file = os.path.join(dataset_folder_path, "winogrande_val_splitup.jsonl")
+            input_file = os.path.join(self.dataset_folder_path, "winogrande_validation.jsonl")
+            output_file = os.path.join(self.dataset_folder_path, "winogrande_val_splitup.jsonl")
         else:
             input_file = path
-            output_file = os.path.join(dataset_folder_path, "winogrande_val_splitup.jsonl")
+            output_file = os.path.join(self.dataset_folder_path, "winogrande_val_splitup.jsonl")
 
-        dataset = load_winogrande(input_file)
-        processed_data = process_dataset(dataset)
-        save_dataset(processed_data, output_file)
+        dataset = self.load_winogrande(input_file)
+        processed_data = self.process_dataset(dataset)
+        self.save_dataset(processed_data, output_file)
 
     def load_winogrande(self, file_path):
         """
@@ -129,6 +130,6 @@ class DataHandler:
         new_data = []
         for item in dataset:
             sentence = item["sentence"]
-            part1, part2 = split_sentence(sentence)
+            part1, part2 = self.split_sentence(sentence)
             new_data.append({"part1": part1, "part2": part2, **item})  # Keep original fields
         return new_data
