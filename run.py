@@ -148,10 +148,11 @@ def main():
         encoded_prompt = tokenizer.encode(
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
+        start_index_answer = len(encoded_prompt[0])
         out = model.generate(
             encoded_prompt, max_new_tokens=500, eos_token_id=tokenizer.eos_token_id
-        )
-        decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
+        )[0][start_index_answer:]
+        decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------")
 
