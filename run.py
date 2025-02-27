@@ -25,7 +25,6 @@ def load_openllama():
         path,
         torch_dtype=torch.float16,
         device_map="auto",
-        temperature=0.4,
     )
 
     return tokenizer, model
@@ -163,22 +162,21 @@ def main():
             max_new_tokens=100,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
+            temperature=0.4,
+            do_sample=True,
         )[0][start_index_answer:]
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
-        results_df.append(
-            {
-                "Index": index,
-                "Embedding": label,
-                "Context": first_piece,
-                "Target": second_piece,
-                "Prediction": decoded_out,
-            },
-            ignore_index=True,
-        )
+        results_df.loc[index] = {
+            "Index": index,
+            "Embedding": label,
+            "Context": first_piece,
+            "Target": second_piece,
+            "Prediction": decoded_out,
+        }
 
         if index > 10:
             break
