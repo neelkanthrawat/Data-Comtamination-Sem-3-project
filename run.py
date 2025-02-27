@@ -137,11 +137,12 @@ def main():
         label = ":)"  # row["Embedding"]
 
         formatted_prompt = prompt_template.format(first_piece=first_piece, label=label)
+        print(f"Formatted prompt: {formatted_prompt}", flush=True)
 
         encoded_prompt = tokenizer.encode(formatted_prompt, return_tensors="pt")
-        out = model.generate(encoded_prompt, max_length=100)
+        out = model.generate(encoded_prompt, max_new_tokens=50)
         decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
-        print(f"output: {decoded_out}")
+        print(f"output: {decoded_out}", flush=True)
 
 
 if __name__ == "__main__":
