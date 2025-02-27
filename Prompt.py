@@ -9,8 +9,7 @@ class Prompt:
             "winogrande": """INSTRUCTION:
             Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance.
 
-            FIRST PIECE:
-            {first_piece}
+            FIRST PIECE: {first_piece}
 
             SECOND PIECE:
             """,
@@ -18,8 +17,7 @@ class Prompt:
             Given a sentence (CONTEXT) and its associated Embedding type (such as "conditional" or "modal"), generate the most likely (TARGET) sentence that logically follows.
             Ensure that the generated sentence aligns with the specified embedding type.
 
-            CONTEXT:
-            {first_piece}
+            CONTEXT: {first_piece}
 
             EMBEDDING: {label}
 
