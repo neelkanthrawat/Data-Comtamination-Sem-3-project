@@ -13,8 +13,7 @@ class Prompt:
 
             SECOND PIECE:
             """,
-            "cb": """INSTRUCTION:
-            Given a sentence (CONTEXT) and its associated Embedding type (entailment cancelling operator), generate the most likely sentence (TARGET) that logically follows.
+            "cb": """INSTRUCTION: Given a sentence (CONTEXT) and its associated Embedding type (entailment cancelling operator), generate the most likely sentence (TARGET) that logically follows.
             Ensure that the generated sentence aligns with the specified embedding type.
             CONTEXT: {first_piece}
             EMBEDDING: {label}
