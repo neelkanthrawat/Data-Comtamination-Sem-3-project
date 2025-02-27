@@ -156,7 +156,7 @@ def main():
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------")
 
-        if index > 50:
+        if index > 10:
             break
 
 
