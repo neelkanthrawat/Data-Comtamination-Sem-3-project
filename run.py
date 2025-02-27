@@ -16,7 +16,7 @@ def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = "VMware/open-llama-13b-open-instruct"
+    path = 'openlm-research/open_llama_13b'#"VMware/open-llama-13b-open-instruct"
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(path)
