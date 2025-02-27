@@ -15,14 +15,15 @@ class Prompt:
             SECOND PIECE:
             """,
             "cb": """INSTRUCTION:
-            Finish the TARGET based on the CONTEXT, such that the following EMBEDDING shows the logical relationship between TARGET and CONTEXT.
+            Given a sentence (CONTEXT) and its associated Embedding type (such as "conditional" or "modal"), generate the most likely (TARGET) sentence that logically follows.
+            Ensure that the generated sentence aligns with the specified embedding type.
 
-            TARGET:
+            CONTEXT:
             {first_piece}
 
             EMBEDDING: {label}
 
-            SENTENCE 2:
+            TARGET:
             """,
         }
 
