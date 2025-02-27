@@ -146,7 +146,7 @@ def main():
         print("------------------------")
 
         encoded_prompt = tokenizer(
-            prompt, return_tensors="pt", add_special_tokens=True
+            formatted_prompt, return_tensors="pt", add_special_tokens=True
         ).to(model.device)
 
         start_index_answer = len(encoded_prompt[0])
