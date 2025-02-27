@@ -3,7 +3,7 @@ class Prompt:
 
     def __init__(self):
         """
-        Set the prompts for the different tasks.
+        Set the prompts for the different tasks.o
         """
         self.unguided_prompts = {
             "winogrande": """INSTRUCTION:
@@ -17,9 +17,11 @@ class Prompt:
             Given a sentence (CONTEXT) and its associated Embedding type (such as "conditional" or "modal"), generate the most likely (TARGET) sentence that logically follows.
             Ensure that the generated sentence aligns with the specified embedding type.
 
-            CONTEXT: {first_piece}
+            CONTEXT: 
+            {first_piece}
 
-            EMBEDDING: {label}
+            EMBEDDING: 
+            {label}
 
             TARGET:
             """,
@@ -37,7 +39,7 @@ class Prompt:
             SECOND PIECE:
             """,
             "cb": """INSTRUCTION:
-            Finish the TARGET based on the CONTEXT, such that the following EMBEDDING shows the logical relationship between TARGET and CONTEXT.
+            Finish the TARGET based on the CONTEXT, such that the fllowing EMBEDDING shows the logical relationship between TARGET and CONTEXT.
 
             TARGET:
             {first_piece}
