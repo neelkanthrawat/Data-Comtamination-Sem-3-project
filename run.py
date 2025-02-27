@@ -142,7 +142,8 @@ def main():
         else:
             formatted_prompt = prompt_template.format(first_piece=first_piece)
 
-        print(f"Formatted prompt: \n {formatted_prompt}", flush=True)
+        print(f"-------- Formatted prompt: --------\n{formatted_prompt}", flush=True)
+        print("------------------------")
 
         encoded_prompt = tokenizer.encode(
             formatted_prompt, return_tensors="pt", add_special_tokens=True
@@ -151,7 +152,8 @@ def main():
             encoded_prompt, max_new_tokens=50, eos_token_id=tokenizer.eos_token_id
         )
         decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
-        print(f"output: \n {decoded_out}", flush=True)
+        print(f"-------- Output: --------\n{decoded_out}", flush=True)
+        print("------------------------")
 
         if index > 50:
             break
