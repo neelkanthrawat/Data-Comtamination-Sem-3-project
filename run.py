@@ -131,12 +131,10 @@ def main():
     elif args.type == "unguided":
         prompt_template = prompt.get_unguided_prompt(args.task)
 
-    index = 0
     for index, row in df.iterrows():
-        index += 1
         first_piece = row["Context"]
         second_piece = row["Target"]
-        if df.columns.contains("Embedding"):
+        if "Embedding" in df.columns:
             label = row["Embedding"]
             formatted_prompt = prompt_template.format(
                 first_piece=first_piece, label=label
