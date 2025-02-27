@@ -164,7 +164,7 @@ def main():
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.4,
             do_sample=True,
-        )[0][start_index_answer:]
+        )[0]
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
