@@ -24,15 +24,15 @@ class DataHandler:
         """
         print(f"Loading dataset {dataset_name}...")
         if dataset_name == "cb":
-            if os.path.exists("datasets/full_dataset.csv"):
-                df = pd.read_csv("datasets/full_dataset.csv")
-            else:
-                df = self.load_cb()
+            cb_file = os.path.join(self.dataset_folder_path, "cb_sentences.csv")
+            df = pd.read_csv(cb_file)[["uID", "Embedding", "Context", "Target"]].to_csv(
+                "full_dataset.csv", index=False
+            )
         elif dataset_name == "winogrande":
-            if os.path.exists("datasets/winogrande_val_splitup.jsonl"):
-                df = self.load_winogrande()
-            else:
-                df = self.handle_winogrande()
+            wg_file = os.path.join(
+                self.dataset_folder_path, "winogrande_val_splitup.csv"
+            )
+            df = pd.DataFrame(wg_file)
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
@@ -65,10 +65,22 @@ class DataHandler:
         """
         Process the Winogrande dataset.
         """
+        if path is None:
+            input_file = os.path.join(
+                self.dataset_folder_path, "winogrande_validation.jsonl"
+            )
+            output_file = os.path.join(
+                self.dataset_folder_path, "winogrande_val_splitup.jsonl"
+            )
+        else:
+            input_file = path
+            output_file = os.path.join(
+                self.dataset_folder_path, "winogrande_val_splitup.jsonl"
+            )
+
         dataset = self.load_winogrande(input_file)
         processed_data = self.process_dataset(dataset)
         self.save_dataset(processed_data, output_file)
-        return processed_data
 
     def load_winogrande(self, file_path):
         """
@@ -126,7 +138,7 @@ class DataHandler:
         new_data = []
         for item in dataset:
             sentence = item["sentence"]
-            part1, part2 = split_sentence(sentence)
+            part1, part2 = self.split_sentence(sentence)
             new_data.append(
                 {"part1": part1, "part2": part2, **item}
             )  # Keep original fields
