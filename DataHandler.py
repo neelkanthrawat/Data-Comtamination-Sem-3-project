@@ -29,7 +29,7 @@ class DataHandler:
             df = pd.read_csv(cb_file)[["uID", "Embedding", "Context", "Target"]]
         elif dataset_name == "winogrande":
             wg_file = os.path.join(
-                self.dataset_folder_path, "winogrande_val_splitup.csv"
+                self.dataset_folder_path, "winogrande_val_splitup.jsonl"
             )
             df = pd.DataFrame(wg_file)
             df = df.rename(columns={'part1': 'Context', 'part2': 'Target'})
