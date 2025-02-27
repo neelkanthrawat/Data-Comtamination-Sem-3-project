@@ -33,6 +33,7 @@ class DataHandler:
                 self.dataset_folder_path, "winogrande_val_splitup.csv"
             )
             df = pd.DataFrame(wg_file)
+            df = df.rename(columns={'part1': 'Context', 'part2': 'Target'})
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
