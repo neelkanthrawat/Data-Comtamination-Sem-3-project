@@ -134,7 +134,9 @@ def main():
     elif args.type == "unguided":
         prompt_template = prompt.get_unguided_prompt(args.task)
 
-    results_df = pd.DataFrame(columns=["Context", "Target", "Embedding", "Prediction"])
+    results_df = pd.DataFrame(
+        columns=["Index", "Embedding", "Context", "Target", "Prediction"]
+    )
 
     for index, row in df.iterrows():
         first_piece = row["Context"]
@@ -173,7 +175,7 @@ def main():
                 "Embedding": label,
                 "Context": first_piece,
                 "Target": second_piece,
-                "Generated Output": decoded_out,
+                "Prediction": decoded_out,
             },
             ignore_index=True,
         )
@@ -181,9 +183,9 @@ def main():
         if index > 10:
             break
 
-        res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
-        results_df.to_csv(res_path, index=False)
-        print(f"Results saved to {res_path}")
+    res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
+    results_df.to_csv(res_path, index=False)
+    print(f"Results saved to {res_path}")
 
 
 if __name__ == "__main__":
