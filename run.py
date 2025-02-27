@@ -144,8 +144,12 @@ def main():
 
         print(f"Formatted prompt: \n {formatted_prompt}", flush=True)
 
-        encoded_prompt = tokenizer.encode(formatted_prompt, return_tensors="pt")
-        out = model.generate(encoded_prompt, max_new_tokens=50, return_full_text=False)
+        encoded_prompt = tokenizer.encode(
+            formatted_prompt, return_tensors="pt", add_special_tokens=True
+        )
+        out = model.generate(
+            encoded_prompt, max_new_tokens=50, eos_token_id=tokenizer.eos_token_id
+        )
         decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
         print(f"output: \n {decoded_out}", flush=True)
 
