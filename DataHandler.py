@@ -25,9 +25,8 @@ class DataHandler:
         print(f"Loading dataset {dataset_name}...")
         if dataset_name == "cb":
             cb_file = os.path.join(self.dataset_folder_path, "cb_sentences.csv")
-            df = pd.read_csv(cb_file)[["uID", "Embedding", "Context", "Target"]].to_csv(
-                "full_dataset.csv", index=False
-            )
+            print(cb_file)
+            df = pd.read_csv(cb_file)[["uID", "Embedding", "Context", "Target"]]
         elif dataset_name == "winogrande":
             wg_file = os.path.join(
                 self.dataset_folder_path, "winogrande_val_splitup.csv"
