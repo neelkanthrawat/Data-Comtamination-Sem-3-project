@@ -16,6 +16,7 @@ def load_openllama():
     """
     path = "openlm-research/open_llama_13b"
     print(f"Loading {path}...")
+
     tokenizer = LlamaTokenizer.from_pretrained(path)
 
     model = LlamaForCausalLM.from_pretrained(
@@ -112,7 +113,7 @@ def main():
     """
     args = parse_args()
 
-    if args.model not in ["llama", "openllama", "mistral"]:
+    if args.model not in ["Llama", "OpenLlama", "Mistral"]:
         print("Invalid model")
     elif args.model in ["Llama", "Llama3"]:
         tokenizer, model = load_llama()
@@ -131,12 +132,16 @@ def main():
         prompt_template = prompt.get_unguided_prompt(args.task)
 
     for index, row in df.iterrows():
-        first_piece = row["first_piece"]
-        second_piece = row["second_piece"]
-        label = row["label"]
+        first_piece = row["Context"]
+        second_piece = row["Target"]
+        label = ":)"  # row["Embedding"]
 
-        formatted_prompt = prompt_template.format(first_piece, label)
-        print(formatted_prompt)
+        formatted_prompt = prompt_template.format(first_piece=first_piece, label=label)
+
+        encoded_prompt = tokenizer.encode(formatted_prompt, return_tensors="pt")
+        out = model.generate(encoded_prompt, max_length=100)
+        decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
+        print(f"output: {decoded_out}")
 
 
 if __name__ == "__main__":
