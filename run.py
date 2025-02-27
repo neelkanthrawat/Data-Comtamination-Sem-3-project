@@ -152,7 +152,7 @@ def main():
         start_index_answer = len(encoded_prompt[0])
 
         out = model.generate(
-            encoded_prompt,
+            encoded_prompt.input_ids,
             max_new_tokens=500,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
