@@ -149,6 +149,8 @@ def main():
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
 
+        print(f"Encoded input: {encoded_prompt}", flush=True)
+
         start_index_answer = len(encoded_prompt[0])
 
         out = model.generate(
@@ -158,9 +160,11 @@ def main():
             pad_token_id=tokenizer.eos_token_id,
         )[0][start_index_answer:]
 
+        print(f"Encoded output: {out}", flush=True)
+
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
-        print("------------------------")
+        print("------------------------", end="\n\n")
 
         if index > 10:
             break
