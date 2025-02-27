@@ -155,7 +155,7 @@ def main():
 
         out = model.generate(
             encoded_prompt.input_ids,
-            max_new_tokens=500,
+            max_new_tokens=100,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
         )[0][start_index_answer:]

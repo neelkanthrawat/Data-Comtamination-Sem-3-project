@@ -24,16 +24,6 @@ class Prompt:
             {first_piece}
 
             TARGET:
-           
-            AN EXAMPLE:
-            EMBEDDING: 
-            modal
-
-            CONTEXT:
-            Doug emerges from the cabin looking blue with cold. He smiles weakly at everyone.
-
-            TARGET:
-            Although he clearly wants to walk off the boat the ambulance crew scramble on board and clamp him onto a stretcher so firmly that I wonder if they think he might punch them.
             """,
         }
 
