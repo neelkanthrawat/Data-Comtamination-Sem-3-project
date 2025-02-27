@@ -31,7 +31,8 @@ class DataHandler:
             wg_file = os.path.join(
                 self.dataset_folder_path, "winogrande_val_splitup.jsonl"
             )
-            df = pd.DataFrame(wg_file)
+            wino_dataset = self.load_winogrande(wg_file)
+            df = pd.DataFrame(wino_dataset)
             df = df.rename(columns={'part1': 'Context', 'part2': 'Target'})
         else:
             print(f"Dataset {dataset_name} was not found.")
