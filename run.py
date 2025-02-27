@@ -143,7 +143,7 @@ def main():
         if "Embedding" in df.columns:
             label = row["Embedding"]
             formatted_prompt = prompt_template.format(
-                first_piece=first_piece, label=label
+                first_piece=first_piece, #label=label
             )
         else:
             formatted_prompt = prompt_template.format(first_piece=first_piece)
