@@ -6,18 +6,24 @@ from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
 )
+from DataHandler import DataHandler
+from Prompt import Prompt
 
 
 def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    tokenizer = LlamaTokenizer.from_pretrained("openlm-research/open_llama_13b")
+    path = "openlm-research/open_llama_13b"
+    print(f"Loading {path}...")
+    tokenizer = LlamaTokenizer.from_pretrained(path)
+
     model = LlamaForCausalLM.from_pretrained(
-        "openlm-research/open_llama_13b",
+        path,
         torch_dtype=torch.float16,
         device_map="auto",
     )
+
     return tokenizer, model
 
 
@@ -25,10 +31,12 @@ def load_llama():
     """
     Load the Llama model and the tokenizer.
     """
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-3B")
+    path = "meta-llama/Llama-3.2-3B"
+    print(f"Loading {path}...")
+    tokenizer = AutoTokenizer.from_pretrained(path)
 
     model = AutoModelForCausalLM.from_pretrained(
-        "meta-llama/Llama-3.2-3B",
+        path,
         return_dict=True,
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
@@ -43,10 +51,13 @@ def load_mistral():
     """
     Load the Mistral model and the tokenizer.
     """
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.3")
+    path = "mistralai/Mistral-7B-v0.3"
+    print(f"Loading {path}...")
+
+    tokenizer = AutoTokenizer.from_pretrained(path)
 
     model = AutoModelForCausalLM.from_pretrained(
-        "mistralai/Mistral-7B-v0.3",
+        path,
         return_dict=True,
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
@@ -71,7 +82,26 @@ def parse_args():
         help="The model to use. Options: llama, openllama, mistral",
     )
 
+    parser.add_argument(
+        "--task",
+        type=str,
+        default="cb",
+        help="The tasks to run",
+        required=False,
+        choices=["cb", "winogrande"],
+    )
+
+    parser.add_argument(
+        "--type",
+        type=str,
+        default="unguided",
+        help="Guided or unguided instruction",
+        required=False,
+        choices=["guided", "unguided"],
+    )
+
     args = parser.parse_args()
+    print(args)
 
     return args
 
@@ -80,8 +110,33 @@ def main():
     """
     Main function
     """
-    print("Running...")
-    load_openllama()
+    args = parse_args()
+
+    if args.model not in ["llama", "openllama", "mistral"]:
+        print("Invalid model")
+    elif args.model in ["Llama", "Llama3"]:
+        tokenizer, model = load_llama()
+    elif args.model in ["OpenLlama"]:
+        tokenizer, model = load_openllama()
+
+    dh = DataHandler()
+
+    df = dh.load_dataset(args.task)
+
+    prompt = Prompt()
+
+    if args.type == "guided":
+        prompt_template = prompt.get_guided_prompt(args.task)
+    elif args.type == "unguided":
+        prompt_template = prompt.get_unguided_prompt(args.task)
+
+    for index, row in df.iterrows():
+        first_piece = row["first_piece"]
+        second_piece = row["second_piece"]
+        label = row["label"]
+
+        formatted_prompt = prompt_template.format(first_piece, label)
+        print(formatted_prompt)
 
 
 if __name__ == "__main__":

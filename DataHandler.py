@@ -3,7 +3,6 @@ import json
 import re
 import random
 import os
-from datasets import load_dataset
 import json
 
 
@@ -17,35 +16,33 @@ class DataHandler:
         Initialize the DataHandler.
         """
         self.script_dir = os.getcwd()
-        self.dataset_folder_path = os.path.join(script_dir, "datasets")
+        self.dataset_folder_path = os.path.join(self.script_dir, "datasets")
 
     def load_dataset(self, dataset_name):
         """
         Load the dataset.
         """
+        print(f"Loading dataset {dataset_name}...")
         if dataset_name == "cb":
-            cb_file = os.path.join(self.dataset_folder_path, "CommitmentBank-items.csv")
-            df = pd.read_csv(cb_file)[["uID", "Context", "Prompt", "Target"]].to_csv(
-                "full_dataset.csv", index=False
-            )
+            if os.path.exists("datasets/full_dataset.csv"):
+                df = pd.read_csv("datasets/full_dataset.csv")
+            else:
+                df = self.load_cb()
         elif dataset_name == "winogrande":
-            pass
+            if os.path.exists("datasets/winogrande_val_splitup.jsonl"):
+                df = self.load_winogrande()
+            else:
+                df = self.handle_winogrande()
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
         return df
 
-    def process_cb(self, path: str = None):
+    def load_cb(self):
         """
-        Process the CommitmentBank dataset.
-
-        :param path: str, path to the unprocessed CB dataset
+        Load the CommitmentBank dataset.
         """
-        if path is None:
-            cb_file = os.path.join(self.dataset_folder_path, "CommitmentBank-items.csv")
-        else:
-            cb_file = path
-
+        cb_file = os.path.join(self.dataset_folder_path, "CommitmentBank-items.csv")
         df = pd.read_csv(cb_file)
 
         # Extract relevant columns
@@ -58,20 +55,20 @@ class DataHandler:
         df_prompt.to_csv("prompt_sentences.csv", index=False)
         df_target.to_csv("target_sentences.csv", index=False)
 
-    def process_winogrande(self, path: str = None):
+        df = pd.read_csv(cb_file)[["uID", "Context", "Prompt", "Target"]].to_csv(
+            "full_dataset.csv", index=False
+        )
+
+        return df
+
+    def handle_winogrande(self):
         """
         Process the Winogrande dataset.
         """
-        if path is None:
-           input_file = os.path.join(dataset_folder_path, "winogrande_validation.jsonl")
-            output_file = os.path.join(dataset_folder_path, "winogrande_val_splitup.jsonl")
-        else:
-            input_file = path
-            output_file = os.path.join(dataset_folder_path, "winogrande_val_splitup.jsonl")
-
-        dataset = load_winogrande(input_file)
-        processed_data = process_dataset(dataset)
-        save_dataset(processed_data, output_file)
+        dataset = self.load_winogrande(input_file)
+        processed_data = self.process_dataset(dataset)
+        self.save_dataset(processed_data, output_file)
+        return processed_data
 
     def load_winogrande(self, file_path):
         """
@@ -119,7 +116,7 @@ class DataHandler:
             mid = len(sentence) // 2
             while mid < len(sentence) and sentence[mid] != " ":
                 mid += 1
-        
+
         return sentence[:mid].strip(), sentence[mid:].strip()
 
     def process_dataset(self, dataset):
@@ -130,5 +127,7 @@ class DataHandler:
         for item in dataset:
             sentence = item["sentence"]
             part1, part2 = split_sentence(sentence)
-            new_data.append({"part1": part1, "part2": part2, **item})  # Keep original fields
+            new_data.append(
+                {"part1": part1, "part2": part2, **item}
+            )  # Keep original fields
         return new_data
