@@ -182,6 +182,10 @@ def main():
             break
 
     res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
+
+    if not os.path.exists("results"):
+        os.makedirs("results")
+
     results_df.to_csv(res_path, index=False)
     print(f"Results saved to {res_path}")
 
