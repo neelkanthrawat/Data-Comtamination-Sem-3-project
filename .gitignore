@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+file_processing.ipynb
 .Python
 build/
 develop-eggs/

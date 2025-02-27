@@ -1,11 +1,10 @@
 class Prompt:
     """ """
 
-    def init(self):
+    def __init__(self):
         """
         Set the prompts for the different tasks.
         """
-
         self.unguided_prompts = {
             "winogrande": """INSTRUCTION:
             Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance.
