@@ -149,13 +149,13 @@ def main():
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
         out = model.generate(
-            encoded_prompt, max_new_tokens=50, eos_token_id=tokenizer.eos_token_id
+            encoded_prompt, max_new_tokens=500, eos_token_id=tokenizer.eos_token_id
         )
         decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------")
 
-        if index > 50:
+        if index > 10:
             break
 
 
