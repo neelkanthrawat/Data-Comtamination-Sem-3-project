@@ -16,12 +16,12 @@ def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = "openlm-research/open_llama_13b"
+    path = "VMware/open-llama-13b-open-instruct"
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(path)
 
-    model = LlamaForCausalLM.from_pretrained(
+    model = AutoModelForCausalLM.from_pretrained(
         path,
         torch_dtype=torch.float16,
         device_map="auto",
