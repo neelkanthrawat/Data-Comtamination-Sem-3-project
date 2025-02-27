@@ -17,7 +17,7 @@ def load_openllama():
     path = "openlm-research/open_llama_13b"
     print(f"Loading {path}...")
 
-    tokenizer = LlamaTokenizer.from_pretrained(path)
+    tokenizer = AutoTokenizer.from_pretrained(path)
 
     model = LlamaForCausalLM.from_pretrained(
         path,
@@ -145,13 +145,18 @@ def main():
         print(f"-------- Formatted prompt: --------\n{formatted_prompt}", flush=True)
         print("------------------------")
 
-        encoded_prompt = tokenizer.encode(
-            formatted_prompt, return_tensors="pt", add_special_tokens=True
-        )
+        encoded_prompt = tokenizer(
+            prompt, return_tensors="pt", add_special_tokens=True
+        ).to(model.device)
+
         start_index_answer = len(encoded_prompt[0])
         out = model.generate(
-            encoded_prompt, max_new_tokens=500, eos_token_id=tokenizer.eos_token_id
+            encoded_prompt,
+            max_new_tokens=500,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
         )[0][start_index_answer:]
+
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------")
