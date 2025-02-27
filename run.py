@@ -156,7 +156,7 @@ def main():
             max_new_tokens=500,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
-        )[start_index_answer:]
+        )
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
