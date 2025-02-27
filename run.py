@@ -8,6 +8,8 @@ from transformers import (
 )
 from DataHandler import DataHandler
 from Prompt import Prompt
+import pandas as pd
+import os
 
 
 def load_openllama():
@@ -23,6 +25,7 @@ def load_openllama():
         path,
         torch_dtype=torch.float16,
         device_map="auto",
+        temperature=0.4,
     )
 
     return tokenizer, model
@@ -131,6 +134,8 @@ def main():
     elif args.type == "unguided":
         prompt_template = prompt.get_unguided_prompt(args.task)
 
+    results_df = pd.DataFrame(columns=["Context", "Target", "Embedding", "Prediction"])
+
     for index, row in df.iterrows():
         first_piece = row["Context"]
         second_piece = row["Target"]
@@ -149,8 +154,6 @@ def main():
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
 
-        print(f"Encoded input: {encoded_prompt}", flush=True)
-
         start_index_answer = len(encoded_prompt[0])
 
         out = model.generate(
@@ -160,14 +163,27 @@ def main():
             pad_token_id=tokenizer.eos_token_id,
         )[0][start_index_answer:]
 
-        print(f"Encoded output: {out}", flush=True)
-
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
+        results_df.append(
+            {
+                "Index": index,
+                "Embedding": label,
+                "Context": first_piece,
+                "Target": second_piece,
+                "Generated Output": decoded_out,
+            },
+            ignore_index=True,
+        )
+
         if index > 10:
             break
+
+        res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
+        results_df.to_csv(res_path, index=False)
+        print(f"Results saved to {res_path}")
 
 
 if __name__ == "__main__":
