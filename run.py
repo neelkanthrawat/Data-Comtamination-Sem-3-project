@@ -8,6 +8,8 @@ from transformers import (
 )
 from DataHandler import DataHandler
 from Prompt import Prompt
+import pandas as pd
+import os
 
 
 def load_openllama():
@@ -132,6 +134,8 @@ def main():
     elif args.type == "unguided":
         prompt_template = prompt.get_unguided_prompt(args.task)
 
+    results_df = pd.DataFrame(columns=["Context", "Target", "Embedding", "Prediction"])
+
     for index, row in df.iterrows():
         first_piece = row["Context"]
         second_piece = row["Target"]
@@ -154,7 +158,7 @@ def main():
 
         out = model.generate(
             encoded_prompt.input_ids,
-            max_new_tokens=500,
+            max_new_tokens=100,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
         )[0][start_index_answer:]
@@ -163,8 +167,23 @@ def main():
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
+        results_df.append(
+            {
+                "Index": index,
+                "Embedding": label,
+                "Context": first_piece,
+                "Target": second_piece,
+                "Generated Output": decoded_out,
+            },
+            ignore_index=True,
+        )
+
         if index > 10:
             break
+
+        res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
+        results_df.to_csv(res_path, index=False)
+        print(f"Results saved to {res_path}")
 
 
 if __name__ == "__main__":
