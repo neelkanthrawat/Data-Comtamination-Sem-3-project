@@ -131,18 +131,28 @@ def main():
     elif args.type == "unguided":
         prompt_template = prompt.get_unguided_prompt(args.task)
 
+    index = 0
     for index, row in df.iterrows():
+        index += 1
         first_piece = row["Context"]
         second_piece = row["Target"]
-        label = ":)"  # row["Embedding"]
+        if df.columns.contains("Embedding"):
+            label = row["Embedding"]
+            formatted_prompt = prompt_template.format(
+                first_piece=first_piece, label=label
+            )
+        else:
+            formatted_prompt = prompt_template.format(first_piece=first_piece)
 
-        formatted_prompt = prompt_template.format(first_piece=first_piece, label=label)
-        print(f"Formatted prompt: {formatted_prompt}", flush=True)
+        print(f"Formatted prompt: \n {formatted_prompt}", flush=True)
 
         encoded_prompt = tokenizer.encode(formatted_prompt, return_tensors="pt")
-        out = model.generate(encoded_prompt, max_new_tokens=50)
+        out = model.generate(encoded_prompt, max_new_tokens=50, return_full_text=False)
         decoded_out = tokenizer.decode(out[0], skip_special_tokens=True)
-        print(f"output: {decoded_out}", flush=True)
+        print(f"output: \n {decoded_out}", flush=True)
+
+        if index > 50:
+            break
 
 
 if __name__ == "__main__":
