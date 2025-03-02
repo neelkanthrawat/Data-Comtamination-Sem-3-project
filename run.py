@@ -167,6 +167,7 @@ def main():
         )[0][start_index_answer:]
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
+        decoded_out = decoded_out.strip()
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
