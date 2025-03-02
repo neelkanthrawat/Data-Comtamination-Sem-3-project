@@ -21,7 +21,7 @@ def load_openllama():
     path = "VMware/open-llama-13b-open-instruct"  #'openlm-research/open_llama_13b'#
     print(f"Loading {path}...")
 
-    tokenizer = AutoTokenizer.from_pretrained(path)
+    tokenizer = LlamaTokenizer.from_pretrained(path)
 
     model = AutoModelForCausalLM.from_pretrained(
         path,
