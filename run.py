@@ -11,6 +11,8 @@ from Prompt import Prompt
 import pandas as pd
 import os
 
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 
 def load_openllama():
     """
@@ -158,12 +160,12 @@ def main():
         start_index_answer = len(encoded_prompt[0])
 
         out = model.generate(
-            encoded_prompt.input_ids,
+            encoded_prompt.input_ids.to(DEVICE),
             max_new_tokens=100,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
-            temperature=0.0,
-            do_sample=  False,
+            temperature=0.2,
+            do_sample=  True,
         )[0][start_index_answer:]
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
