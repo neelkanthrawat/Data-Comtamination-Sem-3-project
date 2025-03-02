@@ -6,7 +6,7 @@ class Prompt:
         Set the prompts for the different tasks.o
         """
         self.unguided_prompts = {
-            "winogrande": """INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance.
+            "winogrande": """INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only repond with the plausible continuation. 
             FIRST PIECE: {first_piece}
             SECOND PIECE:""",
             "cb": """INSTRUCTION: Given a sentence (CONTEXT) and its associated Embedding type (entailment cancelling operator), generate the most likely sentence (TARGET) that logically follows.
