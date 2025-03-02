@@ -172,7 +172,7 @@ def main():
 
         results_df.loc[index] = {
             "Index": index,
-            "Embedding": label,
+            "Embedding": label if "Embedding" in df.columns else None,
             "Context": first_piece,
             "Target": second_piece,
             "Prediction": decoded_out,
