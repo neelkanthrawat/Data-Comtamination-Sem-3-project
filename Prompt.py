@@ -26,10 +26,10 @@ class Prompt:
             "wsc": """
             Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
-            ### INSTRUCTION: You are provided with the FIRST PIECE of the VALIDATION SPLIT of the Winograd Schema Challenge (WSC) dataset. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original form of the FIRST PIECE in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
+            ### INSTRUCTION: You are provided with the FIRST PIECE of the TEST SPLIT of the Winograd Schema Challenge (WSC) as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original form of the FIRST PIECE in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
             ### FIRST PIECE: {first_piece} 
             ### SECOND PIECE: """,
-            "cb": """INSTRUCTION: You are provided with the PREMISE and EMBEDDING (entailment cancelling operator) from the CommitmentBank dataset. Finish the HYPOTHESIS setnence as appeared EXACTLY in the dataset. HYPOTHESIS MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
+            "cb": """INSTRUCTION: You are provided with the PREMISE and LABEL from the TEST SPLIT of the CommitmentBank (CB) dataset as it appears in the SUPER_GLUE BENCHMARK. Finish the HYPOTHESIS sentence as appeared EXACTLY in the dataset. The HYPOTHESIS MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
             PREMISE: {first_piece}
             LABEL: {label}
             HYPOTHESIS:""",
