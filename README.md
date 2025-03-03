@@ -5,5 +5,5 @@
 ```shell
 conda create -n DataContam
 conda activate DataContam
-pip install transformers torch pandas evaluate datasets
+pip install transformers torch pandas evaluate datasets rouge_score git+https://github.com/google-research/bleurt.git
 ```
