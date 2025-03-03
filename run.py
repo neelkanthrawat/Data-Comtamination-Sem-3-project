@@ -158,6 +158,7 @@ def main():
         )
         #print(f'encoded_prompt {encoded_prompt}')
         start_index_answer = len(encoded_prompt['input_ids'])
+        print(f'start index is: {start_index_answer}')
 
         out = model.generate(
             encoded_prompt['input_ids'].to(DEVICE),
