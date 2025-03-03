@@ -16,8 +16,16 @@ class Prompt:
         }
 
         self.guided_prompts = {
-            "winogrande": """INSTRUCTION: You are provided with the FIRST PIECE of the validation split of the Winograd Schema Challenge (WSC) dataset. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (CONTEXT + TARGET) becomes a single instance. Only rely on the original form of the TARGET instance in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
-            FIRST PIECE: {first_piece} SECOND PIECE:""",
+            "winogrande": """### INSTRUCTION: 
+            You are provided with the FIRST PIECE of the validation split of the Winograd Schema Challenge (WSC) dataset. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (CONTEXT + TARGET) becomes a single instance. Only rely on the original form of the TARGET instance in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
+
+
+            ### FIRST PIECE: 
+            {first_piece} 
+            
+            
+            ### SECOND PIECE:
+            """,
             "cb": """INSTRUCTION: You are provided with the CONTEXT and EMBEDDING (entailment cancelling operator) from the CommitmentBank dataset. Finish the TARGET setnence as appeared EXACTLY in the dataset. TARGET MUST EXACTLY MATCH the target in the dataset!!! 
             CONTEXT: {first_piece}
             EMBEDDING: {label}
