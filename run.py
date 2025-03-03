@@ -192,11 +192,12 @@ def main():
         bleurt_score = bleurt.compute(
             predictions=[decoded_out], references=[second_piece]
         )
-        print(f"BLEURT score: {bleurt_score['scores'][0]}")
+        print(f"BLEURT score: {bleurt_score}")
 
         rouge_score = rouge.compute(
             predictions=[decoded_out], references=[second_piece]
         )
+        print(f"ROUGE score: {rouge_score}")
 
         results_df.loc[index] = {
             "Index": index,
