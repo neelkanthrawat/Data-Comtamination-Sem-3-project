@@ -93,7 +93,7 @@ def parse_args():
         default="cb",
         help="The tasks to run",
         required=False,
-        choices=["cb", "winogrande"],
+        choices=["cb", "wsc"],
     )
 
     parser.add_argument(
@@ -123,10 +123,12 @@ def main():
         tokenizer, model = load_llama()
     elif args.model in ["OpenLlama"]:
         tokenizer, model = load_openllama()
+    elif args.model == "test":
+        pass
 
     dh = DataHandler()
 
-    df = dh.load_dataset(args.task)
+    dataset = dh.load_dataset(args.task)
 
     prompt = Prompt()
 
@@ -139,13 +141,17 @@ def main():
         columns=["Index", "Embedding", "Context", "Target", "Prediction"]
     )
 
-    for index, row in df.iterrows():
-        first_piece = row["Context"]
-        second_piece = row["Target"]
-        if "Embedding" in df.columns:
-            label = row["Embedding"]
+    for sample in dataset:
+        print(sample)
+        if args.task == "cb":
+            first_piece = sample["premise"]
+            second_piece = sample["hypothesis"]
+        elif args.task == "wsc":
+            first_piece, second_piece = dh.split_sentence(sample["text"])
+
+        if "label" in sample.keys():
             formatted_prompt = prompt_template.format(
-                first_piece=first_piece, label=label
+                first_piece=first_piece, label=sample["label"]
             )
         else:
             formatted_prompt = prompt_template.format(first_piece=first_piece)

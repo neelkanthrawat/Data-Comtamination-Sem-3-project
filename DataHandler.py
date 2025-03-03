@@ -4,7 +4,7 @@ import re
 import random
 import os
 import json
-
+from datasets import load_dataset
 
 class DataHandler:
     """
@@ -24,20 +24,13 @@ class DataHandler:
         """
         print(f"Loading dataset {dataset_name}...")
         if dataset_name == "cb":
-            cb_file = os.path.join(self.dataset_folder_path, "cb_sentences.csv")
-            print(cb_file)
-            df = pd.read_csv(cb_file)[["uID", "Embedding", "Context", "Target"]]
-        elif dataset_name == "winogrande":
-            wg_file = os.path.join(
-                self.dataset_folder_path, "winogrande_val_splitup.jsonl"
-            )
-            wino_dataset = self.load_winogrande(wg_file)
-            df = pd.DataFrame(wino_dataset)
-            df = df.rename(columns={'part1': 'Context', 'part2': 'Target'})
+            dataset = load_dataset('super_glue', name='cb', split="test")
+        elif dataset_name == "wsc":
+            dataset = load_dataset('super_glue', name='wsc', split="test")
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
-        return df
+        return dataset
 
     def load_cb(self):
         """
