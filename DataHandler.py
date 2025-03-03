@@ -36,6 +36,7 @@ class DataHandler:
                 streaming = True,
                 trust_remote_code=1
             )
+            dataset = dataset.filter(lambda example: example['meta'] == 'en')
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
