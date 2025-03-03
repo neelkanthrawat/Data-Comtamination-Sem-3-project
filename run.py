@@ -10,6 +10,8 @@ from DataHandler import DataHandler
 from Prompt import Prompt
 import pandas as pd
 import os
+from datasets import load_metric
+import evaluate
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -141,6 +143,9 @@ def main():
         columns=["Index", "Label", "First piece", "Gold", "Prediction"]
     )
 
+    bleurt = evaluate.load("bleurt", module_type="metric")
+    rouge = evaluate.load("rouge")
+
     for index, sample in enumerate(dataset):
         print(sample)
         if args.task == "cb":
@@ -164,9 +169,9 @@ def main():
         encoded_prompt = tokenizer(
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
-        #print(f"encoded_prompt {encoded_prompt}")
+        # print(f"encoded_prompt {encoded_prompt}")
         start_index_answer = len(encoded_prompt["input_ids"][0])
-        #print(f"start index is: {start_index_answer}")
+        # print(f"start index is: {start_index_answer}")
 
         out = model.generate(
             encoded_prompt["input_ids"].to(DEVICE),
@@ -184,12 +189,23 @@ def main():
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
+        bleurt_score = bleurt.compute(
+            predictions=[decoded_out], references=[second_piece]
+        )
+        print(f"BLEURT score: {bleurt_score['scores'][0]}")
+
+        rouge_score = rouge.compute(
+            predictions=[decoded_out], references=[second_piece]
+        )
+
         results_df.loc[index] = {
             "Index": index,
             "Label": sample["label"] if "label" in sample.keys() else None,
             "First piece": first_piece,
             "Gold": second_piece,
             "Prediction": decoded_out,
+            "BLEURT": bleurt_score["scores"][0],
+            "ROUGEL": rouge_score["rougeL"],
         }
 
         if index > 5:
