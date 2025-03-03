@@ -41,9 +41,9 @@ class DataHandler:
                 trust_remote_code=1,
             )
             dataset = dataset.filter(
-                lambda example: json.loads(
-                    example["meta"].strip('"').replace('\\"', '"')
-                ).get("language", "")
+                lambda example: json.loads(example["meta"].replace('"', "'")).get(
+                    "language", ""
+                )
                 == "en"
             )
         else:
