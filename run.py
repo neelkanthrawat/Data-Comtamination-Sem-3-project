@@ -157,10 +157,10 @@ def main():
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
         print(f'encoded_prompt {encoded_prompt}')
-        start_index_answer = len(encoded_prompt[0])
+        start_index_answer = len(encoded_prompt['input_ids'])
 
         out = model.generate(
-            encoded_prompt.input_ids.to(DEVICE),
+            encoded_prompt['input_ids'].to(DEVICE),
             max_new_tokens=100,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
