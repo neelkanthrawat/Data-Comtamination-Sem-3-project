@@ -25,18 +25,24 @@ class DataHandler:
         """
         print(f"Loading dataset {dataset_name}...")
         if dataset_name == "cb":
-            dataset = load_dataset("super_glue", name="cb", split="test", trust_remote_code=1)
+            dataset = load_dataset(
+                "super_glue", name="cb", split="test", trust_remote_code=1
+            )
         elif dataset_name == "wsc":
-            dataset = load_dataset("super_glue", name="wsc", split="test",trust_remote_code=1)
+            dataset = load_dataset(
+                "super_glue", name="wsc", split="test", trust_remote_code=1
+            )
         elif dataset_name == "wikipedia":
             dataset = load_dataset(
                 "togethercomputer/RedPajama-Data-1T",
                 name="wikipedia",
                 split="train",
-                streaming = True,
-                trust_remote_code=1
+                streaming=True,
+                trust_remote_code=1,
             )
-            dataset = dataset.filter(lambda example: example['meta'] == 'en')
+            dataset = dataset.filter(
+                lambda example: json.loads(example["meta"])["language"] == "en"
+            )
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None

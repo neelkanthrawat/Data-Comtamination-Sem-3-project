@@ -186,9 +186,9 @@ def main():
 
         results_df.loc[index] = {
             "Index": index,
-            "Embedding": sample["label"] if "label" in sample.keys() else None,
-            "Context": first_piece,
-            "Target": second_piece,
+            "Label": sample["label"] if "label" in sample.keys() else None,
+            "First piece": first_piece,
+            "Gold": second_piece,
             "Prediction": decoded_out,
         }
 
