@@ -166,7 +166,7 @@ def main():
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.2,
             do_sample=  True,
-        )[0][start_index_answer:]
+        )[0]#[start_index_answer:]
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         decoded_out = decoded_out.strip()
@@ -181,7 +181,7 @@ def main():
             "Prediction": decoded_out,
         }
 
-        if index > 30:
+        if index > 10:
             break
 
     res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")

@@ -6,8 +6,19 @@ class Prompt:
         Set the prompts for the different tasks.o
         """
         self.unguided_prompts = {
-            "winogrande": """INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
-            FIRST PIECE: {first_piece} SECOND PIECE:""",
+            "winogrande": 
+            """
+            Below is an instruction that describes a task, paired with an input that provides further context.
+            Write a response that appropriately completes the request.
+
+            ### INSTRUCTION: 
+            Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            
+            ### FIRST PIECE: 
+            {first_piece} 
+             
+            ### SECOND PIECE:
+            """,
             "cb": """INSTRUCTION: Given a sentence (CONTEXT) and its associated Embedding type (entailment cancelling operator), generate the most likely sentence (TARGET) that logically follows.
             Ensure that the generated sentence aligns with the specified embedding type.
             CONTEXT: {first_piece}
