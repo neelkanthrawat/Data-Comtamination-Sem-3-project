@@ -167,7 +167,7 @@ def main():
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.2,
             do_sample=  True,
-        )[0]#[start_index_answer:]
+        )[0][start_index_answer:]
 
         print(f'out: {out}')
 
