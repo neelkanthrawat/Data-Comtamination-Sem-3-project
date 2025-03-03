@@ -11,14 +11,14 @@ from Prompt import Prompt
 import pandas as pd
 import os
 
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = "VMware/open-llama-7b-v2-open-instruct" #'openlm-research/open_llama_7b_v2'#"VMware/open-llama-13b-open-instruct"  #'openlm-research/open_llama_13b'#
+    path = "VMware/open-llama-7b-v2-open-instruct"  #'openlm-research/open_llama_7b_v2'#"VMware/open-llama-13b-open-instruct"  #'openlm-research/open_llama_13b'#
     print(f"Loading {path}...")
 
     tokenizer = LlamaTokenizer.from_pretrained(path)
@@ -93,7 +93,7 @@ def parse_args():
         default="cb",
         help="The tasks to run",
         required=False,
-        choices=["cb", "wsc"],
+        choices=["cb", "wsc", "wikipedia"],
     )
 
     parser.add_argument(
@@ -138,7 +138,7 @@ def main():
         prompt_template = prompt.get_unguided_prompt(args.task)
 
     results_df = pd.DataFrame(
-        columns=["Index", "Embedding", "Context", "Target", "Prediction"]
+        columns=["Index", "Label", "First piece", "Gold", "Prediction"]
     )
 
     for sample in dataset:
@@ -147,6 +147,8 @@ def main():
             first_piece = sample["premise"]
             second_piece = sample["hypothesis"]
         elif args.task == "wsc":
+            first_piece, second_piece = dh.split_sentence(sample["text"])
+        elif args.task == "wikipedia":
             first_piece, second_piece = dh.split_sentence(sample["text"])
 
         if "label" in sample.keys():
@@ -162,20 +164,20 @@ def main():
         encoded_prompt = tokenizer(
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
-        print(f'encoded_prompt {encoded_prompt}')
-        start_index_answer = len(encoded_prompt['input_ids'][0])
-        print(f'start index is: {start_index_answer}')
+        print(f"encoded_prompt {encoded_prompt}")
+        start_index_answer = len(encoded_prompt["input_ids"][0])
+        print(f"start index is: {start_index_answer}")
 
         out = model.generate(
-            encoded_prompt['input_ids'].to(DEVICE),
+            encoded_prompt["input_ids"].to(DEVICE),
             max_new_tokens=100,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.2,
-            do_sample=  True,
+            do_sample=True,
         )[0][start_index_answer:]
 
-        print(f'out: {out}')
+        print(f"out: {out}")
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         decoded_out = decoded_out.strip()

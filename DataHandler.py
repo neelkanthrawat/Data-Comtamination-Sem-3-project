@@ -6,6 +6,7 @@ import os
 import json
 from datasets import load_dataset
 
+
 class DataHandler:
     """
     The DataHandler is responsible for everything related to loading and processing the data.
@@ -24,72 +25,19 @@ class DataHandler:
         """
         print(f"Loading dataset {dataset_name}...")
         if dataset_name == "cb":
-            dataset = load_dataset('super_glue', name='cb', split="test")
+            dataset = load_dataset("super_glue", name="cb", split="test")
         elif dataset_name == "wsc":
-            dataset = load_dataset('super_glue', name='wsc', split="test")
+            dataset = load_dataset("super_glue", name="wsc", split="test")
+        elif dataset_name == "wikipedia":
+            dataset = load_dataset(
+                "togethercomputer/RedPajama-Data-1T",
+                name="wikipedia",
+                split="train[:10%]",
+            )
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
         return dataset
-
-    def load_cb(self):
-        """
-        Load the CommitmentBank dataset.
-        """
-        cb_file = os.path.join(self.dataset_folder_path, "CommitmentBank-items.csv")
-        df = pd.read_csv(cb_file)
-
-        # Extract relevant columns
-        df_context = df[["uID", "Context"]]
-        df_prompt = df[["uID", "Prompt"]]
-        df_target = df[["uID", "Target"]]
-
-        # Save to separate CSV files
-        df_context.to_csv("context_sentences.csv", index=False)
-        df_prompt.to_csv("prompt_sentences.csv", index=False)
-        df_target.to_csv("target_sentences.csv", index=False)
-
-        df = pd.read_csv(cb_file)[["uID", "Context", "Prompt", "Target"]].to_csv(
-            "full_dataset.csv", index=False
-        )
-
-        return df
-
-    def handle_winogrande(self):
-        """
-        Process the Winogrande dataset.
-        """
-        if path is None:
-            input_file = os.path.join(
-                self.dataset_folder_path, "winogrande_validation.jsonl"
-            )
-            output_file = os.path.join(
-                self.dataset_folder_path, "winogrande_val_splitup.jsonl"
-            )
-        else:
-            input_file = path
-            output_file = os.path.join(
-                self.dataset_folder_path, "winogrande_val_splitup.jsonl"
-            )
-
-        dataset = self.load_winogrande(input_file)
-        processed_data = self.process_dataset(dataset)
-        self.save_dataset(processed_data, output_file)
-
-    def load_winogrande(self, file_path):
-        """
-        Load the dataset (assuming JSONL format)
-        """
-        with open(file_path, "r", encoding="utf-8") as f:
-            return [json.loads(line) for line in f]
-
-    def save_dataset(self, data, output_file):
-        """
-        Save the processed dataset to a JSONL file.
-        """
-        with open(output_file, "w", encoding="utf-8") as f:
-            for item in data:
-                f.write(json.dumps(item) + "\n")
 
     def split_sentence(self, sentence):
         """
@@ -124,16 +72,3 @@ class DataHandler:
                 mid += 1
 
         return sentence[:mid].strip(), sentence[mid:].strip()
-
-    def process_dataset(self, dataset):
-        """
-        Process the dataset.
-        """
-        new_data = []
-        for item in dataset:
-            sentence = item["sentence"]
-            part1, part2 = self.split_sentence(sentence)
-            new_data.append(
-                {"part1": part1, "part2": part2, **item}
-            )  # Keep original fields
-        return new_data
