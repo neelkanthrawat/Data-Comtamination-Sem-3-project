@@ -192,7 +192,7 @@ def main():
             "Prediction": decoded_out,
         }
 
-        if index > 5:
+        if index > 30:
             break
 
     res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")

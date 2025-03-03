@@ -17,7 +17,7 @@ class Prompt:
             """,
             "cb": """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
-            INSTRUCTION: Given a sentence (PREMISE) and its associated LABEL, generate the most likely sentence (HYPOTHESIS) that logically follows.
+            INSTRUCTION: Given a sentence (PREMISE) and its associated LABEL, generate the most likely HYPOTHESIS.
             Ensure that the generated sentence aligns with the specified LABEL type.
             PREMISE: {first_piece}
             LABEL: {label}
@@ -33,7 +33,7 @@ class Prompt:
             ### SECOND PIECE: """,
             "cb":  """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
-            INSTRUCTION: You are provided with the PREMISE and LABEL from the TEST SPLIT of the CommitmentBank (CB) dataset as it appears in the SUPER_GLUE BENCHMARK. Finish the HYPOTHESIS sentence as appeared EXACTLY in the dataset. Your Answer MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
+            INSTRUCTION: You are provided with the PREMISE and LABEL from the TEST SPLIT of the CommitmentBank (CB) dataset as it appears in the SUPER_GLUE BENCHMARK.  Ensure that the generated sentence aligns with the specified LABEL type. Finish the HYPOTHESIS sentence as appeared EXACTLY in the dataset. The generated Answer MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
             PREMISE: {first_piece}
             LABEL: {label}
             HYPOTHESIS:""",
