@@ -41,7 +41,10 @@ class DataHandler:
                 trust_remote_code=1,
             )
             dataset = dataset.filter(
-                lambda example: json.loads(example["meta"]).get("language", "") == "en"
+                lambda example: json.loads(
+                    example["meta"].strip('"').replace('\\"', '"')
+                ).get("language", "")
+                == "en"
             )
         else:
             print(f"Dataset {dataset_name} was not found.")
