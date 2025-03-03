@@ -141,7 +141,7 @@ def main():
         columns=["Index", "Label", "First piece", "Gold", "Prediction"]
     )
 
-    for sample in dataset:
+    for index, sample in enumerate(dataset):
         print(sample)
         if args.task == "cb":
             first_piece = sample["premise"]
@@ -186,7 +186,7 @@ def main():
 
         results_df.loc[index] = {
             "Index": index,
-            "Embedding": label if "Embedding" in df.columns else None,
+            "Embedding": sample["label"] if "label" in sample.keys() else None,
             "Context": first_piece,
             "Target": second_piece,
             "Prediction": decoded_out,
