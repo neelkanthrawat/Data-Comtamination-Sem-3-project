@@ -157,7 +157,7 @@ def main():
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
         print(f'encoded_prompt {encoded_prompt}')
-        start_index_answer = len(encoded_prompt['input_ids'])
+        start_index_answer = len(encoded_prompt['input_ids'][0])
         print(f'start index is: {start_index_answer}')
 
         out = model.generate(
