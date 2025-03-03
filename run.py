@@ -10,7 +10,6 @@ from DataHandler import DataHandler
 from Prompt import Prompt
 import pandas as pd
 import os
-#from datasets import load_metric
 import evaluate
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
