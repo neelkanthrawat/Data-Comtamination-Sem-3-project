@@ -6,7 +6,7 @@ def main():
     predictions = ["hello there", "general kenobi"]
     references = ["hello there", "general kenobi"]
 
-    bleurt = evaluate.load("bleurt", module_type="metric")
+    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
     # rouge = evaluate.load("rouge")
 
     bleurt_score = bleurt.compute(predictions=predictions, references=references)
