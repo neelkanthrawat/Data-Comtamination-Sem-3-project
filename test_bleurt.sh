@@ -22,7 +22,7 @@
 source ~/.bashrc
 # load the necessary modules
 module devel/python/3.12.3_gnu_13.3
-module load devel/cuda/11.8
+module load devel/cuda/12.4 
 
 # Activate the conda environment
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
