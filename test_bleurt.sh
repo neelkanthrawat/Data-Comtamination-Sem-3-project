@@ -3,9 +3,9 @@
 # Job name
 #SBATCH --job-name=DataContam               # TODO: adjust job name
 
-#SBATCH --time=00:15:00              # Job time limit (30 minutes)
+#SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
-#SBATCH --gres=gpu:1                  # Request 2 GPUs
+#SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=dev_gpu_4
 
@@ -29,7 +29,7 @@ ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 echo "Activating python environment: $ENV_NAME"
 
 if [ -d "$ENV_NAME" ]; then
-    srun source "$ENV_NAME/bin/activate"
+    source "$ENV_NAME/bin/activate"
     echo "Environment '$ENV_NAME' activated successfully."
 else
     echo "Error: Virtual environment '$ENV_NAME' not found."
@@ -41,8 +41,9 @@ SCRIPT="test_bleurt.py"
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export SSL_CERT_FILE=$(python -m certifi)
+export TF_CPP_MIN_LOG_LEVEL=2
 
-srun python "$SCRIPT"
+python "$SCRIPT"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
