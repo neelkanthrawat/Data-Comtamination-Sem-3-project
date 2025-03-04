@@ -36,8 +36,7 @@ else
     exit 1
 fi
 
-which python
-which pip
+pip list
 
 # Run the Python script
 SCRIPT="run.py"
