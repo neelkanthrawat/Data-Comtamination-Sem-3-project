@@ -29,7 +29,7 @@ ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 echo "Activating python environment: $ENV_NAME"
 
 if [ -d "$ENV_NAME" ]; then
-    source "$ENV_NAME/bin/activate"
+    srun source "$ENV_NAME/bin/activate"
     echo "Environment '$ENV_NAME' activated successfully."
 else
     echo "Error: Virtual environment '$ENV_NAME' not found."
