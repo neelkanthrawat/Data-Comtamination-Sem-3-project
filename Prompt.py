@@ -22,6 +22,12 @@ class Prompt:
             PREMISE: {first_piece}
             LABEL: {label}
             HYPOTHESIS:""",
+            "stackexchange": """Below is an instruction that describes a task, paired with an input that provides further context.
+            Write a response that appropriately completes the request.
+            ### INSTRUCTION: 
+            Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            ### FIRST PIECE: {first_piece} 
+            ### SECOND PIECE:"""
         }
 
         self.guided_prompts = {
@@ -37,6 +43,12 @@ class Prompt:
             PREMISE: {first_piece}
             LABEL: {label}
             HYPOTHESIS:""",
+            "stackexchange": """
+            Below is an instruction that describes a task, paired with an input that provides further context.
+            Write a response that appropriately completes the request.
+            ### INSTRUCTION: You are provided with the FIRST PIECE of the TRAIN SPLIT of the Stackexchange part as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original form of the FIRST PIECE in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
+            ### FIRST PIECE: {first_piece} 
+            ### SECOND PIECE: """,
         }
 
     def get_unguided_prompt(self, prompt_type):

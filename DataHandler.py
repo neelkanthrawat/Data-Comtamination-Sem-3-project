@@ -46,6 +46,14 @@ class DataHandler:
                 )
                 == "en"
             )
+        elif dataset_name == "stackexchange":
+            dataset = load_dataset(
+                "togethercomputer/RedPajama-Data-1T",
+                name="stackexchange",
+                streaming=True,
+                trust_remote_code=1,
+                split="train"
+            )
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None

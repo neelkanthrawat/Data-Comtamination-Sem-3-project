@@ -94,7 +94,7 @@ def parse_args():
         default="cb",
         help="The tasks to run",
         required=False,
-        choices=["cb", "wsc", "wikipedia"],
+        choices=["cb", "wsc", "wikipedia", "stackexchange"],
     )
 
     parser.add_argument(
@@ -161,6 +161,8 @@ def main():
         elif args.task == "wsc":
             first_piece, second_piece = dh.split_sentence(sample["text"])
         elif args.task == "wikipedia":
+            first_piece, second_piece = dh.split_sentence(sample["text"])
+        elif args.task == "stackexchange":
             first_piece, second_piece = dh.split_sentence(sample["text"])
 
         if "label" in sample.keys():
