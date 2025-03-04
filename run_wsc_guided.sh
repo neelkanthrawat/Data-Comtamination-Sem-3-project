@@ -43,7 +43,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export SSL_CERT_FILE=$(python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
-srun python "$SCRIPT" --model "OpenLlama" --task "wsc" --type "guided"
+python "$SCRIPT" --model "OpenLlama" --task "wsc" --type "guided"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
