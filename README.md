@@ -24,6 +24,10 @@ export SSL_CERT_FILE=$(python -m certifi)
 ## Create an environment
 
 ```shell
+module load devel/python/3.10.5_gnu_12.1
+```
+
+```shell
 python -m venv DataContam
 source DataContam/bin/activate
 pip install transformers torch pandas evaluate datasets rouge_score git+https://github.com/google-research/bleurt.git 'accelerate>=0.26.0'
