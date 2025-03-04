@@ -52,26 +52,6 @@ def load_llama():
     return tokenizer, model
 
 
-def load_mistral():
-    """
-    Load the Mistral model and the tokenizer.
-    """
-    path = "mistralai/Mistral-7B-v0.3"
-    print(f"Loading {path}...")
-
-    tokenizer = AutoTokenizer.from_pretrained(path)
-
-    model = AutoModelForCausalLM.from_pretrained(
-        path,
-        return_dict=True,
-        low_cpu_mem_usage=True,
-        torch_dtype=torch.float16,
-        device_map="auto",
-    )
-
-    return tokenizer, model
-
-
 def parse_args():
     """
     Parse command line arguments
@@ -149,7 +129,6 @@ def main():
     )
 
     for index, sample in enumerate(dataset):
-        print(sample)
         if args.task == "cb":
             first_piece = sample["premise"]
             second_piece = sample["hypothesis"]
