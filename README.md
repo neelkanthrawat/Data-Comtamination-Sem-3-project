@@ -14,4 +14,8 @@ Create a conda environment, activate it and install the necessary packages:
 conda create -n DataContam
 conda activate DataContam
 pip install transformers torch pandas evaluate datasets rouge_score git+https://github.com/google-research/bleurt.git 'accelerate>=0.26.0'
+
+conda install -c conda-forge certificates
+conda install -c conda-forge certifi
+pip install --upgrade certifi
 ```
