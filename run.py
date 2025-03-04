@@ -139,7 +139,15 @@ def main():
         prompt_template = prompt.get_unguided_prompt(args.task)
 
     results_df = pd.DataFrame(
-        columns=["Index", "Label", "First piece", "Gold", "Prediction"]
+        columns=[
+            "Index",
+            "Label",
+            "First piece",
+            "Gold",
+            "Prediction",
+            "BLEURT",
+            "ROUGEL",
+        ]
     )
 
     bleurt = evaluate.load("bleurt", module_type="metric")
