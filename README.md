@@ -40,5 +40,5 @@ which pip
 ```
 
 ```shell
-python -m pip install transformers torch pandas evaluate datasets rouge_score git+https://github.com/google-research/bleurt.git 'accelerate>=0.26.0' 'requests==2.32.3' 'fsspec>=2023.1.0,<=2024.12.0'
+python -m pip install transformers torch pandas evaluate datasets rouge_score git+https://github.com/google-research/bleurt.git 'accelerate>=0.26.0' 'requests==2.32.3' 'fsspec>=2023.1.0,<=2024.12.0' 'tensorflow==2.12'
 ```
