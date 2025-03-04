@@ -25,15 +25,16 @@ module load devel/python/3.10.5_gnu_12.1
 module load devel/cuda/11.8
 
 # Activate the conda environment
-ENV_NAME="DataContam"
+ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 echo "Activating python environment: $ENV_NAME"
-if ! source "$ENV_NAME/bin/activate"; then
-    echo "Error: Failed to activate environment '$ENV_NAME'."
-    exit 1
-else
-    echo "Environment '$ENV_NAME' activated successfully."
-fi
 
+if [ -d "$ENV_DIR" ]; then
+    source "$ENV_DIR/bin/activate"
+    echo "Environment '$ENV_DIR' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_DIR' not found."
+    exit 1
+fi
 # Run the Python script
 SCRIPT="test_bleurt.py"
 
@@ -55,4 +56,4 @@ COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrit
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
 
 echo "Deactivating environment: $ENV_NAME"
-source deactivate
+deactivate
