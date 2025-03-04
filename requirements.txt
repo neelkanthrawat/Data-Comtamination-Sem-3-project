@@ -14,7 +14,7 @@ Babel==2.10.3
 backcall==0.2.0
 beautifulsoup4==4.11.1
 bleach==5.0.1
-BLEURT @ git+https://github.com/google-research/bleurt.git@cebe7e6f996b40910cfaa520a63db47807e3bf5c
+BLEURT==0.0.2
 cachetools==5.5.2
 certifi==2022.6.15
 cffi==1.15.1
