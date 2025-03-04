@@ -40,7 +40,9 @@ SCRIPT="test_bleurt.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT"
+export SSL_CERT_FILE=$(python -m certifi)
+
+srun python "$SCRIPT"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
