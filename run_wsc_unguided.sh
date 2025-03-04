@@ -21,7 +21,7 @@
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
-module load devel/python/3.10.5_gnu_12.1 
+module devel/python/3.12.3_gnu_13.3
 module load devel/cuda/11.8
 
 # Activate the conda environment
