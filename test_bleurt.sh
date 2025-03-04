@@ -28,11 +28,11 @@ module load devel/cuda/11.8
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 echo "Activating python environment: $ENV_NAME"
 
-if [ -d "$ENV_DIR" ]; then
-    source "$ENV_DIR/bin/activate"
-    echo "Environment '$ENV_DIR' activated successfully."
+if [ -d "$ENV_NAME" ]; then
+    source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
 else
-    echo "Error: Virtual environment '$ENV_DIR' not found."
+    echo "Error: Virtual environment '$ENV_NAME' not found."
     exit 1
 fi
 # Run the Python script
