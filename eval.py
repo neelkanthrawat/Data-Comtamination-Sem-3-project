@@ -1,6 +1,7 @@
 import pandas as pd
 import transformers
 import evaluate
+import os
 
 
 def parse_args():
@@ -64,6 +65,14 @@ def calc_scores(path: str):
             "BLEURT": bleurt_score["scores"][0],
             "ROUGEL": rouge_score["rougeL"],
         }
+
+    res_path = os.path.join("results", f"{path}_scores.csv")
+
+    if not os.path.exists("results"):
+        os.makedirs("results")
+
+    results_df.to_csv(res_path, index=False, sep=";")
+    print(f"Results saved to {res_path}")
 
 
 def main():

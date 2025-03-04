@@ -146,13 +146,8 @@ def main():
             "First piece",
             "Gold",
             "Prediction",
-            "BLEURT",
-            "ROUGEL",
         ]
     )
-
-    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
-    rouge = evaluate.load("rouge")
 
     for index, sample in enumerate(dataset):
         print(sample)
@@ -197,24 +192,12 @@ def main():
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
-        bleurt_score = bleurt.compute(
-            predictions=[decoded_out], references=[second_piece]
-        )
-        print(f"BLEURT score: {bleurt_score}")
-
-        rouge_score = rouge.compute(
-            predictions=[decoded_out], references=[second_piece]
-        )
-        print(f"ROUGE score: {rouge_score}")
-
         results_df.loc[index] = {
             "Index": index,
             "Label": sample["label"] if "label" in sample.keys() else None,
             "First piece": first_piece,
             "Gold": second_piece,
             "Prediction": decoded_out,
-            "BLEURT": bleurt_score["scores"][0],
-            "ROUGEL": rouge_score["rougeL"],
         }
 
         if index > 30:
