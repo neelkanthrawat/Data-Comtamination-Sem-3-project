@@ -36,6 +36,10 @@ else
     exit 1
 fi
 
+python -m ensurepip --upgrade
+
+which python
+which pip
 pip list
 
 # Run the Python script
