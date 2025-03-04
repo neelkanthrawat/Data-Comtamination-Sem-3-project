@@ -5,7 +5,7 @@
 
 #SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
-#SBATCH --gres=gpu:2                 # Request 2 GPUs
+#SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=dev_gpu_4
 
@@ -21,33 +21,28 @@
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
-module load devel/miniconda/23.9.0-py3.9.15
+module load devel/python/3.10.5_gnu_12.1 
 module load devel/cuda/11.8
 
-# Verify conda availability
-if ! command -v conda &> /dev/null; then
-    echo "Error: Conda is not available after loading the module."
-    exit 1
-else
-    echo "Conda is available."
-fi
-
 # Activate the conda environment
-ENV_NAME="DataContam"
-echo "Activating conda environment: $ENV_NAME"
-if ! conda activate "$ENV_NAME"; then
-    echo "Error: Failed to activate conda environment '$ENV_NAME'."
-    exit 1
-else
-    echo "Conda environment '$ENV_NAME' activated successfully."
-fi
+ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+echo "Activating python environment: $ENV_NAME"
 
+if [ -d "$ENV_NAME" ]; then
+    srun source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_NAME' not found."
+    exit 1
+fi
 # Run the Python script
-SCRIPT="run.py"
+SCRIPT="test_bleurt.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT" --model "OpenLlama" --task "wsc"
+export SSL_CERT_FILE=$(python -m certifi)
+
+srun python "$SCRIPT" --model "OpenLlama" --task "wsc" --type "unguided"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
@@ -62,5 +57,5 @@ echo "Job completed successfully."
 COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
 
-echo "Deactivating conda environment: $ENV_NAME"
-conda deactivate
+echo "Deactivating environment: $ENV_NAME"
+deactivate
