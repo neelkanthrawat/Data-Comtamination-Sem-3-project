@@ -26,7 +26,7 @@ module load devel/cuda/12.4
 module load devel/cudnn/10.2
 
 # Activate the conda environment
-ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 echo "Activating python environment: $ENV_NAME"
 
 if [ -d "$ENV_NAME" ]; then
