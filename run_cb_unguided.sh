@@ -36,7 +36,7 @@ else
     exit 1
 fi
 # Run the Python script
-SCRIPT="test_bleurt.py"
+SCRIPT="run.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
