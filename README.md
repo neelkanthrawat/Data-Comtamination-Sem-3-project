@@ -1,6 +1,6 @@
 # Data-Comtamination-Sem-3-project
 
-## Create the environment
+## Create the conda environment
 
 Load the modules that are needed to create the environment:
 
@@ -19,4 +19,12 @@ conda install -c conda-forge ca-certificates
 conda install -c conda-forge certifi
 pip install --upgrade certifi
 export SSL_CERT_FILE=$(python -m certifi)
+```
+
+## Create an environment
+
+```shell
+python -m venv DataContam
+source DataContam/bin/activate
+pip install transformers torch pandas evaluate datasets rouge_score git+https://github.com/google-research/bleurt.git 'accelerate>=0.26.0'
 ```

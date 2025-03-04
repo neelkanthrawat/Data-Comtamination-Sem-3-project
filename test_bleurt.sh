@@ -21,25 +21,17 @@
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
-module load devel/miniconda/23.9.0-py3.9.15
+module load devel/python/3.10.5_gnu_12.1 
 module load devel/cuda/11.8
-
-# Verify conda availability
-if ! command -v conda &> /dev/null; then
-    echo "Error: Conda is not available after loading the module."
-    exit 1
-else
-    echo "Conda is available."
-fi
 
 # Activate the conda environment
 ENV_NAME="DataContam"
-echo "Activating conda environment: $ENV_NAME"
-if ! conda activate "$ENV_NAME"; then
-    echo "Error: Failed to activate conda environment '$ENV_NAME'."
+echo "Activating python environment: $ENV_NAME"
+if ! source "$ENV_NAME/bin/activate"; then
+    echo "Error: Failed to activate environment '$ENV_NAME'."
     exit 1
 else
-    echo "Conda environment '$ENV_NAME' activated successfully."
+    echo "Environment '$ENV_NAME' activated successfully."
 fi
 
 # Run the Python script
@@ -62,5 +54,5 @@ echo "Job completed successfully."
 COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
 
-echo "Deactivating conda environment: $ENV_NAME"
-conda deactivate
+echo "Deactivating environment: $ENV_NAME"
+source deactivate
