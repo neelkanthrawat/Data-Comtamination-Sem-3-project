@@ -44,10 +44,12 @@ def calc_scores(path: str):
         ]
     )
 
-    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
+    bleurt = evaluate.load(
+        "bleurt", module_type="metric", checkpoint="bleurt-large-512"
+    )
     rouge = evaluate.load("rouge")
 
-    for index, row in enumerate(pred_df.iterrows()):
+    for index, row in pred_df.iterrows():
         label = row["Label"]
         first_piece = row["First piece"]
         gold = row["Gold"]
