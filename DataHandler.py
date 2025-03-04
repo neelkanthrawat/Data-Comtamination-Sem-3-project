@@ -38,7 +38,7 @@ class DataHandler:
                 name="wikipedia",
                 split="train",
                 streaming=True,
-                trust_remote_code=1,
+                trust_remote_code=True,
             )
             dataset = dataset.filter(
                 lambda example: json.loads(example["meta"].replace('"', "'")).get(
@@ -51,8 +51,8 @@ class DataHandler:
                 "togethercomputer/RedPajama-Data-1T",
                 name="stackexchange",
                 streaming=True,
-                trust_remote_code=1,
-                split="train"
+                trust_remote_code=True,
+                split="train",
             )
         else:
             print(f"Dataset {dataset_name} was not found.")

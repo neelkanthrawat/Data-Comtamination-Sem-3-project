@@ -1,5 +1,6 @@
 import pandas as pd
 import transformers
+import evaluate
 
 
 def parse_args():
@@ -16,25 +17,58 @@ def parse_args():
         help="Path to the predictions file",
     )
 
-    parser.add_argument(
-        "--gold",
-        type=str,
-        help="Path to the golden file",
-    )
-
     args = parser.parse_args()
     print(args)
 
     return args
 
 
-def main():
-    args = parse_args()
+def calc_scores(path: str):
+    """
+    Calculate the BLEURT and ROUGEL score for the predictions.
+    """
 
-    with open(args.pred, "r") as f:
+    with open(path, "r") as f:
         pred_df = pd.read_csv(f)
 
-    # TODO: implement BLEURT and ROUGE-L
+    results_df = pd.DataFrame(
+        columns=[
+            "Index",
+            "Label",
+            "First piece",
+            "Gold",
+            "Prediction",
+            "BLEURT",
+            "ROUGEL",
+        ]
+    )
+
+    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
+    rouge = evaluate.load("rouge")
+
+    for index, row in enumerate(pred_df.iterrows()):
+        label = row["Label"]
+        first_piece = row["First piece"]
+        gold = row["Gold"]
+        prediction = row["Prediction"]
+
+        bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
+        rouge_score = rouge.compute(predictions=[prediction], references=[gold])
+
+        results_df.loc[index] = {
+            "Index": index,
+            "Label": row["label"] if "label" in row.columns() else None,
+            "First piece": first_piece,
+            "Gold": gold,
+            "Prediction": prediction,
+            "BLEURT": bleurt_score["scores"][0],
+            "ROUGEL": rouge_score["rougeL"],
+        }
+
+
+def main():
+    args = parse_args()
+    calc_scores(args.pred)
 
 
 if __name__ == "__main__":

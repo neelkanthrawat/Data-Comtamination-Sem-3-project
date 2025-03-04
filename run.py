@@ -85,7 +85,7 @@ def parse_args():
         "--model",
         type=str,
         default="llama",
-        help="The model to use. Options: llama, openllama, mistral",
+        help="The model to use. Options: Llama, OpenLlama, Mistral",
     )
 
     parser.add_argument(
@@ -124,6 +124,7 @@ def main():
         tokenizer, model = load_llama()
     elif args.model in ["OpenLlama"]:
         tokenizer, model = load_openllama()
+    ### test data loading without model
     elif args.model == "test":
         pass
 
@@ -150,7 +151,7 @@ def main():
         ]
     )
 
-    bleurt = evaluate.load("bleurt", module_type="metric")
+    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
     rouge = evaluate.load("rouge")
 
     for index, sample in enumerate(dataset):
@@ -178,9 +179,8 @@ def main():
         encoded_prompt = tokenizer(
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
-        # print(f"encoded_prompt {encoded_prompt}")
+
         start_index_answer = len(encoded_prompt["input_ids"][0])
-        # print(f"start index is: {start_index_answer}")
 
         out = model.generate(
             encoded_prompt["input_ids"].to(DEVICE),
@@ -191,10 +191,9 @@ def main():
             do_sample=True,
         )[0][start_index_answer:]
 
-        print(f"out: {out}")
-
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         decoded_out = decoded_out.strip()
+
         print(f"-------- Output: --------\n{decoded_out}", flush=True)
         print("------------------------", end="\n\n")
 
