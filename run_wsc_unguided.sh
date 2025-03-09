@@ -3,7 +3,7 @@
 # Job name
 #SBATCH --job-name=DataContam               # TODO: adjust job name
 
-#SBATCH --time=00:30:00              # Job time limit (30 minutes)
+#SBATCH --time=00:14:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
