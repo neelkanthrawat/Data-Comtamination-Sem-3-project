@@ -17,11 +17,11 @@ class Prompt:
             """,
             "cb": """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
-            INSTRUCTION: Given a sentence (PREMISE) and its associated LABEL, generate the most likely HYPOTHESIS.
+            ### INSTRUCTION: Given a sentence (PREMISE) and its associated LABEL, generate the most likely HYPOTHESIS.
             Ensure that the generated sentence aligns with the specified LABEL type. Only generate the pausible HYPOTHESIS and nothing else.
-            PREMISE: {first_piece}
-            LABEL: {label}
-            HYPOTHESIS:""",
+            ### PREMISE: {first_piece}
+            ### LABEL: {label}
+            ### HYPOTHESIS:""",
             "stackexchange": """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
             ### INSTRUCTION: 
@@ -39,10 +39,10 @@ class Prompt:
             ### SECOND PIECE: """,
             "cb":  """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
-            INSTRUCTION: You are provided with the PREMISE and LABEL from the TEST SPLIT of the CommitmentBank (CB) dataset as it appears in the SUPER_GLUE BENCHMARK.  Ensure that the generated sentence aligns with the specified LABEL type. Finish the HYPOTHESIS sentence as appeared EXACTLY in the dataset. The generated Answer MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
-            PREMISE: {first_piece}
-            LABEL: {label}
-            HYPOTHESIS:""",
+            ### INSTRUCTION: You are provided with the PREMISE and LABEL from the TEST SPLIT of the CommitmentBank (CB) dataset as it appears in the SUPER_GLUE BENCHMARK.  Ensure that the generated sentence aligns with the specified LABEL type. Finish the HYPOTHESIS sentence as appeared EXACTLY in the dataset. The generated Answer MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
+            ### PREMISE: {first_piece}
+            ### LABEL: {label}
+            ### HYPOTHESIS:""",
             "stackexchange": """
             Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
