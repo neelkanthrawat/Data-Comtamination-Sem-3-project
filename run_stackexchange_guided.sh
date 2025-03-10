@@ -21,7 +21,7 @@
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
-module devel/python/3.12.3_gnu_13.3
+module load devel/python/3.12.3_gnu_13.3
 module load devel/cuda/12.4 
 module load devel/cudnn/10.2
 

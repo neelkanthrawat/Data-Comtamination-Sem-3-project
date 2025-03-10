@@ -42,7 +42,7 @@ which pip
 ```
 
 ```shell
-python -m pip install transformers torch pandas datasets 'accelerate>=0.26.0'
+python -m pip install transformers torch pandas datasets 'accelerate>=0.26.0' sentencepiece
 ```
 
 ### Environment for evaluating
@@ -60,5 +60,5 @@ which pip
 ```
 
 ```shell
-python -m pip install pandas evaluate rouge_score git+https://github.com/google-research/bleurt.git 'accelerate>=0.26.0' 'requests==2.32.3' 'fsspec>=2023.1.0,<=2024.12.0' tensorflow[and-cuda]
+python -m pip install pandas evaluate rouge_score git+https://github.com/google-research/bleurt.git 'requests==2.32.3' 'fsspec>=2023.1.0,<=2024.12.0' tensorflow[and-cuda]
 ```

@@ -110,6 +110,9 @@ def main():
     dh = DataHandler()
 
     dataset = dh.load_dataset(args.task)
+    # shuffle the dataset and sample from it
+    dataset = dataset.shuffle(seed=42)
+    dataset = dataset.select(range(10))
 
     prompt = Prompt()
 
