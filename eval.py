@@ -41,6 +41,7 @@ def calc_scores(in_path: str):
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
     script_dir = os.getcwd()
+    print(script_dir)
     in_path = os.path.join(script_dir, in_path)
     print(in_path)
 
