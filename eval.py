@@ -23,6 +23,13 @@ def parse_args():
         help="Path to the unguided predictions file",
     )
 
+    parser.add_argument(
+        "--name",
+        type=str,
+        default=None,
+        help="Name of the evaluation",
+    )
+
     args = parser.parse_args()
     print(args)
 

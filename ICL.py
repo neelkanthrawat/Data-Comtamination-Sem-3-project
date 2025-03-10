@@ -1,32 +1,35 @@
 import torch
+import pandas as pd
+import os
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# from transformers import (
-#     LlamaTokenizer,
-#     LlamaForCausalLM,
-#     AutoTokenizer,
-#     AutoModelForCausalLM,
-# )
+from transformers import (
+    LlamaTokenizer,
+    LlamaForCausalLM,
+    AutoTokenizer,
+    AutoModelForCausalLM,
+)
 
-# def load_mistral():
-#     """
-#     Load the Mistral model and the tokenizer.
-#     """
-#     path = "mistralai/Mistral-7B-v0.3"
-#     print(f"Loading {path}...")
 
-#     tokenizer = AutoTokenizer.from_pretrained(path)
+def load_mistral():
+    """
+    Load the Mistral model and the tokenizer.
+    """
+    path = "mistralai/Mistral-7B-v0.3"
+    print(f"Loading {path}...")
 
-#     model = AutoModelForCausalLM.from_pretrained(
-#         path,
-#         return_dict=True,
-#         low_cpu_mem_usage=True,
-#         torch_dtype=torch.float16,
-#         device_map="auto",
-#     )
+    tokenizer = AutoTokenizer.from_pretrained(path)
 
-#     return tokenizer, model
+    model = AutoModelForCausalLM.from_pretrained(
+        path,
+        return_dict=True,
+        low_cpu_mem_usage=True,
+        torch_dtype=torch.float16,
+        device_map="auto",
+    )
+
+    return tokenizer, model
 
 
 def ICL_prompting(path: str, args):
@@ -112,3 +115,16 @@ def ICL_prompting(path: str, args):
 
     results_df.to_csv(res_path, index=False, sep=";")
     print(f"Results saved to {res_path}")
+
+
+def parse_args():
+    pass
+
+
+def main():
+    args = parse_args()
+    ICL_prompting(args.path, args)
+
+
+if __name__ == "__main__":
+    main()
