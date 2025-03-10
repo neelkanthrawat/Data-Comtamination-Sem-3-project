@@ -40,6 +40,8 @@ def calc_scores(path: str):
     """
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
+    script_dir = os.getcwd()
+    path = os.path.join(script_dir, path)
 
     with open(path, "r") as f:
         pred_df = pd.read_csv(f)
@@ -93,10 +95,14 @@ def calc_scores(path: str):
 
 def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     if type(results_df_guided) == str:
-        with open(results_df_guided, "r") as f:
+        script_dir = os.getcwd()
+        path = os.path.join(script_dir, path)
+        with open(path, "r") as f:
             results_df_guided = pd.read_csv(f, sep=";")
     if type(results_df_unguided) == str:
-        with open(results_df_unguided, "r") as f:
+        script_dir = os.getcwd()
+        path = os.path.join(script_dir, path)
+        with open(path, "r") as f:
             results_df_unguided = pd.read_csv(f, sep=";")
 
     diff_df = pd.DataFrame(
