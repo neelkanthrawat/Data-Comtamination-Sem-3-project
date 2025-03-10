@@ -37,6 +37,7 @@ else
     echo "Error: Virtual environment '$ENV_NAME' not found."
     exit 1
 fi
+
 # Run the Python script
 SCRIPT="run.py"
 

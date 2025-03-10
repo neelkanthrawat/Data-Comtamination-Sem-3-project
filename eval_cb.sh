@@ -24,13 +24,6 @@ source ~/.bashrc
 module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
 
-# Verify conda availability
-if ! command -v conda &> /dev/null; then
-    echo "Error: Conda is not available after loading the module."
-    exit 1
-else
-    echo "Conda is available."
-fi
 
 # Activate the conda environment
 ENV_NAME="DataContam"
@@ -62,5 +55,5 @@ echo "Job completed successfully."
 COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
 
-echo "Deactivating conda environment: $ENV_NAME"
-conda deactivate
+echo "Deactivating environment: $ENV_NAME"
+deactivate
