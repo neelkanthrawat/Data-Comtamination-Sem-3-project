@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=DataContam               # TODO: adjust job name
+#SBATCH --job-name=cb_unguided               # TODO: adjust job name
 
 #SBATCH --time=00:08:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks

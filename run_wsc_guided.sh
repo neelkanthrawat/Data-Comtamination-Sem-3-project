@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=DataContam               # TODO: adjust job name
+#SBATCH --job-name=wsc_guided               # TODO: adjust job name
 
 #SBATCH --time=00:14:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
