@@ -149,7 +149,7 @@ def load_mistral():
     return tokenizer, model
 
 
-def ICL_prompting(path: str):
+def ICL_prompting(path: str, args):
     """
     Only necessary for guided.
     """
