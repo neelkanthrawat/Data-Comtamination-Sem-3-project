@@ -157,9 +157,14 @@ def main():
 
         start_index_answer = len(encoded_prompt["input_ids"][0])
 
+        if args.task == 'stackexchange':
+            max_len=200
+        else:
+            max_len= 100
+        
         out = model.generate(
             encoded_prompt["input_ids"].to(DEVICE),
-            max_new_tokens=100,
+            max_new_tokens=max_len,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.2,
