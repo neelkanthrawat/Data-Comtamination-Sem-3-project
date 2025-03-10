@@ -46,7 +46,7 @@ class Prompt:
             "stackexchange": """
             Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
-            ### INSTRUCTION: You are provided with the FIRST PIECE of an instance in the TRAIN SPLIT of the Stackexchange part in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original form of the FIRST PIECE in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
+            ### INSTRUCTION: You are provided with the FIRST PIECE of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original form of the FIRST PIECE in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
             ### FIRST PIECE: {first_piece} 
             ### SECOND PIECE: 
             """,
