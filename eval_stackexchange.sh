@@ -25,7 +25,7 @@ source ~/.bashrc
 module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
 
-ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 echo "Activating python environment: $ENV_NAME"
 
 if [ -d "$ENV_NAME" ]; then
