@@ -36,15 +36,15 @@ def parse_args():
     return args
 
 
-def calc_scores(path: str):
+def calc_scores(in_path: str):
     """
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
     script_dir = os.getcwd()
-    path = os.path.join(script_dir, path)
-    print(path)
+    in_path = os.path.join(script_dir, in_path)
+    print(in_path)
 
-    with open(path, "r") as f:
+    with open(in_path, "r") as f:
         pred_df = pd.read_csv(f)
 
     results_df = pd.DataFrame(
@@ -83,7 +83,7 @@ def calc_scores(path: str):
             "ROUGEL": rouge_score["rougeL"],
         }
 
-    res_path = os.path.join("results", f"{path}_scores.csv")
+    res_path = os.path.join("results", f"{in_path}_scores.csv")
 
     if not os.path.exists("results"):
         os.makedirs("results")
