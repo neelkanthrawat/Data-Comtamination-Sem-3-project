@@ -26,14 +26,15 @@ module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
 
 
-# Activate the conda environment
-ENV_NAME="DataContam"
-echo "Activating conda environment: $ENV_NAME"
-if ! conda activate "$ENV_NAME"; then
-    echo "Error: Failed to activate conda environment '$ENV_NAME'."
-    exit 1
+ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+echo "Activating python environment: $ENV_NAME"
+
+if [ -d "$ENV_NAME" ]; then
+    source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
 else
-    echo "Conda environment '$ENV_NAME' activated successfully."
+    echo "Error: Virtual environment '$ENV_NAME' not found."
+    exit 1
 fi
 
 # Run the Python script
