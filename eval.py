@@ -42,6 +42,7 @@ def calc_scores(path: str):
     """
     script_dir = os.getcwd()
     path = os.path.join(script_dir, path)
+    print(path)
 
     with open(path, "r") as f:
         pred_df = pd.read_csv(f)
