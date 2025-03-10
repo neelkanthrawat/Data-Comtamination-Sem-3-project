@@ -59,29 +59,29 @@ class DataHandler:
             return None
         return dataset
 
-    def split_sentence(self, sentence):
+    def split_sentence(self, sentence, split_with_char=True):
         """
         Function to split a sentence, prioritizing "." (not at end), "than", then other punctuation
         """
-        # Prioritize "." but only if it's not at the end
-        match = re.search(r"\.(?!$)", sentence)  # Ensures the period is not at the end
-        if match:
-            idx = match.start() + 1
-            return sentence[:idx], sentence[idx:].strip()
+        if split_with_char:
+            # Prioritize "." but only if it's not at the end
+            match = re.search(r"\.(?!$)", sentence)  # Ensures the period is not at the end
+            if match:
+                idx = match.start() + 1
+                return sentence[:idx], sentence[idx:].strip()
 
-        # If no ".", prioritize other punctuation (; , :)
-        match = re.search(r"([,;:])", sentence)
-        if match:
-            idx = match.start() + 1  # Keep punctuation in part1
-            return sentence[:idx], sentence[idx:].strip()
+            # If no ".", prioritize other punctuation (; , :)
+            match = re.search(r"([,;:])", sentence)
+            if match:
+                idx = match.start() + 1  # Keep punctuation in part1
+                return sentence[:idx], sentence[idx:].strip()
 
-        # If "than" exists, split after the compared entity
-        idx = sentence.find(" than ")
-        if idx != -1:
-            next_space = sentence.find(" ", idx + 6)  # Look after " than "
-            if next_space != -1:
-                return sentence[:next_space], sentence[next_space:].strip()
-
+            # If "than" exists, split after the compared entity
+            idx = sentence.find(" than ")
+            if idx != -1:
+                next_space = sentence.find(" ", idx + 6)  # Look after " than "
+                if next_space != -1:
+                    return sentence[:next_space], sentence[next_space:].strip()
         # If no punctuation or "than", split in half at a word boundary
         mid = len(sentence) // 2
         while mid > 0 and sentence[mid] != " ":

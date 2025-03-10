@@ -139,7 +139,7 @@ def main():
         elif args.task == "wikipedia":
             first_piece, second_piece = dh.split_sentence(sample["text"])
         elif args.task == "stackexchange":
-            first_piece, second_piece = dh.split_sentence(sample["text"])
+            first_piece, second_piece = dh.split_sentence(sample["text"], split_with_char=0)
 
         if "label" in sample.keys():
             formatted_prompt = prompt_template.format(
