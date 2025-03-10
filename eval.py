@@ -42,10 +42,11 @@ def calc_scores(in_path: str):
     """
     script_dir = os.getcwd()
     print(script_dir)
-    in_path = os.path.join(script_dir, in_path)
-    print(in_path)
+    in_path = os.path.join(script_dir, "results")
+    file_in = os.path.join(in_path, "stackexchange_OpenLlama_guided.csv")
+    file_out = os.path.join(in_path, "stackexchange_OpenLlama_guided_scores.csv")
 
-    with open(in_path, "r") as f:
+    with open(file_in, "r") as f:
         pred_df = pd.read_csv(f)
 
     results_df = pd.DataFrame(
