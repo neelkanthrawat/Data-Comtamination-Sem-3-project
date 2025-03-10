@@ -42,7 +42,7 @@ SCRIPT="eval.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT" --guided "./results/cb_OpenLlama_guided" --unguided "./results/cb_OpenLlama_unguided" --name "cb_OpenLlama"
+srun python3 "$SCRIPT" --guided "/results/cb_OpenLlama_guided.csv" --unguided "/results/cb_OpenLlama_unguided.csv" --name "cb_OpenLlama"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
