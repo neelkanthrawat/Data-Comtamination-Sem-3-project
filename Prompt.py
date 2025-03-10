@@ -18,10 +18,11 @@ class Prompt:
             "cb": """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
             ### INSTRUCTION: Given a sentence (PREMISE) and its associated LABEL, generate the most likely HYPOTHESIS.
-            Ensure that the generated sentence aligns with the specified LABEL type. Only generate the pausible HYPOTHESIS and nothing else.
+            Ensure that the generated sentence aligns with the specified LABEL type. ONLY generate the pausible HYPOTHESIS and nothing else.
             ### PREMISE: {first_piece}
             ### LABEL: {label}
-            ### HYPOTHESIS:""",
+            ### HYPOTHESIS: 
+            """,
             "stackexchange": """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
             ### INSTRUCTION: 
