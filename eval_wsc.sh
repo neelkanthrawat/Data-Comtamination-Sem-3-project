@@ -10,8 +10,8 @@
 #SBATCH --partition=dev_gpu_4
 
 # Output and error logs
-#SBATCH --output="DataContam_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="DataContam_err.txt"         # TODO: adjust error log
+#SBATCH --output="eval_wsc_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="eval_wsc_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
@@ -47,7 +47,7 @@ SCRIPT="eval.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT" --guided "./results/wsc_OpenLlama_guided" --unguided "./results/wsc_OpenLlama_unguided"
+srun python3 "$SCRIPT" --guided "./results/wsc_OpenLlama_guided" --unguided "./results/wsc_OpenLlama_unguided" --name "wsc_OpenLlama"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then

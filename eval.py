@@ -95,7 +95,7 @@ def calc_scores(path: str):
     return results_df, res_path
 
 
-def calc_differences(results_df_guided, results_df_unguided):
+def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     if type(results_df_guided) == str:
         with open(results_df_guided, "r") as f:
             results_df_guided = pd.read_csv(f, sep=";")
@@ -124,7 +124,10 @@ def calc_differences(results_df_guided, results_df_unguided):
     diff_df["ROUGEL guided"] = results_df_guided["ROUGEL"]
     diff_df["ROUGEL unguided"] = results_df_unguided["ROUGEL"]
 
-    res_path = os.path.join("results", f"differences.csv")
+    if eval_name is None:
+        res_path = os.path.join("results", f"differences.csv")
+    else:
+        res_path = os.path.join("results", f"{eval_name}_differences.csv")
     diff_df.to_csv(res_path, index=False, sep=";")
     print(f"Differences saved to {res_path}")
 
@@ -223,7 +226,9 @@ def ICL_prompting(path: str, args):
             "Prediction": decoded_out,
         }
 
-    res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
+    res_path = os.path.join(
+        "results", f"{args.task}_{args.model}_{args.type}_prompting.csv"
+    )
 
     if not os.path.exists("results"):
         os.makedirs("results")
@@ -236,7 +241,7 @@ def main():
     args = parse_args()
     results_df_guided, res_path_guided = calc_scores(args.guided)
     results_df_unguided, res_path_unguided = calc_scores(args.unguided)
-    calc_differences(results_df_guided, results_df_unguided)
+    calc_differences(results_df_guided, results_df_unguided, eval_name=args.name)
 
 
 if __name__ == "__main__":

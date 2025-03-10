@@ -11,8 +11,8 @@
 #SBATCH --mem=16GB 
 
 # Output and error logs
-#SBATCH --output="DataContam_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="DataContam_err.txt"         # TODO: adjust error log
+#SBATCH --output="cb_guided_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="cb_guided_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
