@@ -22,11 +22,9 @@ class Prompt:
             ### LABEL: {label}
             ### HYPOTHESIS: 
             """,
-            "stackexchange": """Below is an instruction that describes a task, paired with an input that provides further context.
-            Write a response that appropriately completes the request.
-            ### INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
-            ### FIRST PIECE: {first_piece} 
-            ### SECOND PIECE:
+            "stackexchange": """
+            ### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION!
+            ### BEGINNING: {first_piece} 
             """
         }
 
