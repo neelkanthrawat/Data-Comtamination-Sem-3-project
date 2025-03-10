@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=DataContam               # TODO: adjust job name
+#SBATCH --job-name=eval_cb              # TODO: adjust job name
 
 #SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
@@ -47,7 +47,7 @@ SCRIPT="eval.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT" --pred "" --gold ""
+srun python3 "$SCRIPT" --guided "./results/cb_OpenLlama_guided" --unguided "./results/cb_OpenLlama_unguided"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
