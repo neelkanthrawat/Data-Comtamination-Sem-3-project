@@ -1,15 +1,14 @@
 import pandas as pd
-import transformers
 import evaluate
 import os
-import transformers
 import torch
-from transformers import (
-    LlamaTokenizer,
-    LlamaForCausalLM,
-    AutoTokenizer,
-    AutoModelForCausalLM,
-)
+
+# from transformers import (
+#     LlamaTokenizer,
+#     LlamaForCausalLM,
+#     AutoTokenizer,
+#     AutoModelForCausalLM,
+# )
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -132,24 +131,24 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     print(f"Differences saved to {res_path}")
 
 
-def load_mistral():
-    """
-    Load the Mistral model and the tokenizer.
-    """
-    path = "mistralai/Mistral-7B-v0.3"
-    print(f"Loading {path}...")
+# def load_mistral():
+#     """
+#     Load the Mistral model and the tokenizer.
+#     """
+#     path = "mistralai/Mistral-7B-v0.3"
+#     print(f"Loading {path}...")
 
-    tokenizer = AutoTokenizer.from_pretrained(path)
+#     tokenizer = AutoTokenizer.from_pretrained(path)
 
-    model = AutoModelForCausalLM.from_pretrained(
-        path,
-        return_dict=True,
-        low_cpu_mem_usage=True,
-        torch_dtype=torch.float16,
-        device_map="auto",
-    )
+#     model = AutoModelForCausalLM.from_pretrained(
+#         path,
+#         return_dict=True,
+#         low_cpu_mem_usage=True,
+#         torch_dtype=torch.float16,
+#         device_map="auto",
+#     )
 
-    return tokenizer, model
+#     return tokenizer, model
 
 
 def ICL_prompting(path: str, args):
