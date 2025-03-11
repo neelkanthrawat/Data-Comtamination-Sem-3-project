@@ -25,8 +25,22 @@ source ~/.bashrc
 module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
 
+# CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
+TASK="cb"
+MODEL="OpenLlama"
 
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
+ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+
+
+SCRIPT="eval.py"
+SCRIPT2="ICL.py"
+
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export SSL_CERT_FILE=$(python -m certifi)
+export TF_CPP_MIN_LOG_LEVEL=2
+
+# Run first script with DataContam env
 echo "Activating python environment: $ENV_NAME"
 
 if [ -d "$ENV_NAME" ]; then
@@ -37,12 +51,9 @@ else
     exit 1
 fi
 
-# Run the Python script
-SCRIPT="eval.py"
-
-# Set the environment variable to allow PyTorch to allocate more memory
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-srun python3 "$SCRIPT" --guided "/results/cb_OpenLlama_guided.csv" --unguided "/results/cb_OpenLlama_unguided.csv" --name "cb_OpenLlama"
+echo "Running Python script: $SCRIPT"
+srun python3 "$SCRIPT" --guided "/results/$TASK\_$MODEL\_guided.csv" --unguided "/results/$TASK\_$MODEL\_unguided.csv" --name "$TASK\_$MODEL"
+echo "Finished running Python script: $SCRIPT"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
@@ -52,10 +63,30 @@ else
     exit 1
 fi
 
-echo "Job completed successfully."
+echo "Deactivating environment: $ENV_NAME"
+deactivate
+
+# Run second script with DataContamEval env
+echo "Activating python environment: $ENV_NAME2"
+
+if [ -d "$ENV_NAME2" ]; then
+    source "$ENV_NAME2/bin/activate"
+    echo "Environment '$ENV_NAME2' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_NAME2' not found."
+    exit 1
+fi
+echo "Running Python script: $SCRIPT2"
+srun python3 "$SCRIPT2" --guided "/results/$TASK\_$MODEL\_guided.csv" --name "$TASK\_$MODEL"
+echo "Finished running Python script: $SCRIPT2"
+
+# Verify if the script executed successfully
+if [ $? -eq 0 ]; then
+    echo "Python script '$SCRIPT' executed successfully."
+else
+    echo "Error: Python script '$SCRIPT' failed."
+    exit 1
+fi
 
 COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
-
-echo "Deactivating environment: $ENV_NAME"
-deactivate

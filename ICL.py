@@ -1,15 +1,39 @@
 import torch
 import pandas as pd
 import os
+import argparse
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 from transformers import (
-    LlamaTokenizer,
-    LlamaForCausalLM,
     AutoTokenizer,
     AutoModelForCausalLM,
 )
+
+
+def parse_args():
+    """
+    Parse command line arguments
+    """
+    parser = argparse.ArgumentParser(description="Run the model")
+
+    parser.add_argument(
+        "--guided",
+        type=str,
+        help="Path to the guided predictions file",
+    )
+
+    parser.add_argument(
+        "--name",
+        type=str,
+        default=None,
+        help="Name of the evaluation",
+    )
+
+    args = parser.parse_args()
+    print(args)
+
+    return args
 
 
 def load_mistral():
@@ -115,10 +139,6 @@ def ICL_prompting(path: str, args):
 
     results_df.to_csv(res_path, index=False, sep=";")
     print(f"Results saved to {res_path}")
-
-
-def parse_args():
-    pass
 
 
 def main():
