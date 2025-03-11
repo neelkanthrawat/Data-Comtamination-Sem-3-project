@@ -41,10 +41,8 @@ def calc_scores(in_path: str):
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
     script_dir = os.getcwd()
-    print(script_dir)
-    in_path = os.path.join(script_dir, "results")
-    file_in = os.path.join(in_path, "stackexchange_OpenLlama_guided.csv")
-    file_out = os.path.join(in_path, "stackexchange_OpenLlama_guided_scores.csv")
+    path = os.path.join(in_path.split("/"))
+    file_in = os.path.join(script_dir, path)
 
     with open(file_in, "r") as f:
         pred_df = pd.read_csv(f)
@@ -99,13 +97,18 @@ def calc_scores(in_path: str):
 def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     if type(results_df_guided) == str:
         script_dir = os.getcwd()
-        path = os.path.join(script_dir, path)
-        with open(path, "r") as f:
+        path = os.path.join(results_df_guided.split("/"))
+        file_in = os.path.join(script_dir, path)
+
+        with open(file_in, "r") as f:
             results_df_guided = pd.read_csv(f, sep=";")
+
     if type(results_df_unguided) == str:
         script_dir = os.getcwd()
-        path = os.path.join(script_dir, path)
-        with open(path, "r") as f:
+        path = os.path.join(results_df_unguided.split("/"))
+        file_in = os.path.join(script_dir, path)
+
+        with open(file_in, "r") as f:
             results_df_unguided = pd.read_csv(f, sep=";")
 
     diff_df = pd.DataFrame(
