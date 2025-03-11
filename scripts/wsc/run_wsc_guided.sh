@@ -39,7 +39,7 @@ else
 fi
 
 # Run the Python script
-SCRIPT="$HOME/run.py"
+SCRIPT="$HOME/Data-Comtamination-Sem-3-project/run.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
