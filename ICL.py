@@ -2,13 +2,16 @@ import torch
 import pandas as pd
 import os
 import argparse
-
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+import os
+from pathlib import Path
 from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
 )
+
+HOME = Path.home()
+PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def parse_args():
@@ -60,6 +63,8 @@ def ICL_prompting(path: str, args):
     """
     Only necessary for guided.
     """
+    path = os.path.join(PROJECT_DIR, path)
+
     with open(path, "r") as f:
         df = pd.read_csv(f)
 
@@ -130,12 +135,13 @@ def ICL_prompting(path: str, args):
             "Prediction": decoded_out,
         }
 
+    res_dir = os, path.join(PROJECT_DIR, "results")
     res_path = os.path.join(
-        "results", f"{args.task}_{args.model}_{args.type}_prompting.csv"
+        res_dir, f"{args.task}_{args.model}_{args.type}_prompting.csv"
     )
 
-    if not os.path.exists("results"):
-        os.makedirs("results")
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
 
     results_df.to_csv(res_path, index=False, sep=";")
     print(f"Results saved to {res_path}")

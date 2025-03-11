@@ -19,9 +19,6 @@
 #SBATCH --mail-type=START,END,FAIL  # Send email when the job ends or fails
 
 ### JOB STEPS START HERE ###
-cd "$(dirname "$(dirname "$PWD")")" || exit 1
-echo "Current working directory: $(pwd)"
-
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
@@ -41,7 +38,7 @@ else
     exit 1
 fi
 # Run the Python script
-SCRIPT="run.py"
+SCRIPT="$HOME/run.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

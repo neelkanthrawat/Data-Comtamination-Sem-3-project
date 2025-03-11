@@ -9,9 +9,12 @@ from transformers import (
 from DataHandler import DataHandler
 from Prompt import Prompt
 import pandas as pd
+from pathlib import Path
 import os
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+HOME = Path.home()
+PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 
 def load_openllama():
@@ -139,7 +142,9 @@ def main():
         elif args.task == "wikipedia":
             first_piece, second_piece = dh.split_sentence(sample["text"])
         elif args.task == "stackexchange":
-            first_piece, second_piece = dh.split_sentence(sample["text"], split_with_char=0)
+            first_piece, second_piece = dh.split_sentence(
+                sample["text"], split_with_char=0
+            )
 
         if "label" in sample.keys():
             formatted_prompt = prompt_template.format(
@@ -157,11 +162,11 @@ def main():
 
         start_index_answer = len(encoded_prompt["input_ids"][0])
 
-        if args.task == 'stackexchange':
-            max_len=500
+        if args.task == "stackexchange":
+            max_len = 500
         else:
-            max_len= 100
-        
+            max_len = 100
+
         out = model.generate(
             encoded_prompt["input_ids"].to(DEVICE),
             max_new_tokens=max_len,
@@ -188,10 +193,12 @@ def main():
         if index > 10:
             break
 
-    res_path = os.path.join("results", f"{args.task}_{args.model}_{args.type}.csv")
+    res_dir = os.path.join(PROJECT_DIR, "results")
 
-    if not os.path.exists("results"):
-        os.makedirs("results")
+    res_path = os.path.join(res_dir, f"{args.task}_{args.model}_{args.type}.csv")
+
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
 
     results_df.to_csv(res_path, index=False, sep=";")
     print(f"Results saved to {res_path}")

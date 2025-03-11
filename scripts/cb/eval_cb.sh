@@ -19,9 +19,6 @@
 #SBATCH --mail-type=START,END,FAIL  # Send email when the job ends or fails
 
 ### JOB STEPS START HERE ###
-cd "$(dirname "$(dirname "$PWD")")" || exit 1
-echo "Current working directory: $(pwd)"
-
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
@@ -36,8 +33,8 @@ ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 
 
-SCRIPT="eval.py"
-SCRIPT2="ICL.py"
+SCRIPT="$HOME/eval.py"
+SCRIPT2="$HOME/ICL.py"
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export SSL_CERT_FILE=$(python -m certifi)
@@ -55,7 +52,7 @@ else
 fi
 
 echo "Running Python script: $SCRIPT"
-srun python3 "$SCRIPT" --guided "/results/$TASK\_$MODEL\_guided.csv" --unguided "/results/$TASK\_$MODEL\_unguided.csv" --name "$TASK\_$MODEL"
+srun python3 "$SCRIPT" --guided "$HOME/results/$TASK\_$MODEL\_guided.csv" --unguided "$HOME/results/$TASK\_$MODEL\_unguided.csv" --name "$TASK\_$MODEL"
 echo "Finished running Python script: $SCRIPT"
 
 # Verify if the script executed successfully
@@ -80,7 +77,7 @@ else
     exit 1
 fi
 echo "Running Python script: $SCRIPT2"
-srun python3 "$SCRIPT2" --guided "/results/$TASK\_$MODEL\_guided.csv" --name "$TASK\_$MODEL"
+srun python3 "$SCRIPT2" --guided "$HOME/results/$TASK\_$MODEL\_guided.csv" --name "$TASK\_$MODEL"
 echo "Finished running Python script: $SCRIPT2"
 
 # Verify if the script executed successfully
