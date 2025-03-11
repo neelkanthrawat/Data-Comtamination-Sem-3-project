@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=eval_stackexchange # TODO: adjust job name
+#SBATCH --job-name=eval_wsc              # TODO: adjust job name
 
 #SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
@@ -11,14 +11,17 @@
 #SBATCH --mem=16GB 
 
 # Output and error logs
-#SBATCH --output="eval_stackexchange_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="eval_stackexchange_err.txt"         # TODO: adjust error log
+#SBATCH --output="eval_wsc_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="eval_wsc_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
 #SBATCH --mail-type=START,END,FAIL  # Send email when the job ends or fails
 
 ### JOB STEPS START HERE ###
+cd "$(dirname "$(dirname "$PWD")")" || exit 1
+echo "Current working directory: $(pwd)"
+
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
@@ -26,7 +29,7 @@ module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
-TASK="stackexchange"
+TASK="wsc"
 MODEL="OpenLlama"
 
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"

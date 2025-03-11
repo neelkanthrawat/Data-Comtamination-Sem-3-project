@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=stackexchange_guided               # TODO: adjust job name
+#SBATCH --job-name=stackexchange_unguided               # TODO: adjust job name
 
 #SBATCH --time=00:15:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
@@ -11,14 +11,17 @@
 #SBATCH --mem=16GB 
 
 # Output and error logs
-#SBATCH --output="stackexchange_guided_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="stackexchange_guided_err.txt"         # TODO: adjust error log
+#SBATCH --output="stackexchange_unguided_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="stackexchange_unguided_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
 #SBATCH --mail-type=START,END,FAIL  # Send email when the job ends or fails
 
 ### JOB STEPS START HERE ###
+cd "$(dirname "$(dirname "$PWD")")" || exit 1
+echo "Current working directory: $(pwd)"
+
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
@@ -37,6 +40,7 @@ else
     echo "Error: Virtual environment '$ENV_NAME' not found."
     exit 1
 fi
+
 # Run the Python script
 SCRIPT="run.py"
 
@@ -45,7 +49,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export SSL_CERT_FILE=$(python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
-python "$SCRIPT" --model "OpenLlama" --task "stackexchange" --type "guided"
+python "$SCRIPT" --model "OpenLlama" --task "stackexchange" --type "unguided"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then

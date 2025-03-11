@@ -19,6 +19,9 @@
 #SBATCH --mail-type=START,END,FAIL  # Send email when the job ends or fails
 
 ### JOB STEPS START HERE ###
+cd "$(dirname "$(dirname "$PWD")")" || exit 1
+echo "Current working directory: $(pwd)"
+
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules

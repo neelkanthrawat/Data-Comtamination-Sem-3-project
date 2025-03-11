@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=cb_unguided               # TODO: adjust job name
+#SBATCH --job-name=wsc_unguided               # TODO: adjust job name
 
-#SBATCH --time=00:08:00              # Job time limit (30 minutes)
+#SBATCH --time=00:14:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
@@ -11,14 +11,17 @@
 #SBATCH --mem=16GB 
 
 # Output and error logs
-#SBATCH --output="cb_unguided_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="cb_unguided_err.txt"         # TODO: adjust error log
+#SBATCH --output="wsc_unguided_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="wsc_unguided_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
 #SBATCH --mail-type=START,END,FAIL  # Send email when the job ends or fails
 
 ### JOB STEPS START HERE ###
+cd "$(dirname "$(dirname "$PWD")")" || exit 1
+echo "Current working directory: $(pwd)"
+
 # initialize shell to work with bash
 source ~/.bashrc
 # load the necessary modules
@@ -45,7 +48,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export SSL_CERT_FILE=$(python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
-python "$SCRIPT" --model "OpenLlama" --task "cb" --type "unguided"
+python "$SCRIPT" --model "OpenLlama" --task "wsc" --type "unguided"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
