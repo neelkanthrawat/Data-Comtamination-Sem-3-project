@@ -38,7 +38,7 @@ else
     exit 1
 fi
 # Run the Python script
-SCRIPT="run.py"
+SCRIPT="$HOME/run.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
