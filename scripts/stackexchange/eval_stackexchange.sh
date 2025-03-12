@@ -69,6 +69,8 @@ deactivate
 
 Run second script with DataContamEval env
 echo "Activating python environment: $ENV_NAME2"
+Run second script with DataContamEval env
+echo "Activating python environment: $ENV_NAME2"
 
 if [ -d "$ENV_NAME2" ]; then
     source "$ENV_NAME2/bin/activate"
@@ -81,6 +83,13 @@ echo "Running Python script: $SCRIPT2"
 srun python3 "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/{$TASK}_{$MODEL}_guided.csv" --name "{$TASK}_{$MODEL}"
 echo "Finished running Python script: $SCRIPT2"
 
+# Verify if the script executed successfully
+if [ $? -eq 0 ]; then
+    echo "Python script '$SCRIPT' executed successfully."
+else
+    echo "Error: Python script '$SCRIPT' failed."
+    exit 1
+fi
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
     echo "Python script '$SCRIPT' executed successfully."
