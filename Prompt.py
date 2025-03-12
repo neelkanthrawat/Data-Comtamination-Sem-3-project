@@ -14,7 +14,7 @@ class Prompt:
             ### PREMISE: {first_piece}
             ### LABEL: {label}
             ### HYPOTHESIS: """,
-            "stackexchange": """### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. Your response should not be very short and dont repeat sentences in your response.
+            "stackexchange": """### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. Dont just repeat sentences in your response.
             ### BEGINNING: {first_piece}
             """,
             "ag_news": """### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING.
