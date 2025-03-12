@@ -67,27 +67,27 @@ fi
 echo "Deactivating environment: $ENV_NAME"
 deactivate
 
-# Run second script with DataContamEval env
-# echo "Activating python environment: $ENV_NAME2"
+Run second script with DataContamEval env
+echo "Activating python environment: $ENV_NAME2"
 
-# if [ -d "$ENV_NAME2" ]; then
-#     source "$ENV_NAME2/bin/activate"
-#     echo "Environment '$ENV_NAME2' activated successfully."
-# else
-#     echo "Error: Virtual environment '$ENV_NAME2' not found."
-#     exit 1
-# fi
-# echo "Running Python script: $SCRIPT2"
-# srun python3 "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/$TASK\_$MODEL\_guided.csv" --name "$TASK\_$MODEL"
-# echo "Finished running Python script: $SCRIPT2"
+if [ -d "$ENV_NAME2" ]; then
+    source "$ENV_NAME2/bin/activate"
+    echo "Environment '$ENV_NAME2' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_NAME2' not found."
+    exit 1
+fi
+echo "Running Python script: $SCRIPT2"
+srun python3 "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/$TASK\_$MODEL\_guided.csv" --name "$TASK\_$MODEL"
+echo "Finished running Python script: $SCRIPT2"
 
-# # Verify if the script executed successfully
-# if [ $? -eq 0 ]; then
-#     echo "Python script '$SCRIPT' executed successfully."
-# else
-#     echo "Error: Python script '$SCRIPT' failed."
-#     exit 1
-# fi
+# Verify if the script executed successfully
+if [ $? -eq 0 ]; then
+    echo "Python script '$SCRIPT' executed successfully."
+else
+    echo "Error: Python script '$SCRIPT' failed."
+    exit 1
+fi
 
 COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
