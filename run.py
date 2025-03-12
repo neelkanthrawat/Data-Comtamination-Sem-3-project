@@ -156,6 +156,10 @@ def main():
             formatted_prompt = prompt_template.format(
                 first_piece=first_piece, label=sample["label"]
             )
+        if "meta_daat" in sample.keys():
+            formatted_prompt = prompt_template.format(
+                first_piece=first_piece, meta_data=sample["meta_data"]
+            )
         else:
             formatted_prompt = prompt_template.format(first_piece=first_piece)
 
