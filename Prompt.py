@@ -22,9 +22,10 @@ class Prompt:
             ### LABEL: {label}
             ### HYPOTHESIS: 
             """,
-            "stackexchange": """Finish the second piece based on the first piece, such that these two pieces become a single instance.
-            FIRST PIECE: {first_piece}
-            SECOND PIECE: """
+            "stackexchange": """
+            ### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. 
+            ### BEGINNING: {first_piece} 
+            """
         }
 
         self.guided_prompts = {
@@ -40,13 +41,10 @@ class Prompt:
             ### PREMISE: {first_piece}
             ### LABEL: {label}
             ### HYPOTHESIS:""",
-            # "stackexchange": """
-            # ### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DO more than just simply completing the BEGINNING. 
-            # ### BEGINNING: {first_piece} 
-            # """,
-            "stackexchange": """ You are provided with the first piece of an instance from the train split of the stackexchange part of the RedPajama Dataset. Finish the second piece of the instance as exactly appeared in the dataset. Only rely on the original form of the instance in the dataset to finish the second piece.
-            FIRST PIECE: {first_piece}
-            SECOND PIECE:"""
+            "stackexchange": """
+            ### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DO more than just simply completing the BEGINNING. 
+            ### BEGINNING: {first_piece} 
+            """,
         }
 
     def get_unguided_prompt(self, prompt_type):
