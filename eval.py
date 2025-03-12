@@ -101,16 +101,16 @@ def calc_scores(in_path: str):
 
 def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     if type(results_df_guided) == str:
-        path = os.path.join(results_df_guided.split("/"))
-        file_in = os.path.join(PROJECT_DIR, path)
-
+        # path = os.path.join(results_df_guided.split("/"))
+        # file_in = os.path.join(PROJECT_DIR, path)
+        file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_guided))
         with open(file_in, "r") as f:
             results_df_guided = pd.read_csv(f, sep=";")
 
     if type(results_df_unguided) == str:
-        path = os.path.join(results_df_unguided.split("/"))
-        file_in = os.path.join(PROJECT_DIR, path)
-
+        # path = os.path.join(results_df_unguided.split("/"))
+        # file_in = os.path.join(PROJECT_DIR, path)
+        file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_unguided))
         with open(file_in, "r") as f:
             results_df_unguided = pd.read_csv(f, sep=";")
 
