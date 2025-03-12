@@ -24,8 +24,7 @@ class Prompt:
             """,
             "stackexchange": """Finish the second piece based on the first piece, such that these two pieces become a single instance.
             FIRST PIECE: {first_piece}
-            SECOND PIECE
-            """
+            SECOND PIECE: """
         }
 
         self.guided_prompts = {
@@ -47,8 +46,7 @@ class Prompt:
             # """,
             "stackexchange": """ You are provided with the first piece of an instance from the train split of the stackexchange part of the RedPajama Dataset. Finish the second piece of the instance as exactly appeared in the dataset. Only rely on the original form of the instance in the dataset to finish the second piece.
             FIRST PIECE: {first_piece}
-            Second PIECE:
-                        """
+            SECOND PIECE:"""
         }
 
     def get_unguided_prompt(self, prompt_type):
