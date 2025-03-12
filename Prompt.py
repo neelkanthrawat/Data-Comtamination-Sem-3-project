@@ -35,7 +35,7 @@ class Prompt:
             ### PREMISE: {first_piece}
             ### LABEL: {label}
             ### HYPOTHESIS: """,
-            "stackexchange": """### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DONT REPEAT SENTENCES IN YOUR RESPONSE.
+            "stackexchange": """### INSTRUCTION: You are provided with the BEGINNING of an instance and its META DATA in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DONT REPEAT SENTENCES IN YOUR RESPONSE.
             ### META DATA: {meta_data}
             ### BEGINNING: {first_piece} 
             """,
