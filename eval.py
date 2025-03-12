@@ -49,6 +49,8 @@ def calc_scores(in_path: str):
 
     with open(file_in, "r") as f:
         pred_df = pd.read_csv(f, delimiter=';')
+    
+    print('_______I HAVE READ THE FILE________')
 
     results_df = pd.DataFrame(
         columns=[
@@ -146,6 +148,7 @@ def main():
     results_df_guided, res_path_guided = calc_scores(args.guided)
     results_df_unguided, res_path_unguided = calc_scores(args.unguided)
     calc_differences(results_df_guided, results_df_unguided, eval_name=args.name)
+    print('_BKLA BLA BLA BLA BLAB BLAB')
 
 
 if __name__ == "__main__":
