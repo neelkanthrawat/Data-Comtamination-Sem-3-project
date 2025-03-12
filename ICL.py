@@ -59,11 +59,11 @@ def load_mistral():
     return tokenizer, model
 
 
-def ICL_prompting(path: str, args):
+def ICL_prompting(in_path: str):
     """
     Only necessary for guided.
     """
-    path = os.path.join(PROJECT_DIR, path)
+    path = os.path.join(PROJECT_DIR, in_path)
 
     with open(path, "r") as f:
         df = pd.read_csv(f)
@@ -136,9 +136,7 @@ def ICL_prompting(path: str, args):
         }
 
     res_dir = os, path.join(PROJECT_DIR, "results")
-    res_path = os.path.join(
-        res_dir, f"{args.task}_{args.model}_{args.type}_prompting.csv"
-    )
+    res_path = os.path.join(res_dir, f"{in_path}_prompting.csv")
 
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
@@ -149,7 +147,7 @@ def ICL_prompting(path: str, args):
 
 def main():
     args = parse_args()
-    ICL_prompting(args.path, args)
+    ICL_prompting(args.guided)
 
 
 if __name__ == "__main__":
