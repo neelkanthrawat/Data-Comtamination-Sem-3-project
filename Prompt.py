@@ -23,7 +23,7 @@ class Prompt:
             ### HYPOTHESIS: 
             """,
             "stackexchange": """
-            ### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION!
+            ### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. 
             ### BEGINNING: {first_piece} 
             """
         }
