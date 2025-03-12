@@ -48,7 +48,7 @@ def calc_scores(in_path: str):
     file_in = os.path.join(PROJECT_DIR, path)
 
     with open(file_in, "r") as f:
-        pred_df = pd.read_csv(f)
+        pred_df = pd.read_csv(f, delimiter=';')
 
     results_df = pd.DataFrame(
         columns=[
