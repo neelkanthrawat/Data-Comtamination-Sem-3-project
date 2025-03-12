@@ -24,7 +24,9 @@ def load_openllama():
     path = "VMware/open-llama-7b-v2-open-instruct"  #'openlm-research/open_llama_7b_v2'#"VMware/open-llama-13b-open-instruct"  #'openlm-research/open_llama_13b'#
     print(f"Loading {path}...")
 
-    tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)#LlamaTokenizer.from_pretrained(path)
+    tokenizer = AutoTokenizer.from_pretrained(
+        path, use_fast=False
+    )  # LlamaTokenizer.from_pretrained(path)
 
     model = AutoModelForCausalLM.from_pretrained(
         path,
@@ -145,6 +147,10 @@ def main():
             first_piece, second_piece = dh.split_sentence(
                 sample["text"], split_with_char=0
             )
+        elif args.task == "ag_news":
+            first_piece, second_piece = dh.split_sentence(sample["text"])
+        elif args.task == "imdb":
+            first_piece, second_piece = dh.split_sentence(sample["text"])
 
         if "label" in sample.keys():
             formatted_prompt = prompt_template.format(

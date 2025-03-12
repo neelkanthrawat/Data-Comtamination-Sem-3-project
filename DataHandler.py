@@ -54,6 +54,14 @@ class DataHandler:
                 trust_remote_code=True,
                 split="train",
             )
+        elif dataset_name == "ag_news":
+            dataset = load_dataset(
+                "ag_news", split="test", streaming=True, trust_remote_code=True
+            )
+        elif dataset_name == "imdb":
+            dataset = load_dataset(
+                "stanfordnlp/imdb", split="test", streaming=True, trust_remote_code=True
+            )
         else:
             print(f"Dataset {dataset_name} was not found.")
             return None
@@ -65,7 +73,9 @@ class DataHandler:
         """
         if split_with_char:
             # Prioritize "." but only if it's not at the end
-            match = re.search(r"\.(?!$)", sentence)  # Ensures the period is not at the end
+            match = re.search(
+                r"\.(?!$)", sentence
+            )  # Ensures the period is not at the end
             if match:
                 idx = match.start() + 1
                 return sentence[:idx], sentence[idx:].strip()
