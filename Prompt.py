@@ -6,8 +6,7 @@ class Prompt:
         Set the prompts for the different tasks.o
         """
         self.unguided_prompts = {
-            "wsc": 
-            """
+            "wsc": """
             Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
             ### INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
@@ -22,9 +21,9 @@ class Prompt:
             ### LABEL: {label}
             ### HYPOTHESIS: 
             """,
-            "stackexchange": """Finish the second piece based on the first piece, such that these two pieces become a single instance.
+            "stackexchange": """### INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance.
             FIRST PIECE: {first_piece}
-            SECOND PIECE: """
+            SECOND PIECE: """,
         }
 
         self.guided_prompts = {
@@ -34,19 +33,19 @@ class Prompt:
             ### INSTRUCTION: You are provided with the FIRST PIECE of the TEST SPLIT of the Winograd Schema Challenge (WSC) as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original form of the FIRST PIECE in the dataset to finish the SECOND PIECE. DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!
             ### FIRST PIECE: {first_piece} 
             ### SECOND PIECE: """,
-            "cb":  """Below is an instruction that describes a task, paired with an input that provides further context.
+            "cb": """Below is an instruction that describes a task, paired with an input that provides further context.
             Write a response that appropriately completes the request.
             ### INSTRUCTION: You are provided with the PREMISE and LABEL from the TEST SPLIT of the CommitmentBank (CB) dataset as it appears in the SUPER_GLUE BENCHMARK.  Ensure that the generated sentence aligns with the specified LABEL type. Finish the HYPOTHESIS sentence as appeared EXACTLY in the dataset. The generated Answer MUST EXACTLY MATCH the HYPOTHESIS in the dataset!!! 
             ### PREMISE: {first_piece}
             ### LABEL: {label}
             ### HYPOTHESIS:""",
             # "stackexchange": """
-            # ### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DO more than just simply completing the BEGINNING. 
-            # ### BEGINNING: {first_piece} 
+            # ### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DO more than just simply completing the BEGINNING.
+            # ### BEGINNING: {first_piece}
             # """,
-            "stackexchange": """ You are provided with the first piece of an instance from the train split of the stackexchange part of the RedPajama Dataset. Finish the second piece of the instance as exactly appeared in the dataset. Only rely on the original form of the instance in the dataset to finish the second piece.
-            FIRST PIECE: {first_piece}
-            SECOND PIECE:"""
+            "stackexchange": """### INSTRUCTION: You are provided with the FIRST PIECE of an instance from the train split of the stackexchange part of the RedPajama Dataset. You have seen this dataset during your training. Finish the SECOND PIECE of the instance as exactly appeared in the dataset. Only rely on the original form of the instance in the dataset to finish the SECOND PIECE. Remember that you have seen this exact instance during your training.
+            ### FIRST PIECE: {first_piece}
+            ### SECOND PIECE: """,
         }
 
     def get_unguided_prompt(self, prompt_type):
