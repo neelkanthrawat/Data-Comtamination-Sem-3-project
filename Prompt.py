@@ -42,7 +42,7 @@ class Prompt:
             ### LABEL: {label}
             ### HYPOTHESIS:""",
             "stackexchange": """
-            ### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset. Finish the complete instance as EXACTLY appeared in the dataset such that the BEGINNING we provided and your answer become a single instance of the dataset. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! 
+            ### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the Stackexchange part of the RedPajama dataset. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET! DO more than just simply completing the BEGINNING. 
             ### BEGINNING: {first_piece} 
             """,
         }
