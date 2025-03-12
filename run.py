@@ -173,7 +173,7 @@ def main():
         start_index_answer = len(encoded_prompt["input_ids"][0])
 
         if args.task == "stackexchange":
-            max_len = 3000
+            max_len = 1000
         else:
             max_len = 100
 
