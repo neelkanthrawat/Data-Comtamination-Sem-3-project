@@ -45,7 +45,8 @@ def calc_scores(in_path: str):
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
     print(f'in_path is:{in_path}')
-    path = os.path.join(in_path.split("/"))
+    # path = os.path.join(in_path.split("/"))
+    path = os.path.normpath(in_path)
     file_in = os.path.join(PROJECT_DIR, path)
 
     with open(file_in, "r") as f:
