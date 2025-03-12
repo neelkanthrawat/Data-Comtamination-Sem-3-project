@@ -66,7 +66,7 @@ def ICL_prompting(in_path: str):
     path = os.path.join(PROJECT_DIR, in_path)
 
     with open(path, "r") as f:
-        df = pd.read_csv(f)
+        df = pd.read_csv(f, delimiter=';')
 
     tokenizer, model = load_mistral()
 
