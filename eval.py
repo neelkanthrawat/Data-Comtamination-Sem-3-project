@@ -82,7 +82,7 @@ def calc_scores(in_path: str):
 
         results_df.loc[index] = {
             "Index": index,
-            "Label": row["label"] if "label" in row.columns() else None,
+            #"Label": row["Label"] if "Label" in row.columns() else None,
             "First piece": first_piece,
             "Gold": gold,
             "Prediction": prediction,
