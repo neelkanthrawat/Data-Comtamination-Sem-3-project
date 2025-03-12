@@ -172,7 +172,7 @@ def main():
             max_new_tokens=max_len,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
-            temperature=0.2,
+            temperature=0.15,
             do_sample=True,
         )[0][start_index_answer:]
 
