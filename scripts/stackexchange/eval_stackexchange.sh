@@ -52,7 +52,6 @@ else
 fi
 
 echo "Running Python script: $SCRIPT"
-# srun python3 "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/$TASK/$MODEL/_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/$TASK/$MODEL\_unguided.csv" --name "$TASK\_$MODEL"
 srun python3 "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_unguided.csv" --name "$TASK_$MODEL"
 
 echo "Finished running Python script: $SCRIPT"

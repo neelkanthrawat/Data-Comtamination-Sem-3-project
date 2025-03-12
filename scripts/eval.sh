@@ -54,7 +54,7 @@ fi
 for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         echo "Running model: $model, task: $task"
-        srun python3 "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/$task\_$model\_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/$task\_$model\_unguided.csv" --name "$task\_$model"
+        srun python3 "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/{$task_$model}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/{$task}_{$model}_unguided.csv" --name "{$task}_{$model}"
 
         # Verify if the script executed successfully
         if [ $? -eq 0 ]; then
@@ -83,7 +83,7 @@ fi
 for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         echo "Running model: $model, task: $task"
-        srun python3 "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/$task\_$model\_guided.csv" --name "$task\_$model"
+        srun python3 "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/{$task}_{$model}\_guided.csv" --name "{$task}_{$model}"
 
         # Verify if the script executed successfully
         if [ $? -eq 0 ]; then
