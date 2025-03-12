@@ -24,7 +24,7 @@ def load_openllama():
     path = "VMware/open-llama-7b-v2-open-instruct"  #'openlm-research/open_llama_7b_v2'#"VMware/open-llama-13b-open-instruct"  #'openlm-research/open_llama_13b'#
     print(f"Loading {path}...")
 
-    tokenizer = LlamaTokenizer.from_pretrained(path)
+    tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)#LlamaTokenizer.from_pretrained(path)
 
     model = AutoModelForCausalLM.from_pretrained(
         path,
@@ -172,7 +172,7 @@ def main():
             max_new_tokens=max_len,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
-            temperature=0.4,
+            temperature=0.2,
             do_sample=True,
         )[0][start_index_answer:]
 
