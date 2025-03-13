@@ -136,7 +136,7 @@ def main():
     )
 
     for index, sample in enumerate(dataset):
-        print(sample)
+        print(sample.keys())
         if args.task == "cb":
             first_piece = sample["premise"]
             second_piece = sample["hypothesis"]
