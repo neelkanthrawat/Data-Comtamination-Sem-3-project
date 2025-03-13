@@ -28,7 +28,7 @@ module load devel/python/3.12.3_gnu_13.3
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
 MODELS=("Llama")
-TASKS=("ag_news", "imdb")
+TASKS=("ag_news" "imdb")
 
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
