@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=eval_all              # TODO: adjust job name
+#SBATCH --job-name=eval_all_llama             # TODO: adjust job name
 
 #SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
@@ -11,8 +11,8 @@
 #SBATCH --mem=16GB 
 
 # Output and error logs
-#SBATCH --output="eval_all_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="eval_all_err.txt"         # TODO: adjust error log
+#SBATCH --output="eval_all_llama_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="eval_all_llama_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
@@ -27,8 +27,8 @@ module load devel/cuda/11.8
 module load devel/python/3.12.3_gnu_13.3
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
-MODELS=("OpenLlama")
-TASKS=("cb" "wsc" "stackexchange")
+MODELS=("Llama")
+TASKS=("ag_news", "imdb")
 
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
