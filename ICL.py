@@ -43,10 +43,10 @@ def load_mistral():
     """
     Load the Mistral model and the tokenizer.
     """
-    path = "mistralai/Mistral-7B-v0.3"
+    path = "mistralai/Mistral-7B-Instruct-v0.3"
     print(f"Loading {path}...")
 
-    tokenizer = AutoTokenizer.from_pretrained(path)
+    tokenizer = AutoTokenizer.from_pretrained(path, timeout=500)
 
     model = AutoModelForCausalLM.from_pretrained(
         path,
@@ -54,6 +54,7 @@ def load_mistral():
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
         device_map="auto",
+        timeout=500,
     )
 
     return tokenizer, model
@@ -66,7 +67,7 @@ def ICL_prompting(in_path: str):
     path = os.path.join(PROJECT_DIR, in_path)
 
     with open(path, "r") as f:
-        df = pd.read_csv(f, delimiter=';')
+        df = pd.read_csv(f, delimiter=";")
 
     tokenizer, model = load_mistral()
 
