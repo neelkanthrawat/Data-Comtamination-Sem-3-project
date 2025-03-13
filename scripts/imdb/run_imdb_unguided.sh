@@ -3,7 +3,7 @@
 # Job name
 #SBATCH --job-name=imdb_unguided               # TODO: adjust job name
 
-#SBATCH --time=00:08:00              # Job time limit (30 minutes)
+#SBATCH --time=00:15:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task

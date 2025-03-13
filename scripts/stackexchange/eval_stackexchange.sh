@@ -3,7 +3,7 @@
 # Job name
 #SBATCH --job-name=eval_stackexchange # TODO: adjust job name
 
-#SBATCH --time=00:15:00              # Job time limit (30 minutes)
+#SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
@@ -42,32 +42,32 @@ export SSL_CERT_FILE=$($ENV_NAME/bin/python -m certifi)
 export SSL_CERT_FILE=$($ENV_NAME2/bin/python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
-# Run first script with DataContam env
-# echo "Activating python environment: $ENV_NAME"
+Run first script with DataContam env
+echo "Activating python environment: $ENV_NAME"
 
-# if [ -d "$ENV_NAME" ]; then
-#     source "$ENV_NAME/bin/activate"
-#     echo "Environment '$ENV_NAME' activated successfully."
-# else
-#     echo "Error: Virtual environment '$ENV_NAME' not found."
-#     exit 1
-# fi
+if [ -d "$ENV_NAME" ]; then
+    source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_NAME' not found."
+    exit 1
+fi
 
-# echo "Running Python script: $SCRIPT"
-# python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_unguided.csv" --name "${TASK}_${MODEL}"
+echo "Running Python script: $SCRIPT"
+python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_unguided.csv" --name "${TASK}_${MODEL}"
 
-# echo "Finished running Python script: $SCRIPT"
+echo "Finished running Python script: $SCRIPT"
 
-# # Verify if the script executed successfully
-# if [ $? -eq 0 ]; then
-#     echo "Python script '$SCRIPT' executed successfully."
-# else
-#     echo "Error: Python script '$SCRIPT' failed."
-#     exit 1
-# fi
+# Verify if the script executed successfully
+if [ $? -eq 0 ]; then
+    echo "Python script '$SCRIPT' executed successfully."
+else
+    echo "Error: Python script '$SCRIPT' failed."
+    exit 1
+fi
 
-# echo "Deactivating environment: $ENV_NAME"
-# deactivate
+echo "Deactivating environment: $ENV_NAME"
+deactivate
 
 echo "Activating python environment: $ENV_NAME2"
 
