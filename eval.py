@@ -73,7 +73,7 @@ def calc_scores(in_path: str):
         label = row["Label"]
         first_piece = row["First piece"]
         gold = row["Gold"]
-        prediction = row["Prediction"]
+        prediction = row["Prediction"] if row["Prediction"] is not None else ""
 
         bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
         rouge_score = rouge.compute(predictions=[prediction], references=[gold])
