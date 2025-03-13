@@ -129,7 +129,7 @@ def ICL_prompting(in_path: str):
 
         results_df.loc[index] = {
             "Index": index,
-            "Label": row["label"] if "label" in row.columns() else None,
+            #"Label": row["label"] if "label" in row.columns() else None,
             "First piece": row["Prediction"],
             "Gold": row["Gold"],
             "Prediction": decoded_out,
