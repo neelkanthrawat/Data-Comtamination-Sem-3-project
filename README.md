@@ -64,3 +64,12 @@ python -m pip install pandas evaluate rouge_score git+https://github.com/google-
 python -m pip install pandas evaluate rouge_score git+https://github.com/google-research/bleurt.git accelerate requests fsspec tensorflow[and-cuda]
 
 ```
+
+## Outputs
+
+| Batch File               | Python File | Args                  | Output                                                                                                  |
+| ------------------------ | ----------- | --------------------- | ------------------------------------------------------------------------------------------------------- |
+| `run*{task}_unguided.sh` | `run.py`    | model, task, unguided | `{task}*{model}_unguided.sh`                                                                            |
+| `run*{task}_guided.sh`   | `run.py`    | model, task, guided   | `{task}*{model}_guided.sh`                                                                              |
+| `eval_{task}.sh`         | `eval.py`   | model, task, name     | `{task}_{model}_guided_scores.sh`, `{task}_{model}_unguided_scores.sh`, `{task}_{model}_differences.sh` |
+| `eval_{task}.sh`         | `ICL.py`    | guided, name          | `{task}_{model}_prompting.sh`                                                                           |
