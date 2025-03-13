@@ -108,7 +108,7 @@ def ICL_prompting(in_path: str):
 
     for index, row in df.iterrows():
         formatted_prompt = prompt_template.format(
-            ref_text=row["Gold"], cand_text=row["Prediction"]
+            ref_text=row["Gold"], cand_text=row["Gold"]
         )
 
         print(f"-------- Formatted prompt: --------\n{formatted_prompt}", flush=True)
