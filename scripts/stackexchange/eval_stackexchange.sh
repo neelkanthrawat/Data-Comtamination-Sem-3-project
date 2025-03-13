@@ -68,9 +68,6 @@ export TF_CPP_MIN_LOG_LEVEL=2
 # echo "Deactivating environment: $ENV_NAME"
 # deactivate
 
-Run second script with DataContam env
-echo "Activating python environment: $ENV_NAME2"
-Run second script with DataContamEval env
 echo "Activating python environment: $ENV_NAME2"
 
 if [ -d "$ENV_NAME2" ]; then
