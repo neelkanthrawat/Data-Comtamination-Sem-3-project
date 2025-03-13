@@ -42,7 +42,7 @@ which pip
 ```
 
 ```shell
-python -m pip install transformers torch pandas datasets 'accelerate>=0.26.0' sentencepiece
+python -m pip install transformers torch pandas datasets 'accelerate>=0.26.0' sentencepiece google protobuf
 ```
 
 ### Environment for evaluating
