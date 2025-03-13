@@ -111,9 +111,14 @@ def ICL_prompting(in_path: str):
             ref_text=row["Gold"], cand_text=row["Prediction"]
         )
 
+        print(f"-------- Formatted prompt: --------\n{formatted_prompt}", flush=True)
+        print("------------------------")
+
         encoded_prompt = tokenizer(
             formatted_prompt, return_tensors="pt", add_special_tokens=True
         )
+
+        start_index_answer = len(encoded_prompt["input_ids"][0])
 
         out = model.generate(
             encoded_prompt["input_ids"].to(DEVICE),
@@ -122,21 +127,25 @@ def ICL_prompting(in_path: str):
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.2,
             do_sample=True,
-        )[0]
+        )[0][start_index_answer:]
 
         decoded_out = tokenizer.decode(out, skip_special_tokens=True)
         decoded_out = decoded_out.strip()
 
+        print(f"-------- Output: --------\n{decoded_out}", flush=True)
+        print("------------------------", end="\n\n")
+
         results_df.loc[index] = {
             "Index": index,
-            #"Label": row["label"] if "label" in row.columns() else None,
+            # "Label": row["label"] if "label" in row.columns() else None,
             "First piece": row["Prediction"],
             "Gold": row["Gold"],
             "Prediction": decoded_out,
         }
 
+    prefix = in_path.split(".")[0]
     res_dir = os.path.join(PROJECT_DIR, "results")
-    res_path = os.path.join(res_dir, f"{in_path}_prompting.csv")
+    res_path = os.path.join(res_dir, f"{prefix}_prompting.csv")
 
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
