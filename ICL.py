@@ -46,7 +46,7 @@ def load_mistral():
     path = "mistralai/Mistral-7B-Instruct-v0.3"
     print(f"Loading {path}...")
 
-    tokenizer = AutoTokenizer.from_pretrained(path, timeout=500)
+    tokenizer = AutoTokenizer.from_pretrained(path)
 
     model = AutoModelForCausalLM.from_pretrained(
         path,
@@ -54,7 +54,6 @@ def load_mistral():
         low_cpu_mem_usage=True,
         torch_dtype=torch.float16,
         device_map="auto",
-        timeout=500,
     )
 
     return tokenizer, model
