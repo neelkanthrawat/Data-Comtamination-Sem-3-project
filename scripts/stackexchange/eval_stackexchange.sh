@@ -3,9 +3,9 @@
 # Job name
 #SBATCH --job-name=eval_stackexchange # TODO: adjust job name
 
-#SBATCH --time=00:30:00              # Job time limit (30 minutes)
+#SBATCH --time=00:15:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
-#SBATCH --gres=gpu:2                 # Request 2 GPUs
+#SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=dev_gpu_4
 #SBATCH --mem=16GB 
@@ -24,6 +24,7 @@ source ~/.bashrc
 # load the necessary modules
 module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
+module devel/python/3.12.3_gnu_13.3
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
 TASK="stackexchange"
