@@ -138,9 +138,10 @@ def ICL_prompting(in_path: str):
         results_df.loc[index] = {
             "Index": index,
             # "Label": row["label"] if "label" in row.columns() else None,
-            "First piece": row["Prediction"],
+            "First piece": row["First piece"],
             "Gold": row["Gold"],
-            "Prediction": decoded_out,
+            "Prediction": row["Prediction"],
+            "Mistral": decoded_out,
         }
 
     prefix = in_path.split(".")[0]
