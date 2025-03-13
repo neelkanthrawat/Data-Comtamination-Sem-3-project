@@ -24,7 +24,7 @@ source ~/.bashrc
 # load the necessary modules
 module load devel/miniconda/23.9.0-py3.9.15
 module load devel/cuda/11.8
-module devel/python/3.12.3_gnu_13.3
+module load devel/python/3.12.3_gnu_13.3
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
 MODELS=("OpenLlama")
