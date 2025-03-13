@@ -56,7 +56,7 @@ class DataHandler:
             )
         elif dataset_name == "ag_news":
             dataset = load_dataset(
-                "ag_news", split="test", streaming=True, trust_remote_code=True
+                "fancyzhx/ag_news", split="test", streaming=True, trust_remote_code=True
             )
         elif dataset_name == "imdb":
             dataset = load_dataset(
