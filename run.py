@@ -41,7 +41,7 @@ def load_llama():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Llama-3.2-3B"
+    path = "meta-llama/Llama-3.2-3B-Instruct"  # "meta-llama/Llama-3.2-3B"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path)
 
