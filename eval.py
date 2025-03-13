@@ -90,10 +90,11 @@ def calc_scores(in_path: str):
             "ROUGEL": rouge_score["rougeL"],
         }
 
-    res_path = os.path.join(PROJECT_DIR, "results", f"{in_path}_scores.csv")
+    res_dir = os.path.join(PROJECT_DIR, "results")
+    res_path = os.path.join(res_dir, f"{in_path}_scores.csv")
 
-    if not os.path.exists("results"):
-        os.makedirs("results")
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
 
     results_df.to_csv(res_path, index=False, sep="||")
     print(f"Results saved to {res_path}")
