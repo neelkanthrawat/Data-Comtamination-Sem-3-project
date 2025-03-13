@@ -211,7 +211,7 @@ def main():
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
 
-    results_df.to_csv(res_path, index=False, sep="||")
+    results_df.to_csv(res_path, index=False, sep="|")
     print(f"Results saved to {res_path}")
 
 

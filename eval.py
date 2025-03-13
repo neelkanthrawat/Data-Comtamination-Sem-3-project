@@ -50,7 +50,7 @@ def calc_scores(in_path: str):
     file_in = os.path.join(PROJECT_DIR, in_path)
 
     with open(file_in, "r") as f:
-        pred_df = pd.read_csv(f, delimiter="||")
+        pred_df = pd.read_csv(f, delimiter="|")
 
     print("_______I HAVE READ THE FILE________")
 
@@ -96,7 +96,7 @@ def calc_scores(in_path: str):
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
 
-    results_df.to_csv(res_path, index=False, sep="||")
+    results_df.to_csv(res_path, index=False, sep="|")
     print(f"Results saved to {res_path}")
 
     return results_df, res_path
@@ -108,14 +108,14 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
         # file_in = os.path.join(PROJECT_DIR, path)
         file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_guided))
         with open(file_in, "r") as f:
-            results_df_guided = pd.read_csv(f, sep="||")
+            results_df_guided = pd.read_csv(f, sep="|")
 
     if type(results_df_unguided) == str:
         # path = os.path.join(results_df_unguided.split("/"))
         # file_in = os.path.join(PROJECT_DIR, path)
         file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_unguided))
         with open(file_in, "r") as f:
-            results_df_unguided = pd.read_csv(f, sep="||")
+            results_df_unguided = pd.read_csv(f, sep="|")
 
     diff_df = pd.DataFrame(
         columns=[
@@ -142,7 +142,7 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
         res_path = os.path.join(PROJECT_DIR, "results", f"differences.csv")
     else:
         res_path = os.path.join(PROJECT_DIR, "results", f"{eval_name}_differences.csv")
-    diff_df.to_csv(res_path, index=False, sep="||")
+    diff_df.to_csv(res_path, index=False, sep="|")
     print(f"Differences saved to {res_path}")
 
 

@@ -66,7 +66,7 @@ def ICL_prompting(in_path: str):
     path = os.path.join(PROJECT_DIR, in_path)
 
     with open(path, "r") as f:
-        df = pd.read_csv(f, delimiter="||")
+        df = pd.read_csv(f, delimiter="|")
 
     tokenizer, model = load_mistral()
 
@@ -151,7 +151,7 @@ def ICL_prompting(in_path: str):
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
 
-    results_df.to_csv(res_path, index=False, sep="||")
+    results_df.to_csv(res_path, index=False, sep="|")
     print(f"Results saved to {res_path}")
 
 
