@@ -153,15 +153,11 @@ def main():
         elif args.task == "imdb":
             first_piece, second_piece = dh.split_sentence(sample["text"])
 
-        if "label" in sample.keys():
+        if "label" in [key.strip().lower() for key in sample.keys()]:
             formatted_prompt = prompt_template.format(
                 first_piece=first_piece, label=sample["label"]
             )
-        if "Label" in sample.keys():
-            formatted_prompt = prompt_template.format(
-                first_piece=first_piece, label=sample["Label"]
-            )
-        if "meta" in sample.keys():
+        elif "meta" in sample.keys():
             formatted_prompt = prompt_template.format(
                 first_piece=first_piece, meta_data=sample["meta"]
             )

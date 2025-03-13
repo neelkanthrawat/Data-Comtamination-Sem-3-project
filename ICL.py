@@ -71,7 +71,7 @@ def ICL_prompting(in_path: str):
     tokenizer, model = load_mistral()
 
     prompt_template = """
-        Instruction: You are provided with a reference text and a candidate text. The candidate text is a generated replica of the reference text. Your task is to determine if the candidate text is an exact or near-exact match of the reference text. Near-exact match candidates must precisely match the reference candidates in terms of sentence structure, overlap, and contextual similarity. Respond only with ”Yes” or ”No”. Exact matches must be identical to the reference text.
+        Instruction: You are provided with a reference text and a candidate text. The candidate text is a generated replica of the reference text. Your task is to determine if the candidate text is an exact or near-exact match of the reference text. Near-exact match candidates must precisely match the reference candidates in terms of sentence structure, overlap, and contextual similarity. Respond only with ”Yes” or ”No”.
         
         Example 1:  
         Reference Text: The cat waited at the top. 
