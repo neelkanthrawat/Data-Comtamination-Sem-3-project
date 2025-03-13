@@ -200,7 +200,7 @@ def main():
             "Prediction": decoded_out,
         }
 
-        if index > 10:
+        if index > 1000:
             break
 
     res_dir = os.path.join(PROJECT_DIR, "results")
