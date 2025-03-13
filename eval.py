@@ -44,15 +44,15 @@ def calc_scores(in_path: str):
     """
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
-    print(f'in_path is:{in_path}')
+    print(f"in_path is:{in_path}")
     # path = os.path.join(in_path.split("/"))
-    #path = os.path.normpath(in_path)
+    # path = os.path.normpath(in_path)
     file_in = os.path.join(PROJECT_DIR, in_path)
 
     with open(file_in, "r") as f:
-        pred_df = pd.read_csv(f, delimiter=';')
-    
-    print('_______I HAVE READ THE FILE________')
+        pred_df = pd.read_csv(f, delimiter="||")
+
+    print("_______I HAVE READ THE FILE________")
 
     results_df = pd.DataFrame(
         columns=[
@@ -82,7 +82,7 @@ def calc_scores(in_path: str):
 
         results_df.loc[index] = {
             "Index": index,
-            #"Label": row["Label"] if "Label" in row.columns() else None,
+            # "Label": row["Label"] if "Label" in row.columns() else None,
             "First piece": first_piece,
             "Gold": gold,
             "Prediction": prediction,
@@ -95,7 +95,7 @@ def calc_scores(in_path: str):
     if not os.path.exists("results"):
         os.makedirs("results")
 
-    results_df.to_csv(res_path, index=False, sep=";")
+    results_df.to_csv(res_path, index=False, sep="||")
     print(f"Results saved to {res_path}")
 
     return results_df, res_path
@@ -107,14 +107,14 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
         # file_in = os.path.join(PROJECT_DIR, path)
         file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_guided))
         with open(file_in, "r") as f:
-            results_df_guided = pd.read_csv(f, sep=";")
+            results_df_guided = pd.read_csv(f, sep="||")
 
     if type(results_df_unguided) == str:
         # path = os.path.join(results_df_unguided.split("/"))
         # file_in = os.path.join(PROJECT_DIR, path)
         file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_unguided))
         with open(file_in, "r") as f:
-            results_df_unguided = pd.read_csv(f, sep=";")
+            results_df_unguided = pd.read_csv(f, sep="||")
 
     diff_df = pd.DataFrame(
         columns=[
@@ -141,7 +141,7 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
         res_path = os.path.join(PROJECT_DIR, "results", f"differences.csv")
     else:
         res_path = os.path.join(PROJECT_DIR, "results", f"{eval_name}_differences.csv")
-    diff_df.to_csv(res_path, index=False, sep=";")
+    diff_df.to_csv(res_path, index=False, sep="||")
     print(f"Differences saved to {res_path}")
 
 
@@ -150,7 +150,7 @@ def main():
     results_df_guided, res_path_guided = calc_scores(args.guided)
     results_df_unguided, res_path_unguided = calc_scores(args.unguided)
     calc_differences(results_df_guided, results_df_unguided, eval_name=args.name)
-    print('_BKLA BLA BLA BLA BLAB BLAB')
+    print("_BKLA BLA BLA BLA BLAB BLAB")
 
 
 if __name__ == "__main__":
