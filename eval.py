@@ -45,8 +45,6 @@ def calc_scores(in_path: str):
     Calculate the BLEURT and ROUGEL score for the predictions.
     """
     print(f"in_path is:{in_path}")
-    # path = os.path.join(in_path.split("/"))
-    # path = os.path.normpath(in_path)
     file_in = os.path.join(PROJECT_DIR, in_path)
 
     with open(file_in, "r") as f:
@@ -104,15 +102,11 @@ def calc_scores(in_path: str):
 
 def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     if type(results_df_guided) == str:
-        # path = os.path.join(results_df_guided.split("/"))
-        # file_in = os.path.join(PROJECT_DIR, path)
         file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_guided))
         with open(file_in, "r") as f:
             results_df_guided = pd.read_csv(f, sep="|")
 
     if type(results_df_unguided) == str:
-        # path = os.path.join(results_df_unguided.split("/"))
-        # file_in = os.path.join(PROJECT_DIR, path)
         file_in = os.path.normpath(os.path.join(PROJECT_DIR, results_df_unguided))
         with open(file_in, "r") as f:
             results_df_unguided = pd.read_csv(f, sep="|")
@@ -120,6 +114,10 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     diff_df = pd.DataFrame(
         columns=[
             "Index",
+            "First piece",
+            "Gold",
+            "Prediction unguided",
+            "Prediction guided",
             "BLEURT guided",
             "BLEURT unguided",
             "BLEURT_diff",
@@ -137,6 +135,14 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     diff_df["BLEURT unguided"] = results_df_unguided["BLEURT"]
     diff_df["ROUGEL guided"] = results_df_guided["ROUGEL"]
     diff_df["ROUGEL unguided"] = results_df_unguided["ROUGEL"]
+
+    assert results_df_guided["First piece"].equals(results_df_unguided["First piece"])
+    assert results_df_guided["Gold"].equals(results_df_unguided["Gold"])
+
+    diff_df["First piece"] = results_df_guided["First piece"]
+    diff_df["Gold"] = results_df_guided["Gold"]
+    diff_df["Prediction unguided"] = results_df_unguided["Prediction"]
+    diff_df["Prediction guided"] = results_df_guided["Prediction"]
 
     if eval_name is None:
         res_path = os.path.join(PROJECT_DIR, "results", f"differences.csv")

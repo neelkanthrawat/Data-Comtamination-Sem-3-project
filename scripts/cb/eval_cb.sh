@@ -54,7 +54,7 @@ else
 fi
 
 echo "Running Python script: $SCRIPT"
-python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_unguided.csv" --name "$TASK_$MODEL"
+python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_unguided.csv" --name "${TASK}_${MODEL}"
 echo "Finished running Python script: $SCRIPT"
 
 # Verify if the script executed successfully
