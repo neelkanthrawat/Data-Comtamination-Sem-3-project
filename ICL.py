@@ -135,7 +135,7 @@ def ICL_prompting(in_path: str):
             "Prediction": decoded_out,
         }
 
-    res_dir = os, path.join(PROJECT_DIR, "results")
+    res_dir = os.path.join(PROJECT_DIR, "results")
     res_path = os.path.join(res_dir, f"{in_path}_prompting.csv")
 
     if not os.path.exists(res_dir):
