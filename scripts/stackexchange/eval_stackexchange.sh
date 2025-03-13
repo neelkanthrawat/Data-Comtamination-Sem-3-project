@@ -84,16 +84,9 @@ echo "Finished running Python script: $SCRIPT2"
 
 # Verify if the script executed successfully
 if [ $? -eq 0 ]; then
-    echo "Python script '$SCRIPT' executed successfully."
+    echo "Python script '$SCRIPT2' executed successfully."
 else
-    echo "Error: Python script '$SCRIPT' failed."
-    exit 1
-fi
-# Verify if the script executed successfully
-if [ $? -eq 0 ]; then
-    echo "Python script '$SCRIPT' executed successfully."
-else
-    echo "Error: Python script '$SCRIPT' failed."
+    echo "Error: Python script '$SCRIPT2' failed."
     exit 1
 fi
 

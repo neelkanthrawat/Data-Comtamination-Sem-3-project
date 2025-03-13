@@ -38,7 +38,8 @@ SCRIPT="$HOME/Data-Comtamination-Sem-3-project/eval.py"
 SCRIPT2="$HOME/Data-Comtamination-Sem-3-project/ICL.py"
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export SSL_CERT_FILE=$(python -m certifi)
+export SSL_CERT_FILE=$($ENV_NAME/bin/python -m certifi)
+export SSL_CERT_FILE=$($ENV_NAME2/bin/python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
 # Run first script with DataContam env
