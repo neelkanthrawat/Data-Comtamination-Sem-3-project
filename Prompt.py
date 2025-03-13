@@ -17,14 +17,14 @@ class Prompt:
             "stackexchange": """### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. Dont just repeat sentences in your response.
             ### BEGINNING: {first_piece}
             """,
-            "ag_news": """### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING.
-            ### LABEL: {label}
-            ### BEGINNING: {first_piece}
-            """,
-            "imdb": """### INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. 
-            ### LABEL: {label}
-            ### BEGINNING: {first_piece}
-            """,
+            "ag_news": """INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING.
+            LABEL: {label}
+            BEGINNING: {first_piece}
+            CONTINUATION: """,
+            "imdb": """INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. 
+            LABEL: {label}
+            BEGINNING: {first_piece}
+            CONTINUATION: """,
         }
 
         self.guided_prompts = {
@@ -39,14 +39,14 @@ class Prompt:
             ### META DATA: {meta_data}
             ### BEGINNING: {first_piece} 
             """,
-            "ag_news": """### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the AG News dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the TITLE or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET!
-            ### LABEL: {label}
-            ### BEGINNING: {first_piece}
-            """,
-            "imdb": """### INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the IMDB dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the TITLE in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET!
-            ### LABEL: {label}
-            ### BEGINNING: {first_piece} 
-            """,
+            "ag_news": """You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the AG News dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. DON'T JUST REPEAT the TITLE or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET!
+            LABEL: {label}
+            BEGINNING: {first_piece}
+            CONTINUATION: """,
+            "imdb": """INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the IMDB dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset ensuring that the BEGINNING that we provide and YOUR ANSWER, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the TITLE in the dataset to finish the instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET!
+            LABEL: {label}
+            BEGINNING: {first_piece}
+            CONTINUATION:""",
         }
 
     def get_unguided_prompt(self, prompt_type):
