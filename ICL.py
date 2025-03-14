@@ -122,7 +122,7 @@ def ICL_prompting(in_path: str):
 
         out = model.generate(
             encoded_prompt["input_ids"].to(DEVICE),
-            max_new_tokens=100,
+            max_new_tokens=30,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
             temperature=0.2,
