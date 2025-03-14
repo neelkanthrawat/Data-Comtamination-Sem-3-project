@@ -5,9 +5,8 @@
 
 #SBATCH --time=00:30:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
-#SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
-#SBATCH --partition=gpu_4
+#SBATCH --partition=dev_single
 #SBATCH --mem=16GB 
 
 # Output and error logs

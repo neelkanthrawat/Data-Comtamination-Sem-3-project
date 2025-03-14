@@ -53,9 +53,7 @@ def resample_scores(scores, num_resample):
     return means
 
 
-def calculate_p_value(
-    scores, num_resample, guided="BLEURT guided", unguided="BLEURT unguided"
-):
+def calculate_p_value(scores, num_resample, guided, unguided):
     guided_means = resample_scores(scores[guided], 1000)
     unguided_means = resample_scores(scores[unguided], 1000)
 
