@@ -98,7 +98,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    calculate_statistics(args.scores, args.icl)
+    calculate_statistics(args.diffs, args.icl)
 
 
 if __name__ == "__main__":
