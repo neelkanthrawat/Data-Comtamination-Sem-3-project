@@ -1,5 +1,5 @@
 import pandas as pd
-import Path
+from pathlib import Path
 import os
 
 HOME = Path.home()
