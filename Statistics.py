@@ -54,8 +54,8 @@ def resample_scores(scores, num_resample):
 
 
 def calculate_p_value(scores, num_resample, guided, unguided):
-    guided_means = resample_scores(scores[guided], 1000)
-    unguided_means = resample_scores(scores[unguided], 1000)
+    guided_means = resample_scores(scores[guided], num_resample)
+    unguided_means = resample_scores(scores[unguided], num_resample)
 
     count = 0
 
