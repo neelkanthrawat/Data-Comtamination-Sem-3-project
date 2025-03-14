@@ -67,7 +67,7 @@ class DataHandler:
             return None
         return dataset
 
-    def split_sentence(self, sentence, split_with_char=True):
+    def split_sentence(self, sentence, split_with_char=False):
         """
         Function to split a sentence, prioritizing "." (not at end), "than", then other punctuation
         """

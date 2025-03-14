@@ -73,9 +73,9 @@ def calc_scores(in_path: str):
         label = row["Label"]
         first_piece = row["First piece"]
         gold = row["Gold"]
-        prediction = row["Prediction"] if row["Prediction"]
+        prediction = row["Prediction"]
 
-        if not prediction:
+        if not prediction or not gold:
             bleurt_score = [-1]
             rouge_score = {"rougeL": 0}
         else:
