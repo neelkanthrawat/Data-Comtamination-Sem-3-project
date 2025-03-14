@@ -17,10 +17,48 @@ def calculate_statistics(scores, icl):
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
 
-    res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
-    scores.describe().to_csv(res_path)
-    res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
-    icl.describe().to_csv(res_path)
+    # Calculate and save some descriptive statistics about the scores and ICL
+    # res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
+    # scores.describe().to_csv(res_path)
+    # res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
+    # icl.describe().to_csv(res_path)
+
+    # Calculate the p-value for BLEURT and ROUGE-L
+    p_val_bleu = calculate_p_value(
+        scores, 1000, guided="BLEURT guided", unguided="BLEURT unguided"
+    )
+    print(f"The p-value is {p_val_bleu}")
+
+    p_val_rouge = calculate_p_value(
+        icl, 1000, guided="ROUGE-L guided", unguided="ROUGE-L unguided"
+    )
+    print(f"The p-value is {p_val_rouge}")
+
+
+def resample_scores(scores, num_resample):
+    means = []
+    for i in range(num_resample):
+        sample = scores.sample(n=10, replace=True)
+        means.append(sample.mean())
+
+    return means
+
+
+def calculate_p_value(
+    scores, num_resample, guided="BLEURT guided", unguided="BLEURT unguided"
+):
+    guided_means = resample_scores(scores[guided], 1000)
+    unguided_means = resample_scores(scores[unguided], 1000)
+
+    count = 0
+
+    for avg_guided, avg_unguided in zip(guided_means, unguided_means):
+        if avg_guided > avg_unguided:
+            count += 1
+
+    p_val = 1 - (count / num_resample)
+
+    return p_val
 
 
 def parse_args():
