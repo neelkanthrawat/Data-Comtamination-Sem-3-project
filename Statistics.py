@@ -8,10 +8,10 @@ PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 def calculate_statistics(scores, icl):
     with open(scores, "r") as f:
-        scores = pd.read_csv(f)
+        scores = pd.read_csv(f, delimiter="|")
 
     with open(icl, "r") as f:
-        icl = pd.read_csv(f)
+        icl = pd.read_csv(f, delimiter="|")
 
     res_dir = os.path.join(PROJECT_DIR, "results")
     if not os.path.exists(res_dir):
