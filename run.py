@@ -140,7 +140,9 @@ def main():
             first_piece = sample["premise"]
             second_piece = sample["hypothesis"]
         elif args.task == "wsc":
-            first_piece, second_piece = dh.split_sentence(sample["text"])
+            first_piece, second_piece = dh.split_sentence(
+                sample["text"], split_with_char=True
+            )
         elif args.task == "wikipedia":
             first_piece, second_piece = dh.split_sentence(sample["text"])
         elif args.task == "stackexchange":

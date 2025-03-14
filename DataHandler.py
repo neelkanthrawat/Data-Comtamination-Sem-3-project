@@ -5,6 +5,7 @@ import random
 import os
 import json
 from datasets import load_dataset
+import numpy as np
 
 
 class DataHandler:
@@ -92,13 +93,15 @@ class DataHandler:
                 next_space = sentence.find(" ", idx + 6)  # Look after " than "
                 if next_space != -1:
                     return sentence[:next_space], sentence[next_space:].strip()
+            x = 2
+        else:
+            x = np.random.randint(2, 5)
         # If no punctuation or "than", split in half at a word boundary
-        mid = len(sentence) // 2
+        mid = len(sentence) // x
         while mid > 0 and sentence[mid] != " ":
             mid -= 1
         if mid == 0:
-            mid = len(sentence) // 2
+            mid = len(sentence) // x
             while mid < len(sentence) and sentence[mid] != " ":
                 mid += 1
-
         return sentence[:mid].strip(), sentence[mid:].strip()
