@@ -34,6 +34,14 @@ def calculate_statistics(scores, icl):
     )
     print(f"The p-value is {p_val_rouge}")
 
+    with open(os.path.join(res_dir, "p_values.txt"), "w") as f:
+        f.write(
+            f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
+        )
+        f.write(
+            f"ROUGE-L p-value, {p_val_rouge} \t {'Significant' if p_val_rouge <= 0.05 else 'Not Significant'}\n"
+        )
+
 
 def resample_scores(scores, num_resample):
     means = []
