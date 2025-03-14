@@ -34,7 +34,7 @@ def calculate_statistics(scores_path, icl_path):
     )
     print(f"The p-value is {p_val_rouge}")
 
-    res_path = os.path.join(res_dir, scores_path.split(".")[0], "_p_values.txt")
+    res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_p_values.txt")
     with open(res_path, "w") as f:
         f.write(
             f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
