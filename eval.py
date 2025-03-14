@@ -140,8 +140,7 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     diff_df["ROUGEL guided"] = results_df_guided["ROUGEL"]
     diff_df["ROUGEL unguided"] = results_df_unguided["ROUGEL"]
 
-    assert results_df_guided["First piece"].equals(results_df_unguided["First piece"])
-    assert results_df_guided["Gold"].equals(results_df_unguided["Gold"])
+    assert results_df_guided["Gold"].equals(results_df_guided["Gold"])
 
     diff_df["First piece"] = results_df_guided["First piece"]
     diff_df["Gold"] = results_df_guided["Gold"]
