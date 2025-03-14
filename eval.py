@@ -73,10 +73,14 @@ def calc_scores(in_path: str):
         label = row["Label"]
         first_piece = row["First piece"]
         gold = row["Gold"]
-        prediction = row["Prediction"] if row["Prediction"] is not None else ""
+        prediction = row["Prediction"] if row["Prediction"]
 
-        bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
-        rouge_score = rouge.compute(predictions=[prediction], references=[gold])
+        if not prediction:
+            bleurt_score = [-1]
+            rouge_score = {"rougeL": 0}
+        else:
+            bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
+            rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
         results_df.loc[index] = {
             "Index": index,
