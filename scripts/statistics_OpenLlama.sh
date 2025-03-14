@@ -28,7 +28,7 @@ module load devel/python/3.12.3_gnu_13.3
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
 MODELS=("OpenLlama")
-TASKS=("cb", "stackexchange", "wsc")
+TASKS=("cb" "stackexchange" "wsc")
 
 
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
