@@ -6,11 +6,11 @@ HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 
-def calculate_statistics(scores, icl):
-    with open(scores, "r") as f:
+def calculate_statistics(scores_path, icl_path):
+    with open(scores_path, "r") as f:
         scores = pd.read_csv(f, delimiter="|")
 
-    with open(icl, "r") as f:
+    with open(icl_path, "r") as f:
         icl = pd.read_csv(f, delimiter="|")
 
     res_dir = os.path.join(PROJECT_DIR, "results")
@@ -34,7 +34,7 @@ def calculate_statistics(scores, icl):
     )
     print(f"The p-value is {p_val_rouge}")
 
-    res_path = os.path.join(res_dir, scores.split("."), "p_values.txt")
+    res_path = os.path.join(res_dir, scores_path.split("."), "p_values.txt")
     with open(res_path, "w") as f:
         f.write(
             f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
