@@ -30,7 +30,7 @@ def calculate_statistics(scores, icl):
     print(f"The p-value is {p_val_bleu}")
 
     p_val_rouge = calculate_p_value(
-        icl, 10000, guided="ROUGEL guided", unguided="ROUGEL unguided"
+        scores, 10000, guided="ROUGEL guided", unguided="ROUGEL unguided"
     )
     print(f"The p-value is {p_val_rouge}")
 
