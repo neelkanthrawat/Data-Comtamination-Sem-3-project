@@ -85,7 +85,7 @@ fi
 for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         echo "Running model: $model, task: $task"
-        python "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}\_guided.csv" --name "${task}_${model}"
+        python "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}_guided.csv" --name "${task}_${model}"
 
         # Verify if the script executed successfully
         if [ $? -eq 0 ]; then
