@@ -18,10 +18,10 @@ def calculate_statistics(scores_path, icl_path):
         os.makedirs(res_dir)
 
     # Calculate and save some descriptive statistics about the scores and ICL
-    # res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
-    # scores.describe().to_csv(res_path)
-    # res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
-    # icl.describe().to_csv(res_path)
+    res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
+    scores.describe().to_csv(res_path)
+    res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
+    icl.describe().to_csv(res_path)
 
     # Calculate the p-value for BLEURT and ROUGE-L
     p_val_bleu = calculate_p_value(
@@ -47,7 +47,7 @@ def calculate_statistics(scores_path, icl_path):
 def resample_scores(scores, num_resample):
     means = []
     for i in range(num_resample):
-        sample = scores.sample(n=10, replace=True)
+        sample = scores.sample(n=1000, replace=True)
         means.append(sample.mean())
 
     return means
