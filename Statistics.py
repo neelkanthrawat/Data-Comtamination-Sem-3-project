@@ -7,22 +7,22 @@ PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 
 def calculate_statistics(scores_path, icl_path):
+    print(f'case: num_samples = {num_samples} and num_resamples = {num_resamples}')
+    with open(scores_path, "r") as f:
+        scores = pd.read_csv(f, delimiter="|")
+
+    with open(icl_path, "r") as f:
+        icl = pd.read_csv(f, delimiter="|")
+
+    res_dir = os.path.join(PROJECT_DIR, "results")
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
+
     num_resamples_list = [10000, 50000, 100000]
     num_samples_list = [10, 100, 1000, scores.shape[0]]
-    
+
     for num_resamples, num_samples in num_resamples_list:
         for num_samples in num_samples_list:
-            print(f'case: num_samples = {num_samples} and num_resamples = {num_resamples}')
-            with open(scores_path, "r") as f:
-                scores = pd.read_csv(f, delimiter="|")
-
-            with open(icl_path, "r") as f:
-                icl = pd.read_csv(f, delimiter="|")
-
-            res_dir = os.path.join(PROJECT_DIR, "results")
-            if not os.path.exists(res_dir):
-                os.makedirs(res_dir)
-
             # Calculate and save some descriptive statistics about the scores and ICL
             res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
             scores.describe().to_csv(res_path)
