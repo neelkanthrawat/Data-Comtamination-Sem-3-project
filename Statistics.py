@@ -29,7 +29,7 @@ def calculate_statistics(scores_path, icl_path):
         icl.describe().to_csv(res_path)
 
         # do the resampling from a dataframe that contains num_samples of instances
-        sample_df = scores.sample(n=num_samples, seed=42)
+        sample_df = scores.sample(n=num_samples, random_state=42)
 
         # Calculate the p-value for BLEURT and ROUGE-L
         p_val_bleu = calculate_p_value(
