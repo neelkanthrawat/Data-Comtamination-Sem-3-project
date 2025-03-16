@@ -18,9 +18,9 @@ def calculate_statistics(scores_path, icl_path):
         os.makedirs(res_dir)
 
     # Calculate and save some descriptive statistics about the scores and ICL
-    res_path = os.path.join(res_dir, scores_path.split(".")[0], "_statistics.csv")
+    res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
     scores.describe().to_csv(res_path)
-    res_path = os.path.join(res_dir, scores_path.split(".")[0], "_statistics.csv")
+    res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
     icl.describe().to_csv(res_path)
 
     # Calculate the p-value for BLEURT and ROUGE-L
