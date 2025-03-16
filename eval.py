@@ -65,7 +65,7 @@ def calc_scores(in_path: str):
     )
 
     bleurt = evaluate.load(
-        "bleurt", module_type="metric", checkpoint="bleurt-large-512"
+        "bleurt", module_type="metric", checkpoint="BLEURT-20"
     )
     rouge = evaluate.load("rouge")
 
@@ -76,9 +76,9 @@ def calc_scores(in_path: str):
         prediction = row["Prediction"]
 
         if not prediction or not gold or pd.isna(prediction) or pd.isna(gold):
-            bleurt_score = [-1]
+            bleurt_score = [0]
             rouge_score = {"rougeL": 0}
-            print(f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to -1 and ROUGE-L to 0.")
+            print(f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0.")
         else:
             bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
