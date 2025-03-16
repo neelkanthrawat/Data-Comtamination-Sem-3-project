@@ -7,6 +7,9 @@ PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 
 def calculate_statistics(scores_path, icl_path):
+    num_resamples = 100000
+    num_samples = 1000
+
     with open(scores_path, "r") as f:
         scores = pd.read_csv(f, delimiter="|")
 
@@ -25,17 +28,19 @@ def calculate_statistics(scores_path, icl_path):
 
     # Calculate the p-value for BLEURT and ROUGE-L
     p_val_bleu = calculate_p_value(
-        scores, 10000, guided="BLEURT guided", unguided="BLEURT unguided"
+        scores, num_resample=num_resamples, num_samples=num_samples, guided="BLEURT guided", unguided="BLEURT unguided"
     )
     print(f"The p-value is {p_val_bleu}")
 
     p_val_rouge = calculate_p_value(
-        scores, 10000, guided="ROUGEL guided", unguided="ROUGEL unguided"
+        scores, num_resample=num_resamples, num_samples=num_samples, guided="ROUGEL guided", unguided="ROUGEL unguided"
     )
     print(f"The p-value is {p_val_rouge}")
 
     res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_p_values.txt")
     with open(res_path, "w") as f:
+        f.write(f"Results of bootstrapping\n")
+        f.write(f"Number of resamples: {num_resamples}, number of samples: {num_samples}")
         f.write(
             f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
         )
@@ -44,18 +49,18 @@ def calculate_statistics(scores_path, icl_path):
         )
 
 
-def resample_scores(scores, num_resample):
+def resample_scores(scores, num_resample, num_samples):
     means = []
-    for i in range(num_resample):
-        sample = scores.sample(n=1000, replace=True)
+    for _ in range(num_resample):
+        sample = scores.sample(n=num_samples, replace=True)
         means.append(sample.mean())
 
     return means
 
 
-def calculate_p_value(scores, num_resample, guided, unguided):
-    guided_means = resample_scores(scores[guided], num_resample)
-    unguided_means = resample_scores(scores[unguided], num_resample)
+def calculate_p_value(scores, num_resample, num_samples, guided, unguided):
+    guided_means = resample_scores(scores[guided], num_resample=num_resample, num_samples=num_samples)
+    unguided_means = resample_scores(scores[unguided], num_resample=num_resample, num_samples=num_samples)
 
     count = 0
 
