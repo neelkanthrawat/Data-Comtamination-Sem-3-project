@@ -8,50 +8,54 @@ PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 def calculate_statistics(scores_path, icl_path):
     num_resamples_list = [10000, 50000, 100000]
-    num_samples_list = [10, 100, 1000]
+    num_samples_list = [10, 100, 1000, scores.shape[0]]
     
-    for num_resamples, num_samples in zip(num_resamples_list, num_samples_list):
-        print(f'case: num_samples = {num_samples} and num_resamples = {num_resamples}')
-        with open(scores_path, "r") as f:
-            scores = pd.read_csv(f, delimiter="|")
+    for num_resamples, num_samples in num_resamples_list:
+        for num_samples in num_samples_list:
+            print(f'case: num_samples = {num_samples} and num_resamples = {num_resamples}')
+            with open(scores_path, "r") as f:
+                scores = pd.read_csv(f, delimiter="|")
 
-        with open(icl_path, "r") as f:
-            icl = pd.read_csv(f, delimiter="|")
+            with open(icl_path, "r") as f:
+                icl = pd.read_csv(f, delimiter="|")
 
-        res_dir = os.path.join(PROJECT_DIR, "results")
-        if not os.path.exists(res_dir):
-            os.makedirs(res_dir)
+            res_dir = os.path.join(PROJECT_DIR, "results")
+            if not os.path.exists(res_dir):
+                os.makedirs(res_dir)
 
-        # Calculate and save some descriptive statistics about the scores and ICL
-        res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
-        scores.describe().to_csv(res_path)
-        res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
-        icl.describe().to_csv(res_path)
+            # Calculate and save some descriptive statistics about the scores and ICL
+            res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
+            scores.describe().to_csv(res_path)
+            res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
+            icl.describe().to_csv(res_path)
 
-        # do the resampling from a dataframe that contains num_samples of instances
-        sample_df = scores.sample(n=num_samples, random_state=42)
+            try:
+                # do the resampling from a dataframe that contains num_samples of instances
+                sample_df = scores.sample(n=num_samples, random_state=42)
 
-        # Calculate the p-value for BLEURT and ROUGE-L
-        p_val_bleu = calculate_p_value(
-            sample_df, num_resample=num_resamples, num_samples=num_samples, guided="BLEURT guided", unguided="BLEURT unguided"
-        )
-        print(f"The p-value is {p_val_bleu}")
+                # Calculate the p-value for BLEURT and ROUGE-L
+                p_val_bleu = calculate_p_value(
+                    sample_df, num_resample=num_resamples, num_samples=num_samples, guided="BLEURT guided", unguided="BLEURT unguided"
+                )
+                print(f"The p-value is {p_val_bleu}")
 
-        p_val_rouge = calculate_p_value(
-            sample_df, num_resample=num_resamples, num_samples=num_samples, guided="ROUGEL guided", unguided="ROUGEL unguided"
-        )
-        print(f"The p-value is {p_val_rouge}")
+                p_val_rouge = calculate_p_value(
+                    sample_df, num_resample=num_resamples, num_samples=num_samples, guided="ROUGEL guided", unguided="ROUGEL unguided"
+                )
+                print(f"The p-value is {p_val_rouge}")
 
-        res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_p_values_{num_resamples}_{num_samples}.txt")
-        with open(res_path, "w") as f:
-            f.write(f"Results of bootstrapping\n")
-            f.write(f"Number of resamples: {num_resamples}, number of samples: {num_samples}")
-            f.write(
-                f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
-            )
-            f.write(
-                f"ROUGE-L p-value, {p_val_rouge} \t {'Significant' if p_val_rouge <= 0.05 else 'Not Significant'}\n"
-            )
+                res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_p_values_{num_resamples}_{num_samples}.txt")
+                with open(res_path, "w") as f:
+                    f.write(f"Results of bootstrapping\n")
+                    f.write(f"Number of resamples: {num_resamples}, number of samples: {num_samples}")
+                    f.write(
+                        f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
+                    )
+                    f.write(
+                        f"ROUGE-L p-value, {p_val_rouge} \t {'Significant' if p_val_rouge <= 0.05 else 'Not Significant'}\n"
+                    )
+            except ValueError:
+                print(f"Dataset has length {scores.shape[0]}, trying to sample {num_samples} from it. Continuing with next combination.")
 
 
 def resample_scores(scores, num_resample, num_samples):
