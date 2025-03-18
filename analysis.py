@@ -111,12 +111,17 @@ def main():
         path = os.path.join("results_llama", f"{task}_Llama_differences.csv")
         print(f"Reading {path}")
         df = read_df(path=path)
-        print_min_max(df, "BLEURT")
-        print_min_max(df, "ROUGEL")
-        calculate_correlation(df, task=task)
-        plot_corr(df, task=task)
-        plot_scores(df, metric="BLEURT", task=task)
-        plot_scores(df, metric="ROUGEL", task=task)
+        num_samples_list = [10, 100, 1000, df.shape[0]]
+        for num_samples in num_samples_list:
+            task_num_samples = f"{task}_{num_samples}"
+            sample_df = df.sample(n=num_samples, random_state=42)
+            print_min_max(sample_df, "BLEURT")
+            print_min_max(sample_df, "ROUGEL")
+            calculate_correlation(df, task=task_num_samples)
+
+            plot_corr(df, task=task_num_samples)
+            plot_scores(df, metric="BLEURT", task=task_num_samples)
+            plot_scores(df, metric="ROUGEL", task=task_num_samples)
 
 
 if __name__ == "__main__":
