@@ -87,7 +87,8 @@ def plot_scores(df: pd.DataFrame, metric: str, task: str):
 
 def main():
     for task in ["ag_news", "imdb"]:
-        path = os.path.join("results_llama", f"{task}_Llama_differences.csv")
+        #/home/neel/Desktop/results_llama
+        path = os.path.join("/home/neel/Desktop/results_llama", f"{task}_Llama_differences.csv")
         print(f"Reading {path}")
         df = read_df(path=path)
         print_min_max(df, "BLEURT")
@@ -98,5 +99,5 @@ def main():
         plot_scores(df, metric="ROUGEL", task=task)
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     main()
