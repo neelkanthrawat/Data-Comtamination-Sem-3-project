@@ -98,8 +98,8 @@ def plot_scores(df: pd.DataFrame, metric: str, task: str):
     Plot the scores of the dataframe.
     """
     plt.figure(figsize=(12, 6), dpi=200)
-    plt.plot(df[f"{metric} guided"], label=f"Guided {metric}")
-    plt.plot(df[f"{metric} unguided"], label=f"Unguided {metric}")
+    plt.plot(df[f"{metric} guided"], label=f"Guided {metric}", linestyle="o")
+    plt.plot(df[f"{metric} unguided"], label=f"Unguided {metric}", linestyle="+")
     plt.xlabel("Index")
     plt.ylabel(f"{metric}")
     plt.legend()
