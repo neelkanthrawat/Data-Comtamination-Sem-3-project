@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
 
 
 def read_df(path: str):
@@ -36,18 +37,65 @@ def print_min_max(df, metric):
         print(f"Lowest {metric} {type} score: {lowest}")
 
 
-def main():
-    path = os.path.join("results_llama", "ag_news_Llama_differences.csv")
-    print(f"Reading {path}")
-    df = read_df(path=path)
-    print_min_max(df, "BLEURT")
-    print_min_max(df, "ROUGEL")
+def calculate_correlation(df: pd.DataFrame):
+    """
+    Calculate the correlation between BLEURT and ROUGEL.
+    """
+    unguided_corr = df["BLEURT unguided"].corr(df["ROUGEL unguided"])
+    guided_corr = df["BLEURT guided"].corr(df["ROUGEL guided"])
+    diff_corr = df["BLEURT_diff"].corr(df["ROUGEL_diff"])
+    print(f"Unguided correlation: {unguided_corr}")
+    print(f"Guided correlation: {guided_corr}")
+    print(f"Difference correlation: {diff_corr}")
 
-    path = os.path.join("results_llama", "imdb_Llama_differences.csv")
-    print(f"Reading {path}")
-    df = read_df(path=path)
-    print_min_max(df, "BLEURT")
-    print_min_max(df, "ROUGEL")
+
+def plot_corr(df: pd.DataFrame, task: str):
+    """
+    Plot the correlation of the dataframe.
+    """
+    plt.figure()
+    plt.scatter(df["BLEURT guided"], df["ROUGEL guided"], label="Guided")
+    plt.legend()
+    plt.savefig(f"{task}_guided_scores.png")
+    plt.close()
+
+    # Unguided plot
+    plt.figure()
+    plt.scatter(df["BLEURT unguided"], df["ROUGEL unguided"], label="Unguided")
+    plt.legend()
+    plt.savefig(f"{task}_unguided_scores.png")
+    plt.close()
+
+    # Difference plot
+    plt.figure()
+    plt.scatter(df["BLEURT_diff"], df["ROUGEL_diff"], label="Difference")
+    plt.legend()
+    plt.savefig(f"{task}_difference_scores.png")
+    plt.close()
+
+
+def plot_scores(df: pd.DataFrame, metric: str, task: str):
+    """
+    Plot the scores of the dataframe.
+    """
+    plt.figure()
+    plt.plot(df[f"{metric} guided"], label=f"Guided {metric}")
+    plt.plot(df[f"{metric} unguided"], label=f"Unguided {metric}")
+    plt.legend()
+    plt.savefig(f"{task}_{metric}_scores.png")
+
+
+def main():
+    for task in ["ag_news", "imdb"]:
+        path = os.path.join("results_llama", f"{task}_Llama_differences.csv")
+        print(f"Reading {path}")
+        df = read_df(path=path)
+        print_min_max(df, "BLEURT")
+        print_min_max(df, "ROUGEL")
+        calculate_correlation(df)
+        plot_corr(df, task=task)
+        plot_scores(df, metric="BLEURT", task=task)
+        plot_scores(df, metric="ROUGEL", task=task)
 
 
 if __name__ == "__name__":
