@@ -59,14 +59,12 @@ def plot_corr(df: pd.DataFrame, task: str):
     plt.savefig(f"{task}_guided_scores.png")
     plt.close()
 
-    # Unguided plot
     plt.figure()
     plt.scatter(df["BLEURT unguided"], df["ROUGEL unguided"], label="Unguided")
     plt.legend()
     plt.savefig(f"{task}_unguided_scores.png")
     plt.close()
 
-    # Difference plot
     plt.figure()
     plt.scatter(df["BLEURT_diff"], df["ROUGEL_diff"], label="Difference")
     plt.legend()
@@ -78,7 +76,7 @@ def plot_scores(df: pd.DataFrame, metric: str, task: str):
     """
     Plot the scores of the dataframe.
     """
-    plt.figure()
+    plt.figure(figsize=(12, 6), dpi=200)
     plt.plot(df[f"{metric} guided"], label=f"Guided {metric}")
     plt.plot(df[f"{metric} unguided"], label=f"Unguided {metric}")
     plt.legend()
@@ -98,5 +96,5 @@ def main():
         plot_scores(df, metric="ROUGEL", task=task)
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     main()
