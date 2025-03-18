@@ -65,7 +65,7 @@ def calc_scores(in_path: str):
     )
 
     bleurt = evaluate.load(
-        "bleurt", module_type="metric", checkpoint="bleurt-large-512"
+        "bleurt", module_type="metric", checkpoint="BLEURT-20"
     )
     rouge = evaluate.load("rouge")
 
@@ -75,9 +75,10 @@ def calc_scores(in_path: str):
         gold = row["Gold"]
         prediction = row["Prediction"]
 
-        if not prediction or not gold:
-            bleurt_score = [-1]
+        if not prediction or not gold or pd.isna(prediction) or pd.isna(gold):
+            bleurt_score = {"scores": [0]}
             rouge_score = {"rougeL": 0}
+            print(f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0.")
         else:
             bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
@@ -93,7 +94,7 @@ def calc_scores(in_path: str):
         }
 
     res_dir = os.path.join(PROJECT_DIR, "results")
-    res_path = os.path.join(res_dir, f"{in_path}_scores.csv")
+    res_path = os.path.join(res_dir, f"{in_path.split(".")[0]}_scores.csv")
 
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)

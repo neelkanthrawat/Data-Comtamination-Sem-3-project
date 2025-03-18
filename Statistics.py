@@ -7,6 +7,7 @@ PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 
 def calculate_statistics(scores_path, icl_path):
+    
     with open(scores_path, "r") as f:
         scores = pd.read_csv(f, delimiter="|")
 
@@ -17,45 +18,59 @@ def calculate_statistics(scores_path, icl_path):
     if not os.path.exists(res_dir):
         os.makedirs(res_dir)
 
-    # Calculate and save some descriptive statistics about the scores and ICL
-    # res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
-    # scores.describe().to_csv(res_path)
-    # res_path = os.path.join(res_dir, scores.split("."), "_statistics.csv")
-    # icl.describe().to_csv(res_path)
+    num_resamples_list = [10000, 50000, 100000]
+    num_samples_list = [10, 100, 1000, scores.shape[0]]
 
-    # Calculate the p-value for BLEURT and ROUGE-L
-    p_val_bleu = calculate_p_value(
-        scores, 10000, guided="BLEURT guided", unguided="BLEURT unguided"
-    )
-    print(f"The p-value is {p_val_bleu}")
+    for num_resamples in num_resamples_list:
+        for num_samples in num_samples_list:
+            print(f'case: num_samples = {num_samples} and num_resamples = {num_resamples}')
+            # Calculate and save some descriptive statistics about the scores and ICL
+            res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
+            scores.describe().to_csv(res_path)
+            res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_stats.txt")
+            icl.describe().to_csv(res_path)
 
-    p_val_rouge = calculate_p_value(
-        scores, 10000, guided="ROUGEL guided", unguided="ROUGEL unguided"
-    )
-    print(f"The p-value is {p_val_rouge}")
+            try:
+                # do the resampling from a dataframe that contains num_samples of instances
+                sample_df = scores.sample(n=num_samples, random_state=42)
 
-    res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_p_values.txt")
-    with open(res_path, "w") as f:
-        f.write(
-            f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
-        )
-        f.write(
-            f"ROUGE-L p-value, {p_val_rouge} \t {'Significant' if p_val_rouge <= 0.05 else 'Not Significant'}\n"
-        )
+                # Calculate the p-value for BLEURT and ROUGE-L
+                p_val_bleu = calculate_p_value(
+                    sample_df, num_resample=num_resamples, num_samples=num_samples, guided="BLEURT guided", unguided="BLEURT unguided"
+                )
+                print(f"The p-value is {p_val_bleu}")
+
+                p_val_rouge = calculate_p_value(
+                    sample_df, num_resample=num_resamples, num_samples=num_samples, guided="ROUGEL guided", unguided="ROUGEL unguided"
+                )
+                print(f"The p-value is {p_val_rouge}")
+
+                res_path = os.path.join(res_dir, f"{scores_path.split(".")[0]}_p_values_{num_resamples}_{num_samples}.txt")
+                with open(res_path, "w") as f:
+                    f.write(f"Results of bootstrapping\n")
+                    f.write(f"Number of resamples: {num_resamples}, number of samples: {num_samples}")
+                    f.write(
+                        f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
+                    )
+                    f.write(
+                        f"ROUGE-L p-value, {p_val_rouge} \t {'Significant' if p_val_rouge <= 0.05 else 'Not Significant'}\n"
+                    )
+            except ValueError:
+                print(f"Dataset has length {scores.shape[0]}, trying to sample {num_samples} from it. Continuing with next combination.")
 
 
-def resample_scores(scores, num_resample):
+def resample_scores(scores, num_resample, num_samples):
     means = []
-    for i in range(num_resample):
-        sample = scores.sample(n=10, replace=True)
+    for _ in range(num_resample):
+        sample = scores.sample(n=num_samples, replace=True)
         means.append(sample.mean())
 
     return means
 
 
-def calculate_p_value(scores, num_resample, guided, unguided):
-    guided_means = resample_scores(scores[guided], num_resample)
-    unguided_means = resample_scores(scores[unguided], num_resample)
+def calculate_p_value(scores, num_resample, num_samples, guided, unguided):
+    guided_means = resample_scores(scores[guided], num_resample=num_resample, num_samples=num_samples)
+    unguided_means = resample_scores(scores[unguided], num_resample=num_resample, num_samples=num_samples)
 
     count = 0
 
