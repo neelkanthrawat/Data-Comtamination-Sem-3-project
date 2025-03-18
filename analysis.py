@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 
 def read_df(path: str):
@@ -36,7 +37,15 @@ def print_min_max(df, metric):
 
 
 def main():
-    df = read_df()
+    path = os.path.join("results_llama", "ag_news_Llama_differences.csv")
+    print(f"Reading {path}")
+    df = read_df(path=path)
+    print_min_max(df, "BLEURT")
+    print_min_max(df, "ROUGEL")
+
+    path = os.path.join("results_llama", "imdb_Llama_differences.csv")
+    print(f"Reading {path}")
+    df = read_df(path=path)
     print_min_max(df, "BLEURT")
     print_min_max(df, "ROUGEL")
 
