@@ -45,9 +45,9 @@ def calculate_correlation(df: pd.DataFrame, task: str):
     """
     Calculate the correlation between BLEURT and ROUGEL.
     """
-    unguided_corr = df["BLEURT unguided"].corr(df["ROUGEL unguided"])
-    guided_corr = df["BLEURT guided"].corr(df["ROUGEL guided"])
-    diff_corr = df["BLEURT_diff"].corr(df["ROUGEL_diff"])
+    unguided_corr = df["BLEURT unguided"].corr(df["ROUGEL unguided"], method="spearman")
+    guided_corr = df["BLEURT guided"].corr(df["ROUGEL guided"], method="spearman")
+    diff_corr = df["BLEURT_diff"].corr(df["ROUGEL_diff"], method="spearman")
     print(f"Unguided correlation: {unguided_corr}")
     print(f"Guided correlation: {guided_corr}")
     print(f"Difference correlation: {diff_corr}")
@@ -62,32 +62,32 @@ def plot_corr(df: pd.DataFrame, task: str):
     """
     Plot the correlation of the dataframe.
     """
-    unguided_corr = df["BLEURT unguided"].corr(df["ROUGEL unguided"])
+    unguided_corr = df["BLEURT unguided"].corr(df["ROUGEL unguided"], method="spearman")
     plt.figure()
     plt.scatter(df["BLEURT guided"], df["ROUGEL guided"], label="Guided")
     plt.xlabel("BLEURT guided")
     plt.ylabel("ROUGEL unguided")
-    plt.title(f"Correlation: {unguided_corr}")
+    plt.title(f"Spearman correlation: {unguided_corr}")
     plt.legend()
     plt.savefig(f"{task}_guided_scores.png")
     plt.close()
 
-    guided_corr = df["BLEURT guided"].corr(df["ROUGEL guided"])
+    guided_corr = df["BLEURT guided"].corr(df["ROUGEL guided"], method="spearman")
     plt.figure()
     plt.scatter(df["BLEURT unguided"], df["ROUGEL unguided"], label="Unguided")
     plt.xlabel("BLEURT unguided")
     plt.ylabel("ROUGEL unguided")
-    plt.title(f"Correlation: {guided_corr}")
+    plt.title(f"Spearman correlation: {guided_corr}")
     plt.legend()
     plt.savefig(f"{task}_unguided_scores.png")
     plt.close()
 
-    diff_corr = df["BLEURT_diff"].corr(df["ROUGEL_diff"])
+    diff_corr = df["BLEURT_diff"].corr(df["ROUGEL_diff"], method="spearman")
     plt.figure()
     plt.scatter(df["BLEURT_diff"], df["ROUGEL_diff"], label="Difference")
     plt.xlabel("BLEURT_diff")
     plt.ylabel("ROUGEL_diff")
-    plt.title(f"Correlation: {diff_corr}")
+    plt.title(f"Spearman correlation: {diff_corr}")
     plt.legend()
     plt.savefig(f"{task}_difference_scores.png")
     plt.close()
