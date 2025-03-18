@@ -116,13 +116,13 @@ def main():
         for num_samples in num_samples_list:
             task_num_samples = f"{task}_{num_samples}"
             sample_df = df.sample(n=num_samples, random_state=42)
-            print_min_max(sample_df, "BLEURT")
-            print_min_max(sample_df, "ROUGEL")
-            calculate_correlation(df, task=task_num_samples)
+            print_min_max(df=sample_df, metric="BLEURT")
+            print_min_max(df=sample_df, metric="ROUGEL")
+            calculate_correlation(df=sample_df, task=task_num_samples)
 
-            plot_corr(df, task=task_num_samples)
-            plot_scores(df, metric="BLEURT", task=task_num_samples)
-            plot_scores(df, metric="ROUGEL", task=task_num_samples)
+            plot_corr(df=sample_df, task=task_num_samples)
+            plot_scores(df=sample_df, metric="BLEURT", task=task_num_samples)
+            plot_scores(df=sample_df, metric="ROUGEL", task=task_num_samples)
 
 
 if __name__ == "__main__":
