@@ -117,11 +117,11 @@ def main():
             sample_df = df.sample(n=num_samples, random_state=42)
             print_min_max(sample_df, "BLEURT")
             print_min_max(sample_df, "ROUGEL")
-            calculate_correlation(df, task=task_num_samples)
+            calculate_correlation(sample_df, task=task_num_samples)
 
-            plot_corr(df, task=task_num_samples)
-            plot_scores(df, metric="BLEURT", task=task_num_samples)
-            plot_scores(df, metric="ROUGEL", task=task_num_samples)
+            plot_corr(sample_df, task=task_num_samples)
+            plot_scores(sample_df, metric="BLEURT", task=task_num_samples)
+            plot_scores(sample_df, metric="ROUGEL", task=task_num_samples)
 
 
 if __name__ == "__main__":
