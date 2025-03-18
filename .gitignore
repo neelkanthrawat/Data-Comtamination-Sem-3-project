@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# user defined
+results_llama
+results_openllama
+
 # Distribution / packaging
 file_processing.ipynb
 .Python
