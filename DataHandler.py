@@ -72,6 +72,8 @@ class DataHandler:
         """
         Function to split a sentence, prioritizing "." (not at end), "than", then other punctuation
         """
+        np.random.seed(42)
+
         if split_with_char:
             # Prioritize "." but only if it's not at the end
             match = re.search(
@@ -95,7 +97,10 @@ class DataHandler:
                     return sentence[:next_space], sentence[next_space:].strip()
             x = 2
         else:
-            x = np.random.randint(2, 5)
+            x = np.random.randint(
+                2,
+                5,
+            )
         # If no punctuation or "than", split in half at a word boundary
         mid = len(sentence) // x
         while mid > 0 and sentence[mid] != " ":
