@@ -112,8 +112,8 @@ def plot_scores(df: pd.DataFrame, metric: str, task: str, res_dir: str):
     """
     res_path = os.join(res_dir, f"{task}_{metric}_scores.png")
     plt.figure(figsize=(12, 6), dpi=200)
-    plt.plot(df[f"{metric} guided"],'o' ,label=f"Guided {metric}")
-    plt.plot(df[f"{metric} unguided"], '+',label=f"Unguided {metric}")
+    plt.plot(df[f"{metric} guided"], "o", label=f"Guided {metric}")
+    plt.plot(df[f"{metric} unguided"], "+", label=f"Unguided {metric}")
     plt.xlabel("Index")
     plt.ylabel(f"{metric}")
     plt.legend()
@@ -125,8 +125,10 @@ def main():
     res_dir = "results_llama"
 
     for task in ["ag_news", "imdb"]:
-        #/home/neel/Desktop/results_llama
-        path = os.path.join("/home/neel/Desktop/results_llama", f"{task}_Llama_differences.csv")
+        # /home/neel/Desktop/results_llama
+        path = os.path.join(
+            "/home/neel/Desktop/results_llama/{task}", f"{task}_Llama_differences.csv"
+        )
         print(f"Reading {path}")
         df = read_df(path=path)
         num_samples_list = [10, 100, 1000, df.shape[0]]

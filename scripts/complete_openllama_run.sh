@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=complete_llama               # TODO: adjust job name
+#SBATCH --job-name=complete_openllama               # TODO: adjust job name
 
 #SBATCH --time=06:00:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
@@ -11,8 +11,8 @@
 #SBATCH --mem=128GB 
 
 # Output and error logs
-#SBATCH --output="complete_llama_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="complete_llama_err.txt"         # TODO: adjust error log
+#SBATCH --output="complete_openllama_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="complete_openllama_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
@@ -27,13 +27,12 @@ module load devel/cuda/12.4
 module load devel/cudnn/10.2
 
 # ADJUST THESE VARIABLES TO INCLUDE EVERYTHING WE WANT TO RUN
-MODELS=("Llama")
-TASKS=("ag_news" "imdb")
+MODELS=("OpenLlama")
+TASKS=("cb" "wsc" "stackexchange")
 TYPES=("guided" "unguided")
 
 # Activate the conda environment
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
-echo "Activating python environment: $ENV_NAME"
 ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 
 
@@ -44,9 +43,6 @@ else
     echo "Error: Virtual environment '$ENV_NAME' not found."
     exit 1
 fi
-
-# Run the Python script
-SCRIPT="$HOME/Data-Comtamination-Sem-3-project/run.py"
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -59,32 +55,29 @@ for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         for type in "${TYPES[@]}"; do
             echo "Running model: $model, task: $task, type: $type"
-            python "$SCRIPT" --model "$model" --task "$task" --type "$type"
+            python "$HOME/Data-Comtamination-Sem-3-project/run.py" --model "$model" --task "$task" --type "$type"
             
             # Verify if the script executed successfully
             if [ $? -eq 0 ]; then
-                echo "Python script '$SCRIPT' executed successfully for model=$model, task=$task, type=$type."
+                echo "Python script run.py executed successfully for model=$model, task=$task, type=$type."
             else
-                echo "Error: Python script '$SCRIPT' failed for model=$model, task=$task, type=$type."
+                echo "Error: Python script run.py failed for model=$model, task=$task, type=$type."
                 exit 1
             fi
         done
     done
 done
 
-SCRIPT="$HOME/Data-Comtamination-Sem-3-project/eval.py"
-SCRIPT2="$HOME/Data-Comtamination-Sem-3-project/ICL.py"
-
 for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         echo "Running model: $model, task: $task"
-        python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}_unguided.csv" --name "${task}_${model}"
+        python "$HOME/Data-Comtamination-Sem-3-project/eval.py" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${model}/${task}/${task}_${model}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${model}/${task}/${task}_${model}_unguided.csv" --name "${task}_${model}"
 
         # Verify if the script executed successfully
         if [ $? -eq 0 ]; then
-            echo "Python script '$SCRIPT' executed successfully for model=$model, task=$task, type=$type."
+            echo "Python script eval.py executed successfully for model=$model, task=$task"
         else
-            echo "Error: Python script '$SCRIPT' failed for model=$model, task=$task, type=$type."
+            echo "Error: Python script eval.py failed for model=$model, task=$task"
             exit 1
         fi
     done
@@ -107,13 +100,13 @@ fi
 for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         echo "Running model: $model, task: $task"
-        python "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}_guided.csv" --name "${task}_${model}"
+        python "$HOME/Data-Comtamination-Sem-3-project/ICL.py" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${model}/${task}/${task}_${model}_guided.csv" --name "${task}_${model}"
 
         # Verify if the script executed successfully
         if [ $? -eq 0 ]; then
-            echo "Python script '$SCRIPT2' executed successfully for model=$model, task=$task, type=$type."
+            echo "Python script ICL.py executed successfully for model=$model, task=$task"
         else
-            echo "Error: Python script '$SCRIPT2' failed for model=$model, task=$task, type=$type."
+            echo "Error: Python script ICL.py failed for model=$model, task=$task"
             exit 1
         fi
     done
@@ -123,8 +116,6 @@ echo "Deactivating environment: $ENV_NAME2"
 deactivate
 
 
-ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
-SCRIPT="$HOME/Data-Comtamination-Sem-3-project/Statistics.py"
 
 echo "Activating python environment: $ENV_NAME"
 
@@ -136,17 +127,16 @@ else
     exit 1
 fi
 
-
 for model in "${MODELS[@]}"; do       
     for task in "${TASKS[@]}"; do
         echo "Running task: $task"
-        python "$SCRIPT" --diffs "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}_differences.csv" --icl "$HOME/Data-Comtamination-Sem-3-project/results/${task}_${model}_guided_prompting.csv"
+        python "$HOME/Data-Comtamination-Sem-3-project/Statistics.py" --diffs "$HOME/Data-Comtamination-Sem-3-project/results/${model}/${task}/${task}_${model}_differences.csv" --icl "$HOME/Data-Comtamination-Sem-3-project/results/${model}/${task}/${task}_${model}_guided_prompting.csv"
 
         # Verify if the script executed successfully
         if [ $? -eq 0 ]; then
-            echo "Python script '$SCRIPT' executed successfully for task=$task."
+            echo "Python script Statics.py executed successfully for model=$model and task=$task."
         else
-            echo "Error: Python script '$SCRIPT' failed for task=$task."
+            echo "Error: Python script Statistics.py failed for model=$model and task=$task."
             exit 1
         fi
     done

@@ -145,7 +145,12 @@ def ICL_prompting(in_path: str):
         }
 
     prefix = in_path.split(".")[0]
+    file_name = in_path.split("/")[-1]
+    split = file_name.split("_")
     res_dir = os.path.join(PROJECT_DIR, "results")
+    res_dir = os.path.join(res_dir, split[1])
+    res_dir = os.path.join(res_dir, split[0])
+
     res_path = os.path.join(res_dir, f"{prefix}_prompting.csv")
 
     if not os.path.exists(res_dir):

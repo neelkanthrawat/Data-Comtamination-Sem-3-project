@@ -64,9 +64,7 @@ def calc_scores(in_path: str):
         ]
     )
 
-    bleurt = evaluate.load(
-        "bleurt", module_type="metric", checkpoint="BLEURT-20"
-    )
+    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
     rouge = evaluate.load("rouge")
 
     for index, row in pred_df.iterrows():
@@ -78,7 +76,9 @@ def calc_scores(in_path: str):
         if not prediction or not gold or pd.isna(prediction) or pd.isna(gold):
             bleurt_score = {"scores": [0]}
             rouge_score = {"rougeL": 0}
-            print(f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0.")
+            print(
+                f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0."
+            )
         else:
             bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
@@ -93,7 +93,12 @@ def calc_scores(in_path: str):
             "ROUGEL": rouge_score["rougeL"],
         }
 
+    file_name = in_path.split("/")[-1]
+    split = file_name.split("_")
     res_dir = os.path.join(PROJECT_DIR, "results")
+    res_dir = os.path.join(res_dir, split[1])
+    res_dir = os.path.join(res_dir, split[0])
+
     res_path = os.path.join(res_dir, f"{in_path.split(".")[0]}_scores.csv")
 
     if not os.path.exists(res_dir):
@@ -151,7 +156,17 @@ def calc_differences(results_df_guided, results_df_unguided, eval_name=None):
     if eval_name is None:
         res_path = os.path.join(PROJECT_DIR, "results", f"differences.csv")
     else:
-        res_path = os.path.join(PROJECT_DIR, "results", f"{eval_name}_differences.csv")
+        res_dir = os.path.join(PROJECT_DIR, "results")
+        split = eval_name.split("_")
+        # model
+        res_dir = os.path.join(res_dir, split[1])
+        # task
+        res_dir = os.path.join(res_dir, split[0])
+        res_path = os.path.join(res_dir, f"{eval_name}_differences.csv")
+
+    if not os.path.exists(res_dir):
+        os.makedirs(res_dir)
+
     diff_df.to_csv(res_path, index=False, sep="|")
     print(f"Differences saved to {res_path}")
 
@@ -161,7 +176,6 @@ def main():
     results_df_guided, res_path_guided = calc_scores(args.guided)
     results_df_unguided, res_path_unguided = calc_scores(args.unguided)
     calc_differences(results_df_guided, results_df_unguided, eval_name=args.name)
-    print("_BKLA BLA BLA BLA BLAB BLAB")
 
 
 if __name__ == "__main__":

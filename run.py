@@ -21,7 +21,27 @@ def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = "VMware/open-llama-7b-v2-open-instruct"  #'openlm-research/open_llama_7b_v2'#"VMware/open-llama-13b-open-instruct"  #'openlm-research/open_llama_13b'#
+    path = "openlm-research/open_llama_7b_v2"
+    print(f"Loading {path}...")
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        path, use_fast=False
+    )  # LlamaTokenizer.from_pretrained(path)
+
+    model = AutoModelForCausalLM.from_pretrained(
+        path,
+        torch_dtype=torch.float16,
+        device_map="auto",
+    )
+
+    return tokenizer, model
+
+
+def load_openllama_instruct():
+    """
+    Load the OpenLlama model and the tokenizer.
+    """
+    path = "VMware/open-llama-7b-v2-open-instruct"
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -41,7 +61,27 @@ def load_llama():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Llama-3.2-3B"# "meta-llama/Llama-3.2-3B-Instruct"  # "meta-llama/Llama-3.2-3B"
+    path = "meta-llama/Llama-3.2-3B"  # "meta-llama/Llama-3.2-3B-Instruct"  # "meta-llama/Llama-3.2-3B"
+    print(f"Loading {path}...")
+    tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
+
+    model = AutoModelForCausalLM.from_pretrained(
+        path,
+        return_dict=True,
+        low_cpu_mem_usage=True,
+        torch_dtype=torch.float16,
+        device_map="auto",
+        trust_remote_code=True,
+    )
+
+    return tokenizer, model
+
+
+def load_llama_instruct():
+    """
+    Load the Llama model and the tokenizer.
+    """
+    path = "meta-llama/Llama-3.2-3B-Instruct"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 
@@ -69,7 +109,7 @@ def parse_args():
         "--model",
         type=str,
         default="llama",
-        help="The model to use. Options: Llama, OpenLlama, Mistral",
+        help="The model to use. Options: Llama, OpenLlama, Mistral, OpenLlama-instruct, Llama-instruct",
     )
 
     parser.add_argument(
@@ -101,6 +141,7 @@ def main():
     Main function
     """
     args = parse_args()
+    instruct_flag = False
 
     if args.model not in ["Llama", "OpenLlama", "Mistral"]:
         print("Invalid model")
@@ -108,6 +149,12 @@ def main():
         tokenizer, model = load_llama()
     elif args.model in ["OpenLlama"]:
         tokenizer, model = load_openllama()
+    elif args.model in ["OpenLlama-instruct"]:
+        tokenizer, model = load_openllama_instruct()
+        instruct_flag = True
+    elif args.model in ["Llama-instruct"]:
+        tokenizer, model = load_llama_instruct()
+        instruct_flag = True
     ### test data loading without model
     elif args.model == "test":
         pass
@@ -120,10 +167,16 @@ def main():
 
     prompt = Prompt()
 
-    if args.type == "guided":
-        prompt_template = prompt.get_guided_prompt(args.task)
-    elif args.type == "unguided":
-        prompt_template = prompt.get_unguided_prompt(args.task)
+    if instruct_flag:
+        if args.type == "guided":
+            prompt_template = prompt.get_guided_prompt(args.task, instruct_flag=True)
+        elif args.type == "unguided":
+            prompt_template = prompt.get_unguided_prompt(args.task, instruct_flag=True)
+    else:
+        if args.type == "guided":
+            prompt_template = prompt.get_guided_prompt(args.task)
+        elif args.type == "unguided":
+            prompt_template = prompt.get_unguided_prompt(args.task)
 
     results_df = pd.DataFrame(
         columns=[
@@ -206,6 +259,8 @@ def main():
             break
 
     res_dir = os.path.join(PROJECT_DIR, "results")
+    res_dir = os.path.join(res_dir, args.model)
+    res_dir = os.path.join(res_dir, args.task)
 
     res_path = os.path.join(res_dir, f"{args.task}_{args.model}_{args.type}.csv")
 

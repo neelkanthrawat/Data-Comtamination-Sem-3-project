@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Job name
-#SBATCH --job-name=complete_llama               # TODO: adjust job name
+#SBATCH --job-name=complete_openllama-instruct               # TODO: adjust job name
 
 #SBATCH --time=06:00:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
@@ -11,8 +11,8 @@
 #SBATCH --mem=128GB 
 
 # Output and error logs
-#SBATCH --output="complete_llama_out.txt"        # TODO: adjust standard output log
-#SBATCH --error="complete_llama_err.txt"         # TODO: adjust error log
+#SBATCH --output="complete_openllama-instruct_out.txt"        # TODO: adjust standard output log
+#SBATCH --error="complete_openllama-instruct_err.txt"         # TODO: adjust error log
 
 # Email notifications
 #SBATCH --mail-user=""
@@ -27,8 +27,8 @@ module load devel/cuda/12.4
 module load devel/cudnn/10.2
 
 # ADJUST THESE VARIABLES TO INCLUDE EVERYTHING WE WANT TO RUN
-MODELS=("Llama")
-TASKS=("ag_news" "imdb")
+MODELS=("OpenLlama-instruct")
+TASKS=("cb" "wsc" "stackexchange")
 TYPES=("guided" "unguided")
 
 # Activate the conda environment
