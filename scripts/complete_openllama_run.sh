@@ -98,13 +98,13 @@ echo "Deactivating environment: $ENV_NAME2"
 deactivate
 
 # Run second script with DataContamEval env
-echo "Activating python environment: $ENV_NAME1"
+echo "Activating python environment: $ENV_NAME"
 
-if [ -d "$ENV_NAME1" ]; then
-    source "$ENV_NAME1/bin/activate"
-    echo "Environment '$ENV_NAME1' activated successfully."
+if [ -d "$ENV_NAME" ]; then
+    source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
 else
-    echo "Error: Virtual environment '$ENV_NAME1' not found."
+    echo "Error: Virtual environment '$ENV_NAME' not found."
     exit 1
 fi
 
