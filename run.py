@@ -143,9 +143,7 @@ def main():
     args = parse_args()
     instruct_flag = False
 
-    if args.model not in ["Llama", "OpenLlama", "Mistral"]:
-        print("Invalid model")
-    elif args.model in ["Llama", "Llama3"]:
+    if args.model in ["Llama", "Llama3"]:
         tokenizer, model = load_llama()
     elif args.model in ["OpenLlama"]:
         tokenizer, model = load_openllama()
@@ -158,6 +156,8 @@ def main():
     ### test data loading without model
     elif args.model == "test":
         pass
+    else:
+        print("Invalid model")
 
     dh = DataHandler()
 

@@ -33,7 +33,7 @@ TYPES=("guided" "unguided")
 
 # Activate the conda environment
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
-ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 
 
 if [ -d "$ENV_NAME" ]; then
@@ -68,6 +68,17 @@ for model in "${MODELS[@]}"; do
     done
 done
 
+echo "Deactivating environment: $ENV_NAME"
+deactivate
+
+if [ -d "$ENV_NAME2" ]; then
+    source "$ENV_NAME2/bin/activate"
+    echo "Environment '$ENV_NAME2' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_NAME2' not found."
+    exit 1
+fi
+
 for model in "${MODELS[@]}"; do
     for task in "${TASKS[@]}"; do
         echo "Running model: $model, task: $task"
@@ -83,17 +94,17 @@ for model in "${MODELS[@]}"; do
     done
 done
 
-echo "Deactivating environment: $ENV_NAME"
+echo "Deactivating environment: $ENV_NAME2"
 deactivate
 
 # Run second script with DataContamEval env
-echo "Activating python environment: $ENV_NAME2"
+echo "Activating python environment: $ENV_NAME"
 
-if [ -d "$ENV_NAME2" ]; then
-    source "$ENV_NAME2/bin/activate"
-    echo "Environment '$ENV_NAME2' activated successfully."
+if [ -d "$ENV_NAME" ]; then
+    source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
 else
-    echo "Error: Virtual environment '$ENV_NAME2' not found."
+    echo "Error: Virtual environment '$ENV_NAME' not found."
     exit 1
 fi
 
@@ -111,21 +122,6 @@ for model in "${MODELS[@]}"; do
         fi
     done
 done
-
-echo "Deactivating environment: $ENV_NAME2"
-deactivate
-
-
-
-echo "Activating python environment: $ENV_NAME"
-
-if [ -d "$ENV_NAME" ]; then
-    source "$ENV_NAME/bin/activate"
-    echo "Environment '$ENV_NAME' activated successfully."
-else
-    echo "Error: Virtual environment '$ENV_NAME' not found."
-    exit 1
-fi
 
 for model in "${MODELS[@]}"; do       
     for task in "${TASKS[@]}"; do
