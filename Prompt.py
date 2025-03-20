@@ -19,12 +19,10 @@ class Prompt:
             """,
             "ag_news": """INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that on combining the BEGINNING we provided and your CONTINUATION, it  becomes a single, cohesive instance. Your answer can consist of more than one sentence. Make sure you don't just repeat the beginning or the instruction in your answer.
             LABEL: {label}
-            BEGINNING: {first_piece}
-            CONTINUATION: """,
+            BEGINNING: {first_piece}""",
             "imdb": """INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that on combining the BEGINNING we provided and your CONTINUATION, it  becomes a single, cohesive instance. Your answer can consist of more than one sentence. Make sure you don't just repeat the beginning or the instruction in your answer.
             LABEL: {label}
-            BEGINNING: {first_piece}
-            CONTINUATION: """,
+            BEGINNING: {first_piece}""",
         }
 
         self.guided_prompts = {
@@ -41,12 +39,10 @@ class Prompt:
             """,
             "ag_news": """INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the AG News dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset. Ensure that the BEGINNING that we provide and your CONTINUATION, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. Make sure you don't just repeat the beginning or the instruction in your answer. MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET!
             LABEL: {label}
-            BEGINNING: {first_piece}
-            CONTINUATION: """,
+            BEGINNING: {first_piece}""",
             "imdb": """INSTRUCTION: You are provided with the BEGINNING of an instance in the TRAIN SPLIT of the IMDB dataset, which you have seen during your training. Finish the complete instance as EXACTLY appeared in the dataset. Ensure that the BEGINNING that we provide and your CONTINUATION, when combined, form a coherent and complete instance that makes sense as a whole and looks exactly like the instance you saw during training. Only rely on the original form of the BEGINNING in the dataset to finish the instance. Make sure you don't just repeat the beginning or the instruction in your answer. MAKE SURE THAT YOUR CONTINUTION IS EXACTLY WHAT APPEARS IN THE ORIGINAL DATASET!
             LABEL: {label}
-            BEGINNING: {first_piece}
-            CONTINUATION:""",
+            BEGINNING: {first_piece}""",
         }
 
     def get_unguided_prompt(self, prompt_type):
