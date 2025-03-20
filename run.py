@@ -118,7 +118,7 @@ def parse_args():
         default="cb",
         help="The tasks to run",
         required=False,
-        choices=["cb", "wsc", "wikipedia", "stackexchange", "ag_news", "imdb"],
+        choices=["cb", "wsc", "wikipedia", "stackexchange", "agnews", "imdb"],
     )
 
     parser.add_argument(
