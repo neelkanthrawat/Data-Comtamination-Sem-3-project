@@ -33,7 +33,7 @@ TYPES=("guided" "unguided")
 
 # Activate the conda environment
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
-ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContam"
+ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 
 
 if [ -d "$ENV_NAME" ]; then
