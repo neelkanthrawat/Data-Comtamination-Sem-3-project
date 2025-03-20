@@ -28,7 +28,7 @@ module load devel/cudnn/10.2
 
 # ADJUST THESE VARIABLES TO INCLUDE EVERYTHING WE WANT TO RUN
 MODELS=("Llama-instruct")
-TASKS=("ag_news" "imdb")
+TASKS=("agnews" "imdb")
 TYPES=("guided" "unguided")
 
 # Activate the conda environment

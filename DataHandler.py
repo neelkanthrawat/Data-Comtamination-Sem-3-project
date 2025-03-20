@@ -55,7 +55,7 @@ class DataHandler:
                 trust_remote_code=True,
                 split="train",
             )
-        elif dataset_name == "ag_news":
+        elif dataset_name == "agnews":
             dataset = load_dataset(
                 "fancyzhx/ag_news", split="test", streaming=True, trust_remote_code=True
             )

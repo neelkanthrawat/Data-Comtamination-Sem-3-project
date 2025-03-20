@@ -202,7 +202,7 @@ def main():
             first_piece, second_piece = dh.split_sentence(
                 sample["text"], split_with_char=0
             )
-        elif args.task == "ag_news":
+        elif args.task == "agnews":
             first_piece, second_piece = dh.split_sentence(sample["text"])
         elif args.task == "imdb":
             first_piece, second_piece = dh.split_sentence(sample["text"])
