@@ -3,12 +3,12 @@
 # Job name
 #SBATCH --job-name=complete_llama               # TODO: adjust job name
 
-#SBATCH --time=00:30:00              # Job time limit (30 minutes)
+#SBATCH --time=06:00:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=gpu_4
-#SBATCH --mem=16GB 
+#SBATCH --mem=64GB 
 
 # Output and error logs
 #SBATCH --output="complete_llama_out.txt"        # TODO: adjust standard output log
