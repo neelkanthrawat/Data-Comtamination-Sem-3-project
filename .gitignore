@@ -10,6 +10,8 @@ __pycache__/
 # user defined
 results_llama
 results_openllama
+time-travel-in-llms-main
+.DS_Store
 
 # Distribution / packaging
 file_processing.ipynb
