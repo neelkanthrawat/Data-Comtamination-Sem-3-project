@@ -9,9 +9,10 @@ class Prompt:
             "wsc": """INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
             FIRST PIECE: {first_piece}""",
             "cb": """ INSTRUCTION: Given a sentence (PREMISE) and its associated LABEL, generate the most likely HYPOTHESIS.
-            Ensure that the generated sentence aligns with the specified LABEL type. ONLY generate the pausible HYPOTHESIS and nothing else. DO NOT SIMPLY COPY the premise!!
+            Ensure that the generated sentence aligns with the specified LABEL type. ONLY generate the pausible HYPOTHESIS and nothing else. DO NOT SIMPLY COPY the premise!
+            LABEL: {label}
             PREMISE: {first_piece}
-            LABEL: {label}""",
+            """,
             "stackexchange": """ INSTRUCTION: You are provided with the BEGINNING of an instance. Complete the instance such that the BEGINNING we provided and your answer become a single instance. DON'T JUST REPEAT the BEGINNING or the INSTRUCTION! DO more than just simply completing the BEGINNING. Dont just repeat sentences in your response.
             BEGINNING: {first_piece}
             """,
