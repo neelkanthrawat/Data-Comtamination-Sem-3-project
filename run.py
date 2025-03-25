@@ -16,12 +16,24 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
+agnews_mapping = {
+    0: "0 (World)",
+    1: "1 (Sports)",
+    2: "2 (Business)",
+    3: "3 (Sci/Tech)",
+}
+
+imdb_mapping = {
+    0: "0 (Negative)",
+    1: "1 (Positive)",
+}
+
 
 def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = "openlm-research/open_llama_7b_v2"
+    path = "openlm-research/open_llama_7b_v2"  # bigger model: 'openlm-research/open_llama_13b'
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -41,7 +53,7 @@ def load_openllama_instruct():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = "VMware/open-llama-7b-v2-open-instruct"
+    path = "VMware/open-llama-7b-v2-open-instruct"  # bigger model: 'VMware/open-llama-13b-open-instruct'
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -61,7 +73,7 @@ def load_llama():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Llama-3.2-3B"  # "meta-llama/Llama-3.2-3B-Instruct"  # "meta-llama/Llama-3.2-3B"
+    path = "meta-llama/Llama-3.2-3B"  # bigger model: "meta-llama/Meta-Llama-3.1-70B"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 
@@ -81,7 +93,7 @@ def load_llama_instruct():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Llama-3.2-3B-Instruct"
+    path = "meta-llama/Llama-3.2-3B-Instruct"  # bigger model: "meta-llama/Meta-Llama-3.1-70B-Instruct"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 
@@ -208,8 +220,14 @@ def main():
             first_piece, second_piece = dh.split_sentence(sample["text"])
 
         if "label" in [key.strip().lower() for key in sample.keys()]:
+            label = sample["label"]
+            if args.task == "agnews":
+                label = agnews_mapping[label]
+            elif args.task == "imdb":
+                label = imdb_mapping[label]
+
             formatted_prompt = prompt_template.format(
-                first_piece=first_piece, label=sample["label"]
+                first_piece=first_piece, label=label
             )
         elif "meta" in sample.keys():
             formatted_prompt = prompt_template.format(
