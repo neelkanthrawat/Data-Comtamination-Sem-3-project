@@ -118,7 +118,7 @@ def parse_args():
         default="cb",
         help="The tasks to run",
         required=False,
-        choices=["cb", "wsc", "wikipedia", "stackexchange", "ag_news", "imdb"],
+        choices=["cb", "wsc", "wikipedia", "stackexchange", "agnews", "imdb"],
     )
 
     parser.add_argument(
@@ -202,7 +202,7 @@ def main():
             first_piece, second_piece = dh.split_sentence(
                 sample["text"], split_with_char=0
             )
-        elif args.task == "ag_news":
+        elif args.task == "agnews":
             first_piece, second_piece = dh.split_sentence(sample["text"])
         elif args.task == "imdb":
             first_piece, second_piece = dh.split_sentence(sample["text"])
@@ -255,7 +255,7 @@ def main():
             "Prediction": decoded_out,
         }
 
-        if index > 10:
+        if index > 1000:
             break
 
     res_dir = os.path.join(PROJECT_DIR, "results")

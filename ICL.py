@@ -43,7 +43,7 @@ def load_mistral():
     """
     Load the Mistral model and the tokenizer.
     """
-    path = "mistralai/Mistral-7B-Instruct-v0.3"
+    path = "mistralai/Mistral-7B-Instruct-v0.3"#  copy the load llama-instruct function 
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(path)
@@ -58,6 +58,26 @@ def load_mistral():
 
     return tokenizer, model
 
+def load_llama_instruct():
+    """
+    Load the Llama model and the tokenizer.
+    """
+    path = "meta-llama/Llama-3.2-3B-Instruct"
+    print(f"Loading {path}...")
+    tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
+
+    model = AutoModelForCausalLM.from_pretrained(
+        path,
+        return_dict=True,
+        low_cpu_mem_usage=True,
+        torch_dtype=torch.float16,
+        device_map="auto",
+        trust_remote_code=True,
+    )
+
+    return tokenizer, model
+
+
 
 def ICL_prompting(in_path: str):
     """
@@ -68,7 +88,7 @@ def ICL_prompting(in_path: str):
     with open(path, "r") as f:
         df = pd.read_csv(f, delimiter="|")
 
-    tokenizer, model = load_mistral()
+    tokenizer, model = load_llama_instruct()#load_mistral()# change it to load llama-instruct
 
     prompt_template = """
         Instruction: You are provided with a reference text and a candidate text. The candidate text is a generated replica of the reference text. Your task is to determine if the candidate text is an exact or near-exact match of the reference text. Near-exact match candidates must precisely match the reference candidates in terms of sentence structure, overlap, and contextual similarity. Respond only with ”Yes” or ”No”.

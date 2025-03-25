@@ -3,12 +3,12 @@
 # Job name
 #SBATCH --job-name=complete_llama-intruct               # TODO: adjust job name
 
-#SBATCH --time=00:30:00              # Job time limit (30 minutes)
+#SBATCH --time=06:00:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=gpu_4
-#SBATCH --mem=16GB 
+#SBATCH --mem=64GB 
 
 # Output and error logs
 #SBATCH --output="complete_llama-instruct_out.txt"        # TODO: adjust standard output log
@@ -28,7 +28,7 @@ module load devel/cudnn/10.2
 
 # ADJUST THESE VARIABLES TO INCLUDE EVERYTHING WE WANT TO RUN
 MODELS=("Llama-instruct")
-TASKS=("ag_news" "imdb")
+TASKS=("agnews" "imdb")
 TYPES=("guided" "unguided")
 
 # Activate the conda environment
