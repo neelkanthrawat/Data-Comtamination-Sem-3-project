@@ -87,23 +87,23 @@ def main():
             rouges_unguided = []
             for unguided, ref in zip(unguided_completions, second_pieces):
                 rouge_score = calculate_rouge(preds=[unguided], refs=[ref])
-                rouges_unguided.append(rouge_score["rougeL"])
+                rouges_unguided.append(int(rouge_score["rougeL"]))
 
 
             rep_path = os.path.join(PROJECT_DIR, "replication_results.txt")
             with open(rep_path, "a") as f:
                 f.writelines(f"\n\n\nFile: {file_path}\n")
                 f.writelines(
-                    f"Our recalculated BLEURT Score Guided: {bleurt_score_guided},\n theirs: {df['bleurt_score_for_guided_completion'].tolist()}"
+                    f"Our recalculated BLEURT Score Guided: {bleurt_score_guided},\n theirs: {df['bleurt_score_for_guided_completion'].tolist()}\n"
                 )
                 f.writelines(
-                    f"Our recalculated ROUGE Score Guided: {rouges_guided},\n theirs: {df['rouge_score_for_guided_completion'].tolist()}"
+                    f"Our recalculated ROUGE Score Guided: {rouges_guided},\n theirs: {df['rouge_score_for_guided_completion'].tolist()}\n"
                 )
                 f.writelines(
-                    f"Our recalculated BLEURT Score Unguided: {bleurt_score_unguided},\n theirs: {df['bleurt_score_for_general_completion'].tolist()}"
+                    f"Our recalculated BLEURT Score Unguided: {bleurt_score_unguided},\n theirs: {df['bleurt_score_for_general_completion'].tolist()}\n"
                 )
                 f.writelines(
-                    f"Our recalculated ROUGE Score Unguided: {rouges_unguided},\n theirs: {df['rouge_score_for_general_completion'].tolist()}"
+                    f"Our recalculated ROUGE Score Unguided: {rouges_unguided},\n theirs: {df['rouge_score_for_general_completion'].tolist()}\n"
                 )
 
 
