@@ -2,6 +2,8 @@ import pandas as pd
 import os
 import evaluate
 
+HOME = Path.home()
+PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 def calculate_bleurt(preds, refs):
     bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
@@ -16,7 +18,7 @@ def calculate_rouge(preds, refs):
 
 
 def main():
-    results_dir = "time-travel-in-llms-main/results/"
+    results_dir = os.path.join(PROJECT_DIR, "time-travel-in-llms-main/results/")
     paths = []
     for dirpath, _, filenames in os.walk(results_dir):
         for file in filenames:
