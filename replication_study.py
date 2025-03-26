@@ -23,6 +23,8 @@ def main():
             if file.endswith(".csv"):
                 paths.append(os.path.join(dirpath, file))
 
+    print(f"Found {len(paths)} files: {paths}")
+
     for file_path in paths:
         with open(file_path) as f:
             df = pd.read_csv(f)

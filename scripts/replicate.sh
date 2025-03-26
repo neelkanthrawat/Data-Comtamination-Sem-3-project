@@ -42,6 +42,3 @@ python "$HOME/Data-Comtamination-Sem-3-project/replication_study.py"
 
 echo "Deactivating environment: $ENV_NAME"
 deactivate
-
-COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
-sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
