@@ -8,7 +8,7 @@
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=gpu_4
-#SBATCH --mem=64GB 
+#SBATCH --mem=138GB 
 
 # Output and error logs
 #SBATCH --output="complete_llama-instruct_out.txt"        # TODO: adjust standard output log
