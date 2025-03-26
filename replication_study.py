@@ -27,16 +27,13 @@ def resample_scores(scores, num_resample, num_samples):
     return means
 
 
-def calculate_p_value(guided, unguided, num_resample, num_samples):
+def calculate_p_value(scores, num_resample, num_samples, guided, unguided):
     guided_means = resample_scores(
-        guided, num_resample=num_resample, num_samples=num_samples
+        scores[guided], num_resample=num_resample, num_samples=num_samples
     )
     unguided_means = resample_scores(
-        unguided, num_resample=num_resample, num_samples=num_samples
+        scores[unguided], num_resample=num_resample, num_samples=num_samples
     )
-
-    print(guided_means)
-    print(unguided_means)
 
     count = 0
 
@@ -47,7 +44,6 @@ def calculate_p_value(guided, unguided, num_resample, num_samples):
     p_val = 1 - (count / num_resample)
 
     return p_val
-
 
 def main():
     results_dir = os.path.join(PROJECT_DIR, "time-travel-in-llms-main/results/")
@@ -92,8 +88,11 @@ def main():
                 rouge_score = calculate_rouge(preds=[unguided], refs=[ref])
                 rouges_unguided.append(int(rouge_score["rougeL"]))
 
-            p_val_bleu = calculate_p_value(guided=pd.DataFrame(bleurt_score_guided)["scores"], unguided=pd.DataFrame(bleurt_score_unguided)["scores"], num_resample=10000, num_samples=10)
-            p_val_rouge = calculate_p_value(guided=pd.DataFrame(rouges_guided), unguided=pd.DataFrame(rouges_unguided, columns=["scores"])["scores"], num_resample=10000, num_samples=10)
+            bleurt_dict = {"bleurt_guided": bleurt_score_guided, "bleurt_unguided": bleurt_score_unguided}
+            rouge_dict = {"rouge_guided": rouges_guided, "rouge_unguided": rouges_unguided}
+
+            p_val_bleu = calculate_p_value(scores=pd.DataFrame(bleurt_dict), num_resample=10000, num_samples=10, guided="bleurt_guided", unguided="bleurt_unguided")
+            p_val_rouge = calculate_p_value(scores=pd.DataFrame(rouge_dict), num_resample=10000, num_samples=10, guided="bleurt_guided", unguided="bleurt_unguided")
 
             rep_path = os.path.join(PROJECT_DIR, "replication_results.txt")
             with open(rep_path, "a") as f:
