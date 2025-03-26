@@ -18,6 +18,34 @@ def calculate_rouge(preds, refs):
     return rouge_score
 
 
+def resample_scores(scores, num_resample, num_samples):
+    means = []
+    for _ in range(num_resample):
+        sample = scores.sample(n=num_samples, replace=True)
+        means.append(sample.mean())
+
+    return means
+
+
+def calculate_p_value(scores, num_resample, num_samples, guided, unguided):
+    guided_means = resample_scores(
+        scores[guided], num_resample=num_resample, num_samples=num_samples
+    )
+    unguided_means = resample_scores(
+        scores[unguided], num_resample=num_resample, num_samples=num_samples
+    )
+
+    count = 0
+
+    for avg_guided, avg_unguided in zip(guided_means, unguided_means):
+        if avg_guided > avg_unguided:
+            count += 1
+
+    p_val = 1 - (count / num_resample)
+
+    return p_val
+
+
 def main():
     results_dir = os.path.join(PROJECT_DIR, "time-travel-in-llms-main/results/")
     paths = []
@@ -36,10 +64,6 @@ def main():
                 guided_completions = df["generated_guided_completion"].tolist()
             if "generated_general_completion" in df.columns:
                 unguided_completions = df["generated_general_completion"].tolist()
-            if "first_piece" in df.columns:
-                first_pieces = df["first_piece"].tolist()
-            else:
-                first_pieces = df["sentence1"].tolist()
             if "second_piece" in df.columns:
                 second_pieces = df["second_piece"].tolist()
             else:
@@ -49,33 +73,38 @@ def main():
                 preds=guided_completions,
                 refs=second_pieces,
             )
-            rouge_score_guided = calculate_rouge(
-                preds=guided_completions,
-                refs=second_pieces,
-            )
 
             bleurt_score_unguided = calculate_bleurt(
                 preds=unguided_completions,
                 refs=second_pieces,
             )
-            bleurt_score_guided = calculate_rouge(
-                preds=unguided_completions,
-                refs=second_pieces,
-            )
 
-            print(f"File: {file_path}")
-            print(
-                f"Our recalculated BLEURT Score Guided: {bleurt_score_guided}, theirs: {df['bleurt_score_for_guided_completion'].tolist()}"
-            )
-            print(
-                f"Our recalculated ROUGE Score Guided: {rouge_score_guided}, theirs: {df['rouge_score_for_guided_completion'].tolist()}"
-            )
-            print(
-                f"Our recalculated BLEURT Score Unguided: {bleurt_score_unguided}, theirs: {df['bleurt_score_for_general_completion'].tolist()}"
-            )
-            print(
-                f"Our recalculated ROUGE Score Unguided: {rouge_score_guided}, theirs: {df['rouge_score_for_general_completion'].tolist()}"
-            )
+            rouges_guided = []
+            for guided, ref in zip(guided_completions, second_pieces):
+                rouge_score = calculate_rouge(preds=[guided], refs=[ref])
+                rouges_guided.append(rouge_score["rougeL"])
+
+            rouges_unguided = []
+            for unguided, ref in zip(unguided_completions, second_pieces):
+                rouge_score = calculate_rouge(preds=[unguided], refs=[ref])
+                rouges_unguided.append(rouge_score["rougeL"])
+
+
+            rep_path = os.path.join(PROJECT_DIR, "replication_results")
+            with open(rep_path, "a") as f:
+                f.writeline(f"\n\n\nFile: {file_path}\n")
+                f.writeline(
+                    f"Our recalculated BLEURT Score Guided: {bleurt_score_guided},\n theirs: {df['bleurt_score_for_guided_completion'].tolist()}", end="\n\"
+                )
+                f.writeline(
+                    f"Our recalculated ROUGE Score Guided: {rouges_guided},\n theirs: {df['rouge_score_for_guided_completion'].tolist()}", end="\n\n"
+                )
+                f.writeline(
+                    f"Our recalculated BLEURT Score Unguided: {bleurt_score_unguided},\n theirs: {df['bleurt_score_for_general_completion'].tolist()}", end="\n\n"
+                )
+                f.writeline(
+                    f"Our recalculated ROUGE Score Unguided: {rouges_unguided},\n theirs: {df['rouge_score_for_general_completion'].tolist()}", end="\n\n"
+                )
 
 
 if __name__ == "__main__":
