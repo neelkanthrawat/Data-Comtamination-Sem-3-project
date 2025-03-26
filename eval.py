@@ -83,6 +83,7 @@ def calc_scores(in_path: str):
             )
         else:
             bleurt_score = bleurt.score(references=[prediction], candidates=[gold])
+            print(bleurt_score)
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
         results_df.loc[index] = {
