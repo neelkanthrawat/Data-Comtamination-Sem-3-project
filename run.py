@@ -94,7 +94,7 @@ def load_llama():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Meta-Llama-3.1-70B"  # "meta-llama/Llama-3.2-3B"  # bigger model: "meta-llama/Meta-Llama-3.1-70B"
+    path = "meta-llama/Llama-3.2-3B"  # bigger model: "meta-llama/Meta-Llama-3.1-70B"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 
@@ -114,7 +114,7 @@ def load_llama_instruct():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Meta-Llama-3.1-70B-Instruct"  # "meta-llama/Llama-3.2-3B-Instruct"  # bigger model: "meta-llama/Meta-Llama-3.1-70B-Instruct"
+    path = "meta-llama/Llama-3.2-3B-Instruct"  # bigger model: "meta-llama/Meta-Llama-3.1-70B-Instruct"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 

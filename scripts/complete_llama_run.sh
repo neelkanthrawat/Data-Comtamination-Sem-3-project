@@ -3,12 +3,12 @@
 # Job name
 #SBATCH --job-name=complete_llama               # TODO: adjust job name
 
-#SBATCH --time=24:00:00              # Job time limit (30 minutes)
+#SBATCH --time=10:00:00              # Job time limit (30 minutes)
 #SBATCH --ntasks=1                   # Total number of tasks
 #SBATCH --gres=gpu:1                 # Request 2 GPUs
 #SBATCH --cpus-per-task=1            # Number of CPU cores per task
 #SBATCH --partition=gpu_4
-#SBATCH --mem=240GB 
+#SBATCH --mem=128GB 
 
 # Output and error logs
 #SBATCH --output="complete_llama_out.txt"        # TODO: adjust standard output log
@@ -50,23 +50,23 @@ export SSL_CERT_FILE=$($ENV_NAME/bin/python -m certifi)
 export SSL_CERT_FILE=$($ENV_NAME2/bin/python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
-# Loop through all combinations of models, tasks, and types
-for model in "${MODELS[@]}"; do
-    for task in "${TASKS[@]}"; do
-        for type in "${TYPES[@]}"; do
-            echo "Running model: $model, task: $task, type: $type"
-            python "$HOME/Data-Comtamination-Sem-3-project/run.py" --model "$model" --task "$task" --type "$type"
+# # Loop through all combinations of models, tasks, and types
+# for model in "${MODELS[@]}"; do
+#     for task in "${TASKS[@]}"; do
+#         for type in "${TYPES[@]}"; do
+#             echo "Running model: $model, task: $task, type: $type"
+#             python "$HOME/Data-Comtamination-Sem-3-project/run.py" --model "$model" --task "$task" --type "$type"
             
-            # Verify if the script executed successfully
-            if [ $? -eq 0 ]; then
-                echo "Python script run.py executed successfully for model=$model, task=$task, type=$type."
-            else
-                echo "Error: Python script run.py failed for model=$model, task=$task, type=$type."
-                exit 1
-            fi
-        done
-    done
-done
+#             # Verify if the script executed successfully
+#             if [ $? -eq 0 ]; then
+#                 echo "Python script run.py executed successfully for model=$model, task=$task, type=$type."
+#             else
+#                 echo "Error: Python script run.py failed for model=$model, task=$task, type=$type."
+#                 exit 1
+#             fi
+#         done
+#     done
+# done
 
 echo "Deactivating environment: $ENV_NAME"
 deactivate
