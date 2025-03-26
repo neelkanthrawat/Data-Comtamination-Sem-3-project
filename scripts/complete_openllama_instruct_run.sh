@@ -28,7 +28,7 @@ module load devel/cudnn/10.2
 
 # ADJUST THESE VARIABLES TO INCLUDE EVERYTHING WE WANT TO RUN
 MODELS=("OpenLlama-instruct")
-TASKS=("cb" "wsc" "stackexchange")
+TASKS=("stackexchange")
 TYPES=("guided" "unguided")
 
 # Activate the conda environment
