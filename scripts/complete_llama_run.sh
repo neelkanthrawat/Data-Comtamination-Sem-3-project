@@ -36,13 +36,13 @@ ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 
 
-# if [ -d "$ENV_NAME" ]; then
-#     source "$ENV_NAME/bin/activate"
-#     echo "Environment '$ENV_NAME' activated successfully."
-# else
-#     echo "Error: Virtual environment '$ENV_NAME' not found."
-#     exit 1
-# fi
+if [ -d "$ENV_NAME" ]; then
+    source "$ENV_NAME/bin/activate"
+    echo "Environment '$ENV_NAME' activated successfully."
+else
+    echo "Error: Virtual environment '$ENV_NAME' not found."
+    exit 1
+fi
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -51,25 +51,25 @@ export SSL_CERT_FILE=$($ENV_NAME2/bin/python -m certifi)
 export TF_CPP_MIN_LOG_LEVEL=2
 
 # # Loop through all combinations of models, tasks, and types
-# for model in "${MODELS[@]}"; do
-#     for task in "${TASKS[@]}"; do
-#         for type in "${TYPES[@]}"; do
-#             echo "Running model: $model, task: $task, type: $type"
-#             python "$HOME/Data-Comtamination-Sem-3-project/run.py" --model "$model" --task "$task" --type "$type"
+for model in "${MODELS[@]}"; do
+    for task in "${TASKS[@]}"; do
+        for type in "${TYPES[@]}"; do
+            echo "Running model: $model, task: $task, type: $type"
+            python "$HOME/Data-Comtamination-Sem-3-project/run.py" --model "$model" --task "$task" --type "$type"
             
-#             # Verify if the script executed successfully
-#             if [ $? -eq 0 ]; then
-#                 echo "Python script run.py executed successfully for model=$model, task=$task, type=$type."
-#             else
-#                 echo "Error: Python script run.py failed for model=$model, task=$task, type=$type."
-#                 exit 1
-#             fi
-#         done
-#     done
-# done
+            # Verify if the script executed successfully
+            if [ $? -eq 0 ]; then
+                echo "Python script run.py executed successfully for model=$model, task=$task, type=$type."
+            else
+                echo "Error: Python script run.py failed for model=$model, task=$task, type=$type."
+                exit 1
+            fi
+        done
+    done
+done
 
-# echo "Deactivating environment: $ENV_NAME"
-# deactivate
+echo "Deactivating environment: $ENV_NAME"
+deactivate
 
 if [ -d "$ENV_NAME2" ]; then
     source "$ENV_NAME2/bin/activate"
