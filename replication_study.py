@@ -90,7 +90,7 @@ def main():
                 rouges_unguided.append(int(rouge_score["rougeL"]))
 
             p_val_bleu = calculate_p_value(guided=bleurt_score_guided, unguided=bleurt_score_unguided, num_resample=10000, num_samples=10)
-            p_val_rouge = calculate_p_value(guided=rouges_guided, unguided=rouges_unguided, num_resample=10000, num_samples=10)
+            p_val_rouge = calculate_p_value(guided=pd.DataFrame(rouges_guided), unguided=pd.DataFrame(rouges_unguided), num_resample=10000, num_samples=10)
 
             rep_path = os.path.join(PROJECT_DIR, "replication_results.txt")
             with open(rep_path, "a") as f:
