@@ -85,6 +85,7 @@ def calc_scores(in_path: str):
             bleurt_score = bleurt.score(references=[prediction], candidates=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
+        print(bleurt_score)
         results_df.loc[index] = {
             "Index": index,
             # "Label": row["Label"] if "Label" in row.columns() else None,
