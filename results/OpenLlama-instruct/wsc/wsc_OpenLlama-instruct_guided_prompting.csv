@@ -1,0 +1,453 @@
+Index|Label|First piece|Gold|Prediction|Mistral
+0||Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|and includes as actors some of the people involved in their lives.|"brothers who live in a small town in the American South. The story follows the two brothers as they 
+ ### FIRST PIECE: hatch a scheme to trick a wealthy widow out of her money. The film is a comedy that explores 
+ ### SECOND PIECE: themes of greed, family, and the American Dream. The film stars Damon Wayans and Keenan Ivory Wayans."|"No (not a near-exact match) 
+
+Note: The reference texts are provided for your reference only. Do not copy them. The candidate texts"
+1||Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|entering a building.|"No (exact match does not apply) 
+        Note: The answer is No because the reference text does not match the candidate text at all. The"
+2||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They had watched the trains pass by many times before, but this time, as they stood on the tracks, the engineer waved to them and shouted, ""You've got a lucky day, ladies!"" 
+ Maude and Dora felt their hearts race with excitement. They had always dreamed of riding a train, and now they were going"|"No (not a match) 
+        Note: The candidate text is not a direct replica of the reference text. The candidate text has a different narrative"
+3||Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|d'Arblay is a French painter born in 1840 and died in 1926. She specialized in portraits and genre scenes.|"No (not a match) 
+        Note: The reference text is a description of a painting, while the candidate text is a biographical description of"
+4||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1917.|"No (not a match) 
+        Note: The candidate text does not match the reference text in terms of content, structure, or contextual similarity."
+5||After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm. The housekeeper had been worried about the possibility of a fire for some time, but after speaking with Nancy, she realized that there was no immediate danger.|"No (not a near-exact match) 
+
+        Note: The reference texts are provided for your reference only. Do not copy them into your response"
+6||Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|Dave was the only one who didn't like Johnny. Most of the boys liked him.|"No (not a near-exact match) 
+        Note: The candidate text does not contain the same characters, sentence structure, or contextual similarity as"
+7||Laufer's play was inspired by a court case in which the Havasupai Tribe claimed|that researchers from Arizona State University used their DNA samples improperly.|the right to water in the Grand Canyon, which was decided in 1988.|"No (not a match) 
+
+        Example 7:  
+        Reference Text: The 2019  World Cup was the 21st edition"
+8||The needy were allowed to follow after the|harvesters so that they might pick up the fallen grain.|"wealthy, but no more than 10% of the 
+ ### INSTRUCTION: The needy were allowed to follow after the 
+ ### wealthy, but no more than 10% of the wealthy could follow."|"Yes (near-exact match) 
+        Note: The candidate text is a paraphrased version of the reference text, but it maintains the same"
+9||Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|Dave was the only one who didn't like Johnny. Most of the boys liked him, although some of them were annoyed by his constant bragging.|"No (not a match) 
+        Note: The reference text is a passage from a novel, and the candidate text is a sentence from a different"
+10||Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|Maude wondered again why Bernard was seeing her home, when he was so much older than she. He was a widower, and she was a widow. He had three children, and she had two. He was a lawyer, and she was a teacher. He was very rich, and she was not very rich. He was very handsome, and she was not very handsome.|"No (not a match) 
+        Note: The candidate text is not a match to the reference text in terms of sentence structure, overlap, and"
+11||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains as they tore across the landscape, and they watched them with great interest.|"No (not near-exact match) 
+
+        The reference text is the original text, and the candidate text is the generated replica. The task is"
+12||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains, and couldn't wait to get on board themselves.|"No (not a near-exact match) 
+
+        Reference Text: The company has a long history of innovation and has developed a number of groundbreaking technologies"
+13||The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The blur of the wheel and the streak of light of the needle.|"No (not a near-exact match) 
+
+        Example 6:  
+        Reference Text: The company will begin construction on the new facility in"
+14||Muriel has in her living room a famous painting of a ballerina.|She bought the painting when she was thirty.|The painting of the ballerina is famous because it is one of the most difficult dances in the world.|"No (not a match) 
+
+        Reference Text: The company will be held accountable for the consequences of its actions.
+        Candidate Text: The company"
+15||Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|of her friend Molly.|"No (not a near-exact match) 
+
+        Instructions: 
+        1. Read the reference text and the candidate text carefully."
+16||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|Wilkins, who was sitting on the sofa.|"No (not a match) 
+        Note: The reference text is a sentence from a book, and the candidate text is a sentence from a different"
+17||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1917.|"No (not a match) 
+        Note: The candidate text does not contain any information about Stalin, Pravda, Grigory Zin"
+18||The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The blur of the wheel and the streak of light of the needle.|"No (not a near-exact match) 
+
+        Note: The reference text is not provided in this prompt. Please provide the reference text for the"
+19||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|Clerk, who was sitting behind the counter.|"No (not a match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap, and contextual similarity"
+20||The people in my reading group found Carpenter's|poems hard to understand because they are obscure.|The book to be very interesting.|"No (not a match) 
+        Example 6:  
+        Reference Text: The 2011  World Cup was the 19th FIFA"
+21||The people in my reading group found Carpenter's|poems hard to understand because they are obscure.|"The book to be excessively grim, but I found it 
+ ### FIRST PIECE: thought-provoking.
+ ### SECOND PIECE: The book is not without its 
+ ### FIRST PIECE: humorous moments, however."|"No (not a near-exact match) 
+        The final answer is: $\boxed{Yes}$"
+22||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains, and couldn't wait to see them in person.|"No (not a near-exact match) 
+        Note: The candidate text is not similar in terms of sentence structure, overlap, and contextual similarity"
+23||When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it.|Nell Raleigh was already there when Maude got to school.|"No (not a near-exact match) 
+        Note: The reference text is a sentence from a novel, and the candidate text is a sentence"
+24||Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|of a young woman in a blue dress.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of subject, scene, or"
+25||After all,|Steve might have decided that Mark's legs and ears were better than his hands --- and deliberately let him do the work that best suited him.|the only thing that really matters is that you and I are friends.|"No (not a match) 
+        Note: The answer is No because the candidate text does not match the reference text in terms of sentence structure,"
+26||Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"Grandma had set a place for Mary; and once Mrs. 
+ ### INSTRUCTION: Grandma had set a place for Mary; and once Mrs. 
+ ### SECOND PIECE: Grandma had set a place for Mary; and once Mrs. 
+ ### INSTRUCTION: Grandma had set a place for Mary; and once Mrs. 
+ ### SECOND PIECE: Grandma had set a place for Mary; and once Mrs."|"No (not a near-exact match) 
+
+Note: The candidate text in Example 5 is not a near-exact match because the sentence structure"
+27||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Potter, who was sitting at the desk. Mr. Potter looked up and smiled at him. 
+ ### FIRST PIECE: ""Good morning, Mat,"" he said. ""I didn't know you were coming in today."" 
+ ### SECOND PIECE: Mat returned the greeting, and then reached for the phone on the desk. 
+ ### FIRST PIECE: ""Good morning, Mr. Potter,"" he said. ""I'm here to see Mr"|"No (not a near-exact match) 
+
+        Note: The task requires the model to determine if the candidate text is an exact or near-ex"
+28||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Dick, who was sitting at the desk. “Oh, I’m sorry,” said Mat, apologetically. 
+ ### INSTRUCTION: Dick replied, “It’s all right, Mat. I was just trying to lighten the mood here.” 
+ ### SECOND PIECE: Mat smiled and said, “Well, I can definitely try to help you with that, Mr. Dick.”"|"No (not a near-exact match) 
+
+The task is to determine if the candidate text is an exact or near-exact match of the reference"
+29||People kept going through the traffic light because the light was in the middle of a holiday display.|It was too inconspicuous.|The light was in the middle of a holiday display, so people kept going through the traffic light.|"No (not a near-exact match) 
+
+Note: The reference text and candidate text should be identical in terms of sentence structure, overlap, and"
+30||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|Wilkes, who was standing at the counter.|"No (not a match) 
+        Note: The answer should be ""Yes"" or ""No"" only. The response should not include any additional"
+31||Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|Blaze, the white horse, absorbed Mark.|"No (not a match) 
+        Note: The reference text does not mention Blaze, Mark, or the Burlington Stables. The candidate text is"
+32||Always before, Larry had helped Dad with his work.|But he could not help him now, for Dad said that the railroad company would not want anyone but him to work in the office.|Larry had helped Dad with his work before.|"No (not a near-exact match) 
+
+        Note: The candidate text in Example 5 is not a near-exact match because the candidate"
+33||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1917.|"No (not a match) 
+        Note: The answer is No because the candidate text does not match the reference text in terms of content, structure"
+34||The last day came.|Tomorrow Nell was going away. Dad and Mom had brought home her new trunk.|of the week.|"No (not a match) 
+        Example 6:  
+        Reference Text: The new policy will be implemented on January 1st."
+35||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. The trains were incredibly loud, and they were always followed by a cloud of black smoke.|"No (not near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap, and"
+36||Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|The ballerina in the painting is dancing with a very important person.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap,"
+37||Muriel has in her living room a famous painting of a ballerina.|She bought the painting when she was thirty.|The painting is of a ballerina, and it is famous. It was painted by an artist who was known for his attention to detail.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap,"
+38||Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|Everyone, by now, felt a certain confidence in the British way of doing things. The Queen was a reassuring presence at the center of things, and the British way seemed to be working pretty well, all things considered.|"No (not a near-exact match) 
+
+        Note: The candidate text is a generated replica of the reference text. The task is to determine"
+39||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a prominent Soviet politician, 
+ ### FIRST PIECE: was born in 1882, 
+ ### SECOND PIECE: in the city of Tiflis, 
+ ### FIRST PIECE: which was then part of the Russian Empire, 
+ ### SECOND PIECE: and was named after his father, 
+ ### FIRST PIECE: Yuri Zavadsky, 
+ ### SECOND PIECE: who had been a"|"No (not a match) 
+        Note: The candidate text does not match the reference text in terms of content, structure, or contextual similarity."
+40||Always before, Larry had helped Dad with his work.|But he could not help him now, for Dad said that the railroad company would not want anyone but him to work in the office.|Larry had helped Dad with his work before.|"No (not a near-exact match) 
+        In this task, you are required to determine if the candidate text is an exact or near-ex"
+41||The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|the patient.|"No (not a match) 
+        Note: The answer should be only ""Yes"" or ""No"". The response should not include any additional text"
+42||Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|"of her friend Molly. Molly painted it when she was 
+ ### FIRST PIECE: a child. It is a painting of a kitten playing with 
+ ### SECOND PIECE: a ball of yarn."|"No (not a near-exact match) 
+        The final answer is: $\boxed{Yes}$"
+43||Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|Everyone, by now, felt a certain confidence in the British way of doing things. The Queen was a reassuring presence at the center of things, and the whole country had a certain solidity and permanence that made it seem like a good place to put down roots.|"No (not a near-exact match) 
+
+        Note: The reference text and candidate text should be identical in terms of content, structure, and"
+44||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|Wilkes, who was sitting at the desk.|"No (not a match) 
+        Note: The reference text does not match the candidate text at all. The candidate text is not even related to"
+45||Edward dropped adhesive tape onto his window sill,|and when he pulled the tape off, some of the glue was stuck on it .|and it stuck there for the next several hours.|"No (not a near-exact match) 
+        Note: The reference text does not have a clear near-exact match in the candidate text."
+46||When I got to the house, Mrs.|Everett, the housekeeper, told me that Hermione was in her room, watching her maid pack.|White was waiting for me.|"No (not a near-exact match) 
+
+        Note: The reference text is from the Harry Potter series by J.K. Rowling. The candidate"
+47||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1917.|"No (not a match) 
+        Note: The answer is No because the candidate text does not match the reference text in terms of content, structure"
+48||Usually rainy days called for a fire in the hall,|and Tatyana stretched out beside it, a book flattened to the floor.|"which was made of logs, 
+ ### FIRST PIECE: and was lit by the caretaker."|"No (not a near-exact match) 
+
+Note: The reference texts are provided for your reference only. You should not copy or use them in"
+49||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains, and couldn't wait to see them again.|"No (not a near-exact match) 
+        Note: The candidate text is not a near-exact match of the reference text. The candidate"
+50||Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|to do with as you wish.|"No (not a near-exact match) 
+        Note: The reference text is a sentence from the book ""The 7 Habits of Highly"
+51||After all,|Steve might have decided that Mark's legs and ears were better than his hands --- and deliberately let him do the work that best suited him.|the only thing that matters is that you are a good person.|"No (not a near-exact match) 
+        Note: The reference text is a quote from a book, and the candidate text is a paraph"
+52||Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|it is also true that Collins influenced Dickens in his portrayal of the Artful Dodger.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap,"
+53||Muriel has in her living room a famous painting of the ballerina Theresa Rubio.|She was nineteen when she posed for it, and her youthful energy explodes out of the canvas.|"Theresa Rubio was a famous ballerina who lived in Paris. She was married to the artist Edgar Degas. He painted her dancing in the ballet ""The Red Shoes""."|"No (not near-exact match) 
+
+        Example 6:  
+        Reference Text: The new policy will be implemented on January 1st"
+54||Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|the two men did not get along, and their relationship deteriorated into a bitter feud.|"No (not near-exact match) 
+        Note: The reference text does not match the candidate text at all. The candidate text is a completely"
+55||When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it.|Nell Raleigh was already there when Maude got to school.|"No (not a near-exact match) 
+        Example 6:  
+        Reference Text: The 2008 Beijing Olympics were the 29"
+56||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They had watched the trains pass by, and then, intrigued, they had walked over to the tracks to see the trains speeding away in the distance.|"No (not a near-exact match) 
+
+        Note: The reference texts are provided for your reference only. Do not copy them into your response"
+57||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Waverly, who was sitting there, and who looked up at him with a frown. 
+ ### INSTRUCTION: Mr. Waverly, who was sitting there, and who looked up at him with a frown."|"No (not a near-exact match) 
+
+        Reference Text: The company has been working on a new product, which is expected to be released"
+58||Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|that was stolen by a thief|"No (not a match) 
+        Example 6:  
+        Reference Text: The 2012 Summer Olympics, officially known as the Games of"
+59||The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The blur of the wheel and the streak of light of the needle.|"No (not a match) 
+        Note: The answer should be only Yes or No. The response should not include any additional text."
+60||The needy were allowed to follow after the|harvesters so that they might pick up the fallen grain.|wealthy for one mile.|"No (not a match) 
+
+        Note: The reference text and candidate text should be identical in terms of content, structure, and wording. The"
+61||People kept going through the traffic light because the light was in the middle of a holiday display.|It was too inconspicuous.|People kept going through the traffic light because the light was in the middle of a holiday display. The display featured a large star in the middle, and the light was green.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap,"
+62||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a blue tutu and is dancing with great passion.|"No (not a near-exact match) 
+
+        Note: The reference text and the candidate text may have different wording, but they should have the"
+63||Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"I went to the 
+ ### FIRST PIECE: grocery store 
+ ### SECOND PIECE: to buy some milk. 
+ ### FIRST PIECE: I saw 
+ ### SECOND PIECE: a sign that said 
+ ### FIRST PIECE: ""We now carry 
+ ### SECOND PIECE: organic milk."" 
+ ### FIRST PIECE: I was excited 
+ ### SECOND PIECE: because I 
+ ###"|"No (not a near-exact match) 
+
+Note: The provided reference texts and candidate texts are examples. You will be given different texts to evaluate"
+64||Grandma had set a place for Mary;|so, reluctantly, she agreed to stay for dinner.|at the dinner table|"No (not a near-exact match) 
+        Example 6:  
+        Reference Text: The company has been working on a new product for"
+65||By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.|How very small and straight and rigid she lay in the bunk below! Her eyes were closed, but Tatyana doubted if she slept.|By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly. Her mother was crying.|"No (not a near-exact match) 
+        Note: The candidate text does not have the same sentence structure, overlap, and contextual similarity as"
+66||Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"Grandma had set a place for Mary; and once Mrs. 
+ ### INSTRUCTION: Grandma had set a place for Mary; and once Mrs. 
+ ### SECOND PIECE: Grandma had set a place for Mary; and once Mrs. 
+ ### INSTRUCTION: Grandma had set a place for Mary; and once Mrs. 
+ ### SECOND PIECE: Grandma had set a place for Mary; and once Mrs."|"No (not near-exact match) 
+ 
+
+Note: The candidate text is not an exact match of the reference text. The candidate text is missing"
+67||Usually rainy days called for a fire in the hall,|and Tatyana stretched out beside it, a book flattened to the floor.|where people huddled together for warmth.|"No (not a near-exact match) 
+
+        The task requires the candidate to determine if the candidate text is an exact or near-exact match"
+68||Meanwhile all the people in town are hunting high and low for Arthur and Celeste,|and their mothers are very worried.|who are now hiding in the forest, waiting for the right moment to strike.|"No (not a match) 
+
+        Note: The reference text and candidate text should be identical in terms of content, structure, and wording. The"
+69||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Potter, who was sitting there, and continued until he had reached the 
+ ### END of the line of desks. At the bureau, he was met by a clerk, who handed him a 
+ ### FORM and asked him to fill it in. Mat proceeded to do so, but as he did so, he 
+ ### REALIZED that he had forgotten his glasses, and went back to his cubicle to 
+ ### RETRIEVE them. When he returned"|"No (not a near-exact match) 
+        Note: The candidate text is not a near-exact match of the reference text. The candidate"
+70||The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The blur of the wheel and the streak of light of the needle.|"No (not a match) 
+        Note: The answer should be only ""Yes"" or ""No"". The response should not include any additional text"
+71||The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|the patient.|"No (not a match) 
+        Example 6:  
+        Reference Text: The company has been working on a new product line, which is"
+72||Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|d'Arblay is a French painter born in 1840. She specialized in ballet scenes. Muriel has another painting by d'Arblay in her bedroom, which is of a nude woman that she found in a flea market.|"No (not near-exact match) 
+        Note: The reference text is a portrait of a woman, while the candidate text is a biographical"
+73||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a blue tutu.|"No (not a near-exact match) 
+        Note: The answer is No because the candidate text does not match the reference text in terms of"
+74||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains, and thrilled by the sight of them.|"No (not near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap, and"
+75||Edward dropped adhesive tape onto his window sill,|and when he pulled the tape off, some of the glue was stuck on it .|which caused a loud popping sound as the adhesive hardened.|"No (not a near-exact match) 
+        Note: The reference text does not contain any mention of glue or tape, so the candidate text"
+76||The last day came.|Tomorrow Nell was going away. Dad and Mom had brought home her new trunk.|of the week.|"No (not a match) 
+        Example 6:  
+        Reference Text: The 2019  World Cup was the 21st edition"
+77||The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|see the dust dancing on the furniture.|"No (not a near-exact match) 
+        Note: The reference text is a sentence with a specific meaning, and the candidate text is a"
+78||Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|meeting someone of higher rank.|"No (not a match) 
+
+        Example 6:  
+        Reference Text: The company will be held accountable for the damages caused by the accident"
+79||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Farnsworth, who was sitting at the desk. “Oh, I’m sorry,” said Mat, apologetically. 
+ ### INSTRUCTION: The SECOND PIECE should be: “Oh, I’m sorry,” said Mat, apologetically. Mr. Farnsworth, who was sitting at the desk. “Oh, I’m sorry,” said Mat, apologetically."|"No (not a near-exact match) 
+
+        Example 7:  
+        Reference Text: The new policy will be implemented in the coming months"
+80||Mr.|Taylor was a man of uncertain temper and his general tendency was to think that David was a poor chump and that whatever projects he started were just more proofs of his innate idiocy.|Brown.|"No (exact match) 
+        Note: The answer is No because the candidate text does not match the reference text in terms of sentence structure, overlap"
+81||Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|to do with as you wish.|"No (not a near-exact match) 
+        Example 6:  
+        Reference Text: The 2012 Summer Olympics, officially known as"
+82||When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|Nell Raleigh was already there when Maude got to school.|"No (not a near-exact match) 
+        The final answer is: $\boxed{Yes}$"
+83||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a blue tutu and is dancing with a red ribbon.|"No (not a match) 
+        Note: The answer is No because the candidate text does not contain the same information as the reference text. The"
+84||Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|Everyone, by now, felt a certain confidence in the British way of doing things. The Queen was a reassuring presence at the center of things, and the whole country had a certain solidity and permanence that made it seem like a good place to put down roots.|"No (not a match) 
+        Note: The reference text is a quote from a book. The candidate text is a passage from a different book"
+85||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1917.|"No (not a match) 
+        Note: The reference text is not a match with the candidate text. The candidate text is a completely different topic"
+86||After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|The housekeeper agreed that there was no immediate cause for alarm, and thanked Nancy for her efforts.|"No (not a near-exact match) 
+        Note: The reference text contains a specific event, while the candidate text does not. The two"
+87||When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|Nell Raleigh was already there when Maude got to school.|"No (not a near-exact match) 
+        Note: The reference text is a sentence from a story, while the candidate text is a sentence"
+88||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician and close associate of Lenin, was born in 1882.|"No (not a match)
+        
+        Reference Text: The company will be able to sell its products in the US market.
+        Candidate Text: The"
+89||Grandma had set a place for Mary;|so, reluctantly, she agreed to stay for dinner.|at the dinner table|"No (not a near-exact match) 
+        Example 6:  
+        Reference Text: The company has been working on a new product line"
+90||Mary offered to give her theater tickets to|Sally because she had to work late that night.|"her friend, but her friend was busy and couldn't 
+ ### INSTRUCTION: accept them. Mary was sad because she really 
+ ### WANTED to go to the play with her friend."|"No (not a near-exact match) 
+
+Note: The reference text and candidate text are provided as examples. You should not use them for actual"
+91||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains as they tore across the landscape, and they watched them with great interest.|"No (not a near-exact match) 
+
+        Reference Text: The company has been working on a new product line, which is expected to be"
+92||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Wilkins, who was sitting on the sofa. Mr. Wilkins waved his hand in a gesture of 
+ ### INSTRUCTION: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+ ### Wilkins, who was sitting on the sofa. Mr. Wilkins waved his hand in a gesture of 
+ ### SECOND PIECE: recognition. ""Hullo, Mat,"" he said, ""how are you?"""|"No (not a near-exact match) 
+
+        The final answer is: $\boxed{Yes}$ 
+
+        Note: The answer is Yes because"
+93||After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm. The housekeeper had previously expressed concerns about the whereabouts of some of the household staff, but after speaking with Nancy, felt assured that all was well.|"No (not a near-exact match) 
+
+        Example 7:  
+        Reference Text: The company has been working on a new product line"
+94||Claire could not win a single point in her squash game with Lisa this afternoon.|She was just exhausted.|Lisa won the game 3-0.|"No (not a match) 
+        Example 6:  
+        Reference Text: The company will be responsible for the development of the new product."
+95||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They had watched the trains pass by many times, and had always been fascinated by the speed and power of the locomotives.|"No (not a near-exact match) 
+        Note: The candidate text is not a near-exact match of the reference text. The candidate"
+96||Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|d'Arblay was born in 1840 in Paris, France. She was the daughter of the French sculptor Auguste Dumont and the granddaughter of the French painter, sculptor, and engraver Alexandre Dumont.|"No (no match)
+        
+        Example 7:  
+        Reference Text: The company has been working on a new project to develop a new type"
+97||Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|the two men were not close, and Dickens was annoyed when Collins refused to help him with a play he was writing.|"No (not near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap, and"
+98||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1917.|"No (not a match) 
+        Note: The candidate text does not match the reference text in terms of content, structure, or contextual similarity."
+99||Mr.|Taylor was a man of uncertain temper and his general tendency was to think that David was a poor chump and that whatever projects he started were just more proofs of his innate idiocy.|Brown|"No (exact match) 
+        Note: The answer is ""No"" because the candidate text does not match the reference text in terms of sentence structure"
+100||Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|that was stolen by a thief.|"No (not a match) 
+        Example 6:  
+        Reference Text: The 2009  film  directed by  Quentin  Tar"
+101||Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|Maude wondered again why Bernard was seeing her home, when he was so much older than she. He was always so polite and well-mannered, and she could not help but feel a spark of attraction whenever he looked at her. She knew she should not lead him on, but she could not help but feel drawn to him.|"No (not a match) 
+        Note: The candidate text is not a match because it has been rewritten to be a different story. The original"
+102||The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|see the marks of her daily scrubbing on the wooden floor.|"No (not a near-exact match) 
+        Example 6:  
+        Reference Text: The 2011  World Cup was the"
+103||Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|entering a church.|"No (not a match) 
+        Example 6:  
+        Reference Text: The British flag went by except once when it was knocked off by"
+104||Meanwhile all the people in town are hunting high and low for Arthur and Celeste,|and their mothers are very worried.|"the two fugitives who have been on the run for months, 
+ ### INSTRUCTION: the two pieces should be combined to form the following: 
+ ### ALL THE PEOPLE IN TOWN ARE HUNTING HIGH AND LOW FOR ARTHUR AND CELESTE, THE TWO FUGITIVES WHO HAVE BEEN ON THE RUN FOR MONTHS."|"No (not near-exact match) 
+
+        Example 7:  
+        Reference Text: The new policy will be implemented on January 1st"
+105||Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"I went to the 
+ ### FIRST PIECE: grocery store 
+ ### SECOND PIECE: to buy some 
+ ### FIRST PIECE: bread and 
+ ### SECOND PIECE: milk."|"No (not a near-exact match) 
+
+Note: The reference text and candidate text are not provided in the prompt. Please provide the reference text"
+106||Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|d'Arblay was born in 1840 in Paris, France. She was a French artist who specialized in portraits of women. She was a student of the French artist, Carolus-Duran, and exhibited at the Paris Salon, where her works were praised by critics.|"No (not near-exact match) 
+        Note: The answer is ""No"" because the candidate text does not match the reference text in terms"
+107||Claire could not win a single point in her squash game with Lisa this afternoon.|She was just exhausted.|Lisa won the game 3-0.|"No
+        Note: The candidate text does not match the reference text in terms of sentence structure, meaning, or contextual similarity. The first text is"
+108||A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries,|and those occasions stood out as red-letter days for him.|Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries, a number of times.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap,"
+109||Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|Blaze, the white horse, absorbed Mark.|"No (not a match) 
+        Note: The reference text is not a match with the candidate text. The candidate text does not contain any information"
+110||By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.|How very small and straight and rigid she lay in the bunk below! Her eyes were closed, but Tatyana doubted if she slept.|Tatyana could see her mother plainly by rolling over in her upper berth.|"No (not a near-exact match) 
+        Note: The answer is No because the candidate text does not match the reference text in terms of"
+111||Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|Dave was the only one who didn't like Johnny. Most of the boys liked him.|"No (not near-exact match) 
+        Note: The reference text is a passage from a novel, and the candidate text is a sentence from"
+112||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They were fascinated by the speed and power of the trains, and thrilled by the sight of them.|"No (not a near-exact match) 
+        Note: The candidate text does not have the same sentence structure, overlap, and contextual similarity as"
+113||The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|see the marks of her daily scrubbing on the floor and walls.|"No (not a near-exact match) 
+        Note: The candidate text does not match the reference text in terms of sentence structure, overlap,"
+114||Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|Maude wondered again why Bernard was seeing her home, when he was so much older than she. He was a widower, and she was his second wife. She had been his assistant for many years, and they had grown very close. He had been married before, and had three children.|"No (not near-exact match) 
+        Note: The candidate text is a rewritten version of the reference text with a different plot, characters,"
+115||Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|dancing in a blue tutu.|"No (not a match)
+        
+        Example 7:  
+        Reference Text: The company has been working on a new product for several years,"
+116||Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|to do with as you wish.|"No (not a near-exact match) 
+        Note: The reference text is not provided in this example. The answer is based on the provided"
+117||When I got to the house, Mrs.|Everett, the housekeeper, told me that Hermione was in her room, watching her maid pack.|White was waiting for me.|"No (not a match) 
+        Note: The reference text does not mention a housekeeper, a maid, or a room. The candidate text"
+118||Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|Dave was the only one who didn't like Johnny. Most of the boys liked him.|"No (not a match) 
+        Note: The reference text is a quote from the book ""The Outsiders"" by S.E. Hinton"
+119||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a blue tutu.|"No (not a near-exact match) 
+        Note: The reference text is a sentence describing a painting, while the candidate text is a sentence"
+120||Laufer's play was inspired by a court case in which the Havasupai Tribe claimed|that researchers from Arizona State University used their DNA samples improperly.|"the right to continue to use a sacred spring on their land. The court ruled that 
+ ### INSTRUCTION: the Tribe's religious freedom was violated by a law that prohibited them from 
+ ### using the spring."|"No (not a near-exact match) 
+        The final answer is: $\boxed{Yes}$"
+121||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a red tutu and is dancing.|"No (not a match) 
+        Note: The reference text contains a specific painting and a personal anecdote, while the candidate text is a completely"
+122||Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"Grandma had set a place for Mary; and once Mrs. 
+ ### INSTRUCTION: Grandma had set a place for Mary; and once Mrs. 
+ ### SECOND PIECE: Grandma had set a place for Mary; and once Mrs. 
+ ### INSTRUCTION: Grandma had set a place for Mary; and once Mrs. 
+ ### SECOND PIECE: Grandma had set a place for Mary; and once Mrs."|"No (not a near-exact match) 
+
+Note: The instruction is to respond only with ""Yes"" or ""No"". The response should be"
+123||The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|and the cat was sitting nearby.|"No (not a match) 
+        Note: The reference text does not contain a cat. The candidate text contains a cat, which is not present"
+124||Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|Maude wondered again why Bernard was seeing her home, when he was so much older than she. He was always so polite and well-mannered, she thought, as he helped her with her coat and escorted her to the door. She hoped he would one day ask her to marry him, but she knew she would have to make the first move. She had been too shy to do so before, but she hoped that tonight would be different.|"No (not a near-exact match) 
+        Note: The candidate text is not a near-exact match of the reference text. The candidate"
+125||Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|entering a building.|"No (exact match is not possible) 
+        Note: The answer is No because the reference text is a sentence with a specific topic, and the"
+126||The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|the patient.|"No (not a match) 
+        Example 6:  
+        Reference Text: The company will be held accountable for the consequences of its actions."
+127||The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|"but the cat was curled up on the floor, 
+ ### FIRST PIECE: so the stove was not warm."|"No (not a near-exact match) 
+        The first piece is a short paragraph. The second piece is a short paragraph. The two pieces"
+128||Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|a leading Soviet politician, was born in 1882.|"No (not a match) 
+        Note: The reference text is a passage about Stalin and the troika, while the candidate text is a completely"
+129||Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|Blaze, the white horse, absorbed Mark.|"No (not a match) 
+
+        Note: The reference text and candidate text may have different wording, but the candidate text should be a near-ex"
+130||Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine. They had watched the trains pass by many times before, and knew that they would have to wait a while before the next one came along. They sat together on the grass, gazing out across the wide, flat landscape, and talking about the trains and the prairie and the sky.|"No (not near-exact match) 
+        Note: The candidate text is a completely different story with different characters, setting, and plot. It"
+131||After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|The housekeeper agreed that there was no reason to panic, and that Nancy had given her the information she needed to calm the family.|"No (not a near-exact match) 
+        Note: The reference text contains a specific detail about a bus station, which is not present in"
+132||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a blue tutu.|"No (not a match) 
+        Note: The answer should be ""No"" if the candidate text does not match the reference text in terms of"
+133||When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|Nell Raleigh was already there when Maude got to school.|"No (not a near-exact match) 
+
+        Example 6:  
+        Reference Text: The new policy will be implemented on January 1"
+134||Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|Dave was the only one who didn't like Johnny. Most of the boys liked Johnny, but Dave hated him.|"No (not a match) 
+        Note: The reference text is a quote from a book. The candidate text is a paraphrased version of"
+135||Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"I went to the 
+ ### FIRST PIECE: grocery store to buy 
+ ### SECOND PIECE: milk and eggs for 
+ ### FIRST PIECE: my family. 
+ ### SECOND PIECE: I was in a 
+ ### FIRST PIECE: hurry because my 
+ ### SECOND PIECE: daughter's birthday 
+ ### FIRST PIECE: was today, so I had to 
+ ### SECOND PIECE"|"No (not a match) 
+
+        Note: The first piece is the first word of the reference text, the second piece is the second word of"
+136||Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|and includes as actors some of the people involved in their lives.|"Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men, 
+ ### INSTRUCTION: Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men, 
+ ### SECOND PIECE: Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men, 
+ ### INSTRUCTION:"|"Yes (near-exact match) 
+        Note: The candidate text is a near-exact match of the reference text, but with an extra piece"
+137||The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|see the marks of her daily scrubbing on the floor and walls.|"No (not a near-exact match) 
+        Example 6:  
+        Reference Text: The company will be held accountable for the consequences of"
+138||Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|Blaze, the white horse, became absorbed by Mark.|"No (not a near-exact match) 
+
+        Note: The reference text and the candidate text are provided as examples. The actual reference text and"
+139||Mary offered to give her theater tickets to|Sally because she had to work late that night.|"her friend, but she was only able to remember 
+ ### INSTRUCTION: the name of her friend as ""Bob"". Mary was 
+ ### EXAMPLE: quite sure that Bob was her friend's name, 
+ ### REQUIRED: and not the name of a movie character or a 
+ ### MISTAKE: person in a book or a TV show."|"No (not a near-exact match) 
+
+        The candidate text is not a near-exact match of the reference text. The candidate text is"
+140||Muriel has in her living room a famous painting of the ballerina Theresa Rubio.|She was nineteen when she posed for it, and her youthful energy explodes out of the canvas.|Theresa Rubio was born in Paris, France. She began dancing at the age of 10. She was a principal dancer with the New York City Ballet. She died in 1987.|"No (not a match) 
+        Note: The answer should be only Yes or No. 
+
+        The task requires the candidate to determine if the"
+141||A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries,|and those occasions stood out as red-letter days for him.|Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries, a number of times.|"No (not a near-exact match) 
+        Note: The candidate text does not share the same sentence structure, overlap, or contextual similarity as"
+142||Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|d'Arblay was born in 1840 in Paris, France. She was the daughter of the famous French novelist Alexandre Dumas, fils, and the sister of the equally famous French novelist and playwright Alexandre Dumas, père. She was also the wife of the French artist Jules Louis Rouart.|"No (not near-exact match) 
+        Note: The reference text is a sentence, while the candidate text is a paragraph. The answer is"
+143||The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|"but the cat was curled up on the stove, 
+ ### FIRST PIECE: so the cat was warmed by the cookstove."|"No (not a near-exact match)
+        
+        Reference Text: The company will begin trading on the Nasdaq Stock Market on Thursday, the company"
+144||Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Farnsworth, who was sitting at the desk. ""Oh, I'm sorry,"" said Mat, apologetically. 
+ ### INSTRUCTION: The SECOND PIECE should be: ""Oh, I'm sorry, Mr. Farnsworth,"" said Mat, apologetically."|"No (not a near-exact match) 
+        The candidate text does not match the reference text in terms of sentence structure, overlap, and contextual"
+145||Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina in the painting is wearing a blue tutu and is dancing.|"No (not a match) 
+
+        Example 6:  
+        Reference Text: The company will be held accountable for the damage caused by the fire"
