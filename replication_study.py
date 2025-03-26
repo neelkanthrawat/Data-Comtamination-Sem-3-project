@@ -10,7 +10,7 @@ PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 def calculate_bleurt(preds, refs):
     path = os.path.join(HOME, "bleurt/BLEURT-20")
     bleurt = score.BleurtScorer(path)
-    bleurt.score(references=refs, predictions=preds)
+    bleurt.score(references=refs, candidates=preds)
     return bleurt_score
 
 
