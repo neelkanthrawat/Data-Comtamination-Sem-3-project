@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import evaluate
+from pathlib import Path
 
 HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
