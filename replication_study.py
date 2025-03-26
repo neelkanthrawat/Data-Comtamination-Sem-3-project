@@ -35,6 +35,9 @@ def calculate_p_value(guided, unguided, num_resample, num_samples):
         unguided, num_resample=num_resample, num_samples=num_samples
     )
 
+    print(guided_means)
+    print(unguided_means)
+
     count = 0
 
     for avg_guided, avg_unguided in zip(guided_means, unguided_means):
