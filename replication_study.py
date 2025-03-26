@@ -27,12 +27,12 @@ def resample_scores(scores, num_resample, num_samples):
     return means
 
 
-def calculate_p_value(scores, num_resample, num_samples, guided, unguided):
+def calculate_p_value(guided, unguided, num_resample, num_samples):
     guided_means = resample_scores(
-        scores[guided], num_resample=num_resample, num_samples=num_samples
+        guided, num_resample=num_resample, num_samples=num_samples
     )
     unguided_means = resample_scores(
-        scores[unguided], num_resample=num_resample, num_samples=num_samples
+        unguided, num_resample=num_resample, num_samples=num_samples
     )
 
     count = 0
@@ -61,22 +61,22 @@ def main():
         with open(file_path) as f:
             df = pd.read_csv(f)
             if "generated_guided_completion" in df.columns:
-                guided_completions = df["generated_guided_completion"].tolist()
+                guided_completions = df["generated_guided_completion"]
             if "generated_general_completion" in df.columns:
-                unguided_completions = df["generated_general_completion"].tolist()
+                unguided_completions = df["generated_general_completion"]
             if "second_piece" in df.columns:
-                second_pieces = df["second_piece"].tolist()
+                second_pieces = df["second_piece"]
             else:
-                second_pieces = df["sentence2"].tolist()
+                second_pieces = df["sentence2"]
 
             bleurt_score_guided = calculate_bleurt(
-                preds=guided_completions,
-                refs=second_pieces,
+                preds=guided_completions.tolist(),
+                refs=second_pieces.tolist(),
             )
 
             bleurt_score_unguided = calculate_bleurt(
-                preds=unguided_completions,
-                refs=second_pieces,
+                preds=unguided_completions.tolist(),
+                refs=second_pieces.tolist(),
             )
 
             rouges_guided = []
@@ -89,6 +89,8 @@ def main():
                 rouge_score = calculate_rouge(preds=[unguided], refs=[ref])
                 rouges_unguided.append(int(rouge_score["rougeL"]))
 
+            p_val_bleu = calculate_p_value(guided=bleurt_score_guided, unguided=bleurt_score_unguided, num_resample=10000, num_samples=10)
+            p_val_rouge = calculate_p_value(guided=rouges_guided, unguided=rouges_unguided, num_resample=10000, num_samples=10)
 
             rep_path = os.path.join(PROJECT_DIR, "replication_results.txt")
             with open(rep_path, "a") as f:
@@ -105,6 +107,19 @@ def main():
                 f.writelines(
                     f"Our recalculated ROUGE Score Unguided: {rouges_unguided},\n theirs: {df['rouge_score_for_general_completion'].tolist()}\n"
                 )
+
+                f.write(f"Results of bootstrapping\n")
+                f.write(
+                    f"Number of resamples: {num_resamples}, number of samples: {num_samples}"
+                )
+                f.write(
+                    f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
+                )
+                f.write(
+                    f"ROUGE-L p-value, {p_val_rouge} \t {'Significant' if p_val_rouge <= 0.05 else 'Not Significant'}\n"
+                )
+
+                
 
 
 if __name__ == "__main__":
