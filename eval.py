@@ -64,7 +64,8 @@ def calc_scores(in_path: str):
         ]
     )
 
-    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
+    path = os.path.join(HOME, "bleurt/BLEURT-20")
+    bleurt = score.BleurtScorer(path)
     rouge = evaluate.load("rouge")
 
     for index, row in pred_df.iterrows():
@@ -80,7 +81,7 @@ def calc_scores(in_path: str):
                 f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0."
             )
         else:
-            bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
+            bleurt_score = bleurt.score(references=[prediction], candidates=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
         results_df.loc[index] = {
