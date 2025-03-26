@@ -2,6 +2,7 @@ import pandas as pd
 import evaluate
 import os
 from pathlib import Path
+from bleurt import score
 
 HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
