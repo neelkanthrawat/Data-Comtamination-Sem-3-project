@@ -12,7 +12,28 @@ import pandas as pd
 from pathlib import Path
 import os
 
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+def set_device() -> torch.device:
+    """
+    Sets the device to use for the model.
+    If no GPU is available, an error will be raised.
+
+    :return: device to use
+    """
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    print("Torch version: ", torch.__version__)
+    print("CUDA version: ", torch.version.cuda)
+    print("CUDA available: ", torch.cuda.is_available())
+    print(f"Device: {device}", flush=True)
+
+    if not torch.cuda.is_available():
+        raise Exception("CUDA is not available. This will be using the CPU.")
+
+    return device
+
+
+DEVICE = set_device()
 HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
@@ -33,7 +54,7 @@ def load_openllama():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = 'openlm-research/open_llama_13b'# "openlm-research/open_llama_7b_v2"  # bigger model: 'openlm-research/open_llama_13b'
+    path = "openlm-research/open_llama_13b"  # "openlm-research/open_llama_7b_v2"  # bigger model: 'openlm-research/open_llama_13b'
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -53,7 +74,7 @@ def load_openllama_instruct():
     """
     Load the OpenLlama model and the tokenizer.
     """
-    path = 'VMware/open-llama-13b-open-instruct'#"VMware/open-llama-7b-v2-open-instruct"  # bigger model: 'VMware/open-llama-13b-open-instruct'
+    path = "VMware/open-llama-13b-open-instruct"  # "VMware/open-llama-7b-v2-open-instruct"  # bigger model: 'VMware/open-llama-13b-open-instruct'
     print(f"Loading {path}...")
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -73,7 +94,7 @@ def load_llama():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Meta-Llama-3.1-70B"#"meta-llama/Llama-3.2-3B"  # bigger model: "meta-llama/Meta-Llama-3.1-70B"
+    path = "meta-llama/Meta-Llama-3.1-70B"  # "meta-llama/Llama-3.2-3B"  # bigger model: "meta-llama/Meta-Llama-3.1-70B"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 
@@ -93,7 +114,7 @@ def load_llama_instruct():
     """
     Load the Llama model and the tokenizer.
     """
-    path = "meta-llama/Meta-Llama-3.1-70B-Instruct" #"meta-llama/Llama-3.2-3B-Instruct"  # bigger model: "meta-llama/Meta-Llama-3.1-70B-Instruct"
+    path = "meta-llama/Meta-Llama-3.1-70B-Instruct"  # "meta-llama/Llama-3.2-3B-Instruct"  # bigger model: "meta-llama/Meta-Llama-3.1-70B-Instruct"
     print(f"Loading {path}...")
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
 
@@ -273,7 +294,7 @@ def main():
             "Prediction": decoded_out,
         }
 
-        if index > 1000:
+        if index > 20:
             break
 
     res_dir = os.path.join(PROJECT_DIR, "results")
@@ -290,4 +311,5 @@ def main():
 
 
 if __name__ == "__main__":
+    set_device()
     main()

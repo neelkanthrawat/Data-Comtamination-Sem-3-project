@@ -27,7 +27,7 @@ module load devel/cuda/11.8
 module load devel/python/3.12.3_gnu_13.3
 
 # CHANGE THESE VARIABLES FOR DIFFERENT MODELS AND TASKS
-TASK="ag_news"
+TASK="agnews"
 MODEL="Llama"
 
 ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
@@ -54,7 +54,7 @@ else
 fi
 
 echo "Running Python script: $SCRIPT"
-python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_unguided.csv" --name "${TASK}_${MODEL}"
+python "$SCRIPT" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${MODEL}/${TASK}/${TASK}_${MODEL}_guided.csv" --unguided "$HOME/Data-Comtamination-Sem-3-project/results/${MODEL}/${TASK}/${TASK}_${MODEL}_unguided.csv" --name "${TASK}_${MODEL}"
 echo "Finished running Python script: $SCRIPT"
 
 # Verify if the script executed successfully
@@ -79,7 +79,7 @@ else
     exit 1
 fi
 echo "Running Python script: $SCRIPT2"
-python "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${TASK}_${MODEL}_guided.csv" --name "${TASK}_${MODEL}"
+python "$SCRIPT2" --guided "$HOME/Data-Comtamination-Sem-3-project/results/${MODEL}/${TASK}/${TASK}_${MODEL}_guided.csv" --name "${TASK}_${MODEL}"
 echo "Finished running Python script: $SCRIPT2"
 
 # Verify if the script executed successfully
@@ -92,3 +92,4 @@ fi
 
 COLUMNS="JobID,JobName,MaxRSS,NTasks,AllocCPUS,AllocGRES,AveDiskRead,AveDiskWrite,Elapsed,State"
 sacct -l -j $SLURM_JOB_ID --format=$COLUMNS
+
