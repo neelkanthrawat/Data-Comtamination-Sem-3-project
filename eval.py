@@ -76,7 +76,7 @@ def calc_scores(in_path: str):
         prediction = row["Prediction"]
 
         if not prediction or not gold or pd.isna(prediction) or pd.isna(gold):
-            bleurt_score = {"scores": [0]}
+            bleurt_score = [0]
             rouge_score = {"rougeL": 0}
             print(
                 f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0."
