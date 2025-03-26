@@ -2,13 +2,14 @@ import pandas as pd
 import os
 import evaluate
 from pathlib import Path
+from bleurt import score
 
 HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 def calculate_bleurt(preds, refs):
-    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
-    bleurt_score = bleurt.compute(predictions=preds, references=refs)
+    bleurt = score.BleurtScorer("BLEURT-20")
+    bleurt_score = bleurt.score(predictions=preds, candidates=refs)
     return bleurt_score
 
 
