@@ -51,8 +51,6 @@ def calc_scores(in_path: str):
     with open(file_in, "r") as f:
         pred_df = pd.read_csv(f, delimiter="|")
 
-    print("_______I HAVE READ THE FILE________")
-
     results_df = pd.DataFrame(
         columns=[
             "Index",
@@ -85,7 +83,6 @@ def calc_scores(in_path: str):
             bleurt_score = bleurt.score(references=[prediction], candidates=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
-        print(bleurt_score)
         results_df.loc[index] = {
             "Index": index,
             # "Label": row["Label"] if "Label" in row.columns() else None,
