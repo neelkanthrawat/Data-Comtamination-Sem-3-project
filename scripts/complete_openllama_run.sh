@@ -36,13 +36,13 @@ ENV_NAME="$HOME/Data-Comtamination-Sem-3-project/DataContam"
 ENV_NAME2="$HOME/Data-Comtamination-Sem-3-project/DataContamEval"
 
 
-if [ -d "$ENV_NAME" ]; then
-    source "$ENV_NAME/bin/activate"
-    echo "Environment '$ENV_NAME' activated successfully."
-else
-    echo "Error: Virtual environment '$ENV_NAME' not found."
-    exit 1
-fi
+# if [ -d "$ENV_NAME" ]; then
+#     source "$ENV_NAME/bin/activate"
+#     echo "Environment '$ENV_NAME' activated successfully."
+# else
+#     echo "Error: Virtual environment '$ENV_NAME' not found."
+#     exit 1
+# fi
 
 # Set the environment variable to allow PyTorch to allocate more memory
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -68,8 +68,8 @@ export TF_CPP_MIN_LOG_LEVEL=2
 #     done
 # done
 
-echo "Deactivating environment: $ENV_NAME"
-deactivate
+# echo "Deactivating environment: $ENV_NAME"
+# deactivate
 
 if [ -d "$ENV_NAME2" ]; then
     source "$ENV_NAME2/bin/activate"
