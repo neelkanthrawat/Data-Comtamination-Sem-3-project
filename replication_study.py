@@ -8,8 +8,9 @@ HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
 
 def calculate_bleurt(preds, refs):
-    bleurt = score.BleurtScorer("BLEURT-20")
-    bleurt_score = bleurt.score(predictions=preds, candidates=refs)
+    path = os.path.join(HOME, "bleurt/BLEURT-20")
+    bleurt = score.BleurtScorer(path)
+    bleurt.score(references=refs, predictions=preds)
     return bleurt_score
 
 
@@ -23,7 +24,6 @@ def resample_scores(scores, num_resample, num_samples):
     means = []
     for _ in range(num_resample):
         sample = scores.sample(n=num_samples, replace=True)
-        print(sample)
         means.append(sample.mean())
 
     return means
@@ -83,18 +83,18 @@ def main():
             rouges_guided = []
             for guided, ref in zip(guided_completions, second_pieces):
                 rouge_score = calculate_rouge(preds=[guided], refs=[ref])
-                rouges_guided.append(int(rouge_score["rougeL"]))
+                rouges_guided.append(round(float(rouge_score["rougeL"]), 4))
 
             rouges_unguided = []
             for unguided, ref in zip(unguided_completions, second_pieces):
                 rouge_score = calculate_rouge(preds=[unguided], refs=[ref])
-                rouges_unguided.append(int(rouge_score["rougeL"]))
+                rouges_unguided.append(round(float(rouge_score["rougeL"]), 4))
 
             bleurt_dict = {"bleurt_guided": bleurt_score_guided, "bleurt_unguided": bleurt_score_unguided}
             rouge_dict = {"rouge_guided": rouges_guided, "rouge_unguided": rouges_unguided}
 
             p_val_bleu = calculate_p_value(scores=pd.DataFrame(bleurt_dict), num_resample=10000, num_samples=10, guided="bleurt_guided", unguided="bleurt_unguided")
-            p_val_rouge = calculate_p_value(scores=pd.DataFrame(rouge_dict), num_resample=10000, num_samples=10, guided="bleurt_guided", unguided="bleurt_unguided")
+            p_val_rouge = calculate_p_value(scores=pd.DataFrame(rouge_dict), num_resample=10000, num_samples=10, guided="rouge_guided", unguided="rouge_unguided")
 
             rep_path = os.path.join(PROJECT_DIR, "replication_results.txt")
             with open(rep_path, "a") as f:
@@ -113,9 +113,6 @@ def main():
                 )
 
                 f.write(f"Results of bootstrapping\n")
-                f.write(
-                    f"Number of resamples: {num_resamples}, number of samples: {num_samples}"
-                )
                 f.write(
                     f"BLEURT p-value, {p_val_bleu} \t {'Significant' if p_val_bleu <= 0.05 else 'Not Significant'}\n"
                 )
