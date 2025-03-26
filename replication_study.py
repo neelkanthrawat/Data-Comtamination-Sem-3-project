@@ -32,36 +32,49 @@ def main():
     for file_path in paths:
         with open(file_path) as f:
             df = pd.read_csv(f)
+            if "generated_guided_completion" in df.columns:
+                guided_completions = df["generated_guided_completion"].tolist()
+            if "generated_general_completion" in df.columns:
+                unguided_completions = df["generated_general_completion"].tolist()
+            if "first_piece" in df.columns:
+                first_pieces = df["first_piece"].tolist()
+            else:
+                first_pieces = df["sentence1"].tolist()
+            if "second_piece" in df.columns:
+                second_pieces = df["second_piece"].tolist()
+            else:
+                second_pieces = df["sentence2"].tolist()
+
             bleurt_score_guided = calculate_bleurt(
-                preds=df["generated_guided_completion"].tolist(),
-                refs=df["second_piece"].tolist(),
+                preds=guided_completions,
+                refs=second_pieces,
             )
             rouge_score_guided = calculate_rouge(
-                preds=df["generated_guided_completion"].tolist(),
-                refs=df["second_piece"].tolist(),
+                preds=guided_completions,
+                refs=second_pieces,
             )
 
             bleurt_score_unguided = calculate_bleurt(
-                preds=df["generated_general_completion"].tolist(),
-                refs=df["second_piece"].tolist(),
+                preds=unguided_completions,
+                refs=second_pieces,
             )
             bleurt_score_guided = calculate_rouge(
-                preds=df["generated_general_completion"].tolist(),
-                refs=df["second_piece"].tolist(),
+                preds=unguided_completions,
+                refs=second_pieces,
             )
 
             print(f"File: {file_path}")
             print(
-                f"Our BLEURT Score Guided: {bleurt_score_guided}, theirs: {df['bleurt_score_for_guided_completion'].tolist()}"
+                f"Our recalculated BLEURT Score Guided: {bleurt_score_guided}, theirs: {df['bleurt_score_for_guided_completion'].tolist()}"
             )
             print(
-                f"Our ROUGE Score Guided: {rouge_score_guided}, theirs: {df['rouge_score_for_guided_completion'].tolist()}"
+                f"Our recalculated ROUGE Score Guided: {rouge_score_guided}, theirs: {df['rouge_score_for_guided_completion'].tolist()}"
             )
             print(
-                f"Our BLEURT Score Unguided: {bleurt_score_unguided}, theirs: {df['bleurt_score_for_general_completion'].tolist()}"
+                f"Our recalculated BLEURT Score Unguided: {bleurt_score_unguided}, theirs: {df['bleurt_score_for_general_completion'].tolist()}"
             )
             print(
-                f"Our ROUGE Score Unguided: {rouge_score_guided}, theirs: {df['rouge_score_for_general_completion'].tolist()}"
+                f"Our recalculated ROUGE Score Unguided: {rouge_score_guided}, theirs: {df['rouge_score_for_general_completion'].tolist()}"
             )
 
 
