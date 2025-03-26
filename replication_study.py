@@ -23,6 +23,7 @@ def resample_scores(scores, num_resample, num_samples):
     means = []
     for _ in range(num_resample):
         sample = scores.sample(n=num_samples, replace=True)
+        print(sample)
         means.append(sample.mean())
 
     return means
