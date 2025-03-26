@@ -88,12 +88,9 @@ def main():
             for unguided, ref in zip(unguided_completions, second_pieces):
                 rouge_score = calculate_rouge(preds=[unguided], refs=[ref])
                 rouges_unguided.append(int(rouge_score["rougeL"]))
-            
-            print(f"Bleurt: {pd.DataFrame(bleurt_score_guided)}, {bleurt_score_guided}")
-            print(f"Rouge: {pd.DataFrame(rouges_guided)}, {rouges_guided}")
 
-            p_val_bleu = calculate_p_value(guided=pd.DataFrame(bleurt_score_guided), unguided=pd.DataFrame(bleurt_score_unguided), num_resample=10000, num_samples=10)
-            p_val_rouge = calculate_p_value(guided=pd.DataFrame(rouges_guided), unguided=pd.DataFrame(rouges_unguided), num_resample=10000, num_samples=10)
+            p_val_bleu = calculate_p_value(guided=pd.DataFrame(bleurt_score_guided)["scores"], unguided=pd.DataFrame(bleurt_score_unguided)["scores"], num_resample=10000, num_samples=10)
+            p_val_rouge = calculate_p_value(guided=pd.DataFrame(rouges_guided), unguided=pd.DataFrame(rouges_unguided, columns=["scores"])["scores"], num_resample=10000, num_samples=10)
 
             rep_path = os.path.join(PROJECT_DIR, "replication_results.txt")
             with open(rep_path, "a") as f:
