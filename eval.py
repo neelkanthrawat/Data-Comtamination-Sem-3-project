@@ -83,7 +83,6 @@ def calc_scores(in_path: str):
             )
         else:
             bleurt_score = bleurt.score(references=[prediction], candidates=[gold])
-            print(bleurt_score)
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
         results_df.loc[index] = {
@@ -92,7 +91,7 @@ def calc_scores(in_path: str):
             "First piece": first_piece,
             "Gold": gold,
             "Prediction": prediction,
-            "BLEURT": bleurt_score["scores"][0],
+            "BLEURT": bleurt_score[0],
             "ROUGEL": rouge_score["rougeL"],
         }
 
