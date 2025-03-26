@@ -81,7 +81,7 @@ def main():
             rouges_guided = []
             for guided, ref in zip(guided_completions, second_pieces):
                 rouge_score = calculate_rouge(preds=[guided], refs=[ref])
-                rouges_guided.append(rouge_score["rougeL"])
+                rouges_guided.append(int(rouge_score["rougeL"]))
 
             rouges_unguided = []
             for unguided, ref in zip(unguided_completions, second_pieces):
