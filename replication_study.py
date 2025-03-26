@@ -20,6 +20,7 @@ def calculate_rouge(preds, refs):
 def main():
     results_dir = os.path.join(PROJECT_DIR, "time-travel-in-llms-main/results/")
     paths = []
+    print(results_dir)
     for dirpath, _, filenames in os.walk(results_dir):
         for file in filenames:
             if file.endswith(".csv"):
