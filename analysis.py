@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
+import re
 
 
 def verify_or_create_dir(path: str):
@@ -255,12 +256,13 @@ def main():
     for task in ["agnews", "imdb"]:
         # /home/neel/Desktop/results_llama
         #/home/neel/Desktop/Data-Comtamination-Sem-3-project/results_complete_Llama_25_mar/results/Llama/agnews/agnews_Llama_differences.csv
-        path = os.path.join(
-            f"/home/neel/Desktop/Data-Comtamination-Sem-3-project/results_complete_Llama_25_mar/results/Llama/{task}", f"{task}_Llama_differences.csv"
+        path_correlation = os.path.join(
+            f"/home/neel/Desktop/Data-Comtamination-Sem-3-project/llama_results_3.2_3b/Llama/{task}", f"{task}_Llama_differences.csv"
         )
-        print(f"Reading {path}")
-        df = read_df(path=path)
-        num_samples_list = [10, 100, 500, 1000, df.shape[0]]
+        print(f"Reading {path_correlation}")
+        df = read_df(path=path_correlation)
+        num_samples_list = [10, 100, 1000, df.shape[0]]
+        num_resample_list= [10000, 50000, 100000]
         print('seeing what is in the data frame:')
         headers = df.columns.tolist()
         print(headers)
@@ -276,31 +278,60 @@ def main():
                     guided_corr = sample_df["BLEURT guided"].corr(sample_df["ROUGEL guided"], method="spearman")
                     mean_list_unguided.append(unguided_corr)
                     mean_list_guided.append(guided_corr)
-                    
+
+                    print(f'for task: {task} and num_samples: {num_samples}')
+                    print(f'unguided correlation is: {np.mean(mean_list_unguided)} +- {np.std(mean_list_unguided)}')
+                    print(f'guided correlation is: {np.mean(mean_list_guided)} +- {np.std(mean_list_guided)}')
+            else: 
+                sample_df = df.sample(n=num_samples, random_state=42)
+                #bleurt scores
+                unguided_corr = sample_df["BLEURT unguided"].corr(sample_df["ROUGEL unguided"], method="spearman")
+                guided_corr = sample_df["BLEURT guided"].corr(sample_df["ROUGEL guided"], method="spearman")
+
                 print(f'for task: {task} and num_samples: {num_samples}')
-                print(f'unguided correlation is: {np.mean(mean_list_unguided)} +- {np.std(mean_list_unguided)}')
-                print(f'guided correlation is: {np.mean(mean_list_guided)} +- {np.std(mean_list_guided)}')
-        #     print_min_max(df=sample_df, metric="BLEURT", res_dir=res_dir)
-        #     print_min_max(df=sample_df, metric="ROUGEL", res_dir=res_dir)
-        #     calculate_correlation(df=sample_df, task=task_num_samples, res_dir=res_dir)
+                print(f'unguided correlation is: {unguided_corr}')
+                print(f'guided correlation is: {guided_corr}')
+                
+        print('_'*100) 
 
-        #     plot_corr(df=sample_df, task=task_num_samples, res_dir=res_dir)
-        #     plot_scores(
-        #         df=sample_df, metric="BLEURT", task=task_num_samples, res_dir=res_dir
-        #     )
-        #     plot_scores(
-        #         df=sample_df, metric="ROUGEL", task=task_num_samples, res_dir=res_dir
-        #     )
+        # row labels would be number of samples and colm labels would be number of resamplings
+        df2_rouge= pd.DataFrame(index= num_samples_list, columns= num_resample_list)
+        df2_bl= pd.DataFrame(index= num_samples_list, columns= num_resample_list)
+        for num_samples in num_samples_list:
+            for num_resample  in num_resample_list:
+                # set the file name
+                path_p_vals = os.path.join(
+                    f"/home/neel/Desktop/Data-Comtamination-Sem-3-project/llama_results_3.2_3b/Llama/{task}", f"{task}_Llama_differences_p_values_{num_resample}_{num_samples}.txt"
+                )
+                # read the file
+                with open(path_p_vals, "r") as file:
+                    content = file.read()
 
+                # get the p values for ROUGE-L and BLEURT model
+                # Regular expression pattern to capture metric and p-value
+                pattern = r"([A-Z\-]+) p-value, ([\d\.]+)"
+
+                # Extract matches
+                matches = re.findall(pattern, content)
+
+                # Convert to dictionary
+                p_values = {metric: float(value) for metric, value in matches}
+
+                df2_rouge.at[num_samples, num_resample] = p_values['ROUGE-L']
+                df2_bl.at[num_samples, num_resample] = p_values['BLEURT']
+
+        print('rouge'); print(df2_rouge)
+        print('BLEURT'); print(df2_bl)
+
+        plt.imshow(df2_bl, cmap="coolwarm", aspect="auto")
+        plt.colorbar()  # Add color scale
+        plt.xticks(ticks=np.arange(len(df2_bl.columns)), labels=df2_bl.columns)
+        plt.yticks(ticks=np.arange(len(df2_bl.index)), labels=df2_bl.index)
+        plt.title("Matrix Representation of DataFrame")
+        plt.show()
 
 if __name__ == "__main__":
     main()
-
-
-
-if __name__ == "__main__":
-    main()
-
 
 ###
 # import re
