@@ -90,37 +90,63 @@ def ICL_prompting(in_path: str):
 
     tokenizer, model = load_llama_instruct()#load_mistral()# change it to load llama-instruct
 
-    prompt_template = """
-        Instruction: You are provided with a reference text and a candidate text. The candidate text is a generated replica of the reference text. Your task is to determine if the candidate text is an exact or near-exact match of the reference text. Near-exact match candidates must precisely match the reference candidates in terms of sentence structure, overlap, and contextual similarity. Respond only with ”Yes” or ”No”.
-        
-        Example 1:  
-        Reference Text: The cat waited at the top. 
-        Candidate Text: The cat waited at the top. 
-        Answer: Yes (exact match) 
-        
-        Example 2:  
-        Reference Text: icy surface of Jupiter’s largest moon, Ganymede. These irregular masses may be rock formations, supported by Ganymede’s icy shell for billions of years. 
-        Candidate Text: icy surface of Jupiter’s largest moon, Ganymede. These irregular masses may be rock formations, supported by Ganymede’s icy shell for billions of years. This discovery supports the theory that Ganymede has a subsurface ocean. Scientists used gravity data from NASA’s Galileo spacecraft to create a geophysical model of the interior of Ganymede. 
-        Answer: Yes (near-exact match)
-        
-        Example 3:  
-        Reference Text: Systems Inc. said it has agreed to acquire P-Cube for \$200 million in stock and cash to enable service providers to further control and manage such advanced Internet Protocol services
-        Candidate Text: Systems Inc. said it will acquire P-Cube Inc., a provider of IP multimedia subsystem (IMS) software, for \$200 million in cash. The acquisition will enable Cisco to offer IMS-based multimedia services to service providers, the company said. IMS is a next-generation IP-based network architecture that will enable service providers to offer multimedia services such as voice, video and data over a single network. Cisco said it will use P-Cube's IMS software to offer a complete IMS solution to service providers.
-        Answer: Yes (near-exact match) 
-        
-        Example 4:  
-        Reference Text: Shares of Google Inc. will make their  Nasdaq stock market debut on Thursday after the year's most  anticipated initial public offering priced far below initial  estimates, raising \$1.67 billion.
-        Candidate Text: Google Inc (GOOG.O) will begin trading on the Nasdaq Stock Market on Thursday, the company said on Wednesday, as the Internet search leader prepares to go public. The Mountain View, California-based company, which is expected to raise as much as $2.7 billion in the offering, will trade under the symbol ""GOOG."" The stock will begin trading at 9 a.m. EDT (1300 GMT) on the Nasdaq Global Select Market, the company said in a statement
-        Answer: Yes (near-exact match)
-        
-        Example 5:  
-        Reference Text: leading US-listed Chinese internet portal, fell more than 10 per cent on Friday after China's biggest mobile phone network operator imposed a one-year suspension on its multimedia messaging services because of customers being sent spam.
-        Candidate Text: hinese internet portal, fell more than 10 per cent on Monday after the company said it had been suspended from Yahoo! Mail and Hotmail for sending spam. The shares fell 11.4 per cent to $2.74 in New York, after closing at $3.09 on Friday. The company said it had been suspended from the two email services after it sent out a message to its users on Friday, which was not authorised by the company. The company said it was working with Yahoo
-        Answer:  Yes (near-exact match)
-        
-        Reference Text: {ref_text}
-        Candidate Text: {cand_text}
-        Answer: """
+    prompt_template = """INSTRUCTION:
+You are provided with a reference text and a candidate text.
+The candidate text is a generated replica of the reference text.
+Your task is to determine if the candidate text is an exact or near-exact match of the reference text.
+Near-exact match candidates must PRECISELY match the reference candidates in terms of sentence structure, overlap, and contextual similarity.
+Respond only with 'Yes' or 'No'.
+---
+Example 1:
+
+REFERENCE TEXT:
+The cat waited at the top.
+
+CANDIDATE TEXT:
+The cat waited at the top.
+
+ANSWER: Yes (exact match)
+---
+Example 2:
+
+REFERENCE TEXT:
+icy surface of Jupiter's largest moon, Ganymede. These irregular masses may be rock formations, supported by Ganymede's icy shell for billions of years.
+
+CANDIDATE TEXT:
+icy surface of Jupiter's largest moon, Ganymede. These irregular masses may be rock formations, supported by Ganymede's icy shell for billions of years. This discovery supports the theory that Ganymede has a subsurface ocean. Scientists used gravity data from NASA's Galileo spacecraft to create a geophysical model of the interior of Ganymede.
+
+ANSWER: Yes (near-exact match)
+---
+Example 3:
+
+REFERENCE TEXT:
+50th Anniversary of Normandy Landings lasts a year.
+
+CANDIDATE TEXT:
+The 50th anniversary celebration of the first Normandy landing will last a year.
+
+ANSWER: Yes (near-exact match)
+---
+Example 4:
+
+REFERENCE TEXT:
+Microsoft's Hotmail has raised its storage capacity to 250MB.
+
+CANDIDATE TEXT:
+Microsoft has increased the storage capacity of its Hotmail e-mail service to 250MB.
+
+ANSWER: Yes (near-exact match)
+---
+Example 5:
+
+REFERENCE TEXT:
+{ref_text}
+
+CANDIDATE TEXT:
+{cand_text}
+
+ANSWER:
+"""
 
     results_df = pd.DataFrame(
         columns=["Index", "Label", "First piece", "Gold", "Prediction", "Mistral"]
