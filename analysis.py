@@ -268,22 +268,18 @@ def main():
             
             task_num_samples = f"{task}_{num_samples}"
             if num_samples <1000: 
-                mean_list_unguided_bleurt, mean_list_guided_bleurt=[],[]
-                mean_list_unguided_rouge, mean_list_unguided_rouge = [],[]
+                mean_list_unguided, mean_list_guided=[],[]
                 for i in range(0,10):
                     sample_df = df.sample(n=num_samples, random_state=i)
                     #bleurt scores
                     unguided_corr = sample_df["BLEURT unguided"].corr(sample_df["ROUGEL unguided"], method="spearman")
                     guided_corr = sample_df["BLEURT guided"].corr(sample_df["ROUGEL guided"], method="spearman")
-                    mean_list_unguided_bleurt.append(unguided_corr)
-                    mean_list_guided_bleurt.append(guided_corr)
-
-                    # rouge scores:
+                    mean_list_unguided.append(unguided_corr)
+                    mean_list_guided.append(guided_corr)
                     
-                
                 print(f'for task: {task} and num_samples: {num_samples}')
-                print(f'unguided correlation is: {np.mean(mean_list_unguided_bleurt)} +- {np.std(mean_list_unguided_bleurt)}')
-                print(f'guided correlation is: {np.mean(mean_list_guided_bleurt)} +- {np.std(mean_list_guided_bleurt)}')
+                print(f'unguided correlation is: {np.mean(mean_list_unguided)} +- {np.std(mean_list_unguided)}')
+                print(f'guided correlation is: {np.mean(mean_list_guided)} +- {np.std(mean_list_guided)}')
         #     print_min_max(df=sample_df, metric="BLEURT", res_dir=res_dir)
         #     print_min_max(df=sample_df, metric="ROUGEL", res_dir=res_dir)
         #     calculate_correlation(df=sample_df, task=task_num_samples, res_dir=res_dir)
@@ -302,5 +298,27 @@ if __name__ == "__main__":
 
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
+
+
+###
+# import re
+
+# # Sample text from your file
+# text = """Results of bootstrapping
+# Number of resamples: 10000, number of samples: 10
+# BLEURT p-value, 0.11229999999999996 	 Not Significant
+# ROUGE-L p-value, 1.0 	 Not Significant"""
+
+# # Regular expression pattern to capture metric and p-value
+# pattern = r"(\w+-?\w*) p-value, ([\d\.]+)"
+
+# # Extract matches
+# matches = re.findall(pattern, text)
+# print(f"matches are: {matches}")
+
+# # Convert to dictionary
+# p_values = {metric: float(value) for metric, value in matches}
+
+# print(p_values)

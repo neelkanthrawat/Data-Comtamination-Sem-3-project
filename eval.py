@@ -2,6 +2,7 @@ import pandas as pd
 import evaluate
 import os
 from pathlib import Path
+from bleurt import score
 
 HOME = Path.home()
 PROJECT_DIR = os.path.join(HOME, "Data-Comtamination-Sem-3-project")
@@ -50,8 +51,6 @@ def calc_scores(in_path: str):
     with open(file_in, "r") as f:
         pred_df = pd.read_csv(f, delimiter="|")
 
-    print("_______I HAVE READ THE FILE________")
-
     results_df = pd.DataFrame(
         columns=[
             "Index",
@@ -64,7 +63,8 @@ def calc_scores(in_path: str):
         ]
     )
 
-    bleurt = evaluate.load("bleurt", module_type="metric", checkpoint="BLEURT-20")
+    path = os.path.join(HOME, "bleurt/BLEURT-20")
+    bleurt = score.BleurtScorer(path)
     rouge = evaluate.load("rouge")
 
     for index, row in pred_df.iterrows():
@@ -74,13 +74,13 @@ def calc_scores(in_path: str):
         prediction = row["Prediction"]
 
         if not prediction or not gold or pd.isna(prediction) or pd.isna(gold):
-            bleurt_score = {"scores": [0]}
+            bleurt_score = [0]
             rouge_score = {"rougeL": 0}
             print(
                 f"Prediction {prediction} or Gold {gold} is NaN. Setting BLEURT to 0 and ROUGE-L to 0."
             )
         else:
-            bleurt_score = bleurt.compute(predictions=[prediction], references=[gold])
+            bleurt_score = bleurt.score(references=[prediction], candidates=[gold])
             rouge_score = rouge.compute(predictions=[prediction], references=[gold])
 
         results_df.loc[index] = {
@@ -89,7 +89,7 @@ def calc_scores(in_path: str):
             "First piece": first_piece,
             "Gold": gold,
             "Prediction": prediction,
-            "BLEURT": bleurt_score["scores"][0],
+            "BLEURT": bleurt_score[0],
             "ROUGEL": rouge_score["rougeL"],
         }
 

@@ -12,6 +12,7 @@ results_llama
 results_openllama
 .DS_Store
 time-travel-in-llms-main/results/**/*.txt
+results/*
 
 
 # Distribution / packaging
