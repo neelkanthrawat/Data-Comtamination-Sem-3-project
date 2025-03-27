@@ -267,7 +267,7 @@ def main():
         start_index_answer = len(encoded_prompt["input_ids"][0])
 
         if args.task == "stackexchange":
-            max_len = 1000
+            max_len = 300
         else:
             max_len = 100
 
@@ -276,7 +276,7 @@ def main():
             max_new_tokens=max_len,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
-            temperature=0.22,
+            temperature=0.2,
             do_sample=True,
         )[0][start_index_answer:]
 
