@@ -300,3 +300,25 @@ if __name__ == "__main__":
 
 if __name__ == "__main__":
     main()
+
+
+###
+# import re
+
+# # Sample text from your file
+# text = """Results of bootstrapping
+# Number of resamples: 10000, number of samples: 10
+# BLEURT p-value, 0.11229999999999996 	 Not Significant
+# ROUGE-L p-value, 1.0 	 Not Significant"""
+
+# # Regular expression pattern to capture metric and p-value
+# pattern = r"(\w+-?\w*) p-value, ([\d\.]+)"
+
+# # Extract matches
+# matches = re.findall(pattern, text)
+# print(f"matches are: {matches}")
+
+# # Convert to dictionary
+# p_values = {metric: float(value) for metric, value in matches}
+
+# print(p_values)
