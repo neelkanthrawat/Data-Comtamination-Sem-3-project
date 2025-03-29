@@ -1,0 +1,942 @@
+Index|Label|First piece|Gold|Prediction
+0|-1|Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|and includes as actors some of the people involved in their lives.|"<NAME> and <NAME>, who were both born in the 1930s and spent their lives in the shadow of the Great Depression.
+
+            SECOND PIECE: The film is a remake of the 1931 film of the same name, which was based on a novel by <NAME> and <NAME>.
+
+            ANSWER: The film is a remake of the 1931 film of the same name,"
+1|-1|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|"entering a church.
+            SECOND PIECE: Not since the British army come to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his"
+2|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            SECOND PIECE: Maude and Dora had seen the trains rushing across the pra"
+3|-1|Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|"SECOND PIECE: The painting is of a ballerina by Cecile d'Arblay.
+
+            FIRST PIECE: The painting is of a ballerina by Cecile d'Arblay.
+            SECOND PIECE: Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.
+
+            FIRST PIECE: Muriel has in her living"
+4|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik faction, was arrested in 1926 for his role in the assassination of Sergei Kirov.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik faction, was arrested in 1926 for his role in the assassination of Sergei Kirov.
+
+            FIRST PIECE: Kotkin describes how Lev"
+5|-1|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|"SECOND PIECE: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.
+            ANSWER: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm."
+6|-1|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"SECOND PIECE: Dave hated Johnny; only Dave hated him.
+            ANSWER: Dave hated Johnny; Dave hated him.
+
+            FIRST PIECE: The boys liked Johnny; only Dave hated him.
+            SECOND PIECE: Dave hated Johnny; only Dave hated him.
+            ANSWER: Dave hated Johnny; Dave hated him.
+
+            FIRST PIECE: The boys liked Johnny; only Dave hated"
+7|-1|Laufer's play was inspired by a court case in which the Havasupai Tribe claimed|that researchers from Arizona State University used their DNA samples improperly.|"that the Hualapai Tribe had stolen their sacred site.
+            SECOND PIECE: The Havasupai Tribe claimed that the Hualapai Tribe had stolen their sacred site.
+            ANSWER: The Havasupai Tribe claimed that the Hualapai Tribe had stolen their sacred site."
+8|-1|The needy were allowed to follow after the|harvesters so that they might pick up the fallen grain.|"rich.
+            SECOND PIECE: The needy were allowed to follow after the rich.
+            ANSWER: The needy were allowed to follow after the rich.
+
+INSTRUCTION: Finish the THIRD PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST PIECE: The"
+9|-1|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"SECOND PIECE: Most of the boys liked Johnny; only Dave hated him.
+            ANSWER: Dave hated Johnny."
+10|-1|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|"SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+            SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again"
+11|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"SECOND PIECE: Dora and Maude had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: The train was a long, low, black thing, with a great, rolling puff of smoke streaming back from the engine.
+            SECOND PIECE: The train was a long, low, black thing, with a great, rolling p"
+12|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            SECOND PIECE: Maude and Dora had seen the trains rushing across the pra"
+13|-1|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|"SECOND PIECE: The wheel was a blur and the needle was a streak of light.
+
+            FIRST PIECE: The wheel was a blur and the needle was a streak of light.
+            SECOND PIECE: The wheel was a blur and the needle was a streak of light.
+
+            FIRST PIECE: The wheel was a blur and the needle was a streak of light.
+            SECOND PIECE"
+14|-1|Muriel has in her living room a famous painting of a ballerina.|She bought the painting when she was thirty.|"SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ballerina is wearing a tutu.
+            SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ball"
+15|-1|Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|"by <NAME> called ""The Scream.""
+            SECOND PIECE: Muriel has hanging in her living room a famous painting by <NAME> called ""The Scream.""
+            
+            ANSWER: The Scream
+
+            ANSWER: The Scream
+
+            ANSWER: The Scream
+
+            ANSWER: The Scream
+
+            ANSWER: The Scream
+
+            ANSWER: The Scre"
+16|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Farnsworth, who was coming out of the bathroom.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Farnsworth, who was coming out of the bathroom.
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Farnsworth, who was coming out of the bathroom.
+
+            FIRST P"
+17|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik faction, was arrested in 1917.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik faction, was arrested in 1917.
+
+            FIRST PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik faction, was arrested in 1917."
+18|-1|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|"SECOND PIECE: The wheel was a blur and the needle was a streak of light.
+            ANSWER: The wheel was a blur and the needle was a streak of light.
+
+INSTRUCTION: Finish the THIRD PIECE based on the FIRST and SECOND PIECE, such that these three pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction."
+19|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Hale.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Hale.
+            THE ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Hale.
+
+            FIRST PIECE: The man was standing in the doorway, looking out.
+            SECOND PIECE: The man was standing"
+20|-1|The people in my reading group found Carpenter's|poems hard to understand because they are obscure.|"book to be a good read.
+            SECOND PIECE: The people in my reading group found Carpenter's book to be a good read.
+            ANSWER: Carpenter's book to be a good read.
+
+            FIRST PIECE: The people in my reading group found Carpenter's book to be a good read.
+            SECOND PIECE: The people in my reading group found Carpenter's book to"
+21|-1|The people in my reading group found Carpenter's|poems hard to understand because they are obscure.|"book to be a good read.
+            SECOND PIECE: The people in my reading group found Carpenter's book to be a good read.
+
+            ANSWER: The people in my reading group found Carpenter's book to be a good read.
+
+            ANSWER: The people in my reading group found Carpenter's book to be a good read.
+
+            ANSWER: The people in my reading group found Carpenter"
+22|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            SECOND PIECE: Maude and Dora had seen the trains rushing across the pra"
+23|-1|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it.|"SECOND PIECE: When Maude got to school, Nell Raleigh was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECOND PIECE: When Maude got to school, Nell Raleigh was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECON"
+24|-1|Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|"by <NAME> called The Scream.
+            SECOND PIECE: Muriel has hanging in her living room a famous painting by <NAME> called The Scream."
+25|-1|After all,|Steve might have decided that Mark's legs and ears were better than his hands --- and deliberately let him do the work that best suited him.|"the world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.
+            SECOND PIECE: After all, the world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.
+
+            FIRST PIECE: After all, the world is a dangerous place to live; not because of"
+26|-1|Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"Smith had come to dinner.
+            SECOND PIECE: Grandma had set a place for Mary; and once Mrs. Smith had come to dinner.
+
+            ANSWER: Grandma had set a place for Mary; and once Mrs. Smith had come to dinner.
+
+            EXPLANATION: The first piece is a sentence fragment. The second piece is a sentence fragment. The second piece is a complete sentence.
+
+            ANSWER: Grand"
+27|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Smith.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Smith.
+            COMPLETION: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Smith.
+
+            FIRST PIECE: The man who was in the room was a stranger.
+            SECOND PIECE: The man who was in the room was a stranger"
+28|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Dashwood.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Dashwood.
+
+            FIRST PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Dashwood.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. D"
+29|-1|People kept going through the traffic light because the light was in the middle of a holiday display.|It was too inconspicuous.|"SECOND PIECE: People kept going through the traffic light because the light was in the middle of a holiday display.
+            FIRST PIECE: People kept going through the traffic light because the light was in the middle of a holiday display.
+            SECOND PIECE: People kept going through the traffic light because the light was in the middle of a holiday display.
+            FIRST PIECE: People kept going through the traffic light because the"
+30|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Baxter, who was coming out of the office.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Baxter, who was coming out of the office.
+
+            FIRST PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Baxter, who was coming out of the office.
+            SECOND P"
+31|-1|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|"SECOND PIECE: Mark became absorbed in Blaze, the white horse.
+
+            FIRST PIECE: Mark became absorbed in Blaze, the white horse.
+            SECOND PIECE: Mark became absorbed in Blaze, the white horse.
+
+            FIRST PIECE: Mark became absorbed in Blaze, the white horse.
+            SECOND PIECE: Mark became absorbed in Blaze, the white horse."
+32|-1|Always before, Larry had helped Dad with his work.|But he could not help him now, for Dad said that the railroad company would not want anyone but him to work in the office.|"SECOND PIECE: Always before, Larry had helped Dad with his work.
+
+            FIRST PIECE: Always before, Larry had helped Dad with his work.
+            SECOND PIECE: Always before, Larry had helped Dad with his work.
+
+            FIRST PIECE: Always before, Larry had helped Dad with his work.
+            SECOND PIECE: Always before, Larry had helped Dad with his work."
+33|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik Central Committee, was killed in a 1937 purge.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed in a 1937 purge.
+            ANSWER: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed in a 193"
+34|-1|The last day came.|Tomorrow Nell was going away. Dad and Mom had brought home her new trunk.|"SECOND PIECE: The last day came.
+            COMPLETION: The last day came.
+
+            FIRST PIECE: The last day came.
+            SECOND PIECE: The last day came.
+            COMPLETION: The last day came.
+
+            FIRST PIECE: The last day came.
+            SECOND PIECE: The last day came.
+            COMPLETION: The last"
+35|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+36|-1|Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|"SECOND PIECE: Cecile d'Arblay has in her living room a famous painting of a ballerina by Muriel.
+
+            INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST PIECE: Muriel has in her living"
+37|-1|Muriel has in her living room a famous painting of a ballerina.|She bought the painting when she was thirty.|"SECOND PIECE: The painting is a famous work of art.
+
+            ANSWER: The painting is a famous work of art.
+
+            ANSWER: The painting is a famous work of art.
+
+            ANSWER: The painting is a famous work of art.
+
+            ANSWER: The painting is a famous work of art.
+
+            ANSWER: The painting is a famous work of art."
+38|-1|Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|"SECOND PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+
+            FIRST PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+            SECOND PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+
+            FIRST PIECE: Everyone, by now, felt a certain confidence in the British way"
+39|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a Soviet politician, was arrested in 1936 for his involvement in the assassination of Sergei Kirov.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a Soviet politician, was arrested in 1936 for his involvement in the assassination of Sergei Kirov.
+
+            FIRST PIECE: Kotkin describes how Lev Kamenev, a Soviet politician, was arrested in 19"
+40|-1|Always before, Larry had helped Dad with his work.|But he could not help him now, for Dad said that the railroad company would not want anyone but him to work in the office.|"SECOND PIECE: Always before, Larry had helped Dad with his work.
+            ANSWER: Always before, Larry had helped Dad with his work.
+
+            FIRST PIECE: Always before, Larry had helped Dad with his work.
+            SECOND PIECE: Always before, Larry had helped Dad with his work.
+            ANSWER: Always before, Larry had helped Dad with his work.
+
+            FIRST P"
+41|-1|The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|"the patient.
+            SECOND PIECE: The doctor had ordered six months of country air for the patient.
+
+            The doctor had ordered six months of country air for the patient.
+
+            The doctor had ordered six months of country air for the patient.
+
+            The doctor had ordered six months of country air for the patient.
+
+            The doctor had ordered six months of country air for the patient.
+
+            The doctor had ordered six months of country"
+42|-1|Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|"by <NAME>.
+            SECOND PIECE: The painting is a portrait of <NAME> and is signed by the artist.
+            
+            ANSWER: The painting is a portrait of <NAME> and is signed by the artist.
+            
+            ANSWER: The painting is a portrait of <NAME> and is signed by the artist.
+            
+            ANSWER: The painting is a portrait of <NAME> and is signed by the artist"
+43|-1|Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|"SECOND PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+
+            FIRST PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+            SECOND PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+
+            FIRST PIECE: Everyone, by now, felt a certain confidence in the British way"
+44|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Keller.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Keller.
+
+            FIRST PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Keller.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Keller."
+45|-1|Edward dropped adhesive tape onto his window sill,|and when he pulled the tape off, some of the glue was stuck on it .|"and then he stuck it to his window.
+            SECOND PIECE: Edward dropped adhesive tape onto his window sill, and then he stuck it to his window.
+
+            FIRST PIECE: Edward dropped adhesive tape onto his window sill, and then he stuck it to his window.
+            SECOND PIECE: Edward dropped adhesive tape onto his window sill, and then he stuck it to his window.
+
+            F"
+46|-1|When I got to the house, Mrs.|Everett, the housekeeper, told me that Hermione was in her room, watching her maid pack.|"Smith was outside.
+            SECOND PIECE: I got to the house, and Mrs. Smith was outside.
+            COMPLETION: I got to the house, and Mrs. Smith was outside.
+
+            FIRST PIECE: I was in the car, and I saw a dog.
+            SECOND PIECE: I was in the car, and I saw a dog.
+            COMPLETION: I was in the car, and"
+47|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik Central Committee, was killed in 1936.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed in 1936.
+
+            ANSWER: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed in 1936.
+
+            AN"
+48|-1|Usually rainy days called for a fire in the hall,|and Tatyana stretched out beside it, a book flattened to the floor.|"but today was different.
+            SECOND PIECE: The fire in the hall, usually called for a fire in the hall, but today was different.
+
+            FIRST PIECE: The fire in the hall, usually called for a fire in the hall, but today was different.
+            SECOND PIECE: The fire in the hall, usually called for a fire in the hall, but today was different.
+
+            FIRST PIECE"
+49|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The first piece is a sentence, the second piece is a sentence fragment.
+            
+            The first piece is a sentence, the second piece is a sentence fragment.
+            
+            The first piece is a sentence, the second piece is a sentence fragment."
+50|-1|Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|"and you must live with the choices you make.
+            SECOND PIECE: You must live with the choices you make.
+
+            ANSWER: You must live with the choices you make.
+
+            ANSWER: You must live with the choices you make.
+
+            ANSWER: You must live with the choices you make.
+
+            ANSWER: You must live with the choices you make.
+
+            ANSWER: You"
+51|-1|After all,|Steve might have decided that Mark's legs and ears were better than his hands --- and deliberately let him do the work that best suited him.|"I'm not a very good person.
+            SECOND PIECE: After all, I'm not a very good person.
+
+            FIRST PIECE: After all, I'm not a very good person.
+            SECOND PIECE: After all, I'm not a very good person.
+
+            FIRST PIECE: After all, I'm not a very good person.
+            SECOND PIE"
+52|-1|Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|"it is not clear whether Dickens was the source of the character's name.
+            SECOND PIECE: Though Dickens is said to have helped Collins develop the character of Mat Grice, it is not clear whether Dickens was the source of the character's name.
+
+            ANSWER: Though Dickens is said to have helped Collins develop the character of Mat Grice, it is not clear whether Dickens was the source of the character's name"
+53|-1|Muriel has in her living room a famous painting of the ballerina Theresa Rubio.|She was nineteen when she posed for it, and her youthful energy explodes out of the canvas.|"SECOND PIECE: Theresa Rubio has in her living room a famous painting of the ballerina Muriel.
+            ANSWER: Theresa Rubio has in her living room a famous painting of the ballerina Muriel."
+54|-1|Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|"the two men were not friends.
+            SECOND PIECE: Though Dickens is said to have helped Collins develop the character of Mat Grice, the two men were not friends.
+
+            SOLUTION: Though Dickens is said to have helped Collins develop the character of Mat Grice, the two men were not friends.
+
+            INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two"
+55|-1|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it.|"SECOND PIECE: When Maude got to school, Nell Raleigh was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECOND PIECE: When Maude got to school, Nell Raleigh was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECON"
+56|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            SECOND PIECE: Maude and Dora had seen the trains rushing across the pra"
+57|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Dooley.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Dooley.
+
+            FIRST PIECE: The man was a great man, and he had a great mind.
+            SECOND PIECE: The man was a great man, and he had a great mind.
+
+            FIRST PIECE: He was a great man, and he"
+58|-1|Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|".
+            SECOND PIECE: The ballerina is wearing a pink tutu.
+            ANSWER: The ballerina is wearing a pink tutu.
+
+            FIRST PIECE: The ballerina is wearing a pink tutu.
+            SECOND PIECE: The ballerina is wearing a pink tutu.
+            ANSWER: The ballerina is wearing a pink tutu.
+
+            FIRST"
+59|-1|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|"SECOND PIECE: The wheel was a blur and the needle was a streak of light.
+            ANSWER: The wheel was a blur and the needle was a streak of light.
+
+            FIRST PIECE: The wheel was a blur and the needle was a streak of light.
+            SECOND PIECE: The wheel was a blur and the needle was a streak of light.
+            ANSWER: The wheel was a blur"
+60|-1|The needy were allowed to follow after the|harvesters so that they might pick up the fallen grain.|"rich.
+            SECOND PIECE: The needy were allowed to follow after the rich.
+
+            ANSWER: The needy were allowed to follow after the rich.
+
+            FIRST PIECE: The needy were allowed to follow after the rich.
+            SECOND PIECE: The needy were allowed to follow after the rich.
+
+            ANSWER: The needy were allowed to follow after the rich."
+61|-1|People kept going through the traffic light because the light was in the middle of a holiday display.|It was too inconspicuous.|SECOND PIECE: People kept going through the traffic light because the light was in the middle of a holiday display.
+62|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: The painting is by <NAME>.
+            ANSWER: The painting is by <NAME>.
+
+            FIRST PIECE: The painting is by <NAME>.
+            SECOND PIECE: Muriel has in her living room a famous painting of a ballerina.
+            ANSWER: The painting is by <NAME>.
+
+            FIRST PIECE: The painting is by <NAME>."
+63|-1|Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"I went to the movies with my friends.
+            SECOND PIECE: I went to the movies with my friends.
+
+            FIRST PIECE: I went to the movies with my friends.
+            SECOND PIECE: Last week, I went to the movies with my friends.
+
+            FIRST PIECE: I went to the movies with my friends.
+            SECOND PIECE: I went to the movies with my"
+64|-1|Grandma had set a place for Mary;|so, reluctantly, she agreed to stay for dinner.|"she was coming home for dinner.
+            SECOND PIECE: Grandma had set a place for Mary; she was coming home for dinner.
+            COMPLETION: Grandma had set a place for Mary; she was coming home for dinner.
+        """"""
+        return ""Grandma had set a place for Mary; she was coming home for dinner.""
+
+    def test_complete_sentence(self):
+        self.assertEqual(self"
+65|-1|By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.|How very small and straight and rigid she lay in the bunk below! Her eyes were closed, but Tatyana doubted if she slept.|"SECOND PIECE: By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.
+
+            FIRST PIECE: By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.
+            SECOND PIECE: By rolling over in her upper berth, Tatyana could look over the edge of it and see"
+66|-1|Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"Smith had finished her breakfast, she went to the table and sat down.
+            SECOND PIECE: Mary had set a place for Grandma; and once Mrs. Smith had finished her breakfast, she went to the table and sat down.
+
+            FIRST PIECE: Mary had set a place for Grandma; and once Mrs. Smith had finished her breakfast, she went to the table and sat down.
+            SECOND PIECE: Mary had"
+67|-1|Usually rainy days called for a fire in the hall,|and Tatyana stretched out beside it, a book flattened to the floor.|"but today was different.
+            SECOND PIECE: The fire in the hall was different today.
+            
+            ANSWER: Usually rainy days called for a fire in the hall, but today was different. The fire in the hall was different today.
+            
+            ANSWER: Usually rainy days called for a fire in the hall, but today was different. The fire in the hall was different today.
+            
+            ANSWER: Usually rainy days"
+68|-1|Meanwhile all the people in town are hunting high and low for Arthur and Celeste,|and their mothers are very worried.|"who are still missing.
+            SECOND PIECE: Meanwhile all the people in town are hunting high and low for Arthur and Celeste, who are still missing.
+
+            ANSWER: Meanwhile all the people in town are hunting high and low for Arthur and Celeste, who are still missing.
+
+            ANSWER: Meanwhile all the people in town are hunting high and low for Arthur and Celeste, who are still missing.
+
+            ANSWER"
+69|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"Poole.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Poole.
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Poole.
+
+            FIRST PIECE: The man who had been in the room was a stranger to me.
+            SECOND PIECE: The"
+70|-1|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|"SECOND PIECE: The needle was a blur and the wheel was a streak of light.
+
+            ANSWER: The wheel was a blur and the needle was a streak of light.
+
+            ANSWER: The wheel was a blur and the needle was a streak of light.
+
+            ANSWER: The wheel was a blur and the needle was a streak of light.
+
+            ANSWER: The wheel was a blur and the"
+71|-1|The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|"the patient.
+            SECOND PIECE: The patient had ordered six months of country air for the doctor.
+
+            ANSWER: The patient had ordered six months of country air for the doctor.
+
+            EXPLANATION: The first piece is the patient ordering the second piece.
+            */
+
+            var first = ""The doctor had ordered six months of country air for the patient."";
+            var second = ""The patient had ordered six months"
+72|-1|Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|"SECOND PIECE: Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.
+            ANSWER: Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.
+
+            FIRST PIECE: The painting is by the famous artist Cecile d'Arblay.
+            SECOND PIECE: The painting is by"
+73|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: Muriel has in her living room a famous painting of a ballerina.
+            ANSWER: Muriel has in her living room a famous painting of a ballerina.
+            ANSWER: Muriel has in her living room a famous painting of a ballerina.
+            ANSWER: Muriel has in her living room a famous painting of a ballerina.
+            ANSWER: Muriel has"
+74|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: The train was a long, low, boxy thing, with a long, low, boxy engine, and a long, low, boxy caboose.
+            SECOND PIECE: The train was a long, low, boxy"
+75|-1|Edward dropped adhesive tape onto his window sill,|and when he pulled the tape off, some of the glue was stuck on it .|"and then he pulled it off.
+            SECOND PIECE: Edward dropped adhesive tape onto his window sill, and then he pulled it off.
+            ANSWER: Edward dropped adhesive tape onto his window sill, and then he pulled it off.
+
+
+INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion."
+76|-1|The last day came.|Tomorrow Nell was going away. Dad and Mom had brought home her new trunk.|"SECOND PIECE: The last day came.
+
+            FIRST PIECE: The last day came.
+            SECOND PIECE: The last day came.
+
+            FIRST PIECE: The last day came.
+            SECOND PIECE: The last day came.
+
+            FIRST PIECE: The last day came.
+            SECOND PIECE: The last day came."
+77|-1|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|"eat off the floor.
+            SECOND PIECE: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+            ANSWER: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+
+            FIRST PIECE: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+            SECOND PIECE: The Harbor folks said Grand"
+78|-1|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|"entering a church.
+            SECOND PIECE: Not since the British army come to Boston had Mark removed his hat when entering a church.
+            
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+            
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+            
+            ANSWER: Not since the British army come to Boston had"
+79|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.
+
+            FIRST PIECE: The man was a little surprised at the suddenness of the attack.
+            SECOND PIECE: The man was a little surprised at the suddenness of the attack"
+80|-1|Mr.|Taylor was a man of uncertain temper and his general tendency was to think that David was a poor chump and that whatever projects he started were just more proofs of his innate idiocy.|"Smith is a man who is very good at making things.
+            SECOND PIECE: Mr. Smith is a man who is very good at making things.
+            ANSWER: Mr. Smith is a man who is very good at making things.
+
+            FIRST PIECE: Mr. Smith is a man who is very good at making things.
+            SECOND PIECE: Mr. Smith is a man who is very good at making things"
+81|-1|Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|"and you are responsible for it.
+            SECOND PIECE: You are responsible for your life.
+
+            ANSWER: You are responsible for your life.
+
+            EXPLANATION: The first piece is a statement, and the second piece is a question. The second piece is the answer to the first piece.
+
+            ANSWER: You are responsible for your life.
+
+            EXPLANATION: The first piece is a statement,"
+82|-1|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|"SECOND PIECE: When Nell Raleigh got to school, Maude was already there.
+            COMPLETION: When Nell Raleigh got to school, Maude was already there.
+
+            FIRST PIECE: The man who was sitting on the bench was wearing a hat.
+            SECOND PIECE: The man who was sitting on the bench was wearing a hat.
+            COMPLETION: The man who was sitting"
+83|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ballerina is wearing a tutu.
+            SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ball"
+84|-1|Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|"SECOND PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+
+            FIRST PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+            SECOND PIECE: Everyone, by now, felt a certain confidence in the British way of doing things.
+
+            FIRST PIECE: Everyone, by now, felt a certain confidence in the British way"
+85|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik Central Committee, was executed in 1937.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was executed in 1937.
+
+            FIRST PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was executed in 1937."
+86|-1|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|"SECOND PIECE: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.
+            COMPLETION: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.
+
+            FIRST PIECE: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.
+            SECOND PIECE: After a somewhat lengthy conversation, Nancy"
+87|-1|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|"SECOND PIECE: When Nell Raleigh got to school, Maude was already there.
+            ANSWER: When Nell Raleigh got to school, Maude was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECOND PIECE: When Nell Raleigh got to school, Maude was already there.
+            ANSWER: When"
+88|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik Central Committee, was assassinated by a group of Mensheviks in 1905.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was assassinated by a group of Mensheviks in 1905.
+
+            FIRST PIECE: Kotkin describes how Lev Kamenev, a member of the"
+89|-1|Grandma had set a place for Mary;|so, reluctantly, she agreed to stay for dinner.|"she was coming for dinner.
+            SECOND PIECE: Mary was coming for dinner.
+            ANSWER: Grandma had set a place for Mary; she was coming for dinner.
+
+INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST PIE"
+90|-1|Mary offered to give her theater tickets to|Sally because she had to work late that night.|"the party.
+            SECOND PIECE: Mary offered to give her theater tickets to the party.
+
+            ANSWER: Mary offered to give her theater tickets to the party.
+
+            INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST PIE"
+91|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            ANSWER: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: The train was a long, black, smoking monster, and it seemed to be"
+92|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Baxter.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Baxter.
+
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Baxter.
+
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Baxter."
+93|-1|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|"SECOND PIECE: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.
+
+            ANSWER: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.
+
+            EXPLANATION: The first piece is a sentence fragment. The second piece is a complete sentence.
+
+            ANSWER: After a somewhat lengthy conversation, Nancy convinced the housekeeper that there"
+94|-1|Claire could not win a single point in her squash game with Lisa this afternoon.|She was just exhausted.|"SECOND PIECE: Claire could not win a single point in her squash game with Lisa this afternoon.
+            ANSWER: Claire could not win a single point in her squash game with Lisa this afternoon.
+
+            FIRST PIECE: The man who was driving the car was not wearing a seatbelt.
+            SECOND PIECE: The man who was driving the car was not wearing a seatbelt.
+            ANSWER"
+95|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            ANSWER: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: Maude and Dora had seen the trains rushing across the prairie, with"
+96|-1|Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|"SECOND PIECE: Theresa Rubio is a famous ballerina.
+
+            ANSWER: Theresa Rubio is a famous ballerina.
+        """"""
+        # TODO: Complete this function
+        return None
+
+    def _get_sentence_pairs(self, sentences):
+        """"""
+        INSTRUCTION: Return a list of pairs of sentences.
+        """"""
+        # TODO: Complete this"
+97|-1|Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|"the two men were not friends.
+            SECOND PIECE: Though Dickens is said to have helped Collins develop the character of Mat Grice, the two men were not friends.
+
+            ANSWER: Though Dickens is said to have helped Collins develop the character of Mat Grice, the two men were not friends.
+
+            ANSWER: Though Dickens is said to have helped Collins develop the character of Mat Grice, the two men were not"
+98|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik Central Committee, was killed by a bomb in 1918.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed by a bomb in 1918.
+            ANSWER: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed by a bomb in 1"
+99|-1|Mr.|Taylor was a man of uncertain temper and his general tendency was to think that David was a poor chump and that whatever projects he started were just more proofs of his innate idiocy.|"Smith was a very good teacher.
+            SECOND PIECE: Mr. Smith was a very good teacher.
+            ANSWER:
+
+            FIRST PIECE: Mr. Smith was a very good teacher.
+            SECOND PIECE: Mr. Smith was a very good teacher.
+            ANSWER:
+
+            FIRST PIECE: Mr. Smith was a very good teacher.
+            SECOND PIECE:"
+100|-1|Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|".
+            SECOND PIECE: She has a famous painting of a ballerina.
+            ANSWER: She has a famous painting of a ballerina.
+
+            FIRST PIECE: The ballerina is wearing a tutu.
+            SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE"
+101|-1|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|"SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+            SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again"
+102|-1|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|"eat off the floor.
+            SECOND PIECE: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+            ANSWER: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+
+            FIRST PIECE: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+            SECOND PIECE: The Harbor folks said Grand"
+103|-1|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|"entering a church.
+            SECOND PIECE: Not since the British army came to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his"
+104|-1|Meanwhile all the people in town are hunting high and low for Arthur and Celeste,|and their mothers are very worried.|"who have been missing for days.
+            SECOND PIECE: Meanwhile all the people in town are hunting high and low for Arthur and Celeste, who have been missing for days.
+            ANSWER: Meanwhile all the people in town are hunting high and low for Arthur and Celeste, who have been missing for days.
+
+            FIRST PIECE: Meanwhile all the people in town are hunting high and low for Arthur and Celeste, who have been missing"
+105|-1|Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"I was at the beach.
+            SECOND PIECE: I was at the beach last week.
+
+            FIRST PIECE: I was at the beach last week.
+            SECOND PIECE: I was at the beach last week.
+
+            FIRST PIECE: I was at the beach last week.
+            SECOND PIECE: I was at the beach last week.
+
+            FIRST PIECE:"
+106|-1|Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|"SECOND PIECE: Theresa Rubio was a famous ballerina.
+            ANSWER: Theresa Rubio was a famous ballerina."
+107|-1|Claire could not win a single point in her squash game with Lisa this afternoon.|She was just exhausted.|"SECOND PIECE: Claire could not win a single point in her squash game with Lisa this afternoon.
+            ANSWER: Claire could not win a single point in her squash game with Lisa this afternoon.
+
+            FIRST PIECE: Lisa could not win a single point in her squash game with Claire this afternoon.
+            SECOND PIECE: Lisa could not win a single point in her squash game with Claire this afternoon.
+            AN"
+108|-1|A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries,|and those occasions stood out as red-letter days for him.|"and he had been present at many of the interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries.
+            SECOND PIECE: A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries, and he had been present at many of the interviews which his father had had with noted detectives who desired his aid in solving perplexing myster"
+109|-1|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|"SECOND PIECE: Mark became absorbed in Blaze, the white horse.
+
+            FIRST PIECE: Mark became absorbed in Blaze, the white horse.
+            SECOND PIECE: Mark became absorbed in Blaze, the white horse.
+
+            FIRST PIECE: Mark became absorbed in Blaze, the white horse.
+            SECOND PIECE: Mark became absorbed in Blaze, the white horse."
+110|-1|By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.|How very small and straight and rigid she lay in the bunk below! Her eyes were closed, but Tatyana doubted if she slept.|"SECOND PIECE: By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.
+            ANSWER: By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.
+
+            FIRST PIECE: By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plain"
+111|-1|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"SECOND PIECE: Only Dave hated Johnny.
+            ANSWER: Dave hated Johnny.
+
+            FIRST PIECE: The boy who was the most popular was Johnny.
+            SECOND PIECE: The boy who was the most popular was Johnny.
+            ANSWER: The boy who was the most popular was Johnny.
+
+            FIRST PIECE: The boy who was the most popular was Johnny.
+            SE"
+112|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: The train was a long, low, black thing, with a long, rolling puff of black smoke streaming back from the engine.
+            SECOND PIECE: The train was a long, low, black thing, with a long, rolling"
+113|-1|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|"eat off the floor.
+            SECOND PIECE: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+            ANSWER: The Harbor folks said Grandma kept her house so clean that you could eat off the floor."
+114|-1|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|"SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+            SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again"
+115|-1|Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|".
+            SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ballerina is wearing a tutu.
+            SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The"
+116|-1|Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|"and you must live with it.
+            SECOND PIECE: You must live with it.
+            ANSWER: You must live with it.
+
+            FIRST PIECE: You must live with it.
+            SECOND PIECE: You must live with it.
+            ANSWER: You must live with it.
+
+            FIRST PIECE: You must live with it.
+            SECOND PIECE:"
+117|-1|When I got to the house, Mrs.|Everett, the housekeeper, told me that Hermione was in her room, watching her maid pack.|"Smith was there.
+            SECOND PIECE: She was there when I got to the house.
+
+            FIRST PIECE: I was there when she got to the house.
+            SECOND PIECE: She was there when I got to the house.
+
+            FIRST PIECE: I was there when she got to the house.
+            SECOND PIECE: She was there when I got to the house."
+118|-1|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"SECOND PIECE: Most of the boys liked Johnny; only Dave hated him.
+
+            ANSWER: Dave hated him.
+
+            ANSWER: Dave hated him.
+
+            ANSWER: Dave hated him.
+
+            ANSWER: Dave hated him.
+
+            ANSWER: Dave hated him.
+
+            ANSWER: Dave hated him.
+
+            ANSWER: Dave hated him."
+119|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: The ballerina is wearing a red tutu.
+            ANSWER: The ballerina is wearing a red tutu.
+
+INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST PIECE: The baller"
+120|-1|Laufer's play was inspired by a court case in which the Havasupai Tribe claimed|that researchers from Arizona State University used their DNA samples improperly.|"that the Hualapai Tribe had stolen their land.
+            SECOND PIECE: Laufer's play was inspired by a court case in which the Havasupai Tribe claimed that the Hualapai Tribe had stolen their land.
+
+            FIRST PIECE: Laufer's play was inspired by a court case in which the Havasupai Tribe claimed that the Hualapai Tribe had stolen their land"
+121|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: The painting is of a ballerina who is dancing.
+            ANSWER: The painting is of a ballerina who is dancing.
+
+            FIRST PIECE: The painting is of a ballerina who is dancing.
+            SECOND PIECE: The painting is of a ballerina who is dancing.
+            ANSWER: The painting is of a ballerina who is dancing."
+122|-1|Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"Smith had set a place for her.
+            SECOND PIECE: Grandma had set a place for Mary; and once Mrs. Smith had set a place for her.
+
+            FIRST PIECE: Grandma had set a place for Mary; and once Mrs. Smith had set a place for her.
+            SECOND PIECE: Grandma had set a place for Mary; and once Mrs. Smith had set a place for her."
+123|-1|The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|"and the kitchen was warming the cookstove.
+            SECOND PIECE: The cookstove was warming the kitchen, and the kitchen was warming the cookstove.
+
+            ANSWER: The cookstove was warming the kitchen, and the kitchen was warming the cookstove.
+
+            EXPLANATION:
+            The first piece is a sentence. The second piece is a sentence.
+            The first piece is a sentence that is a complete"
+124|-1|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|"SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+            SECOND PIECE: Maude wondered again why Bernard was seeing her home, when he was so much older than she.
+
+            FIRST PIECE: Maude wondered again"
+125|-1|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|"entering a church.
+            SECOND PIECE: Not since the British army came to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army come to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army came to Boston had Mark removed his hat when entering a church.
+
+            ANSWER: Not since the British army came to Boston had Mark removed his"
+126|-1|The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|"the patient.
+            SECOND PIECE: The patient had ordered six months of country air for the doctor.
+
+            ANSWER: The patient had ordered six months of country air for the doctor.
+
+            EXPLANATION: The second piece is a rephrasing of the first piece.
+
+            ANSWER: The patient had ordered six months of country air for the doctor.
+
+            ANSWER: The patient had ordered six months"
+127|-1|The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|"and the smell of the stew was filling the house.
+            SECOND PIECE: The smell of the stew was filling the house.
+
+            ANSWER: The cookstove was warming the kitchen, and the smell of the stew was filling the house.
+            ANSWER: The smell of the stew was filling the house.
+
+            ANSWER: The smell of the stew was filling the house.
+            ANSWER: The cookstove"
+128|-1|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Bolshevik Central Committee, was killed by a bomb in 1918.
+            SECOND PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed by a bomb in 1918.
+
+            FIRST PIECE: Kotkin describes how Lev Kamenev, a member of the Bolshevik Central Committee, was killed by a bomb"
+129|-1|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|"SECOND PIECE: Mark became absorbed in Blaze, the white horse.
+
+            ANSWER: Mark became absorbed in Blaze, the white horse.
+
+            ANSWER: Mark became absorbed in Blaze, the white horse.
+
+            ANSWER: Mark became absorbed in Blaze, the white horse.
+
+            ANSWER: Mark became absorbed in Blaze, the white horse.
+
+            ANSWER: Mark"
+130|-1|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"SECOND PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+
+            FIRST PIECE: Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            SECOND PIECE: Maude and Dora had seen the trains rushing across the pra"
+131|-1|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|"SECOND PIECE: The housekeeper was convinced that there was no immediate cause for alarm.
+            ANSWER: The housekeeper was convinced that there was no immediate cause for alarm.
+
+
+INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST"
+132|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ballerina is wearing a tutu.
+            SECOND PIECE: The ballerina is wearing a tutu.
+            ANSWER: The ballerina is wearing a tutu.
+
+            FIRST PIECE: The ball"
+133|-1|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|"SECOND PIECE: When Maude got to school, Nell Raleigh was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECOND PIECE: When Maude got to school, Nell Raleigh was already there.
+
+            FIRST PIECE: When Maude got to school, Nell Raleigh was already there.
+            SECON"
+134|-1|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"SECOND PIECE: Most of the boys liked Johnny; only Dave hated him.
+
+            ANSWER: Dave hated Johnny.
+
+            ANSWER: Dave hated Johnny.
+
+            ANSWER: Dave hated Johnny.
+
+            ANSWER: Dave hated Johnny.
+
+            ANSWER: Dave hated Johnny.
+
+            ANSWER: Dave hated Johnny.
+
+            ANSWER: Dave hated Johnny."
+135|-1|Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"I was in the city.
+            SECOND PIECE: Last week, I was in the city.
+
+            FIRST PIECE: Last week, I was in the city.
+            SECOND PIECE: Last week, I was in the city.
+
+            FIRST PIECE: Last week, I was in the city.
+            SECOND PIECE: Last week, I was in the city.
+
+            F"
+136|-1|Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|and includes as actors some of the people involved in their lives.|"<NAME> and <NAME>, who were both born in the 1930s and died in the 1980s.
+            SECOND PIECE: The film is a comedy that is adapted from the stories of two con men, <NAME> and <NAME>, who were both born in the 1930s and died in the 1980s.
+            ANSWER: The film is a comedy that is adapted from"
+137|-1|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|"eat off the floor.
+            SECOND PIECE: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+
+            ANSWER: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+
+            ANSWER: The Harbor folks said Grandma kept her house so clean that you could eat off the floor.
+
+            ANSWER: The Harbor folks said Grandma kept her"
+138|-1|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|"SECOND PIECE: Mark became absorbed in Blaze, the white horse.
+            ANSWER: Mark became absorbed in Blaze, the white horse.
+        */
+
+        // The first piece of the puzzle is ""Mark became absorbed in Blaze, the white horse.""
+        // The second piece of the puzzle is ""Mark became absorbed in Blaze, the white horse.""
+        // The answer is ""Mark became absorbed in Blaze, the"
+139|-1|Mary offered to give her theater tickets to|Sally because she had to work late that night.|"her friend.
+            SECOND PIECE: Mary offered to give her theater tickets to her friend.
+            COMPLETION: Mary offered to give her theater tickets to her friend.
+
+            FIRST PIECE: She was very happy to see him.
+            SECOND PIECE: She was very happy to see him.
+            COMPLETION: She was very happy to see him.
+
+            FIRST PIECE: She was very"
+140|-1|Muriel has in her living room a famous painting of the ballerina Theresa Rubio.|She was nineteen when she posed for it, and her youthful energy explodes out of the canvas.|"SECOND PIECE: Theresa Rubio is a famous ballerina.
+            ANSWER: Theresa Rubio is a famous ballerina.
+
+INSTRUCTION: Finish the SECOND PIECE based on the FIRST PIECE, such that these two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.
+            FIRST PIECE: Muriel has"
+141|-1|A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries,|and those occasions stood out as red-letter days for him.|"and he had been present at the interview of the man who had been the murderer of the woman who had been the wife of his father.
+            SECOND PIECE: The man who had been the murderer of the woman who had been the wife of his father.
+
+            ANSWER: The man who had been the murderer of the woman who had been the wife of his father.
+
+            ANSWER: The man who had been"
+142|-1|Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|"SECOND PIECE: Theresa Rubio is a famous ballerina.
+            ANSWER: Theresa Rubio is a famous ballerina.
+
+            FIRST PIECE: Theresa Rubio is a famous ballerina.
+            SECOND PIECE: Theresa Rubio is a famous ballerina.
+            ANSWER: Theresa Rubio is a famous ballerina.
+
+            FIRST P"
+143|-1|The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|"and the kitchen was warming the cookstove.
+            SECOND PIECE: The cookstove was warming the kitchen, and the kitchen was warming the cookstove.
+            THE COMPLETION: The cookstove was warming the kitchen, and the kitchen was warming the cookstove.
+
+            FIRST PIECE: The cookstove was warming the kitchen, and the kitchen was warming the cookstove.
+            SECOND PIE"
+144|-1|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"Green.
+            SECOND PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Green.
+
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Green.
+
+            ANSWER: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Green.
+
+            ANSWER: Mat advanced"
+145|-1|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"SECOND PIECE: The ballerina is wearing a pink tutu.
+            ANSWER: The ballerina is wearing a pink tutu.
+
+            FIRST PIECE: The ballerina is wearing a pink tutu.
+            SECOND PIECE: The ballerina is wearing a pink tutu.
+            ANSWER: The ballerina is wearing a pink tutu.
+
+            FIRST P"

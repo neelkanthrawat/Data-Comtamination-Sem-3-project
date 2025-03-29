@@ -1,0 +1,801 @@
+Index|First piece|Gold|Prediction unguided|Prediction guided|BLEURT guided|BLEURT unguided|BLEURT_diff|ROUGEL guided|ROUGEL unguided|ROUGEL_diff
+0|Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|and includes as actors some of the people involved in their lives.|"and their exploits. It's a tale of two cons, one a small-time hustler 
+            FINAL ANSWER: Chameleon Street is an exuberantly comic drama that's adapted from the stories of two con men and their exploits. It's a tale of two cons, one a small-time hustler who dreams of a better life, and the other a confidence man who sees a chance to make a big score."|Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|0.08293741196393967|0.30393385887145996|-0.2209964469075203|0.06896551724137931|0.09756097560975609|-0.028595458368376778
+1|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|the British flag was being raised.|the British Army had invaded Boston.|0.22911158204078674|0.35229557752609253|-0.12318399548530579|0.19047619047619044|0.3809523809523809|-0.19047619047619044
+2|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|"The two women sat in the grass, watching the trains as they came and went. 
+            
+            (The end of the first sentence is missing.)"|0.20258811116218567|0.215818852186203|-0.013230741024017334|0.0909090909090909|0.08163265306122448|0.009276437847866414
+3|Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|"Is the following a factual statement?
+            ""Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.""
+            Options:
+- yes
+- no"|"The ballerina in the painting is wearing a tutu and is holding a pair of pointe shoes. 
+            
+            Is the following sentence factually correct?
+            ""The famous painting of a ballerina by Cecile d'Arblay shows the ballerina wearing a tutu.""
+            Options:
+- yes
+- no"|0.35082247853279114|0.17811115086078644|0.1727113276720047|0.03636363636363636|0.15789473684210525|-0.12153110047846889
+4|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo,
+            FINAL PIECE:  was a member of the Soviet Politburo during the Second World War.
+
+The final answer: it is not possible to tell."|"the Soviet Union's ambassador to the United Nations, 
+            FINAL INSTANCE:Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, was instructed to vote for the United States at the United Nations."|0.25486624240875244|0.23681524395942688|0.01805099844932556|0.11904761904761907|0.10526315789473682|0.013784461152882246
+5|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|"The housekeeper had been worried that something was amiss, and Nancy's reassurances had calmed her down. 
+            
+            Both pieces together: There was a housekeeper and Nancy, conversing."|The housekeeper sighed with relief and returned to the kitchen to prepare breakfast for the family.|0.23033130168914795|0.3292161226272583|-0.09888482093811035|0.16216216216216214|0.08333333333333333|0.07882882882882881
+6|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"The boys all liked Dave; only Johnny hated him.
+            Is the following a factual statement?
+            ""The boys all liked Dave; only Johnny hated him.""
+Options:
+- yes
+- no"|The boys all liked Dave; only Johnny hated him.|0.29109376668930054|0.37513458728790283|-0.0840408205986023|0.049999999999999996|0.10344827586206896|-0.05344827586206897
+7|Laufer's play was inspired by a court case in which the Havasupai Tribe claimed|that researchers from Arizona State University used their DNA samples improperly.|"that they were not responsible for the damage caused to the Grand Canyon 
+            
+            The result of this instruction is that the second piece is inspired by the first piece, and the two pieces are combined into a single instance. The final answer: the Havasupai Tribe claimed they were not responsible for the damage caused to the Grand Canyon."|that the tribe owned the copyright to Laufer's play.|0.15148134529590607|0.28284960985183716|-0.1313682645559311|0.09523809523809525|0.02898550724637681|0.06625258799171843
+8|The needy were allowed to follow after the|harvesters so that they might pick up the fallen grain.|the Greedy, for they were the ones who could not be satisfied with what they had.|"### INSTRUCTION: The needy were allowed to follow after the 
+            ### FIRST PIECE: The needy were allowed to follow after the 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: The needy were allowed to follow after the 
+            ### FIRST PIECE: The needy were allowed to follow after the 
+            ### SECOND PIECE:"|0.4696046710014343|0.13105186820030212|0.3385528028011322|0.038461538461538464|0.15384615384615385|-0.11538461538461539
+9|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"The boys all liked Dave; only Johnny hated him.
+            
+            Is the following a factual statement?
+            ""The boys all liked Dave; only Johnny hated him.""
+Options:
+- yes
+- no"|The boys all liked Dave; only Johnny hated him.|0.29109376668930054|0.37513458728790283|-0.0840408205986023|0.049999999999999996|0.10344827586206896|-0.05344827586206897
+10|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|### Bernard saw Maude's home because he was older than she and thus could be her father.|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|0.24969089031219482|0.2525501251220703|-0.0028592348098754883|0.1081081081081081|0.1081081081081081|0.0
+11|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"2. The trains were rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|The two women looked at the trains as they rumbled across the prairie. They watched the long, rolling puffs of smoke streaming back from the engine, and the two women knew that the trains were coming for them.|0.2938268780708313|0.2218371033668518|0.07198977470397949|0.03389830508474576|0.044444444444444446|-0.010546139359698684
+12|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|The two women sat on the porch steps, watching the trains go by.|0.1652778685092926|0.215818852186203|-0.0505409836769104|0.0|0.08163265306122448|-0.08163265306122448
+13|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The wheel was a blur and the needle was a streak of light.|The final answer: it is not possible to tell.|0.15173417329788208|0.23429188132286072|-0.08255770802497864|0.17391304347826086|0.22222222222222224|-0.04830917874396137
+14|Muriel has in her living room a famous painting of a ballerina.|She bought the painting when she was thirty.|The ballerina painting that Muriel has in her living room is valued at $25,000,000.|"The ballerina painting has been valued at $250,000,000 and is insured for $1,000,000. 
+            
+            The painting has been stolen and the insurance company is investigating. They have discovered that the painting has been stolen and they want to recover it. 
+            
+            They have asked Muriel to be a witness and tell them what she knows about the painting."|0.30261895060539246|0.314555287361145|-0.011936336755752563|0.08823529411764708|0.16666666666666666|-0.07843137254901958
+15|Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|"FINAL PIECE: ""Muriel has hanging in her living room a famous painting by Monet."""|"The painting is valued at $500,000,000 and was painted by <NAME>.
+            
+            How much is the insurance policy on the painting?"|0.19726496934890747|0.12461219727993011|0.07265277206897736|0.12121212121212123|0.08|0.04121212121212123
+16|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"The man advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The two pieces are now a single instance. Please finish the THIRD PIECE."|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.
+            
+            The first piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            
+            Mat advanced at once"|0.2915074825286865|0.16792035102844238|0.12358713150024414|0.11904761904761904|0.07017543859649124|0.0488721804511278
+17|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo,
+            FINAL PIECE:  was a member of the Soviet Politburo during the Second World War.
+            
+            Kotkin describes how Lev Kamenev, a member of the Soviet Politburo, was a member of the Soviet Politburo during the Second World War."|"the Soviet Union's ambassador to the United Nations, 
+            FINAL INSTANCE:Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, was the first person to use the name ""Washington"" when referring to the U.S. capital."|0.25803762674331665|0.3048800230026245|-0.04684239625930786|0.09090909090909091|0.08888888888888888|0.002020202020202033
+18|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The wheel was a blur and the needle was a streak of light.|The final answer: it is not possible to tell.|0.15173417329788208|0.23429188132286072|-0.08255770802497864|0.17391304347826086|0.22222222222222224|-0.04830917874396137
+19|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"The man advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The two pieces are not a single instance, so they cannot be combined into a single sentence."|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            ### FIRST PIECE: Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: The second piece of the Winograd Schema Challenge (W"|0.223914235830307|0.1523677110671997|0.0715465247631073|0.07894736842105263|0.06557377049180328|0.013373597929249345
+20|The people in my reading group found Carpenter's|poems hard to understand because they are obscure.|"### FULL TEXT: The people in my reading group found Carpenter's 
+            ### INSTRUCTION: Carpenter's is the most likely completion."|### INSTRUCTION: You are provided with the FIRST PIECE of the TEST SPLIT of the Winograd Schema Challenge (WSC) as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original|0.21457815170288086|0.2949492931365967|-0.08037114143371582|0.030769230769230767|0.0|0.030769230769230767
+21|The people in my reading group found Carpenter's|poems hard to understand because they are obscure.|"### INSTRUCTION: The people in your reading group found Carpenter's 
+            ### FULL TEXT: The people in my reading group found Carpenter's 
+            ### INSTRUCTION: The people in your reading group found Carpenter's 
+            ### FULL TEXT: The people in my reading group found Carpenter's 
+            ### INSTRUCTION: The people in your reading group found Carpenter'"|### INSTRUCTION: You are provided with the FIRST PIECE of the TEST SPLIT of the Winograd Schema Challenge (WSC) as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original|0.21457815170288086|0.545432984828949|-0.3308548331260681|0.030769230769230767|0.0|0.030769230769230767
+22|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|The two women sat in silence, watching the trains rush by.|0.1930631846189499|0.215818852186203|-0.022755667567253113|0.0625|0.08163265306122448|-0.019132653061224483
+23|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+Options:
+- the bell rang
+- the class room
+- school building
+- classroom
+- desk
+the class room"|The final answer: it is not possible to tell.|0.151206374168396|0.13116422295570374|0.02004215121269226|0.09523809523809525|0.0|0.09523809523809525
+24|Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|The second piece of information is irrelevant to the first piece. It is not necessary to complete the second piece in order to understand the first piece. The second piece may be anything, it does not have to be a part of the first piece.|The painting is valued at $500,000,000 and was painted by <NAME>.|0.14869362115859985|0.13098013401031494|0.017713487148284912|0.08333333333333334|0.07142857142857142|0.011904761904761918
+25|After all,|Steve might have decided that Mark's legs and ears were better than his hands --- and deliberately let him do the work that best suited him.|THE COMPLETE SENTENCE IS: After all, since you never know what sort of day you'll be having, it's best to be prepared for anything.|"### INSTRUCTION: The second piece of the test split for the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+
+After all,"|0.1686873584985733|0.20439675450325012|-0.03570939600467682|0.0392156862745098|0.07692307692307693|-0.037707390648567124
+26|Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"### FULL TEXT: Grandma had set a place for Mary, and once Mrs. 
+            ### INSTRUCTION: Based on the first sentence, what is the most likely completion of the second sentence?
+Options:
+- table setting
+- place setting
+- silverware
+- glass
+- setting"|### INSTRUCTION: Mary was not hungry; so she just sat there.|0.25326794385910034|0.16068010032176971|0.09258784353733063|0.2105263157894737|0.0|0.2105263157894737
+27|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+            Options:
+- third piece of advice
+- third piece of information
+- third piece of clothing
+- third piece of data
+- third piece of meat
+third piece of information"|"### INSTRUCTION: The second piece of the test split for the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The final piece of the test split for the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is"|0.21566814184188843|0.1605505794286728|0.05511756241321564|0.11363636363636363|0.029850746268656716|0.08378561736770691
+28|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|The man in the gray suit bumped into Mat, who was carrying a stack of papers.|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.
+
+            The first piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            He finished his dinner and was getting ready to"|0.22509215772151947|0.16507291793823242|0.06001923978328705|0.11235955056179775|0.13333333333333333|-0.020973782771535582
+29|People kept going through the traffic light because the light was in the middle of a holiday display.|It was too inconspicuous.|The people kept going through the red light because the holiday display was in the middle of the red light.|The people kept going through the traffic light as the light was in the middle of a holiday display.|0.25200116634368896|0.30248624086380005|-0.050485074520111084|0.08695652173913043|0.08333333333333334|0.00362318840579709
+30|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"### INSTRUCTION: The second piece of information you have given me is: 
+            ### INSTRUCTION: Mr. 
+            ### INSTRUCTION: I have now finished the second piece of information you gave me. It is: 
+            ### INSTRUCTION: Mr. 
+            ### INSTRUCTION: I have now finished the second piece of information you gave me. It is: 
+            ### INSTRUCTION:"|### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) is currently unavailable for testing. Please try again later.|0.05928434431552887|0.3679314851760864|-0.30864714086055756|0.08333333333333333|0.08|0.003333333333333327
+31|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|The horse, Blaze, was a white horse.|The horse was brown and white, with a star on his forehead. He was a beautiful horse.|0.2805258631706238|0.27346035838127136|0.007065504789352417|0.16326530612244897|0.10256410256410256|0.060701203558346406
+32|Always before, Larry had helped Dad with his work.|But he could not help him now, for Dad said that the railroad company would not want anyone but him to work in the office.|"Dad was always grateful to Larry for his help. 
+            
+            Is the following a factual statement?
+            ""Larry helped his dad with his work.""
+Options:
+- yes
+- no"|"Dad was a famous mathematician. He had always been fascinated by the work that Larry did. 
+            
+            Dad wanted to learn more about Larry's work. He asked Larry to explain his approach to solving problems. Larry was happy to explain his work to Dad. He enjoyed solving problems and helping others understand the process. 
+            
+            Dad was fascinated by Larry's work. He wanted to learn more about it."|0.471288800239563|0.42273151874542236|0.048557281494140625|0.10752688172043011|0.12|-0.012473118279569886
+33|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo, 
+            FINAL PIECE:  Kotkin describes how Lev Kamenev, a member of the Soviet Politburo, became a Soviet politician and statesman who was a prominent figure in the Soviet Union during the period following the Russian Revolution."|"the Soviet Union's ambassador to the United Nations, 
+            FINAL INSTANCE:Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, was the first person to use the name ""Washington"" when referring to the capital of the United States."|0.24385826289653778|0.22252127528190613|0.021336987614631653|0.08888888888888888|0.09090909090909091|-0.002020202020202033
+34|The last day came.|Tomorrow Nell was going away. Dad and Mom had brought home her new trunk.|"### INSTRUCTION: The second piece should be: ""The last day is today."""|The final answer: it is not possible to tell.|0.2214398980140686|0.23141875863075256|-0.00997886061668396|0.0|0.0|0.0
+35|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|"The two women stood in the yard, watching the trains rumble by. 
+            
+            (The second piece is missing from the Winograd Schema Challenge (WSC) test split. Please provide the second piece as exactly as possible so that the two pieces form a single instance.)"|0.16486811637878418|0.232488751411438|-0.06762063503265381|0.03125|0.08888888888888889|-0.05763888888888889
+36|Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|"Is the following statement true?
+            ""Cecile d'Arblay painted a famous painting of a ballerina that is in Muriel's living room."""|"The ballerina in the painting is wearing a tutu and carrying a bouquet of flowers. 
+            
+            Is the following a factual statement?
+            ""The ballerina in the famous painting by Cecile d'Arblay is wearing a tutu.""
+            Options:
+- yes
+- no"|0.37886202335357666|0.196577787399292|0.18228423595428467|0.0784313725490196|0.1142857142857143|-0.03585434173669469
+37|Muriel has in her living room a famous painting of a ballerina.|She bought the painting when she was thirty.|"The ballerina painting is valued at $25,000,000 and has been appraised by a specialist.
+            
+            Is the following statement true?
+            ""The Ballerina painting is worth a lot of money."""|"The ballerina painting has been valued at $250,000,000 and is in the possession of a private collector. 
+            
+            The collector is selling the painting to a museum for $1,000,000,000. 
+            
+            The painting has been insured for $500,000,000. 
+            
+            The collector will accept offers from"|0.2783140242099762|0.40154755115509033|-0.12323352694511414|0.07142857142857142|0.10526315789473685|-0.033834586466165426
+38|Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|"### INSTRUCTION: Based on the first piece, how would you finish the second piece?
+Options:
+- meeting new people
+- confidence
+- being confident
+- confidence in british way of doing things
+- feeling confident
+The answer is confidence in british way of doing things"|"The British, however, were not known for their confidence in the American way of doing things. 
+            
+            How could this be? 
+            
+            The Americans were confident in their ability to do things well. 
+            
+            The British, on the other hand, were not confident in their ability to do things well. 
+            
+            They were confident in their ability to do things well, but they were not confident in the American way of"|0.39209043979644775|0.25220954418182373|0.13988089561462402|0.046511627906976744|0.03448275862068966|0.012028869286287082
+39|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo,
+            FINAL PIECE:  was a member of the Soviet Politburo during the Great Purge.
+            
+            The second piece should be:
+            
+            Kotkin describes how Lev Kamenev, a member of the Soviet Politburo, was a member of the Soviet Politburo during the Great Purge."|the Soviet Union's first Mars Exploration Mission|0.11216887831687927|0.30722662806510925|-0.19505774974822998|0.03636363636363636|0.08602150537634408|-0.04965786901270772
+40|Always before, Larry had helped Dad with his work.|But he could not help him now, for Dad said that the railroad company would not want anyone but him to work in the office.|"Dad had always relied on Larry to help him with his work. 
+            
+            The pieces have been rearranged to reflect the following:
+            
+            Dad: Always relied on Larry to help him with his work.
+            Larry: Always before, Larry had helped Dad with his work.
+            
+            The two pieces can be rearranged further to reflect the following:
+            
+            Dad: Always relied on Larry to help"|"Dad had always been a hard worker, but Larry had helped him get ahead even more. 
+            
+            How could Larry help you with your work?"|0.42518264055252075|0.5290358662605286|-0.10385322570800781|0.16326530612244897|0.14117647058823532|0.022088835534213647
+41|The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|"the patient, but the patient refused to go.
+            
+            The doctor had ordered six months of country air for the patient, but the patient refused to go."|the patient.|0.12176693230867386|0.19350337982177734|-0.07173644751310349|0.0|0.0|0.0
+42|Muriel has hanging in her living room a famous painting|by Cecile d'Arblay of a ballerina putting on her shoe.|"FINAL PIECE: ""Muriel has hanging in her living room a famous painting by Monet."""|"### INSTRUCTION: The second piece of the test split for the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+Muriel has hanging in her living room a famous painting by Van Gogh"|0.12167312204837799|0.12461219727993011|-0.002939075231552124|0.0851063829787234|0.08|0.0051063829787234005
+43|Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|The British, in their usual way, had taken the initiative and were already preparing to host the next summit.|"The British, however, were not known for their culinary skills. 
+            
+            How could this be?
+            
+            The answer is that the British were not known for their culinary skills because they were too busy being perfect at the art of doing things the British way."|0.3226906657218933|0.18188320100307465|0.14080746471881866|0.03225806451612903|0.15789473684210525|-0.12563667232597622
+44|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"The man in the bureau was staring at Mat. Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The man in the bureau was staring at Mat. Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The man in the bureau was staring at Mat. Mat advanced at once to the bureau, starting involuntarily"|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The first piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            Mat advanced at once to the b"|0.26557061076164246|0.3438705801963806|-0.07829996943473816|0.1149425287356322|0.04301075268817204|0.07193177604746015
+45|Edward dropped adhesive tape onto his window sill,|and when he pulled the tape off, some of the glue was stuck on it .|The adhesive tape stuck to his window sill, and Edward had to remove it.|"The adhesive tape had stuck to his window sill, 
+            
+            But Edward was able to remove it without damaging the glass."|0.23118874430656433|0.22649633884429932|0.004692405462265015|0.2285714285714286|0.2758620689655172|-0.04729064039408859
+46|When I got to the house, Mrs.|Everett, the housekeeper, told me that Hermione was in her room, watching her maid pack.|"### FULL TEXT: When I got to the house, Mrs. 
+            ### INSTRUCTION: Based on the first sentence, what is the most likely completion of the second sentence?
+Options:
+- the house
+- my house
+- her house
+- his house
+- other house
+the house"|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            ### FIRST PIECE: When I got to the house, Mrs. 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: The first piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue"|0.22204941511154175|0.15857607126235962|0.06347334384918213|0.06451612903225806|0.07547169811320754|-0.010955569080949482
+47|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo, 
+            FINAL PIECE:  was a member of the Soviet Politburo during the Second World War. 
+            
+            Kotkin describes how Lev Kamenev, a member of the Soviet Politburo, was a member of the Soviet Politburo during the Second World War."|"the Soviet Union's ambassador to the United Nations, 
+            ### INSTRUCTION: The second piece of the test split for the Winograd Schema Challenge (WSC) is as follows:
+
+Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, made a speech in which he called for a ""peaceful coexistence"" between the USSR and the United States. During the Cold War, the speech was"|0.17160025238990784|0.3048800230026245|-0.13327977061271667|0.10714285714285714|0.08888888888888888|0.01825396825396826
+48|Usually rainy days called for a fire in the hall,|and Tatyana stretched out beside it, a book flattened to the floor.|a blaze that would warm the whole house.|the living room.|0.14400115609169006|0.23478631675243378|-0.09078516066074371|0.13333333333333333|0.2|-0.06666666666666668
+49|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|The two women sat in the grass, watching the trains rumble by.|0.2530858516693115|0.26436319947242737|-0.011277347803115845|0.0|0.08|-0.08
+50|Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|### INSTRUCTION: Please complete the second piece based on the first piece. The second piece should be a summary of your life, or a description of your life to date. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.|### INSTRUCTION: The Winograd Schema Challenge (WSC) is a natural language inference (NLI) dataset used for transfer learning in natural language processing. It is a subset of the Super Glue benchmark, which is a collection of natural language inference datasets used for evaluating machine learning and natural language processing models. The WSC is a set of 100 natural language inference queries that are split into three folds for training, validation, and|0.1281990259885788|0.11214029788970947|0.016058728098869324|0.07058823529411765|0.13114754098360656|-0.06055930568948892
+51|After all,|Steve might have decided that Mark's legs and ears were better than his hands --- and deliberately let him do the work that best suited him.|"### INSTRUCTION: Based on the first piece, what is the most likely completion of the second piece?
+Options:
+- eat cake
+- listen to music
+- make music
+- play golf
+- make noise
+The final answer: make music."|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+
+            ### FIRST PIECE: Given the sentence ""A man in a blue shirt and black pants is standing in front of a large tree."" is it true that ""A man is standing in front of a tree.""?"|0.23051688075065613|0.2496606409549713|-0.019143760204315186|0.05|0.03389830508474576|0.01610169491525424
+52|Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|"Though Dickens is said to have helped Collins develop the character of Mat Grice, 
+            THIRD PIECE: 
+            
+            Though Dickens is said to have helped Collins develop the character of Mat Grice, 
+            FOURTH PIECE: 
+            
+            Though Dickens is said to have helped Collins develop the character of Mat Grice, 
+            FIFTH PIECE:"|The character of Mat Grice was developed by Dickens and not Collins.|0.26716282963752747|0.32819369435310364|-0.06103086471557617|0.16|0.09836065573770492|0.06163934426229509
+53|Muriel has in her living room a famous painting of the ballerina Theresa Rubio.|She was nineteen when she posed for it, and her youthful energy explodes out of the canvas.|"Based on the first piece, what is the most likely third piece of information?
+Options:
+- the location of the painting
+- the subject of the painting
+- the medium of the painting
+- the size of the painting
+- the value of the painting
+the subject of the painting"|"The ballerina Theresa Rubio is preparing to perform the lead role in the company's production of The Nutcracker. 
+            
+            How would you finish the sentence?"|0.18220925331115723|0.21567881107330322|-0.033469557762145996|0.09523809523809526|0.06451612903225806|0.030721966205837198
+54|Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|"Though Dickens is said to have helped Collins develop the character of Mat Grice, 
+            THIRD PIECE: 
+            
+            Though Dickens is said to have helped Collins develop the character of Mat Grice, 
+            FOURTH PIECE: 
+            
+            Though Dickens is said to have helped Collins develop the character of Mat Grice, 
+            FIFTH PIECE:"|The Winograd Schema Challenge (WSC) is a natural language inference (NLI) task where a model must respond to a prompt with a factual statement that is entailed by a given passage. The WSC is split into two pieces, a training set and a test set. The test set is used to evaluate the performance of models on the task. The test set is split into two pieces, a first piece and a second piece. The first piece|0.17289605736732483|0.32819369435310364|-0.1552976369857788|0.06666666666666667|0.09836065573770492|-0.03169398907103825
+55|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+Options:
+- the bell rang
+- the class was called
+- Nell Raleigh
+- the doorbell rang
+- the bell rang"|The final answer: it is not possible to tell.|0.151206374168396|0.12192635238170624|0.02928002178668976|0.09523809523809525|0.0|0.09523809523809525
+56|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|"The two women sat in the grass, watching the trains as they came and went. 
+            
+            (The second piece is missing from the provided test split.)"|0.19236347079277039|0.26436319947242737|-0.07199972867965698|0.0851063829787234|0.08|0.0051063829787234005
+57|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+            Options:
+- office
+- desk
+- third piece
+- fourth piece
+- table
+third piece"|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The first piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            
+            Mat advanced at"|0.28782081604003906|0.1586165428161621|0.12920427322387695|0.12048192771084339|0.038461538461538464|0.08202038924930492
+58|Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|"Is the following sentence factually correct?
+            ""Muriel has a famous painting of a ballerina that was originally painted by her father.""
+Options:
+- yes
+- no"|"Muriel has a famous painting of a ballerina 
+            
+            The SECOND PIECE must be an exact repetition of the FIRST PIECE."|0.17554989457130432|0.15133008360862732|0.024219810962677002|0.0|0.12121212121212122|-0.12121212121212122
+59|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The wheel was a blur and the needle was a streak of light.|The final answer: it is not possible to tell.|0.15173417329788208|0.23429188132286072|-0.08255770802497864|0.17391304347826086|0.22222222222222224|-0.04830917874396137
+60|The needy were allowed to follow after the|harvesters so that they might pick up the fallen grain.|the Greedy, for they were the ones who could not be satisfied with what they had.|"### INSTRUCTION: The needy were allowed to follow after the 
+            ### FIRST PIECE: The needy were allowed to follow after the 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: The needy were allowed to follow after the 
+            ### FIRST PIECE: The needy were allowed to follow after the 
+            ### SECOND PIECE:"|0.4696046710014343|0.13105186820030212|0.3385528028011322|0.038461538461538464|0.15384615384615385|-0.11538461538461539
+61|People kept going through the traffic light because the light was in the middle of a holiday display.|It was too inconspicuous.|The people were stuck in traffic as they went through the light during the holiday display.|The people kept going through the traffic light as the light was in the middle of a holiday display.|0.25200116634368896|0.2438533902168274|0.008147776126861572|0.08695652173913043|0.0|0.08695652173913043
+62|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina painting that Muriel has in her living room is valued at $25,000,000.|"The ballerina painting has been valued at $5 million and is insured for $10 million. 
+            
+            Who would insure the painting for its value? 
+            
+            Options:
+            
+            - muriel
+            - painting
+            - ballerina
+            - art
+            - collector
+            
+            The answer: collector."|0.2655101716518402|0.2588158845901489|0.006694287061691284|0.03571428571428572|0.1|-0.06428571428571428
+63|Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|THE COMPLETE INSTRUCTION: Last week, I went to the store and bought a loaf of bread, a pound of cheese, and a pound of meat. How much money did I spend?|DON'T JUST REPEAT the FIRST PIECE or the INSTRUCTION!|0.08009655028581619|0.08191554993391037|-0.0018189996480941772|0.11428571428571428|0.14285714285714285|-0.028571428571428567
+64|Grandma had set a place for Mary;|so, reluctantly, she agreed to stay for dinner.|### INSTRUCTION: Place for Mary was set by her grandma;|Mary sat down beside her sister, Jane.|0.18550246953964233|0.07029765844345093|0.1152048110961914|0.0|0.11764705882352941|-0.11764705882352941
+65|By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.|How very small and straight and rigid she lay in the bunk below! Her eyes were closed, but Tatyana doubted if she slept.|"Tatyana's mother was a famous model. She had been featured in many magazines and newspapers. 
+            
+            The second piece is a continuation of the first piece, describing what Tatyana's mother looked like."|The woman looked over the edge of her upper berth and saw her mother clearly.|0.37580054998397827|0.28008484840393066|0.09571570158004761|0.10526315789473685|0.14285714285714288|-0.03759398496240603
+66|Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"### FULL TEXT: Grandma had set a place for Mary, and once Mrs. 
+            ### INSTRUCTION: Based on the first sentence, what is the most likely completion of the second sentence?
+Options:
+- table setting
+- place setting
+- setting
+- chair setting
+- place
+The most likely completion is place setting."|"### INSTRUCTION: Mary was late, and Mrs. 
+            ### FIRST PIECE: Had set a place for her. 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: Mary was late, and Mrs. 
+            ### FIRST PIECE: Had set a place for her. 
+            ### SECOND PIECE: 
+            ### INSTRUCTION:"|0.29454347491264343|0.15617358684539795|0.13836988806724548|0.09523809523809523|0.0|0.09523809523809523
+67|Usually rainy days called for a fire in the hall,|and Tatyana stretched out beside it, a book flattened to the floor.|"and the family would huddle around the hearth on such a day, 
+            ### FULL PIECE: Usually rainy days called for a fire in the hall, and the family would huddle around the hearth on such a day."|"The blond-haired man looked out the window, 
+            
+            The bald-headed man looked out the window, 
+            
+            The brown-haired man looked out the window, 
+            
+            The red-haired man looked out the window, 
+            
+            The black-haired man looked out the window, 
+            
+            The curly-haired man looked out the window,"|0.24382126331329346|0.32716983556747437|-0.08334857225418091|0.06666666666666667|0.125|-0.058333333333333334
+68|Meanwhile all the people in town are hunting high and low for Arthur and Celeste,|and their mothers are very worried.|### FULL TEXT: Meanwhile all the people in town are hunting high and low for the missing couple, Arthur and Celeste.|the couple are in a secret location and are not in any danger. They are just fine. The end.|0.30757415294647217|0.2543841600418091|0.053189992904663086|0.16|0.07692307692307691|0.08307692307692309
+69|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+Options:
+- office
+- desk
+- third piece
+- building
+- table
+third piece"|The man in the blue shirt had a firm grip on the handlebars of his wheelchair and was in a hurry. He was on his way to the store, and he needed to get there before the bus arrived. He was a little disoriented, but he knew he was going in the right direction. He was glad he had his trusty shopping bag with him, it would make it easier to pick out what he needed at the store. He was a little annoyed with|0.2832843065261841|0.13649234175682068|0.1467919647693634|0.12280701754385964|0.0392156862745098|0.08359133126934984
+70|The wheel was a blur and the needle was a streak of light.|Mrs. Black's plump hands scrambled on the cloth, feeding it under the needle|The wheel was a blur and the needle was a streak of light.|The final answer: it is not possible to tell.|0.15173417329788208|0.23429188132286072|-0.08255770802497864|0.17391304347826086|0.22222222222222224|-0.04830917874396137
+71|The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|"the patient, but the patient refused to go.
+            OUTCOME:The doctor had ordered six months of country air for the patient, but the patient refused to go."|the patient.|0.12176693230867386|0.1887911558151245|-0.06702422350645065|0.0|0.0|0.0
+72|Muriel has in her living room a famous painting of a ballerina by Cecile d'Arblay.|She is seen in profile, with her arms outstretched to an unseen lover.|"Is the following statement true?
+            ""Cecile d'Arblay painted a famous painting of a ballerina that is currently in Muriel's living room."""|"The ballerina in the painting is about to perform a dance for the audience. 
+            
+            Is the following sentence factually correct?
+            ""The ballerina in the famous painting by Cecile d'Arblay is preparing to perform a dance.""
+            Options:
+- yes
+- it is not possible to tell
+- no"|0.42137986421585083|0.18946266174316406|0.23191720247268677|0.10344827586206898|0.1111111111111111|-0.007662835249042127
+73|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"The ballerina painting is valued at $250,000,000 and has been appraised by a specialist.
+            
+            Is the following statement true?
+            ""The value of the ballerina painting has been appraised at $250,000,000."""|"The ballerina painting has been valued at $2 million and is insured for $5 million. 
+            
+            How much is the house worth?"|0.23790845274925232|0.4042688012123108|-0.16636034846305847|0.044444444444444446|0.06896551724137931|-0.024521072796934863
+74|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|The two women sat in the grass, watching the trains rumble by.|0.2530858516693115|0.29115408658981323|-0.03806823492050171|0.0|0.08695652173913043|-0.08695652173913043
+75|Edward dropped adhesive tape onto his window sill,|and when he pulled the tape off, some of the glue was stuck on it .|"The adhesive tape stuck to the sill and he had to remove it.
+            
+            The final answer: it is not possible to tell."|The adhesive tape had been sitting on his window sill for several days. Edward had not noticed it until today, when he was cleaning the house. He had not known what to do with the tape, so he had simply left it on the window sill. Now he had to remove it all at once, but he was not sure how to go about it. He had never removed adhesive tape before. He had never cleaned the house before either. He was not|0.18220874667167664|0.31050461530685425|-0.1282958686351776|0.14285714285714285|0.21621621621621623|-0.07335907335907338
+76|The last day came.|Tomorrow Nell was going away. Dad and Mom had brought home her new trunk.|### INSTRUCTION: The second piece is too short to be a complete sentence. It should be followed by a comma and the rest of the information.|The final answer: it is not possible to tell.|0.2214398980140686|0.22048026323318481|0.0009596347808837891|0.0|0.05128205128205128|-0.05128205128205128
+77|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|### FULL TEXT: The harbor folks said grandma kept her house so clean that you could see the harbor from the front porch.|"### INSTRUCTION: The Harbor folks said Grandma kept her house so clean that you could 
+            ### FULL INSTRUCTION: The Harbor folks said Grandma kept her house so clean that you could 
+            ### INSTRUCTION: The Harbor folks said Grandma kept her house so clean that you could 
+            ### FULL INSTRUCTION: The Harbor folks said Grandma kept her house so clean that you could 
+            ###"|0.45969337224960327|0.1570902168750763|0.302603155374527|0.056338028169014086|0.1142857142857143|-0.05794768611670021
+78|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|the British flag was being raised.|the British flag was being raised.|0.35229557752609253|0.35229557752609253|0.0|0.3809523809523809|0.3809523809523809|0.0
+79|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way, as if it had been a living creature.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+            Options:
+- office
+- desk
+- bureau
+- table
+- chair"|"### INSTRUCTION: The second piece of the test split for the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The final piece of the test split for the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is"|0.22103817760944366|0.09333164989948273|0.12770652770996094|0.11363636363636363|0.041666666666666664|0.07196969696969696
+80|Mr.|Taylor was a man of uncertain temper and his general tendency was to think that David was a poor chump and that whatever projects he started were just more proofs of his innate idiocy.|"Together, the first and second piece form the complete sentence: ""Mr. and Mrs. Smith are celebrating their 5th wedding anniversary with a romantic dinner at their favorite restaurant.""
+            
+            The most likely completion to the second piece based on the first piece is: ""Celebrating their 5th wedding anniversary with a romantic dinner at their favorite restaurant."""|"Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr. 
+            
+            Mr."|0.25716426968574524|0.4165424704551697|-0.15937820076942444|0.0|0.06741573033707865|-0.06741573033707865
+81|Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|### INSTRUCTION: Complete the second piece based on the first piece, such that the two pieces become a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.|### INSTRUCTION: You are provided with the FIRST PIECE of the TEST SPLIT of the Winograd Schema Challenge (WSC) as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original|0.212421253323555|0.1226053535938263|0.0898158997297287|0.11111111111111112|0.11764705882352941|-0.006535947712418291
+82|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|The bell rang, and Nell Raleigh left the room.|Maude Raleigh was sitting in the front row, next to Nell.|0.19111348688602448|0.11287553608417511|0.07823795080184937|0.08695652173913043|0.09523809523809525|-0.008281573498964814
+83|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|"The ballerina painting is valued at $25,000,000 and has been appraised by a specialist.
+            
+            Is the following statement true?
+            ""The Ballerina painting is worth a lot of money."""|"The ballerina in the painting is wearing a tutu and carrying a bouquet of roses. 
+            
+            Is the following sentence factually correct?
+            ""The ballerina in the famous painting is wearing tights.""
+            Options:
+- yes
+- no"|0.22571323812007904|0.3499738872051239|-0.12426064908504486|0.10526315789473685|0.11111111111111112|-0.005847953216374269
+84|Everyone, by now, felt a certain confidence in the British way of doing things.|A general had the right to punish a soldier caught selling his arms, and also anyone who tempted him.|"The British, in their usual manner, had prepared thoroughly for the upcoming meeting.
+            
+            Is the following a factual statement?
+            ""The British are confident in their ability to perform well in upcoming meetings.""
+Options:
+- yes
+- no"|"The British, however, were not always confident in their own way of doing things. 
+            
+            How could they be confident in their own way of doing things?"|0.3500710129737854|0.3102123737335205|0.03985863924026489|0.044444444444444446|0.11111111111111112|-0.06666666666666668
+85|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Russian Communist Party who later became the Soviet Minister of Agriculture, described the collectives as ""kolkhozes"" (which were sovkhozes, or co-operatives, in Russian).
+            
+            The two pieces put together would be:
+            
+            Kotkin describes how Lev Kamenev, a member of the Russian Communist Party who later became the Soviet Minister of Agriculture, described the collectives as ""kolkhozes"" (which"|"The second piece of the test split is the description of the event.
+            
+            The first sentence is a description of the event, while the second sentence is a description of the person.
+            
+            The sentences are separated by a colon.
+            
+            The sentences are not separated by a new line.
+            
+            The sentences may be indented.
+            
+            The sentences may be formatted using bold, italic, underline,"|0.12925851345062256|0.2649170756340027|-0.13565856218338013|0.055045871559633024|0.07407407407407407|-0.019028202514441046
+86|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|The housekeeper had been worried that something was amiss, but Nancy assured her that everything was fine.|The housekeeper sighed with relief and returned to the kitchen to prepare the roast beef.|0.23465457558631897|0.3025931119918823|-0.06793853640556335|0.16666666666666666|0.05263157894736842|0.11403508771929824
+87|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+Options:
+- the bell rang
+- the class was late
+- Nell Raleigh
+- the doorbell rang
+- the second piece"|"Maude Raleigh was sitting in the front row, and Nell was sitting in the back row. 
+            Is the following sentence factually correct?
+            Options:
+- yes
+- no"|0.08841132372617722|0.07054208219051361|0.017869241535663605|0.10810810810810811|0.0|0.10810810810810811
+88|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo,
+            FINAL PIECE:  was a member of the Soviet Politburo during the Second World War."|"the Soviet Union's ambassador to the United Nations, 
+            FINAL INSTANCE:Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, was the first person to use the name ""Washington"" when referring to the capital of the United States."|0.24385826289653778|0.21253052353858948|0.0313277393579483|0.08888888888888888|0.08955223880597013|-0.0006633499170812518
+89|Grandma had set a place for Mary;|so, reluctantly, she agreed to stay for dinner.|### INSTRUCTION: Grandma had set a place for Mary, but she wasn't sure that Mary would come.|"### INSTRUCTION: Mary was the name of the girl who lived with Grandma;
+            ### FIRST PIECE: She had set a place for her at the table;
+            ### SECOND PIECE: 
+            ### INSTRUCTION: She was a very special girl;
+            ### FIRST PIECE: She had a place at the table;
+            ### SECOND PIECE:"|0.45943015813827515|0.20071828365325928|0.25871187448501587|0.07692307692307693|0.07999999999999999|-0.0030769230769230604
+90|Mary offered to give her theater tickets to|Sally because she had to work late that night.|"Mary offered to give her theater tickets to John.
+            
+            The final answer: it is not possible to tell."|"Mary offered to give her theater tickets to 
+            
+            Mary offered to give her theater tickets to 
+            
+            Mary offered to give her theater tickets to 
+            
+            Mary offered to give her theater tickets to 
+            
+            Mary offered to give her theater tickets to 
+            
+            Mary offered to give her theater tickets to 
+            
+            Mary offered to give her theater tickets to"|0.326977014541626|0.20486173033714294|0.12211528420448303|0.03076923076923077|0.07407407407407407|-0.0433048433048433
+91|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they came in sight.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The final answer: 2."|"The two women sat in the grass, watching the trains as they came and went. They were quiet for a while, just enjoying the scene, and then Maude said, ""I wonder what it would be like to ride one of those trains.""
+            
+            Dora laughed. ""I've always wanted to ride a train! Let's pretend we're on one, and you're the engineer.""
+            
+            Maude smiled. ""Ok"|0.1486208736896515|0.215818852186203|-0.06719797849655151|0.045454545454545456|0.08163265306122448|-0.03617810760667903
+92|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|"The man advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The man is a government employee, which is how he was able to get a job at the bureau. 
+            
+            The man advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The man is a government employee, which is how he was able to get a job"|"The man in a suit was standing in front of the bureau, staring at Mat.
+            
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The man in a suit was standing in front of the bureau, staring at Mat.
+            
+            Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. 
+            
+            The man"|0.4421875476837158|0.4290175437927246|0.013170003890991211|0.08988764044943821|0.04255319148936171|0.047334448960076506
+93|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|"Based on the first piece, what is the most likely completion of the second piece?
+Options:
+- nancy (with an ""a"")
+- housekeeper
+- conversation
+- alarm
+- explain"|The housekeeper sighed with relief and returned to the kitchen, where she proceeded to prepare the meal as directed by the chef.|0.21949654817581177|0.13971470296382904|0.07978184521198273|0.1395348837209302|0.08888888888888889|0.05064599483204131
+94|Claire could not win a single point in her squash game with Lisa this afternoon.|She was just exhausted.|THIRD PIECE: Claire and Lisa played a game of squash this afternoon, and Claire could not win a single point.|The final answer: it is not possible to tell.|0.21160748600959778|0.1746317744255066|0.036975711584091187|0.0|0.0|0.0
+95|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|"The two women looked at the trains in silence. Maude was the first to speak.
+            
+            ""I wonder what it would be like to ride one of those great big iron monsters across the prairie.""
+            
+            Dora nodded. ""It would be fun, I guess. But I don't think we'll ever get a chance to ride one.""
+            
+            Maude smiled. ""Maybe we'll get a chance to ride"|0.21069562435150146|0.29115408658981323|-0.08045846223831177|0.045454545454545456|0.08695652173913043|-0.04150197628458498
+96|Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|"Is the following statement true?
+            ""Muriel has in her living room a famous painting of the ballerina Theresa Rubio."""|"The ballerina Theresa Rubio was the star of the Paris Opera when the painting was done in the early 1880s. 
+            
+            The painting was done in the style of the Impressionists, and it is said that the artist, Cecile d'Arblay, was influenced by the paintings of the French painter, Paul Dupont. 
+            
+            The painting has been in the family of the late baron"|0.26262494921684265|0.16106683015823364|0.10155811905860901|0.07894736842105263|0.12121212121212122|-0.04226475279106859
+97|Though Dickens is said to have helped Collins develop the character of Mat Grice,|he is probably based on Leatherstocking from the novels of James Fenimore Cooper.|"THIRD PIECE: Collins's first novel, The Woman in White, was published anonymously in 1851 under the name of ""By Mrs. C."" The novel was a great success, and Collins went on to write more than 50 novels, including the famous detective series The Mystery of Edwin
+            
+            FINAL PIECE: Drood. He also wrote novels in the genres of romance, science fiction,"|The Winograd Schema Challenge (WSC) is a natural language inference (NLI) task that is a subset of the SuperGLue benchmark. The WSC is a binary classification task where the goal is to determine whether a given sentence is a factual statement about a named entity (such as a person, place, or organization) or a non-factual statement. The WSC is split into two parts: the training set and the test set.|0.13792754709720612|0.18054619431495667|-0.04261864721775055|0.04761904761904762|0.10810810810810811|-0.06048906048906049
+98|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo, 
+            FINAL PIECE:  Kotkin describes how Lev Kamenev, a member of the Soviet Politburo, was a ""political moderate"" who ""played a crucial role in the thaw"" during the 1950s."|"the Soviet Union's ambassador to the United Nations, 
+            FINAL INSTANCE:Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, was one of the key players in the development of the nuclear bomb."|0.26273924112319946|0.20984643697738647|0.05289280414581299|0.1176470588235294|0.09876543209876544|0.018881626724763956
+99|Mr.|Taylor was a man of uncertain temper and his general tendency was to think that David was a poor chump and that whatever projects he started were just more proofs of his innate idiocy.|"### INSTRUCTION: Based on the first piece, what is the most likely completion of the second piece?
+Options:
+- the sky
+- universe
+- mars
+- space shuttle
+- earth
+the sky"|"The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark.
+            
+            The first piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark.
+            
+            The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark.
+            
+            The first piece"|0.35330477356910706|0.1700383424758911|0.18326643109321594|0.04545454545454545|0.03333333333333333|0.012121212121212116
+100|Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|"Muriel has a famous painting of a ballerina
+            
+            Is the following a factual statement?
+            ""The painting of a ballerina by Muriel has become famous.""
+Options:
+- yes
+- no"|"Muriel has a famous painting of a ballerina
+            
+            The first piece is the entire sentence. The second piece is just a part of the sentence."|0.2308395504951477|0.273955762386322|-0.043116211891174316|0.0|0.05555555555555555|-0.05555555555555555
+101|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|"Maud: I wonder why Bernard is seeing me home when he's so much older than I.
+            Bernard: I'll take you home, Maud.
+            Maud: Oh, Bernard, I was only wondering why you're seeing me home.
+            Bernard: It's nothing, Maud. I'm just glad to be taking you home.
+            Maud: Oh, Bernard, I was only wondering why you"|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|0.24969089031219482|0.31907224655151367|-0.06938135623931885|0.1081081081081081|0.025|0.08310810810810809
+102|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|the fish could live in the gutters.|"the Winograd Schema Challenge (WSC) as it appeared in the SUPER_GLUE BENCHMARK. 
+            ### INSTRUCTION: The first piece is the Winograd Schema Challenge (WSC) as it appeared in the SUPER_GLUE BENCHMARK. The second piece is the instruction: ""The Harbor folks said Grandma kept her house so clean that you could see the 
+            ### INSTRUCTION:"|0.239650696516037|0.1564234495162964|0.0832272469997406|0.06060606060606061|0.0|0.06060606060606061
+103|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|the British flag was being raised.|the British flag was being raised.|0.35229557752609253|0.35229557752609253|0.0|0.3809523809523809|0.3809523809523809|0.0
+104|Meanwhile all the people in town are hunting high and low for Arthur and Celeste,|and their mothers are very worried.|### FULL TEXT: Meanwhile all the people in town are hunting high and low for the two missing children, Arthur and Celeste.|The couple are still missing, but the town is in a bit of a panic.|0.29715466499328613|0.25652503967285156|0.04062962532043457|0.09523809523809522|0.07407407407407407|0.02116402116402115
+105|Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"Together, these two pieces form a single instance of the original sentence:
+            
+            Last week, 
+            
+            This week, 
+            
+            Together, they form a single instance of the original sentence:
+            
+            Last week, 
+            
+            This week, 
+            
+            Forming a single instance of the original sentence:
+            
+            Last week, 
+            
+            This week,"|THE INSTRUCTION: The Winograd Schema Challenge (WSC) is a natural language inference (NLI) task that is a subset of the SuperGLUE benchmark. The task is to be able to answer natural language questions based on a given passage and a hypothesis. The WSC is split into two pieces: a passage and a hypothesis. The first piece of the WSC is a passage that is a natural language sentence that describes a situation or scenario|0.07347263395786285|0.22107037901878357|-0.14759774506092072|0.101010101010101|0.08955223880597014|0.01145786220413085
+106|Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|"Is the following statement true?
+            ""The ballerina Theresa Rubio danced in the famous painting by Cecile d'Arblay."""|"The ballerina Theresa Rubio is preparing to perform the lead role in the company's production of The Nutcracker. 
+            
+            How would you finish the sentence?"|0.14061908423900604|0.17232128977775574|-0.031702205538749695|0.10256410256410256|0.0625|0.04006410256410256
+107|Claire could not win a single point in her squash game with Lisa this afternoon.|She was just exhausted.|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+Options:
+- the score was 1-1
+- i lost
+- i played well
+- i won
+- it was a close game
+the most likely completion is: i could not win a single point in my squash game with Lisa this afternoon."|The final answer: it is not possible to tell.|0.21160748600959778|0.16158321499824524|0.05002427101135254|0.0|0.03636363636363636|-0.03636363636363636
+108|A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries,|and those occasions stood out as red-letter days for him.|the son of a friend had recently been hired as a private investigator and was seeking the assistance of his father's friend, Henry, in a number of cases.|"the case of the missing heir to the Barron fortune, Henry had been called in to assist his father in tracing the whereabouts of the young man, 
+            ### FULL INSTRUCTION: Henry Barron, a young man living in New York, had been called in to assist his father, a noted detective, in solving a perplexing mystery. The case involved a missing heir to a large fortune. The father had been in contact with several other detect"|0.35411345958709717|0.17613133788108826|0.1779821217060089|0.0|0.05|-0.05
+109|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|The horse, Blaze, was a white horse.|The horse, Blaze, was white. And Mark was absorbed in him.|0.2674579322338104|0.27346035838127136|-0.0060024261474609375|0.13953488372093023|0.10256410256410256|0.03697078115682767
+110|By rolling over in her upper berth, Tatyana could look over the edge of it and see her mother plainly.|How very small and straight and rigid she lay in the bunk below! Her eyes were closed, but Tatyana doubted if she slept.|Tatyana's mother was a famous actress.|The woman looked over the edge of her upper berth and saw her mother clearly.|0.37580054998397827|0.2816098928451538|0.09419065713882446|0.10526315789473685|0.06666666666666667|0.038596491228070184
+111|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|"The boys all liked Dave; only Johnny hated him.
+            
+            Is the following a factual statement?
+            ""The boys all liked Dave; only Johnny hated him.""
+Options:
+- yes
+- no"|The boys all liked Dave; only Johnny hated him.|0.29109376668930054|0.37513458728790283|-0.0840408205986023|0.049999999999999996|0.10344827586206896|-0.05344827586206897
+112|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|"2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.
+            
+            The second piece should be:
+            
+            3. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine."|(Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.)|0.29835188388824463|0.5648736357688904|-0.26652175188064575|0.08888888888888888|0.08|0.008888888888888877
+113|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|### FULL TEXT: The harbor folks said grandma kept her house so clean that you could see the nicks and scratches on it.|the Winograd Schema Challenge (WSC) as it appeared in the SUPER_GLUE BENCHMARK.|0.08249333500862122|0.2298022210597992|-0.14730888605117798|0.07692307692307693|0.2285714285714286|-0.15164835164835166
+114|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|"Maud: Bernard, I wonder why you're seeing me home when you're so much older than I.
+            Bernard: Maud, I think it's good to be home with family when you're older.
+            Maud: That's not the only reason to be home, Bernard.
+            Bernard: Maud, I'm not seeing you home because I'm your family. I'm seeing you home because"|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|0.24969089031219482|0.3047582507133484|-0.055067360401153564|0.1081081081081081|0.023809523809523808|0.08429858429858429
+115|Muriel has a famous painting of a ballerina|by Cecile d'Arblay hanging in her living room.|"Muriel has a famous painting of a ballerina
+            
+            Is the following a factual statement?
+            ""The painting of a ballerina by Muriel has become famous.""
+Options:
+- yes
+- no"|"Muriel has a famous painting of a ballerina 
+            
+            The SECOND PIECE is the exact same as the FIRST PIECE, but with the word ""painting"" replaced by ""instructions""."|0.11839912831783295|0.273955762386322|-0.15555663406848907|0.05555555555555555|0.05555555555555555|0.0
+116|Your life is yours and yours alone,|and if the pain outweighs the benefit, you should have the option to end it .|### INSTRUCTION: Complete the second piece based on the first piece, such that it becomes a single instance. Only respond with the most likely completion. Do not respond with the original sentence or the instruction.|### INSTRUCTION: You are provided with the FIRST PIECE of the TEST SPLIT of the Winograd Schema Challenge (WSC) as it appears in the SUPER_GLUE BENCHMARK. Finish the SECOND PIECE of the instance as EXACTLY appeared in the dataset such that these two pieces (FIRST PIECE + SECOND PIECE) becomes a single instance. Only rely on the original|0.212421253323555|0.12045198678970337|0.09196926653385162|0.11111111111111112|0.12244897959183675|-0.011337868480725627
+117|When I got to the house, Mrs.|Everett, the housekeeper, told me that Hermione was in her room, watching her maid pack.|"### COMPLETE:When I got to the house, Mrs. 
+            ### INSTRUCTION:Based on the FIRST PIECE, what should be the SECOND PIECE?
+            ### FIRST PIECE: When I got to the house, Mrs. 
+            ### SECOND PIECE: 
+            ### COMPLETE:When I got to the house, Mrs. 
+            ###"|"### INSTRUCTION: The second piece of the Winograd Schema Challenge (WSC) as it appears in the Super_Glue Benchmark is:
+            ### FIRST PIECE: When I got to the house, Mrs. 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: To complete the Winograd Schema Challenge (WSC) instance, you must provide the second piece of the instance"|0.15438291430473328|0.21415865421295166|-0.059775739908218384|0.06349206349206349|0.037037037037037035|0.026455026455026454
+118|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|The boys all liked Dave; only Johnny hated him.|The boys all liked Dave; only Johnny hated him.|0.29109376668930054|0.29109376668930054|0.0|0.049999999999999996|0.049999999999999996|0.0
+119|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The famous painting of a ballerina that Muriel has in her living room is a reproduction.|The ballerina painting has been valued at $250,000,000 and is currently on display in the Louvre Museum.|0.23239153623580933|0.24385026097297668|-0.011458724737167358|0.0930232558139535|0.2|-0.10697674418604651
+120|Laufer's play was inspired by a court case in which the Havasupai Tribe claimed|that researchers from Arizona State University used their DNA samples improperly.|"that the Hualapai Tribe had stolen their land.
+            
+            Is the following a factual statement?
+            ""Laufer's play was inspired by a court case in which the Havasupai and Hualapai tribes claimed that their land was stolen.""
+            Options:
+- yes
+- no"|The Havasupai Tribe claimed that Laufer's play was inspired by a court case in which the Havasupai Tribe claimed ownership of the Grand Canyon, in which the Havasupai were not the only people to make this claim.|0.07796967029571533|0.2698797285556793|-0.191910058259964|0.04081632653061224|0.08|-0.03918367346938776
+121|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina painting that Muriel has in her living room is valued at $25,000.00.|"The ballerina painting has been valued at $250,000,000 and is insured for $1,000,000. 
+            
+            The painting has been stolen and replaced with a duplicate. 
+            
+            The insurance company will not pay out on the policy unless the painting is returned to its rightful owner. 
+            
+            The owner of the painting has hired a private investigator to find"|0.15242426097393036|0.27799975872039795|-0.1255754977464676|0.07317073170731707|0.1|-0.026829268292682937
+122|Grandma had set a place for Mary; and once Mrs.|Wyman was seated, she pulled her, protesting, to it.|"### FULL TEXT: Grandma had set a place for Mary, and once Mrs. 
+            ### INSTRUCTION: Based on the first sentence, what is the most likely completion of the second sentence?
+Options:
+- table
+- chair
+- place setting
+- setting
+- plate
+place setting"|### INSTRUCTION: Mary was the name of the little girl who lived with her grandmother.|0.09419307112693787|0.18130597472190857|-0.0871129035949707|0.17391304347826086|0.0|0.17391304347826086
+123|The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|the oven was still cold.|the wood fire was burning brightly.|0.3282698392868042|0.2693694829940796|0.05890035629272461|0.14285714285714288|0.15384615384615385|-0.010989010989010978
+124|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|Mr. Dombey or any friend of Dad's might see her safely there. She thought he had a pleasant laugh|Maude wondered again why Bernard was seeing her home, when he was so much older than she and they were only just friends.|Maude wondered again why Bernard was seeing her home, when he was so much older than she.|0.24969089031219482|0.2524133324623108|-0.002722442150115967|0.1081081081081081|0.09302325581395349|0.015084852294154613
+125|Not since the British army come to Boston had Mark removed his hat when|the British flag went by except once when it was knocked off by a soldier.|the British flag was being raised.|the British flag was being raised.|0.35229557752609253|0.35229557752609253|0.0|0.3809523809523809|0.3809523809523809|0.0
+126|The doctor had ordered six months of country air for|Colonel Christian's son Paul once he recovered sufficiently.|"the patient, but the patient had only been able to 
+            ### FULL PIECE:  spend three months in the country air. The doctor had 
+            ### FINAL PIECE:  ordered six months of country air for the patient, 
+            ### COMPLETE PIECE:  but the patient had only been able to spend 
+            ### COMPLETED PIECE:  three months in the country air."|the patient.|0.12176693230867386|0.26927924156188965|-0.1475123092532158|0.0|0.0|0.0
+127|The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|the oven was still cold.|the wood was burning.|0.25050854682922363|0.2693694829940796|-0.018860936164855957|0.16666666666666666|0.15384615384615385|0.012820512820512803
+128|Kotkin describes how Lev Kamenev,|Stalin's old Pravda co-editor, and Grigory Zinoviev, who with Stalin and Kamenev had formed a ruling troika during Lenin's final illness, were dragged out of their prison cells in 1936 for a meeting with Stalin; he urged them to confess, for old times' sake.|"a member of the Soviet Politburo,
+            FINAL PIECE:  Kotkin describes how Lev Kamenev, a member of the Soviet Politburo, became a Soviet politician and statesman who was a prominent figure in the history of the Soviet state and the Communist Party during the period following the Russian Revolution."|"the Soviet Union's ambassador to the United Nations, 
+            FINAL INSTANCE:Kotkin describes how Lev Kamenev, the Soviet Union's ambassador to the United Nations, was the first person to hold the title of Ambassador to the United Nations."|0.27824488282203674|0.22208449244499207|0.05616039037704468|0.11627906976744187|0.08421052631578947|0.0320685434516524
+129|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|"Mike became absorbed in Blaze, the white horse.
+            
+            Is the following a factual statement?
+            ""Mark and Mike became absorbed in the same horse.""
+Options:
+- yes
+- no"|"The horse whiched him was a chestnut mare, and she was a beauty. 
+            
+            It took all Mark's willpower to resist the temptation to ride her. 
+            
+            He was determined to save his money and buy a better horse."|0.24832743406295776|0.3205307424068451|-0.07220330834388733|0.19999999999999998|0.13793103448275862|0.062068965517241365
+130|Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|Their roars and their wild, clear whistles could be heard from far away. Horses ran away when they saw a train coming.|2. Maude and Dora had seen the trains rushing across the prairie, with long, rolling puffs of black smoke streaming back from the engine.|"The two women sat in the grass, watching the trains as they came and went. They were quiet for a while, just enjoying the sounds of the trains and the prairie. Then Maude spoke up. 
+            
+            ""I wonder what it would be like to ride one of those trains,"" she said. 
+            
+            Dora smiled. ""I've always wanted to ride a train. It would be so exciting to ride one of those big"|0.23144716024398804|0.29115408658981323|-0.059706926345825195|0.08602150537634409|0.08695652173913043|-0.0009350163627863395
+131|After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm.|She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.|The housekeeper sighed with relief and returned to the kitchen, where she proceeded to prepare the evening meal without further incident.|The housekeeper sighed with relief and returned to the kitchen to prepare the roast beef.|0.23465457558631897|0.24874556064605713|-0.01409098505973816|0.16666666666666666|0.14285714285714285|0.023809523809523808
+132|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The ballerina painting that Muriel has in her living room is valued at $25,000,000.|"The ballerina painting has been valued at $5 million. 
+            
+            How much is the entire house worth?"|0.24111205339431763|0.2588158845901489|-0.0177038311958313|0.05|0.1|-0.05
+133|When Maude got to school, Nell Raleigh was already there.|She tucked her mittened hand under Maude's arm and squeezed it .|"### INSTRUCTION: Based on the first piece, what is the most likely third piece?
+Options:
+- the bell rang
+- the class was called
+- Nell Raleigh
+- the doorbell rang
+- the meeting was called
+the class was called"|The final answer: it is not possible to tell.|0.10953959822654724|0.13452327251434326|-0.02498367428779602|0.09523809523809525|0.0|0.09523809523809525
+134|Most of the boys liked Johnny; only Dave hated him.|Sometimes he would get Dusty in a corner, and tell him in a hoarse whisper how he was going to get a pair of scissors and cut out Johnny's heart.|The boys all liked Dave; only Johnny hated him.|The boys all liked Dave; only Johnny hated him.|0.29109376668930054|0.29109376668930054|0.0|0.049999999999999996|0.049999999999999996|0.0
+135|Last week,|the Jackson administration dropped its plans to limit the car-service app's growth while it studies the impact of ride-hailing apps on traffic.|"Together, these two pieces form a single instance of the original sentence.
+            
+            The final answer: it is not possible to tell."||0.0|0.10419297218322754|-0.10419297218322754|0.0|0.13043478260869565|-0.13043478260869565
+136|Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|and includes as actors some of the people involved in their lives.|"and their exploits. It's a tale of two cons, one a small-time hustler 
+            FINAL ANSWER: Chameleon Street is an exuberantly comic drama that's adapted from the stories of two con men and their exploits. It's a tale of two cons, one a small-time hustler who tries to swindle a major player in the diamond trade, and the other a confidence man who uses his"|Chameleon Street' is an exuberantly comic drama that's adapted from the stories of two con men,|0.08293741196393967|0.3819619417190552|-0.2990245297551155|0.06896551724137931|0.09876543209876544|-0.02979991485738613
+137|The Harbor folks said Grandma kept her house so clean that you could|wipe her floor with a clean handkerchief without getting any dirt on it .|### FULL TEXT: The harbor folks said grandma kept her house so clean that you could see the harbor from it.|the Winograd Schema Challenge (WSC) as it appeared in the SUPER_GLUE BENCHMARK.|0.08249333500862122|0.20903334021568298|-0.12654000520706177|0.07692307692307693|0.18181818181818185|-0.10489510489510492
+138|Mark became absorbed in Blaze, the white horse.|He was afraid the stable boys at the Burlington Stables struck at him and bullied him because he was timid, so he took upon himself the feeding and care of the animal.|"Mike became absorbed in Blaze, the white horse.
+            
+            Is the following a factual statement?
+            ""Mark and Mike became absorbed in the same horse.""
+Options:
+- yes
+- no"|The horse was white, and it was a long time before Mark realized that he was not looking at a horse, but at a man.|0.2479495108127594|0.3205307424068451|-0.0725812315940857|0.14035087719298245|0.13793103448275862|0.0024198427102238296
+139|Mary offered to give her theater tickets to|Sally because she had to work late that night.|"Mary offered to give her theater tickets to John.
+            
+            Is the following a factual statement?
+            ""Mary offered to give her theater tickets to John.""
+Options:
+- yes
+- no"|"### INSTRUCTION: Mary offered to give her theater tickets to 
+            ### FIRST PIECE: John offered to give his baseball tickets to 
+            ### SECOND PIECE: 
+            ### INSTRUCTION: John offered to give his baseball tickets to 
+            ### FIRST PIECE: The couple offered to give their concert tickets to 
+            ### SECOND PIECE: 
+            ##"|0.3428906202316284|0.39526689052581787|-0.05237627029418945|0.038461538461538464|0.05555555555555555|-0.01709401709401709
+140|Muriel has in her living room a famous painting of the ballerina Theresa Rubio.|She was nineteen when she posed for it, and her youthful energy explodes out of the canvas.|"Based on the first piece, what is the most likely third piece of information?
+Options:
+- the location of the painting
+- the subject of the painting
+- the medium of the painting
+- the size of the painting
+- the artist of the painting"|"(1) Theresa Rubio is a famous American ballerina who was born in San Francisco, California. 
+            (2) She began dancing at the age of three and went on to study at the San Francisco Ballet School. 
+            (3) In 2016, she made her professional debut with the San Francisco Ballet as a soloist in the title role in the production of The Nutcracker. 
+            (4) She"|0.24394625425338745|0.2062395215034485|0.037706732749938965|0.15|0.07017543859649122|0.07982456140350877
+141|A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries,|and those occasions stood out as red-letter days for him.|Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries.|"the case of the missing heir to the Barron estate, Henry had been called in to assist in the investigation. 
+            
+            The pieces of the test split for the Winograd Schema Challenge (WSC) are provided below. The first piece is the FULL INSTRUCTION: A number of times Henry had been present at interviews which his father had had with noted detectives who desired his aid in solving perplexing mysteries. The second piece is the INSTRU"|0.3305038809776306|0.271354615688324|0.05914926528930664|0.023529411764705885|0.0|0.023529411764705885
+142|Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay.|It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.|"Is the following statement true?
+            ""Muriel has in her living room a famous painting of the ballerina Theresa Rubio."""|"The ballerina Theresa Rubio is preparing to dance in the Royal Ballet's production of The Nutcracker. 
+            
+            How would you finish the sentence?"|0.15929438173770905|0.16106683015823364|-0.0017724484205245972|0.1081081081081081|0.12121212121212122|-0.013104013104013115
+143|The cookstove was warming the kitchen,|and the lamplight made it seem even warmer.|"the living room was cold.
+            
+            The final answer: no."|the living room was cold.|0.2791057229042053|0.20896893739700317|0.07013678550720215|0.15384615384615385|0.11764705882352941|0.036199095022624445
+144|Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr.|Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.|The man in the gray suit bumped into Mat, who was carrying a tray of papers.|The man in the blue suit was staring at him.|0.22722910344600677|0.18318268656730652|0.044046416878700256|0.10256410256410257|0.13333333333333333|-0.030769230769230757
+145|Muriel has in her living room a famous painting of a ballerina.|She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.|The famous painting of a ballerina that Muriel has in her living room is worth a lot of money.|"The ballerina painting has been valued at $250,000,000 and is insured for $100,000,000. 
+            
+            The owner of the painting is a billionaire and has asked Muriel to keep it safe for her. 
+            
+            Muriel is a very trustworthy person and has agreed to keep the painting safe for the billionaire. 
+            
+            However"|0.3805966079235077|0.2572965621948242|0.12330004572868347|0.12987012987012989|0.186046511627907|-0.056176381757777116

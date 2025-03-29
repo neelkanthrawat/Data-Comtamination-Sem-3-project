@@ -1,0 +1,986 @@
+Index|Label|First piece|Gold|Prediction|BLEURT|ROUGEL
+0||B: everyone I talk to, they says, you know, it's real easy to say that. A: we didn't damage enough of their arsenal. We damaged most of it but we should have made sure we got everything. B: Yeah, I don't think the higher ups were thinking about what this guy's going to do with the rest of his war machine.|the higher ups were thinking about what this guy's going to do with the rest of his war machine|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+2"|0.21381142735481262|0.10526315789473685
+1||To get four miles they covered twenty, and they took nearly two hours. Edward was sweating lightly when they walked into the house. Perhaps he had hoped that Hannele would be there miraculously.|Hannele would be there|4 miles. 2 hours. Edward was sweating lightly. Hannele was not there.|0.3164895176887512|0.25
+2||B: until they're older and then they look back. A: Yeah, it's true, um. what are some other questions they have, I'm not sure. I know my parents are growing up, I guess they never spent much time watching TV. In fact, I've never seen my mom turn on the TV,|his mom would turn on the TV|"1: until they're older and then they look back.
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17116934061050415|0.044444444444444446
+3||The meat tea was probably the answer. A big slice of ham, or grilled bacon, or a few sausages, and they could put a few extra on Benny's plate in case she felt the need of it. Annabel could hardly believe that she had a daughter about to go to university.|Annabel had a daughter about to go to university|"2
+
+The meat tea was probably the answer. A big slice of ham, or grilled bacon, or a few sausages, and they could put a few extra on Benny's plate in case she felt the need of it. Annabel could hardly believe that she had a daughter about to go to university."|0.28545576333999634|0.2903225806451613
+4||B: Right, I think I've seen some statistics that say that, uh, it's more expensive to kill somebody than to keep them in prison for life. A: Right because you've got all the prison expenses, plus all the legal expenses. B: Right. A: Uh, and, you know, it certainly doesn't seem to be a deterrent. Uh, for one thing because it's used so infrequently and for another thing because I honestly don't think the people that are committing the crimes that would be eligible, you know, really care.|the people that are committing the eligible crimes really care|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.21959298849105835|0.14814814814814817
+5||Forced to listen to all those hoary chestnuts that cast me and my kind as the bad guys, and the butt of all the jokes. What arrogance, what cheek, what chutzpah! Has our charming storyteller forgotten that once upon a time the Christian world made no distinction between Jews and demons - knowing both had horns?|once upon a time the Christian world made no distinction between Jews and demons|I was forced to listen to all those old chestnuts that cast me and my kind as the bad guys, and the butt of all the jokes. What arrogance, what cheek, what chutzpah! Has our charming storyteller forgotten that once upon a time the Christian world made no distinction between Jews and demons - knowing both had horns?|0.32325640320777893|0.3943661971830986
+6||A: That is the way to do it. I mean, and that's, you know, at least the Air Force is, I do not know, uh, I am nervous in Dallas. I mean, you know, I mean, I go to like an aerobics class or something. And, you know, uh, seventy women in a Jazzercise class in a public, uh, parks and rec building. And you are supposed to feel safe, but then there are all these, does not matter race, but, you know, it is an inter racial mix. And you see these guys standing there watching you jump around in your leotards. B: Yeah. A: And I do not even think that way, but I mean, you just think to yourself, you just, I mean, nobody can think that it can't happen to them.|it can't happen to them|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.3053949475288391|0.1739130434782609
+7||I should think that just about everyone was having a go at everyone else by the time it ended. But I suppose you could say that it was a war that needed fighting.|it was a war that needed fighting|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.211443692445755|0.1111111111111111
+8||And she still didn't know what was on Luke Hunter's mind. But the day after that things began to get a little clearer. This time Reception said they had run out of vases and whatever he 'd done didn't she think it was time she forgave him?|Reception had run out of vases|She still didn't know what was on Luke Hunter's mind. But the day after that things began to get a little clearer. This time Reception said they had run out of vases and whatever he 'd done didn't she think it was time she forgave him.|0.2773984968662262|0.2181818181818182
+9||A: Okay, looks like we're ready to go. Capital punishment, uh, the problem I have with capital punishment is that, uh, uh, it's supposed to be a deterrent to crime, but I don't think that it really actually does that. I don't think it deters anybody, because most of the time crimes uh, are committed without any thought to the consequences|it deters somebody|"1: Capital punishment does not deter criminals. It is a barbaric practice that has no place in a civilized society.
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.27601486444473267|0.044444444444444446
+10||A: But, uh, B: Yeah, yeah.  But it was, yeah, just lots of little lakes and, of course, it was, you know, a little more expensive to live on the lake, but I just thought that was grand. And I think a lot of people didn't really know that there were all those lakes out there unless you were from that area and kind of spotted them,|there were all those lakes out there|"2: But, uh, 3: Yeah, yeah.  But it was, yeah, just lots of little lakes and, of course, it was, you know, a little more expensive to live on the lake, but I just thought that was grand. And I think a lot of people didn't really know that there were all those lakes out there unless you were from that area and kind of spotted them,
+            Is this hypothesis entailed by the premise?
+Options"|0.27318906784057617|0.1686746987951807
+11||B: Although they've got, uh, Meals On Wheels, Which I understand is a really good, you know, way to handle that so that at least they eat. A: Yeah.  Uh-huh. So as a family you all just visited nursing homes or probably in College Station there wasn't a whole lot of choice. B: No, I don't think there was. Um,|there was a whole lot of choice|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.31284070014953613|0.05555555555555555
+12||B: our land is in acres, our people aren't going to understand what an amount of something is. A: Right.  Yeah, I agree with you. I don't think we should either even though I know there are benefits to the metric system, I don't think the benefits of the metric system outweigh the disadvantages that would happen to the people in America|the benefits of the metric system outweigh the disadvantages that would happen to the people in America|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.21655184030532837|0.08695652173913043
+13||A: and I'm just like, well, uh, I'm not even going to think much about it if you're going to treat me with this much respect even before you've gotten to know me. B: Yeah.  Right.  Right. that's basically my opinion on it, right there, is that it's just, you know, I was in the same sort of situation as, it was a job interview and then you had a physical, where you were drug tested, and it's, I just, and I know people who have been drug tested and who have not, you know, been hired by a corporation which, uh, you know, I really. The other side of it is, besides its being an invasion of personal privacy, it's my bodily fluid and I don't really want you to look at it, or something pretty basic like that, A: Uh-huh. B: just to the fact that I don't know that it is a company's business to regulate what its employees are doing when they're not at work.|it is a company's business to regulate what its employees are doing when they're not at work|2|0.06972653418779373|0.0
+14||B: They're seen as senile. A: and oh, the old-timer made with the old way and nobody respects the traditions. And, you know, it's I, I'm not saying that I do either|she respects the traditions either|"2
+
+Based on the provided sentence and label, the most likely hypothesis is that nobody respects the traditions."|0.22545990347862244|0.2608695652173913
+15||B: he refuted it, it just was not effective enough to... A: Well, he didn't refute it til the last two weeks of the campaign. He didn't believe anybody would believe that. And indeed his trend started upward. B: Well see, I didn't believe anybody would believe that either.|anybody would believe that|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.21035870909690857|0.0
+16||A: That's true. B: And they're going to be really struggling and I don't think that America is currently the type of environment where struggling up from the bottom is necessarily considered to be good.|America is currently the type of environment where struggling up from the bottom is necessarily considered to be good|"2
+
+Based on the provided sentence and label, what is the most likely hypothesis?
+Options:
+- 1
+- 2
+- 3
+- 4
+- 5
+2"|0.19601303339004517|0.1
+17||I'm putting out no more clean linen until tomorrow. Fighting, indeed. I might have known that Dr. Lorrimer would be mixed up in it.|Dr. Lorrimer would be mixed up in fighting|"2
+
+Based on the provided sentence and label, the most likely hypothesis is that the fight is between two people named Dr. Lorrimer and Mr. Wickham."|0.37107598781585693|0.11764705882352941
+18||Robert H. Knight's Oct. 5 editorial-page article bemoaning violence in comedy movies (``Hollywood, You Slay Me'') is interesting, but somewhat off-base. As a fan of older movies from the 1920s on, I do not find modern comedies contain violence, sex and foul language to any greater degree than other recent movies.|modern comedies contain violence|"1920s movies did not contain violence, sex and foul language to any greater degree than other recent movies.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2826637923717499|0.10526315789473684
+19||Most zero-coupon CDs are in maturities of six to nine years, and they usually double in value by maturity.  But investors who bought zero-coupon CDs in the secondary market aren't the only ones who may be surprised to learn the full amount of their investments isn't insured. People who paid a premium for standard CDs purchased on the secondary market could also find that those premiums aren't insured if the institutions that issued the CDs failed.|those premiums aren't insured if the institutions that issued the CDs failed|6 to 9 years. Double in value by maturity. Not insured. Premiums paid by buyer may be surprised to learn not insured. Institutions that issue the CD may fail.|0.3952908515930176|0.23809523809523808
+20||``I just want to show you something.'' He took her protesting hand, and laid it on a thick roll of tablecloths between their bodies. She had been so busy avoiding touching him she had not even noticed it was there.|the thick roll of tablecloths was there|"``I just want to show you something.`` He took her protesting hand, and laid it on a thick roll of tablecloths between their bodies. She had been so busy avoiding touching him she had not even noticed it was there.
+            ``I just want to show you something.`` He took her protesting hand, and laid it on a thick roll of tablecloths between their bodies. She had been so busy avoiding touching him she had not even noticed"|0.7212445735931396|0.14285714285714285
+21||``Look, Preston, I can't listen to any more. You burst into my office talking about killings.'' If you think I have any personal knowledge of matters of that kind you must be crazy.|she has any personal knowledge of matters of that kind|"``You're right, Preston. I do sound crazy. But I assure you, I'm not. I have knowledge of a murder that occurred in this building and I need your help. Can you keep what I'm telling you a secret?''
+            If you can't keep a secret, then we can't work together."|0.26649147272109985|0.09375000000000001
+22||Laying the Christmas decoration on the eiderdown with care, he thought about Vic. What had he really been saying as they sat among the trees? Did he mean that Mungo was not welcome here?|Mungo was not welcome here|"2
+            Based on the provided sentence and label, the most likely hypothesis is that the man was thinking about his friend Vic as he placed Christmas decorations on the eiderdown. The man may have been saying that Mungo was not welcome at the Christmas celebration, but he could also have been thinking about his friend's feelings. The man may have been saying that Mungo was not welcome here, or he may have been saying that Mungo was not welcome at the Christmas celebration"|0.44025760889053345|0.11235955056179775
+23||A: that's one difference. There really wasn't a lot of difference. B: I didn't, see I never even heard that there was a book tied in with that movie. That's interesting. That was a good movie, too. A: Well, do you think we covered baseball?|they covered baseball|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.017891034483909607|0.0
+24||My wife went back to Britain. She said I 'd chosen the path to failure. Aye we're still friends but she 'll never understand that I'm not a failure I'm a success.|he is not a failure|The man's wife went back to Britain. She said he'd chosen the path to failure. Aye, they're still friends but she'll never understand that he's not a failure, he's a success.|0.29169440269470215|0.19047619047619047
+25||A: No, it doesn't. B: And, of course, your court system when you get into the appeals, I don't believe criminal is in a court by itself.|criminal is in a court by itself|"2: Yes, it does. 3: And, of course, your court system when you get into the appeals, I don't believe criminal is in a court by itself.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.32792872190475464|0.2692307692307693
+26||Perhaps I should apologize for my tears. As a rationalist, I had but to snap my rational fingers, it might be argued, and the devil would fade away in a puff of smoke. To which I might say that rationalist or not I had spent too many years in my capacity as church architect investigating the fossils of a dead faith not to have imbibed something of the old superstitions.|he had spent too many years in his capacity as church architect investigating the fossils of a dead faith not to have imbibed something of the old superstitions|Perhaps I should apologize for my tears. As a rationalist, I had but to snap my rational fingers, it might be argued, and the devil would fade away in a puff of smoke. To which I might say that rationalist or not I had spent too many years in my capacity as church architect investigating the fossils of a dead faith not to have imbibed something of the old superstitions.|0.454590380191803|0.5306122448979592
+27||B: Well, I know I'm in the, you know, the only reason I asked about secondary schools or, you know, advanced education is because down here, you know, going to the University of Texas, the education I'm getting I think is kind of shoddy for a public school. A: Is it? B: I don't think I'm getting what I should,|she is getting what she should|"1
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.16643735766410828|0.06896551724137931
+28||A: and I guess I would like, I don't know, the European countries certainly, uh, none of them have capital punishment and they don't have a crime problem either. B: Oh, really. A: No, you can't, they don't execute anybody in Britain or France and I don't believe they do in Germany or Italy either and they don't have the crime problems we do. I don't really think that there is too much of a relationship between the two.|there is too much of a relationship between the two|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.22120137512683868|0.12121212121212122
+29||A: Um, I don't, I am only twenty-eight and I haven't had much experience with nursing homes. I have never visited any of them and, uh, I don't think I've ever even been in one.|he has ever been in one|"28 year old male nurse aide applying for job at local nursing home.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+no"|0.17283715307712555|0.0
+30||B: But I think with the way the future is, um, economy wise, I don't think it's going to be realistic. A: I know. Unfortunately, that's probably true. Um, do you think the parents spend quality time with their kids|the parents spend quality time with their kids|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1626691371202469|0.05405405405405405
+31||B: I wish they'd put those, that's why I say, did you stay up late to watch this Red Dwarf. It came on after Doctor Who, on Saturday nights, here at least. A: Uh-huh. B: And it should, of course I li- really it was, I don't think they should show it during prime time,|they should show it during prime time|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17946511507034302|0.05555555555555555
+32||``What do you mean she disappeared?'' It was a measure of his upset that Karel didn't even notice he was repeating himself.|Karel was repeating himself|Karel didn't notice he was repeating himself.|0.5555055737495422|0.6666666666666666
+33||A: Okay, looks like we're ready to go. Capital punishment, uh, the problem I have with capital punishment is that, uh, uh, it's supposed to be a deterrent to crime, but I don't think that it really actually does that.|it really actually does that|"2: Capital punishment does not deter crime. It's a cruel and unusual punishment.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.282365083694458|0.05555555555555555
+34||B: yeah, obviously we don't have any and I think that's part of the role reversal, is it's okay to get married and not have kids. A: Oh yeah. B: And I think society for such a long time said, well, you know, you're married, now you need to have your family and I don't think it's been until recently that they had decided that two people was a family.|it's been until recently that they had decided that two people was a family|2 people can be considered a family.|0.5105525851249695|0.27272727272727276
+35||On his orders the tapster broached a good cask of wine and brought across a bowl of water. Joachim cleaned my face, wiping dirt from the bruises whilst I greedily gulped the thick red claret. Perhaps I should have known there was something wrong.|there was something wrong|"1
+            Based on the provided sentence and label, the most likely hypothesis is 1."|0.24056249856948853|0.0
+36||B: I think they should be randomly drug tested. A: Yeah. B: I believe, full force in that. A: Yeah. B: I don't know that I believe every secretary in every company needs to be.|he believes every secretary in every company needs to be drug tested|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.15313807129859924|0.057142857142857134
+37||``We're about to run out of time. I would like to thank you for coming into the studio today, and I'm sure we 'll receive a lot of letters from our listeners about what's been said.'' You could find that this is just the beginning and that your plans aren't quite as cut and dried as they appear.|this is just the beginning|We're about to run out of time. I would like to thank you for coming into the studio today, and I'm sure we 'll receive a lot of letters from our listeners about what's been said.|0.19843721389770508|0.045454545454545456
+38||``Yeah.'' Lorton wondered what was the purpose of that unnecessary question. Perhaps Maxham already knew that the Newleys ' burglar alarm was one of the early Custodemus models.|the Newleys ' burglar alarm was one of the early Custodemus models|���Yeah.��� Lorton wondered what was the purpose of that unnecessary question. Perhaps Maxham already knew that the Newleys��� burglar alarm was one of the early Custodemus models.|0.4329853057861328|0.5789473684210525
+39||A: Yeah. Now that's a very good suggestion. B: Uh, just something to, i-, rather than throw someone into that environment, uh, you know, it A: Yeah. I don't think student teaching is enough.|student teaching is enough|"2: You're not going to throw someone into that environment are you?
+            A: Yeah. I don't think student teaching is enough."|0.3091065287590027|0.29629629629629634
+40||I had decided that I had to have a partial confidant at the school. One did not have to attend school meals with the boys over the week-end if one was off duty. And the only master who might have noticed I had been away was Meli himself but as it happened he 'd been in Athens.|he had been away|I had decided that I had to have a partial confidant at the school. One did not have to attend school meals with the boys over the week-end if one was off duty. And the only master who might have noticed I had been away was Meli himself but as it happened he 'd been in Athens.|0.2417856752872467|0.0967741935483871
+41||A: But like I said if I voted for Bush, or like when, uh, Gary Hart was running, a lot of women would have voted for him just because he was nicer looking, B: Hart?  Uh-huh. A: not that I think he was good looking, but, he was young. B: Yeah.  Yeah. A: And then, I didn't think that was right, because he may have been a good president, or whatever.|that was right|a woman would vote for Gary Hart only because he was nicer looking than George Bush.|0.11403274536132812|0.10526315789473684
+42||B: Oh, I do too. A: So anyway it's still, B: Uh-huh, uh-huh.  And, you know, if she wanted to go to combat, I do not see that they should stop her.|they should stop her|"2
+
+            Is the above sentence factually correct?
+Options:
+- yes
+- no"|0.08711650967597961|0.0
+43||The women were much easier to supervise and hold. So he refused to accept Dule in exchange. Kit ordered Ariel brought so that the islanders could see she was as well as could be expected and recovering from the wound to her thigh.|Ariel was as well as could be expected|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2463560700416565|0.05405405405405405
+44||A: Good morning. Um, I mean, if I start this I just wanted to say that, um, one of the things that I don't think we really understood about the middle eastern situation is that they're a totally different type of people than we are, and I mean they think differently and their idea of what is justice is totally different from ours. and right now, I think that that's been proven in the fact that, um, they have just, well, anyway, I just think that, you know, the United States policy over there, I think we should just leave them alone. I really do. in a major way because um, that whole region over there, I think needs to settle its own differences within itself. B: Yeah. A: And that's the course that they should go, I mean, you know, we can maybe help them a little bit, prompt them, but I don't think this intervention at such high levels should be going on.|this intervention at such high levels should be going on|2|0.08002597093582153|0.0
+45||Talks between the two sides could unravel, of course, as they have more than once since Sony announced its plans to hire Mr. Guber and Mr. Peters.  But both sides appear to be more willing now to meet each other's terms to resolve the issue. And although Warner has said it wanted the producers to fulfill the terms of their contract, the producers said in sworn court declarations that they didn't believe the relationship could be repaired after the acrimony of the legal battle.|the relationship could be repaired after the acrimony of the legal battle|The producers said in sworn court declarations that they didn't believe the relationship could be repaired after the acrimony of the legal battle.|0.38833171129226685|0.6666666666666666
+46||A: That most of it is plea bargained, uh, half way through or most of the cases are plea bargained anyway. B: Right. A: But, uh, uh, how do you feel uh, about the jury system itself? do you think that should be changed?|the jury system should be changed|"1: That most of it is plea bargained, uh, half way through or most of the cases are plea bargained anyway. 2: But, uh, uh, how do you feel uh, about the jury system itself? do you think that should be changed?
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.32344990968704224|0.18461538461538463
+47||B: That was surprising to me. A: Um. B: I missed that question, totally, I mean really bad. I'm trying to think, I didn't miss too many, I can't remember what my score was, but I did exceeding well. I was surprised. But I didn't realize that our garbage isn't being decomposed.|their garbage isn't being decomposed|"1: That was surprising to me. I missed that question, totally, I mean really bad. I'm trying to think, I didn't miss too many, I can't remember what my score was, but I did exceeding well. I was surprised. But I didn't realize that our garbage isn't being decomposed.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.31261971592903137|0.13157894736842105
+48||B: although in my case I might have been more, uh, sympathetic with the person who got caught, I don't know. A: Uh-huh.  So, uh, were the, uh, sentences that the judge handed out what you thought to be fair, or would, if you were deciding, do you think that they would have been different.|the sentences would have been different|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.23452989757061005|0.05714285714285715
+49||B: But I like dogs and my husband likes cats. So we haven't reached a real agreement on that yet. If we get a place where we can have both, it'll be great, but until then, A: Yeah, I like both, but since I'm in an apartment, I don't think an apartment is big enough for a dog.|an apartment is big enough for a dog|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1364496946334839|0.1081081081081081
+50||That was then, and then's gone. It's now now. I don't mean I 've done a sudden transformation.|she has done a sudden transformation|2|0.03071104735136032|0.0
+51||B: That's it. A: And that's not one of those things that you can turn the wheel back and reverse everything. B: Uh-huh. Well, right now our laws are so liberal that, uh, even with the death penalty in effect, I do n't think that, uh, they're going to use it, uh, too frequently, uh, unfortunately.|they're going to use it too frequently|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.10287649184465408|0.06451612903225806
+52||A: Oh, you mean, uh, learning type, uh, yeah? I mean actual experiments they would have to get your permission. B: Yes. A: But, yeah, I suppose, uh, if there is a psychology department or an education department around, you might find that they're pushing one form of education or another,|the psychology department is pushing one form of education or another|"1: Oh, you mean learning type, yeah? I mean actual experiments they would have to get your permission. 2: But, yeah, I suppose, uh, if there is a psychology department or an education department around, you might find that they're pushing one form of education or another,
+            Is the HYPOTHESIS above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+-"|0.31160271167755127|0.225
+53||B: So the original question, do we think they're you know, a security threat? A: Yeah. B: Um, yes and no. A: Yeah, I can go with that answer too. The only yes I could go to is if uh, a renegade crew decides to launch an attack or an accidental launching or something to that effect to a nuclear exchange, but I don't even see that occurring. Uh, because their internal strifes are more important right now than concentrating on any kind of outside affairs that they used to be adapted to I guess. B: Um, no.  Well, I don't really feel that the Soviets really want to blow up the world.|the Soviets really want to blow up the world|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2232266068458557|0.15384615384615383
+54||A: Now the best, the supporting actor, he was good, but from what I heard, the guy who got it was better, so you know, I can see that. B: Yeah. A: But, oh, B: You think my daughter would like it?|her daughter would like it|1: I heard that the supporting actor in this movie was really good, but from what I heard, the guy who got it was better, so you know, I can see that. 2: Yeah. 1: But oh, 2: You think my daughter would like it?|0.2997397184371948|0.15999999999999998
+55||Why should I think that? It's your first time on a horse, for Pete's sake. And please don't imagine that I haven't landed on my backside before today.|he hasn't landed on his backside before today|"2
+
+Based on the provided sentence and label, the most likely hypothesis is that the horse is a gift from Pete."|0.04765284061431885|0.06666666666666667
+56||After the discarded mural was found outside the school by a concerned Stamford graduate, it eventually was turned over to Hiram Hoelzer, a professional art restorer. Throughout the 1970s, Stamford school and city officials made no effort to locate the mural. Apparently the officials didn't even know the mural was missing until 1980, when a researcher found that the painting was in Mr. Hoelzer's studio and questioned school officials about it.|the mural was missing|The mural was painted by a Stamford High School student in 1929 and was located in the school's auditorium. The mural was painted over in 1930 and later restored by Hiram Hoelzer, a professional art restorer. The mural was then returned to the school in 1970, where it was eventually turned over to the city of Stamford and the school district. The mural has|0.23394396901130676|0.08695652173913043
+57||Did you know that? Pluto... the God of Hades. Did you know that the planet Saturn is associated with lead?|the planet Saturn is associated with lead||0.0|0.0
+58||``I know the one. Yes, it was good though I say it myself.'' But that doesn't mean I have to be involved in this kind of nauseous business.|she has to be involved in this kind of nauseous business|"1
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1608404666185379|0.05
+59||A: Yes, yes it is. Down in the more southern and western areas. And, of course we are, um, about two hours from the northern border, straight south, B: Yeah. A: and, uh, very windy. It's amazing to me because I have only lived in Dallas for three years, and I can not believe that the wind blows all the time.|the wind blows all the time|"2: Yes, it is. Down in the more southern and western areas. And, of course, we are about two hours from the northern border, straight south. It's amazing to me because I have only lived in Dallas for three years, and I can not believe that the wind blows all the time.
+            Is this hypothesis pausable?
+            Yes."|0.22599565982818604|0.1875
+60||B: I can understand that very easily. I've had a class on, um, R Base and also in Paradox A: Uh-huh. B: and both of those seem very easy to use compared to D Base. A: Uh-huh. Do you think D Base is more flexible or allows you to do more.|D Base is more flexible|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.15649306774139404|0.0588235294117647
+61||Alone in the big drawing-room where Annette's choice of bright fabrics had fought hardest, albeit still without winning against her dead in-laws ' passion for darkpanelled gloom Maxim went straight to the telephone. It was the same old-fashioned type as Miss Tuckey's and he unscrewed the mouthpiece carefully but found nothing extra inside. Looking around he remembered it was difficult to plant bugs actually inside panelling but even his half-trained eye could see that the elaborate cornices and mouldings gave a myriad opportunities to a good wire man.|the elaborate cornices and mouldings gave a myriad opportunities to a good wire man|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.14797274768352509|0.12903225806451615
+62||A pity. For myself, a great pity. But no one can say Bishop Malduin has not received latitude.|Bishop Malduin has not received latitude|"""Bishop Malduin has not received latitude.""
+            Is this hypothesis plausible?
+            Options:
+            - yes
+            - it is not possible to tell
+            - no"|0.5545759201049805|0.4799999999999999
+63||``He's harmless, quite afraid of me.'' It brought a very visible relaxing of attitudes that quite surprised Maggie. She didn't know she had it in her but she had felt the need to act.|Maggie had the need to act in her|He's harmless, quite afraid of me.|0.07637759298086166|0.0
+64||The birthday party was of a kind which Cecilia would have wondered at, had she been invited to it, for although a few of Bienvida's classmates were present in its early stages, by seven it had become a celebration for the grown-ups. Bienvida and Jasper were of course still there. No one noticed that Bienvida her grandmother's granddaughter more than her mother's child had at some stage gone back to the Headmaster's Flat and changed into dungarees to keep her Oxfam dress of nylon organza from getting dirty.|Bienvida had at some stage gone back to the Headmaster's Flat|2|0.027963340282440186|0.0
+65||A: And, with just a curtain, of course, between us and, uh, B: Right. A: they revived the man and cleared out his airway and so forth, and he was definitely, just by looking at him and the way he acted, you could tell he was in need of nursing home care,|the man was in need of nursing home care|"2: And so, with just a curtain between us and him, they revived the man and cleared out his airway and so forth. It was definitely clear that he was in need of nursing home care.
+        }
+    }
+}"|0.2907941937446594|0.4
+66||Nick rolled his eyes upwards. ``Not so bad, then.'' She wished she could tell him that Mr Evans hadn't stolen the Will after all but Nick had never thought that he had so there was no point in it.|Mr. Evans had stolen the Will|"Nick rolled his eyes upwards. ""Not so bad, then."" She wished she could tell him that Mr. Evans hadn't stolen the Will after all, but Nick had never thought that he had so there was no point in it."|0.3521926999092102|0.21739130434782608
+67||He spoke Maa fluently and he had unrivalled connections. As women do, she probably knew that she had made an impression on him on the two or three occasions they had met at Muthaiga. Claudia could see that locking up a Masai for a crime he did not understand was cruel and inhuman.|locking up a Masai for a crime he did not understand was cruel and inhuman|"2
+
+Based on the provided sentence and label, the most likely hypothesis is that the man spoke Maori fluently and had unrivalled connections."|0.23436352610588074|0.052631578947368425
+68||A: Yeah, thirty years ago I had a college job, uh, working as a programmer and we had to write code in binary and, uh, have it punched in on those little cardboard cards which, I don't think exists anymore. B: I know.  No. A: You never see one of those punch cards anymore. B: Uh, I think TV has a lot to do with the changes, too. Don't you?|TV has a lot to do with the changes|1010111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111|0.18042835593223572|0.0
+69||A: And I don't think that's right. I think we should do what Europe does and include cultural activities in our school system. B: Oh, likewise. A: I don't think I should have to pay for dancing lessons, gymnastics, piano.|he should have to pay for dancing lessons|"2
+
+Based on the provided sentence and label, what is the most likely hypothesis?
+Options:
+- 1
+- 2
+- 3
+- 4
+- 5
+2"|0.07736984640359879|0.0
+70||``Here's three pence for you for a lolly if you 'll go.'' ``All right, then,'' agreed Peggy, her pout disappearing at once. She did not notice that a little troubled crease appeared on her mummy's forehead.|a little troubled crease appeared on Peggy's mummy's forehead|"3 pence for you for a lolly if you 'll go? All right, then, agreed Peggy, her pout disappearing at once. She did not notice that a little troubled crease appeared on her mummy's forehead.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.31263965368270874|0.28125
+71||He has been told simply that I object to marriage with Artai. If he believes that I have exhibited any preference for his person above that of the others who have offered for my hand then he is a fool.|she has exhibited preference for his person above that of the others|"1
+
+The most likely hypothesis based on the premise and the label is that the man is a fool."|0.19646614789962769|0.12903225806451615
+72||The senator spoke with a sudden and incredible venom, and I realised it was only that angry force that was keeping him from weeping for his two children. ``It seems,'' he went on in a calmer voice, ``that Rickie and Robin-Anne are among the sizeable minority of the population that is peculiarly prone to severe addiction.'' I wondered why McIllvanney had not told me that Rickie and Robin-Anne Crowninshield were drug addicts then I realised that McIllvanney would not have told me anything that might have risked my acceptance of the charter but now that I had learned that the twins had such a severe drug problem I was even less keen to take on the job.|Rickie and Robin-Anne Crowninshield were drug addicts|The senator spoke with a sudden and incredible venom, and I realised it was only that angry force that was keeping him from weeping for his two children. ``It seems,'' he went on in a calmer voice, ``that Rickie and Robin-Anne are among the sizeable minority of the population that is peculiarly prone to severe addiction.'' I wondered why McIllvanney had not told me that Rickie and Robin-Anne Crowninshield were|0.33671313524246216|0.15
+73||``Oh, come on! Don't lie, to me or yourself.'' You know damned well that if I said black was black you 'd say it was white!|black was black|"1
+
+            Is the above sentence factually correct?
+Options:
+- yes
+- no"|-0.016231968998908997|0.0
+74||It was dark and well stormy by the time I got to the Aurora Corona Rest Home and the residents were probably battened down for the night. I parked Armstrong on the road and walked down the short drive to the impressive Gothic porch around the front door. That at least had a light showing and at first I thought the rest of the building was in total darkness but as I crunched gravel and got closer I could see they used extra thick curtains maybe left-overs from the Blackout.|the residents used extra thick curtains|It was dark and well stormy outside when I got to the Aurora Corona Rest Home. I parked Armstrong at the road and walked down the short drive to the impressive Gothic porch around the front door. That at least had a light showing, but at first I thought the rest of the building was in total darkness. I crunched gravel and got closer, though, and I could see they used extra thick curtains, maybe left-overs from the Blackout.|0.2460114061832428|0.11627906976744186
+75||He often referred to the royal garden party when he was in a good frame of mind. Scarlet still found the episode entirely mysterious, since she could think of no reason at all why they had been invited. It was improbable in the extreme that Brian's sterling qualities had come to the notice of the Comptroller of the Household and she could only assume that the summons had been the consequence of her father's having been an RA.|the summons had been the consequence of Scarlet's father's having been an RA|He often referred to the royal garden party when he was in a good frame of mind. Scarlet still found the episode entirely mysterious, since she could think of no reason at all why they had been invited. It was improbable in the extreme that Brian's sterling qualities had come to the notice of the Comptroller of the Household and she could only assume that the summons had been the consequence of her father's having been an RA.|0.3635631799697876|0.27368421052631575
+76||B: and I'm just here for the rest of the stay. And so you know, I guess most of the time when I think about somebody going into a nursing home, it's more a case of where they are not able to look after their day-to-day needs. Yeah A: Uh-huh. B: they can look after a lot of things but there's some of the day-to-day needs that they just are not able to deal with physically anymore. Uh, I know none of my grandparents were in a nursing home. They generally were able to have someone care for them at home and they died. But they were all, goodness, younger than your grandparents. Like they were in their eighties. That type of thing. Uh, but I did, uh, you know, I guess, uh, when I think nursing home I do think of people that are not able to take care of themselves physically. Uh, A: But I just don't think that nursing homes really do a very good job.|nursing homes really do a very good job|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.14897918701171875|0.06451612903225806
+77||There was latent power in every careless move he made. His body was extremely fit, not an ounce of surplus flesh on him, and every trained muscle and sinew was ready to act in a split-second to whatever the brain required of it. Paige could only admit that she had never seen a better male specimen.|Paige had never seen a better male specimen|"0
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.15078017115592957|0.0
+78||Out on the waste ground is a guy with his head bashed in. Ludo swung his club at him with all that strength he hardly knows he possesses. Does Ludo now realise the man is dead?|the man is dead|A man is playing a game of Ludo and gets his head bashed in.|0.23131641745567322|0.22222222222222224
+79||He opened the door and smiled because a good-looking woman was arriving to keep a date. Sophie sat down at Pascoe's table and said, ``I thought I 'd find you here.'' He could see that something had happened.|something had happened|"2
+            Is the hypothesis less plausible than the premise?"|0.11837757378816605|0.0
+80||We can not, however, join the political chorus that as one proclaims how offputting it is that Mrs. Thatcher refuses to get along by going along.  It is refreshing to see at least one world figure who knows what she believes in and is not inclined to reflexively compromise those beliefs. Perhaps Mrs. Thatcher understands better than those distressed at her style that ultimately history and Britain's voters will decide who is right about Europe, sanctioning South Africa or running Britain's economy.|ultimately history and Britain's voters will decide who is right about Europe|Mrs. Thatcher refuses to get along by going along.|0.17134881019592285|0.0
+81||A: and they kind of are in different spectrums, I think. Um, one of them is Quantum Leap B: Okay. A: and the other one is Night Court. And I think they're real different , I mean, I don't think they have anything in common,|Quantum Leap and Night Court have anything in common|2|0.053127214312553406|0.0
+82||He pulled up in fourth gear at the foot of the balustraded stone steps which led up to the solicitor's office. Totteridge, Spruce and Hardnut, Commissioners for Oaths, said the brass plate. He took the scuffed leather document case off the seat beside him and banged the door shut with the violence of someone who had not learned that car doors do not need the same sort of treatment as those of railway carriages.|car doors do not need the same sort of treatment as those of railway carriages|4th gear at the foot of the balustraded stone steps which led up to the solicitor's office.|0.08825162053108215|0.1212121212121212
+83||Like many questions which the police were obliged to put, these were a formality, it being clear that the bargeowners couldn't answer them. It could only be hoped that the mooring-ropes were in better case than the anchors.|the mooring-ropes were in better case than the anchors|2|0.06786523014307022|0.0
+84||B: Oh, you found that out tonight? A: Yeah. B: I haven't even heard that, that's great. I think he deserves every penny of it. A: Yeah. B: But, there are some others out there that I don't believe deserve the money they're getting.|some others out there don't deserve the money they're getting|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.1907758265733719|0.06666666666666667
+85||I want to look dark and menacing. The way I ought to look, the way I should look, the way I might have looked if I hadn't had my little accident. Looking at me you 'd never guess I 'd killed three people.|she had killed three people|3 people died because of me.|0.44506460428237915|0.1818181818181818
+86||Those people... Not a one of them realized I was not human. They looked at me and they pretend I'm someone called Franz Kafka. Maybe they really thought I was Franz Kafka.|he was Franz Kafka|"1
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.07602717727422714|0.0
+87||B: I'm not sure I want an eighteen year old to make that kind of decision. Uh, I mean, that doesn't sound right. Um, I guess I see overall beneficial, if we're going from that point of view. A: Uh-huh. B: Um. you know, in the past, I don't know how old you are, but when I was, uh, in high school, it was the beginning of Vietnam and so forth. And many of my peers were being drafted. A: Uh-huh. B: And I could see that many of them had conscientious objections to war or whatever.|many of her peers had conscientious objections to war|18 year old is too young to understand the complexities of the Vietnam War.|0.27390334010124207|0.17391304347826086
+88||A: But, no it would seem like it would be the same way on the California coastline, wouldn't it? B: Oh, gosh, I think I would hate to live in California, the smog there. A: Uh-huh. B: I mean, I can't believe they have warnings here, which it's mainly just when it gets real, real hot.|they have warnings here|2|0.04650428146123886|0.0
+89||B: not going to help. It's never helped my personal situation. I can't say it would help with theirs either.|it would help with their personal situation|"B: not going to help them. It's never helped their situation. I can't say it would help them either.
+            LABEL: 0
+            HYPOTHESIS: B: not going to help them. It's never helped their situation. I can't say it would help them either.
+            LABEL: 1
+            HYPOTHESIS: B: not going to help them. It's never"|0.5861364603042603|0.15625
+90||But she did not tell me about the food, or the cold, or the unkind teachers. Charlotte told me those things, much later. I know Maria did not tell me that the food was often burnt and uneatable or that they could not sleep because the beds were too cold.|the food was often burnt and uneatable|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.12775039672851562|0.1111111111111111
+91||``The motor was running earlier, smooth as honey.'' Lissa accepted the comfort of his assurances. She did not really believe anything untoward was going to happen this afternoon.|something untoward was going to happen this afternoon|"2
+            The motor was running earlier, smooth as honey. Lissa accepted the comfort of his assurances. She did not really believe anything untoward was going to happen this afternoon."|0.2869793176651001|0.3783783783783784
+92||A: I don't think it's done. I don't think we run it as a deterrent. I mean people say that, but, I mean, if it was really a deterrent, I mean I think like horse thieves in the old west, you know, they saw other horse thieves hanging by the necks every once in a while. B: Uh-huh. A: And if it was really seriously going to be a deterrent, I would think that it would be public. I mean I don't think it would be this private thing because nobody ever sees it.|it would be this private thing|2|0.07317446172237396|0.0
+93||In the clenched-to-cracking night We mouthed the hope, gave it a name: twenty-sixty-two still trembles in the flinching air and catches, bright rag on a bramble. At supper earlier the three of us had talked of Californian scientists who see the foetal heart accelerate translucent fingers tense and eye-muscles steer frantically through their dark when sounds of a high-revving motor are played to swelling, quizzically-smiling moms and wondered if there's anywhere on earth-Australasia or Amazonian forest-to find an unborn innocent of engines. Then it was time to watch ``Tomorrow's World'' and I thought of Sheila with her firstborn encircling him with Mozart in the womb but waking him at three months ' old to be a witness to be held up towards the moon on television so one day he could say he 'd shared in man's first giant steps.|Sheila's firstborn had shared in man's first giant steps|"20th February 1962 is the day that will live in infamy as the day that man first set foot on the moon.
+            It was a dark and stormy night when three friends, Bill, John and Sheila, were having dinner together. Bill was a scientist from California who had recently returned from a trip to Australia. He told his friends about a new discovery he had made. He had been studying the sounds that a fetus made when certain sounds were played"|0.2215750515460968|0.06521739130434782
+94||When Matt married Inez I was left high and dry. A year later I met a sales rep for an agricultural firm and married him. You could say it was on the rebound but I had no reason to regret it.|the marriage was on the rebound|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.053814008831977844|0.05714285714285715
+95||But first Zosie had come. Rufus, driving back from London with the hashish his dealer swore was genuine Indian charas and a package of best Colombian, picked her off the street - ``a piece of property that is found ownerless''. And she had slept with Rufus in the Centaur Room it being taken for granted she would share his bed though Adam did not think her wishes had been consulted.|Zosie's wishes had been consulted|"2
+            Is the following a factual statement?
+""Zosie came to Rufus in the Centaur Room and they shared his bed.""
+Options:
+- yes
+- it is not possible to tell
+- no"|0.3106989860534668|0.05714285714285715
+96||B: I'll give it that. It is fun to play. If you don't value your very much. A: You've played it then? B: But, you know, I don't think rugby will ever be professional|rugby will be professional|"0: I'll give it that. It is fun to play. If you don't value your very much. 1: You've played it then? 0: But, you know, I don't think rugby will ever be professional
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+no"|0.2679831385612488|0.13559322033898305
+97||Perhaps I might have recognized my own hypocrisy, if it had not been for Richard's behaviour in the next months. He brought me flowers, took me out to dinner and the theatre, and was generally attentive to me, as if I were his mistress and not an old married woman. If at any point I thought that his solicitude was the sort of tender kindness you might show to someone utterly dependent and helpless - a prisoner or a caged bird - I was ashamed at once and re-doubled my efforts to be a good wife asking Nonni to teach me how to cook the elaborate dishes Richard liked and taking care to change my dress before he came home in the evening.|Richard's solicitude was the sort of tender kindness you might show to someone utterly dependent and helpless|Perhaps I might have recognized my own hypocrisy, if it had not been for Richard's behaviour in the next months. He brought me flowers, took me out to dinner and the theatre, and was generally attentive to me, as if I were his mistress and not an old married woman. If at any point I thought that his solicitude was the sort of tender kindness you might show to someone utterly dependent and helpless - a prisoner or a caged bird - I|0.3406509459018707|0.36
+98||B: Yeah, I mean, there would be loopholes just like there is in anything else. A: Right, you know, they'd figure a way around that one in a heartbeat. But,, I'm wondering if there's another issue here, and maybe this is why this has died out. Can you go into, and this wasn't the question but it may be the more of the issue versus should young adults, can they go in there and can anyone go well, out of the Kurdish community is a little bit extreme at this time, but say, I think Bangladesh would have been a good example or some really desperate situation and teach them to farm and teach them and it doesn't do any good. B: Yeah. A: I don't know that it does.|teaching them to farm does any good|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1084795594215393|0.08333333333333333
+99||B: And it seems like when the winds blow, it goes right through you. It's really different from Utah's weather. I thought Utah was cold, but I think Iowa is a lot colder. A: Yeah, see, that's how it is in Texas, too because when it's cold, it's really cold. So, B: Yeah, I don't think there is any mountains to stop the wind.|there are some mountains to stop the wind|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17398644983768463|0.05405405405405405
+100||I had been there and I knew it as a beautiful seaside resort, but that wasn't why I was so delighted. It was because it was in Yorkshire. As we marched out of the station into the streets of Scarborough I could hardly believe I was back in Yorkshire.|he was back in Yorkshire|Scarborough, Yorkshire is a beautiful seaside resort.|0.27295979857444763|0.16666666666666666
+101||B: Uh-huh. Yeah, I don't think switching back and forth is that big a deal. I think people need to understand more like what a meter is, instead of how many feet in a meter or something. Just get used to using all the terms. Because someone says a kilogram, no one knows what that is. A: Everyone wants a conversion of that before kind of recognizing it as a concept to hold in mind. B: Yeah. A: Uh, I don't see that, it can change it very quickly.|it can change it very quickly|1. B: Uh-huh. Yeah, I don't think switching back and forth is that big a deal. I think people need to understand more like what a meter is, instead of how many feet in a meter or something. Just get used to using all the terms. Because someone says a kilogram, no one knows what that is. A: Everyone wants a conversion of that before kind of recognizing it as a concept to hold in mind. B: Yeah. A|0.3147447109222412|0.022988505747126436
+102||A: and I'm saying to myself, well, you know, you dump your little turnip off to, uh, you know, this child care place and they don't pay very much and why would they be interested in your little turnip unless, you know, one of the motivations in the hidden agenda is well that's somebody to molest, you know. B: Uh-huh. A: And, uh, that's a terrible kind of thing and I don't think my children have ever been subject to that|her children have been subject to that|2: And I'm saying to myself, well, you know, you dump your little turnip off to, uh, you know, this child care place and they don't pay very much and why would they be interested in your little turnip unless, you know, one of the motivations in the hidden agenda is well that's somebody to molest, you know.|0.06940250098705292|0.05882352941176471
+103||It was as if they realised that she was not for the rough and tumble of this world, like the aggressive women with shaggy hair styles who pushed their way through life thrusting their hard shopping baskets at defenceless men. The man who had offered the seat had seen Ianthe as a tall fragile-looking woman in a pretty blue hat that matched her eyes. He might also have noticed that her dark hair was touched with grey and that although she was not exactly smart there was a kind of elegance about her.|Ianthe's dark hair was touched with grey|It was as if they realised that she was not for the rough and tumble of this world, like the aggressive women with shaggy hair styles who pushed their way through life thrusting their hard shopping baskets at defenceless men.|0.20556440949440002|0.08333333333333334
+104||The best moments in the show occur at the beginning and the end (and occasionally in the middle), when Mr. Mason slips into his standup mode and starts meting out that old-fashioned Jewish mischief to other people as well as to himself.  But too often, these routines lack spark because this sitcom, like all sitcoms, is timid about confronting Mr. Mason's stock in trade - ethnic differences. I'm not suggesting that the producers start putting together episodes about topics like the Catholic-Jewish dispute over the Carmelite convent at Auschwitz.|the producers should start putting together episodes about topics like the Catholic-Jewish dispute over the Carmelite convent at Auschwitz|The best moments in the show occur at the beginning and the end (and occasionally in the middle), when Mr. Mason slips into his standup mode and starts meting out that old-fashioned Jewish mischief to other people as well as to himself.  But too often, these routines lack spark because this sitcom, like all sitcoms, is timid about confronting Mr. Mason's stock in trade - ethnic differences. I'm not suggesting that the|0.27413409948349|0.0851063829787234
+105||A: Yeah, but, uh, I guess most of the things that happen around here are pretty, uh, innocuous. Although, uh, from what I hear in the news, and I saw an episode of the TV show, COPS uh, one time that was in Pittsburgh, B: Uh-huh. A: and, uh, it did surprise me, because, you know, they were doing drug arrests and things like that, but I don't really think those things happen too often because, like I said, from what's reported in the news, at least, it's not all that common.|those things happen too often|2: Yeah, but, uh, I guess most of the things that happen around here are pretty, uh, innocuous. Although, uh, from what I hear in the news, and I saw an episode of the TV show, COPS uh, one time that was in Pittsburgh, 1: Uh-huh. 2: and, uh, it did surprise me, because, you know, they were doing drug arrests and things like that|0.3557196259498596|0.05633802816901409
+106||Charlotte told me those things, much later. I know Maria did not tell me that the food was often burnt and uneatable, or that they could not sleep because the beds were too cold. She did not tell me that the poor hungry children had to wash with ice in the morning and walk through wet snow to sit for two hours with icy feet in a cold church on Sundays.|the poor hungry children had to wash with ice in the morning|"The food was often burnt and uneatable and they could not sleep because the beds were too cold. Maria did not tell me that the poor hungry children had to wash with ice in the morning and walk through wet snow to sit for two hours with icy feet in a cold church on Sundays.
+        
+        The final answer: no."|0.32259267568588257|0.33802816901408456
+107||While the rest of the gang dived into the pub opposite to use the toilets, I called in at H. R. Higgins (Coffee-man) Ltd and bought six gift boxes of coffee (assorted) and two of tea (scented). That was my Christmas shopping sewn up. Who said it was stressful?|Christmas shopping was stressful|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.09213687479496002|0.0
+108||B: And they have said no. A: Yeah and then during the week you see these women, in the you know, just because you put on a pair of hose with them doesn't make them not shorts anymore, you know. B: Yeah. A: I mean I've never seen them do it without hose,|these women would wear shorts without hose|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.11825823783874512|0.05555555555555555
+109||Then he grilled the result on a flat stone beside the fire. Thus provisioned, he invited Louise to come to the banqueting hall to celebrate her birthday, though in a very quiet way, he assured her. He had not forgotten that she must still be suffering on account of her father who had only recently taken his last dive down the well in the Residency yard in the wake of so many of his former patients.|Louise must still be suffering on account of her father|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2438138723373413|0.0
+110||David had obviously always known and Julia had learned that, whatever feelings were churning around inside his mother's mind, it was vital for her that they remained private. David was holding the strings in a pattern Julia had never seen before. His face seemed to show nothing except benevolent interest but Julia could tell from the way that he was carrying his head and a certain tension in his body that they were approaching a crisis point.|David and his mother were approaching a crisis point|2|0.10905985534191132|0.0
+111||``Everyone was a little concerned about the general narrowness of the rally and failure of the OTC market to get into plus territory. It's just a strange feeling.'' I don't think anyone left the place whistling Dixie.''|anyone left the place whistling Dixie|"Everyone was a little concerned about the general narrowness of the rally and failure of the OTC market to get into plus territory. It's just a strange feeling.
+            Everyone was a little concerned about the general narrowness of the rally and failure of the OTC market to get into plus territory. It's just a strange feeling."|0.23889458179473877|0.03125
+112||A: Uh, well, that gets. Some of the punk, um, when I was in high school, that was, uh, one of the big things, was punk music, and, uh, or some of it has a lot to say, the lyrics do, but the actual, B: I don't think they have a whole lot to say, even.|they have a whole lot to say|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.31535130739212036|0.1111111111111111
+113||A: Right, they don't want anyone with particular experience or knowledge of the legal system. B: Exactly.  Uh-huh, exactly. Uh, A: And they tend, and since anyone can get out of it who basically says they don't want to do it, I mean, you know, it's anyone can get out of jury just about, uh, so, uh, it's not really my peers that, let's say I were arrested falsely or not and put up for a jury I wouldn't feel that, uh, I would be being tried by a jury of my peers.|he would be being tried by a jury of his peers|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.20232991874217987|0.07142857142857142
+114||Polly had to think quickly. They were still close enough to shore for him to return her to the police if she admitted she was not an experienced ocean sailor.|Polly was not an experienced ocean sailor|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.19772420823574066|0.05555555555555555
+115||A: and I guess I would like, I don't know, the European countries certainly, uh, none of them have capital punishment and they don't have a crime problem either. B: Oh, really. A: No, you can't, they don't execute anybody in Britain or France and I don't believe they do in Germany or Italy either.|they execute anybody in Germany or Italy|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.04683329164981842|0.0
+116||B: Yeah, that's probably true. You know A: But, I think that's a small, uh, number could, B: but even through those groups, do you think that they participate as much as maybe they used to?|they participate as much as maybe they used to|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.06954322010278702|0.05263157894736842
+117||A: Oh, okay. uh, you ready to begin? B: We might as well. A: Oh, okay. Okay. B: I understand we are doing care of the elderly, right?|they are doing care of the elderly|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.11317487061023712|0.05555555555555555
+118||She was about to tell him that was his own stupid fault and that she wasn't here to wait on him - particularly since he had proved to be so inhospitable. But she bit back the words. Perhaps if she made herself useful he might decide she could stay - for a while at least just until she got something else sorted out.|she could stay|"She was about to tell him that she wasn't here to wait on him - particularly since he had proved to be so inhospitable. But she bit back the words. Perhaps if she made herself useful he might decide she could stay - for a while at least just until she got something else sorted out.
+        
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it"|0.24250298738479614|0.07500000000000001
+119||B: Yeah, hormones, but yeah, uh, steroids. But, I stay from that crap. A: Yeah, it's too dangerous. B: Oh, I could just see hair would start growing out of my upper lip or something.|hair would start growing out of her upper lip|2|0.10147750377655029|0.0
+120||A: It's depressing. B: Uh-huh, it is, and you know, you don't spi-, well. Speaking for myself I don't sleep as well, when I am not exercising, and uh, it's harder to get out of bed in the morning and all kinds of stuff, your body just gets used to it. Yeah, I don't particularly enjoy it. Well I used to lift weights an awful lot, and stuff like that. I do enjoy riding bike, but as far as the working out and lifting and things like that. Uh, I can't say I really enjoyed it all that much,|he really enjoyed working out and lifting all that much|"2
+            Is the hypothesis entailed by the premise?
+            Options:
+                - yes
+                - it is not possible to tell
+                - no"|0.16363218426704407|0.0
+121||B: Uh, my son's teacher has twenty-seven students. A: Uh-huh. B: And that's certainly is a lot of students for one person to deal with on an every day basis. Uh A: Yeah.  Perhaps. B: but more than that, I don't think that they have the authority to command the attention of the children.|they have the authority to command the attention of the children|27 students is a lot of students for one person to deal with on an every day basis.|0.30052924156188965|0.06896551724137931
+122||B: Yeah, I mean it's. True. Yeah. A: I think that's a lot more realistic. Uh, I think that we should be spending more time and again I don't think the Peace Corps is as successful now simply because it doesn't fit the circumstance anymore.|the Peace Corps is as successful now|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.15664248168468475|0.06666666666666667
+123||Obispal's gaze drifted towards Meh ` Lindi, and he frowned as if adding the final piece to a puzzle which had been perplexing him, but not liking the pattern that he saw. Did Obispal's associates realize that the rashly rampaging Inquisitor was only present in this auditorium courtesy of Jaq's Assassin who had plucked him to safety?|the rashly rampaging Inquisitor was only present in this auditorium courtesy of Jaq's Assassin|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.13595940172672272|0.0625
+124||B: the Arabs all of a sudden uh, are cheering for Baker on his drive to reconcile relations with the Israelis, so it's like, A: Well, Baker is really not very much pro Israel. B: Yeah I, A: And did you know John Sununu is, uh, half Arab?|John Sununu is half Arab|Baker is really not very much pro Israel.|0.1829237937927246|0.15384615384615385
+125||The slaves continued their stoking, shuffling to and from the cart, heaving the beech logs into the next furnace. The Robemaker moved forward, prodding Nuadu onwards and, as they moved down the centre of the Workshop, the blazing furnaces roaring on each side of them, Nuadu felt his skin already shrivelling from the heat. How must it be to work here day after day month after month knowing there was no end to it?|there was no end to working here|The slaves continued their stoking, shuffling to and from the cart, heaving the beech logs into the next furnace. The Robemaker moved forward, prodding Nuadu onwards and, as they moved down the centre of the Workshop, the blazing furnaces roaring on each side of them, Nuadu felt his skin already shrivelling from the heat. How must it be to work here day after day month after month knowing there was no|0.24729987978935242|0.07692307692307691
+126||Powerlessness. Hope and no-hope, both at the same time. Well I can't pretend that this doctoring business came as a total surprise.|this doctoring business came as a total surprise|The powerless hope that they will be able to keep their job has been dashed as the company is going bankrupt. They now face the reality of having to find a new job and the uncertainty that comes with that.|0.2564796209335327|0.08333333333333334
+127||By late last night, Globe Managing Editor Thomas Mulvoy, bending to the will of his troops, scrapped the new drawings.  For a few days at least, he says, no pictures or drawings of any kind will adorn the columns. Trouble was, nobody thought they looked right.|the columns looked right|"By late last night, Globe Managing Editor Thomas Mulvoy, bending to the will of his troops, scrapped the new drawings.  For a few days at least, he says, no pictures or drawings of any kind will adorn the columns. Trouble was, nobody thought they looked right.
+            
+            Thus, the hypothesis is that the Globe Managing Editor Thomas Mulvoy is making the decision to not run any pictures or drawings of any kind in the columns."|0.3413691818714142|0.10256410256410257
+128||Zenaida the sorceress jumped on her from behind, one hand at her throat, the other yanking at her hair. She screeched and the bird flapping over her head screeched with her but Carmellina could tell from the look in its pale green eye that it was her true love under a spell from the wicked enchantress and she fell to her knees and clutched the skirts of Zenaida.|the bird was Carmellina's true love under a spell from the wicked enchantress|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.13095055520534515|0.12903225806451615
+129||A: and, they seem pretty, you know, they don't have the hard body. They don't have that perfect look, and an awful lot of exercise is sort of image conscious. But you know, they live to a hundred and ten some, you know, B: Yeah, A: And, that's, B: Well, don't you think a lot of that is diet too?|a lot of that is diet  too|"1: And, they seem pretty, you know, they don't have the hard body. They don't have that perfect look, and an awful lot of exercise is sort of image conscious. But you know, they live to a hundred and ten some, you know,
+            2: Yeah, 1: And, that's, 2: Well, don't you think a lot of that is diet too?"|0.28623902797698975|0.19718309859154928
+130||The notion that tracking is somehow ``undemocratic'' is absurd.  The purpose of education is to encourage young men and women to realize their full academic potential. No one in his right mind actually believes that we all have an equal academic potential.|we all have an equal academic potential|The notion that tracking is somehow ``undemocratic'' is absurd.  The purpose of education is to encourage young men and women to realize their full academic potential. No one in his right mind actually believes that we all have an equal academic potential.  However, it is important to note that while tracking may be used in the educational process, it is not a sufficient condition for academic success.  Thus, it is not surprising that tracking is often used as a justification for educational|0.3333360552787781|0.15730337078651685
+131||They were all the same, all noise and sparrow shit, and if the man only knew the idiot scene he cut... ``My fire exploded.'' The fight had fled the Major. His hands hung simply by his trouser pockets ungloved and Rudakov could see that they trembled.|the Major's hands trembled|They were all the same, all noise and sparrow shit, and if the man only knew the idiot scene he cut... ``My fire exploded.'' The fight had fled the Major. His hands hung simply by his trouser pockets ungloved and Rudakov could see that they trembled.|0.2611619234085083|0.1568627450980392
+132||B: But, I do n't get into uh, the real women libber movement, you know. A: No, I do n't either. I do n't think they're ever going to prove that men and women are equal.|that they're going to prove that men and women are equal|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.15065306425094604|0.04878048780487805
+133||``It's your own silly fault,'' Claire said. ``You think people have nothing better to do than listen to you.'' I might have guessed I 'd get no sympathy from Claire.|he 'd get no sympathy from Claire|"It's your own silly fault. You think people have nothing better to do than listen to you.
+            I might have guessed I 'd get no sympathy from Claire."|0.3540979027748108|0.33333333333333326
+134||``Funny that the met people should get it so wrong.'' Outside the flight deck, a wisp of white flicked past the black window. Why did Delaney suddenly find he was suspicious about the meteorological report?|Delaney was suspicious about the meteorological report|the met people should get it so wrong|0.10789117217063904|0.13333333333333333
+135||``I think he ought to know about this.'' The ex-soldier said and started to rise. Braden stepped in closer and the ex-soldier looked up almost straight up and you could see then that he was afraid but trying hard not to show it.|the ex-soldier was afraid but trying hard not to show it|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.15322208404541016|0.20689655172413793
+136||Eve hadn't known that Mr Burns in the hardware shop was inclined to take to the drink or that Dr Johnson had a very bad temper and was heard shouting about God never putting a mouth into the world that he didn't feed. Dr Johnson was of the view that there were a lot of mouths, especially in the families with thirteen children, that God had forgotten to feed. Benny didn't know that Peggy Pine was an old friend of Mother Francis that they had been girls years ago and that when she came to the convent she called Mother Francis Bunty.|Peggy Pine was an old friend of Mother Francis|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1370760053396225|0.0
+137||My dear girl, it's a small fortune! No one in her right mind would turn her back on that! If you think I 'd believe such crazy behaviour you've miscalculated my knowledge of human nature.|he 'd believe such crazy behavior|It is a small fortune! No one in their right mind would turn their back on that! If you think I'd believe such crazy behaviour you've miscalculated my knowledge of human nature.|0.30113786458969116|0.2
+138||For the first time in my life I could not confess all my sins to the priest. Father Jankowski looked at me so kindly I could not tell him. I thought he might have guessed I was not normal.|she was not normal|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17603278160095215|0.0606060606060606
+139||B: And the long-range views are just kind of, become a thing of the past. A: Yeah you, B: And, uh, A: I don't think there can be anymore long range planning.|there can be some more long range planning|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.27316218614578247|0.1081081081081081
+140||Our groundshare next season will show what the team is really made of as we run out for home games on the unfamiliar battlefield of St Dodimeads Comprehensive. With the pitch being unavailable during term time, three-quarters of our games will be away. Travelling to these matches could of course prove expensive and some of our senior supporters may find they are unable to afford it.|some senior supporters are unable to afford traveling to these matches|The team will have a tough time next season.|0.15993726253509521|0.0
+141||A: Uh, at, uh, it's TCJC. Tarrant County Junior College. B: Oh. A: Yeah. B: Okay. A: And it's really enjoyable. I like it. And then they also, you know, do you think we could make laws to eliminate all corruption, and I don't think we can make laws to eliminate anything anyplace totally.|people can make laws to eliminate something every place totally|"1: Uh, at, uh, it's TCJC. Tarrant County Junior College. 2: Oh. 1: Yeah. 2: Okay. 1: And it's really enjoyable. I like it. And then they also, you know, do you think we could make laws to eliminate all corruption, and I don't think we can make laws to eliminate anything anyplace totally.
+            Is this hypothesis plausible?
+Options"|0.2580774426460266|0.16666666666666666
+142||B: And, uh, the injector pump went bad so I found a outfit down here to rebuild it. And, uh, reinstalled that B: and that was probably one of the most miserable things I had gotten into in a long time. A: I don't think I'd know where to start with a diesel.|she'd know where to start with a diesel|"2: And I found a diesel shop that would rebuild the injector pump for a fair price so I had them do it. And then I had them install it and I was like wow that was a long time coming. I was really happy to have it done. I: I don't think I'd know where to start with a diesel.
+            Is the HYPOTHESIS a correct explanation of the premise?
+Options:
+- yes
+- it is"|0.2005520761013031|0.18823529411764706
+143||B: it's just a great cat, but. A: Well, my personal preference is a dog. Uh, I don't know uh, that I would ever want a cat.|he would want a cat|"2: Well, my personal preference is a dog. Uh, I don't know uh, that I would ever want a cat.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.286579430103302|0.18604651162790697
+144||A: But, I'm not real sure that we promised them anything. B: Uh-huh. A: I, that would have been stupid, B: Yeah. A: and I don't think we did it.|they did it|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.12345658242702484|0.0625
+145||The car engine roared again and the red car moved off but it didn't go far. Stuart's Mum was reversing out of her space and her car was blocking the way. Stuart could see that the red car was going to turn back.|the red car was going to turn back|"2
+            Is the hypothesis above correct, and can it be inferred from the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.15494561195373535|0.12903225806451613
+146||Children aren't real people, in the sense that they are not small males and females but a separate species which will (probably) grow into one or the other in due time. Younger children in particular, before the insidious and evil influence of society and their parents have properly got to them, are sexlessly open and hence perfectly likeable. I did like Esmerelda (even if I thought her name was a bit soppy) and played with her a lot when she came to stay.|Esmerelda's name was a bit soppy|"2 children came to stay with me over the weekend and I enjoyed having them.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.16633427143096924|0.0
+147||B: I, think because they were scheduling a video release of it in July and then when it won all those awards, uh, they pushed it back to August, so. But, yeah, that one is definitely worth seeing, it's really good. A: Now did you see, uh, Driving Miss Daisy? B: Yeah, and you know, I didn't think that one was near as good.|that one was as good|2|0.03103478252887726|0.0
+148||A: I think there really is. B: It's kind of an easy thing to talk about. A: Oh, I guess the work force would be the main, wouldn't it.|the work force would be the main|"2
+
+Based on the provided sentence and label, what is the most likely hypothesis?
+Options:
+- 1
+- 2
+- 3
+- 4
+- 5
+2"|0.08714108914136887|0.14285714285714285
+149||They were baroque symbols reinforcing the lush imagination of the theatre. But the drama on its own wasn't enough, or great performances, or symbols. They the audience were what mattered for it should never be forgotten that it was their patronage and their applause which truly kept the theatre alive.|it was the audience's patronage and the audience's applause which truly kept the theatre alive|They were baroque symbols reinforcing the lush imagination of the theatre. But the drama on its own wasn't enough, or great performances, or symbols. They the audience were what mattered for it should never be forgotten that it was their patronage and their applause which truly kept the theatre alive.|0.5008760690689087|0.3235294117647059
+150||A: Is, uh, kind of fun. It's best done when you have leisure time and I had more of that in my childhood days than I have now. And I grew up in an area that, uh, was just a few feet from a rather large lake, and a few more miles from that was a even larger lake and we had a variety of boats at our disposal. Uh, I worked for a camp for a number of years. My father was on staff there, and we had every kind of things from canoes to paddle boats, sailboats, speedboats, you name it, they had it and we did a lot of, water sports. But I think, uh, the thing I liked the best was, uh, we spent about a summer couple of guys, uh, restored an old wooden boat that was built back in the mid-thirties and got a new canvas sail for it and had a real big old four- foot center board that went down in the middle to keep you upright when the waves, or the wind came from the side and we got that thing in the water and had a real good time with it. If you ever got it dumped over, though, it was a mess to get back up. It wasn't like the newer ones that have nice chambers that keep it afloat or keep it, uh, upright again. This one you had to work with. You get out of the water again and get it upright. And, uh, sailing was kind of nice to learn the maneuvers you had to make to work your way down a lake or work back up against the wind, as it were, tacking back and forth and, uh, more than once we'd get out there on a really stormy day and, uh, the storm or the wind was due to the front blowing and as soon as the front came over, it was calm. So you're out in the middle of nowhere with a paddle and you paddle your way back in and hope it doesn't start raining on you right away. And that didn't always work. We oftentimes got wet. But, uh, it's a nice hobby to have. Nowadays I don't think I could afford the boat or the time, nor do we live that close to a lake anymore, so things change, I guess. What are your memories of boating, or current, B: Uh, about the only memories that I have of boating, uh, my husband's family had a motor boat, uh, when we got engaged and they took us out on the lake several times. And, uh, I really did enjoy that. I don't know that I ever learned to drive it or anything,|she ever learned to drive the motor boat|A: Is, uh, kind of fun. It's best done when you have leisure time and I had more of that in my childhood days than I have now. And I grew up in an area that, uh, was just a few feet from a rather large lake, and a few more miles from that was a even larger lake and we had a variety of boats at our disposal. Uh, I worked for a camp for a number of years. My father|0.27184486389160156|0.0
+151||A: It's no more costly than renting one. The last, see I went about two or three weeks ago and saw FX TWO and that is a really good movie, if you like special effects, kind of gory and lots of, you know action. B: Uh-huh.  I have not done that one, I don't know if I have even heard of that one. A: Um, do you know that I don't follow performers,|he doesn't follow performers|"2
+            Is the following sentence factually correct?
+""The last time I went to the movie, I saw that FX TWO is a really good movie, if you like special effects, kind of gory and lots of, you know action.""
+Options:
+- yes
+- no"|0.050097815692424774|0.0
+152||B: How about Ghost? A: we saw, an, we liked it but, you know, I didn't think it was as good as all the, uh, hype was about it.|it was as good as all the hype was about it|"2: Would you be interested in seeing a movie about a girl who died in a car crash?
+            -1: no
+            1: yes
+            2: no"|0.23758924007415771|0.05714285714285715
+153||A: Yeah, that's true., but, uh, I think, I mean even more than that, even, I mean if you drop out in high school you should still be able to read, you know? Which, I mean it sounds like, uh, B: Uh-huh.  Yeah. That's true. A: now I think maybe it's started changing in the past few years because, uh, they have these, uh, sort of, -tory tests you have to take before you get a diploma.|it's started changing in the past few years|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.24791595339775085|0.05263157894736842
+154||A: you know, then, we thought, well we can use it for, you know, some personal things. We di-, for us it really took, you know, a business application to justify the expense of it. B: Uh-huh.  Oh, definitely, definitely. I know my stepfather bought my mother a little personal computer, oh, I guess, probably three years ago for Christmas, and, you know, it's got some stuff on it. It's got a nice little word processing software on it, you know, and some budgeting type things and stuff. And I don't think she's ever touched it you know.|her mother has ever touched the computer|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1294848620891571|0.05555555555555555
+155||Fernando's escaladun had been wonderful last night and not direct from the freezer. All his own work. She hadn't known he was such a good cook... She paid her bill and wandered back to where she had parked the car in a shady spot under an orange tree in a square - She didn't know a lot about Fernando Serra she realised with a dull bumping of her heart.|Fernando was a good cook|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.12435882538557053|0.0
+156||For Syl I felt no sympathy, since if he was fool enough to want me he deserved none. In the course of time I would die and then it would all be over. We went to the theatre and to dinner and I believe I must have talked and as I have said I know I sometimes laughed and I think no one ever knew that I was empty of everything except perhaps madness.|she was empty of everything except perhaps madness|"1
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.08066382259130478|0.0
+157||The FCC effort collapsed. The networks and studios have bickered ever since. Network officials involved in the studio talks may hope the foreign influx builds more support in Washington, but that seems unlikely.|the foreign influx will build more support in Washington|The FCC effort collapsed as the networks and studios continue to bicker. Network officials involved in the studio talks may hope the foreign influx builds more support in Washington, but that seems unlikely.|0.29833102226257324|0.3333333333333333
+158||B: Yeah, it is. A: For instance, B: I'm a historian, and my father had kept them, I think, since nineteen twenty-seven uh, but he burned the ones from twenty-seven to fi-, A: My goodness. B: I could not believe he did that,|his father burned the ones from twenty-seven|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.0007205158472061157|0.06451612903225806
+159||B: That throws the budget out of whack real fast. A: Well, we actually planned for about one year. B: Oh, good. A: Uh, that God because,, it never occurred to us that it would take seven months.|it would take seven months|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.21905410289764404|0.0909090909090909
+160||A: I guess it, would, B: Because you got to, watch them every day, and keep them watered A: yeah.  Uh-huh. B: and I don't think I'll do it again.|she will do it again|"2: I'll do it.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.2802514433860779|0.14814814814814814
+161||A: But, uh, my only complaint is I really don't enough time to look at the articles every day and go through a paper, you know, exhaust the details. So that's why I concentrate on weekly magazines. B: Do you think that the weekly magazines provide you with as much detail information as you'd like? A: Well, yes. I don't think I have the time to really become a student in every article.|he has the time to really become a student in every article|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.19200320541858673|0.13793103448275862
+162||``We aren't inclined to prune stock portfolios now,'' says Steven G. Einhorn, chairman of the investment policy committee of Goldman, Sachs & Co. ``Investors should stay with their stocks.'' We expect a choppy and sloppy market for a short period, but we don't think it will be ugly.|it will be ugly|We aren't inclined to prune stock portfolios now.  Investors should stay with their stocks.  We expect a choppy and sloppy market for a short period, but we don't think it will be ugly.|0.2918931841850281|0.20512820512820512
+163||B: there's, and you just miss the little things, A: Yeah. B: and, uh, A: Well, I do not think I would put her in day care for joint, situation right now, unless it was like one other child with a person.|she would put her in day care right now|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1642599105834961|0.0
+164||A: People are always mo-, you know, one out of every seven people moves every year. Uh, that is almost a fourteen percent turnover every, you know, B: Uh-huh. A: if you compound that, uh, eh- eh, if it is difficult to register to vote, that would remove your eligibility to vote. B: But I do not think it is difficult enough to prevent people who are motivated in the first place, or, who are not just motivated who really believe that their voice is heard.|voter registration is difficult enough to prevent people who are motivated in the first place|7|0.11484416574239731|0.0
+165||A: Well, because we finally negotiated that I was losing my mind, uh, he sleeps in the laundry room and then he goes out for the day. But this is a beautiful dog and he is wonderful with our little girls and he's, comes from a purebred line and there's nothing you could say bad about him, except that I was more of a cat or a small dog person that you could sit in the chair and cuddle. B: Right.  Right. A: And this is huge. You know, course, when he runs around the yard, he just digs, he doesn't know that he's tearing up things,|the dog's tearing up things|2: Well, because we finally negotiated that I was losing my mind, uh, he sleeps in the laundry room and then he goes out for the day. But this is a beautiful dog and he is wonderful with our little girls and he's, comes from a purebred line and there's nothing you could say bad about him, except that I was more of a cat or a small dog person that you could sit in the chair and cuddle.|0.18390995264053345|0.06896551724137931
+166||A: Okay. Well, let's see, well, we keep our paper bags lined up in the garage for glass and, uh, plastics and, uh, we make the dump over to the Wal-Mart bins there as soon as they're full. I guess we collect milk cartons and whatever other plastics are acceptable. B: Are you in the part of town where, uh, they have gotten into the other containers yet for recycling? A: No, no, I didn't think that anybody had those at all yet.|anybody had recycling containers at all yet|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.12178582698106766|0.0
+167||B: That's right, it's all their fault. A: Well, I mean, it's more our fault than theirs at this point because they saw the light, um, I don't know why they um, were more able than we were except I think, that they probably just said well, we're just going to start using the things now|they're just going to start using the things now|"1: That's right, it's all their fault. 2: Well, I mean, it's more our fault than theirs at this point because they saw the light, um, I don't know why they um, were more able than we were except I think, that they probably just said well, we're just going to start using the things now
+            Is the HYPOTHESIS less plausible than the PREMISE?"|0.34634798765182495|0.25316455696202533
+168||``The white man has blood. That is true.'' But the white man does not believe that cattle are payment for taking someone's life.|cattle are payment for taking someone's life|"2
+
+The most likely hypothesis is that the white man has blood on his hands and doesn't believe cattle are payment for taking someone's life."|0.3021572530269623|0.45714285714285713
+169||B: I really never had anything major with my Mazda but it was a standard also and the clutch went out on it toward the end, I had it five years and the last two years it seemed to go out really easily. I think it went out twice in two years and that's a lot it shouldn't go out that much. A: Huh-uh. B: And so I went ahead and bought another standard when I bought the Honda but I don't think I'm going to do that again.|he is going to buy a standard again|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.12465493381023407|0.1081081081081081
+170||A: and, uh, I was kind of interested to hear cause they had some people from the EP  and lots of different places B: Uh-huh. A: and, uh, they had basically decided that there is going to be a real problem here within a few years on solid waste. B: Uh, I didn't think that was a new revelation.|that was a new revelation|"A: And I was kind of interested to hear cause they had some people from the EP and lots of different places.
+Is the above claim true?
+Options:
+- yes
+- no"|0.2614234387874603|0.05714285714285715
+171||A: Boy that really takes someone who is bold to do that. B: Well, yeah, it's pretty bad. A: Well, now, do you find that security is very good in a town home?|security is very good in a town home|1: Yes, it is very good. 2: No, it is not good. 3: It is not necessary to know.|0.32156407833099365|0.22222222222222218
+172||And if anyone had noticed, maybe I could have just tossed the whole matter off in a casual way. ``Oh, that... it's nothing much...'' No, it's too easy to forget that something which I hardly ever think about now was then a very great concern. I was aware what could happen I could see that any weakness was pounced upon by the other boys and I knew that I wasn't big enough or belligerent enough to bully my way out of it.|any weakness was pounced upon by the other boys|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2010670304298401|0.15384615384615383
+173||A: Oh, I can't either, not a one. B: And I know at least in the medical field, it seems like they've come out with a lot further advances as far as female medications and things since women have gotten into the doctor field. A: Uh-huh. B: I don't think that men really took the time to work on that sort of thing.|men really took the time to work on that sort of thing|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.24365928769111633|0.0975609756097561
+174||B: And so that's what they were trying to do with the tax situation. And, of course, that's when he said well you render unto Caesar's what is Caesar's, you render unto God what is God's. A: Right. B: And, uh, you know, of course, there, I don't think they really cared about the answer,|they really cared about the answer|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.19611555337905884|0.06896551724137931
+175||A: They, probably not enough, but I'm sure I lot of it's filtered down enough to the common folks that they have gotten wind, of what they're missing out on. B: Yeah, I think they're starting to realize, but I just don't think they have the resources, if you were to compare, uh, the Americans to the Soviets as far as home computers are concerned or Fax machines and cellular phones, and state of the art equipment that we are so used to.|they have the resources|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+It is not possible to tell"|0.31499892473220825|0.07407407407407408
+176||A: when I started thinking about this, those are some of my favorite shows, McGyver, because it's only one person there, uh, you know, instead of a cast of people, B: Uh-huh. A: but he's always going out and inventing new things out of scrap, and grabbing what he can and, you know, pieces of baling wire and a few tires and all of a sudden he's got a hang glider and, B: I don't think I've even heard of that show.|she has heard of that show|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.14272737503051758|0.0
+177||Nevertheless, life went on as it always does. By the accidents of distance and dates of birth both the Kiwi Keith and the Mackenzie houses had been spared the effects of war and neither knew the pain of loss or the sadness of wounds in young bodies. Indeed it could be said that they had prospered.|the Kiwi Keith and the Mackenzie houses had prospered|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.10380677878856659|0.15384615384615383
+178||You will not dispute, I presume, that Mr Marshall of Charleville House and Mr Lane of Bridewood have been the two great butlers of recent times. Perhaps you might be persuaded that Mr Henderson of Branbury Castle also falls into this rare category. But you may think me merely biased if I say that my own father could in many ways be considered to rank with such men and that his career is the one I have always scrutinized for a definition of ``dignity''.|his own father could in many ways be considered to rank with such men|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.20419707894325256|0.09302325581395349
+179||A: Yeah, but that, doesn't mean, B: But that doesn't eliminate it, does it? A: I don't think making laws will stop it.|making laws will stop it|"2: But that doesn't mean it's not true.
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.22841793298721313|0.046511627906976744
+180||``I 've already got money that I 've saved from Grye's winnings.'' Seb did not amplify his statement. He had not forgotten that Christian disapproved of gambling.|Christian disapproved of gambling|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.05913008749485016|0.0
+181||B: Well that's true. You're right, you know, by the time you've finally got down to it, I was hoping I could remember where all those other things went. A: Well that's kind of the way I was, I tried to remember as I took stuff off where it went, and I don't think I had too many nuts and bolts left over when I got it all put back together.|he had too many nuts and bolts left over|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.16161994636058807|0.05263157894736842
+182||``Give me more time,'' replies Rufus. But he knows this is part of the game. He probably remembers I don't have a car.|he doesn't have a car|"Give me more time, Rufus. You don't have a car, so you probably remember. But you also know this is part of the game.
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.22699636220932007|0.13559322033898305
+183||That's why he's locked up. I don't want him to know we 've got divers aboard and I especially don't want him to see me taking off with divers in the general direction of the Delos. If we find that there was no spare tank we shall have to keep an even closer eye on him.|there was no spare tank|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.24146613478660583|0.0588235294117647
+184||A: I don't much care for Michael J Fox anyway. B: Yeah. Well, the last two I saw him in, one of those Back To The Future, Part Three deals and that was crummy also. I didn't think that was any good|that was any good|"2: I don't much care for Michael J Fox anyway. 3: Yeah. Well, the last two I saw him in, one of those Back To The Future, Part Three deals and that was crummy also. I didn't think that was any good.
+            Is this hypothesis plausible?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.22409014403820038|0.13114754098360656
+185||A: I'll let you go first. B: Oh, well, what's there to say? Doesn't seem like it's being carried out very well in my opinion. Seems like it takes so long between conviction and carrying out the penalty that I don't see that it makes any difference to sentence anybody.|it makes any difference to sentence someone|"2: I'll let you go first. 3: Oh, well, what's there to say? Doesn't seem like it's being carried out very well in your opinion. Seems like it takes so long between conviction and carrying out the penalty that I don't see that it makes any difference to sentence anybody.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.3345492482185364|0.1518987341772152
+186||I promised Mr Harvey I would. Of course, he's terribly anxious for me to settle down out there, marry Cora-Beth and become an American citizen, the way his father did years ago. Do you realize that according to some strange Scottish law about dynasties Cora-Beth is now heir to the title and the Kinmuire estate?|Cora-Beth is now heir to the title and the Kinmuire estate|I promised Mr Harvey I would marry Cora-Beth and become an American citizen, the way his father did years ago. Do you realize that according to some strange Scottish law about dynasties I am now heir to the title and the Kinmuire estate.|0.34055352210998535|0.3928571428571429
+187||A: So that's not too bad. B: No, uh, I really think that, here in Indiana at least we pay uh, just too much tax. I worked in a factory, uh, last summer and, on the average, I was losing twenty percent of every paycheck to taxes and I don't feel that I really get a whole lot of return from that.|she really gets a whole lot of return from taxes|"2: That's not too bad, I worked in a factory last summer and I was losing twenty percent of every paycheck to taxes but I don't feel that I really get a whole lot of return from that.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.23360097408294678|0.208955223880597
+188||This was the back of the shelter. It had an emergency exit which they all had a go at unbolting. Willie was so absorbed that he didn't notice that his knees were being licked and unconsciously he rested his hand on the back of Sammy's neck.|Willie's knees were being licked|The back of the shelter was labeled -1. It had an emergency exit that all of them had a go at unbolting. Willie was so absorbed that he didn't notice that his knees were being licked and unconsciously he rested his hand on the back of Sammy's neck.|0.28864458203315735|0.17857142857142858
+189||The window-boxes were in full bloom. But there was a for sale board up, new today, he hadn't seen it there this morning when he set out for the meeting with the AC. Mrs Brocklebank had been quiet lately about the tragic possibilities of the house but he did not think she had forgotten.|Mrs. Brocklebank had forgotten|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+The answer is it is not possible to tell"|0.31514421105384827|0.0
+190||I was emotionally devastated, but I was not going back with the intention of finding a man to take care of me, to pay my bills, to embellish me and play papa as Helmut had. I was irritated that he could imagine I would want to go back to him.|she would want to go back to Helmut|I was not going back with the intention of finding a man to take care of me, to pay my bills, to embellish me and play papa as Helmut had. I was irritated that he could imagine I would want to go back to him.|0.22903509438037872|0.22641509433962267
+191||B: If you compare like the people that could have sent their kids to private schools and you know, the people that, uh, did send their kids to private schools. A: Yes. B: I think they compare you know, fairly well. A: Yeah. Yeah. I mean, I honestly don't really think I could have, you know, done much better than I did in the school system I was in.|she could have done much better than she did in the school system she was in|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.1921074390411377|0.058823529411764705
+192||It was an extraordinary sensation, floating here in the inky darkness, with moonbeams dancing off the top of the small waves, and the twinkling stars above shining through the moth-eaten blanket of the night sky. It was as if she was all alone - a tiny speck on the ocean, surrounded by a galaxy that seemed to stretch out into infinity. Despite being caught up in an almost mystical trance Laura had not entirely forgotten that she wasn't the only person swimming in the ocean.|Laura wasn't the only person swimming in the ocean|It was an extraordinary sensation, floating here in the inky darkness, with moonbeams dancing off the top of the small waves, and the twinkling stars above shining through the moth-eaten blanket of the night sky. It was as if she was all alone - a tiny speck on the ocean, surrounded by a galaxy that seemed to stretch out into infinity. Despite being caught up in an almost mystical trance Laura had not entirely forgotten that she wasn'|0.3812320828437805|0.06818181818181818
+193||``That's no problem,'' he grinned, unabashed. ``We have a perfectly efficient paging system, isn't that right, Niall?'' Lindsey saw the dark brow come down and from his thunderous expression could tell Niall was furious.|Niall was furious|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.05516722798347473|0.0
+194||And, such is trust, they went on seeing it after it had gone, for by now they were used to the constant and bewildering ebb and flow of Stevenson money. Each banker took it to be part of some Brand strategy of which he was privileged to see, and be entrusted with, but a small portion. They did not notice that there was now more ebb than flow.|there was now more ebb than flow|They were used to the constant and bewildering ebb and flow of Stevenson money. Each banker took it to be part of some Brand strategy of which he was privileged to see, and be entrusted with, but a small portion. They did not notice that there was now more ebb than flow.|0.3288704454898834|0.23728813559322035
+195||I shall not waver even at this supreme moment. Nor shall I again urge the objections cited above to the ``murderous conspiracy'' theory. I simply wish to point out that if it is supposed that Karen Parsons and I embarked that afternoon with the intention of drowning her husband why did we wait till we had reached a point where our criminal acts were overlooked by at least fifteen witnesses?|he and Karen Parsons embarked that afternoon with the intention of drowning her husband|"2
+
+Based on the provided sentence and label, what is the most likely hypothesis?
+The answer is 2"|0.10144735872745514|0.125
+196||Occasionally, gross chromosome damage was visible.  Dr. Knudson found that some children with the eye cancer had inherited a damaged copy of chromosome No. 13 from a parent who had had the disease. Under a microscope he could actually see that a bit of chromosome 13 was missing.|a bit of chromosome 13 was missing|13|0.20817601680755615|0.25
+197||Maggie rocked her closer still. She could understand the guilt that Ana carried. She prayed that Felipe would hurry back because he was the only one who could convince Ana that she was not to blame.|Ana was not to blame|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1791677474975586|0.1818181818181818
+198||A: Yeah. Well, Do you have anything else to say? B: Well,  No, not too much more about credit cards. A: Okay. I don't think I do either|she has more to say about credit cards|"2: Well, I don't know what you're talking about. A: Okay. I don't think I do either
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.14575541019439697|0.044444444444444446
+199||B: but, you know, for other kind of cans, it'd probably only take aluminum cans like that, don't they. A: Yeah, I don't, yeah, I don't think it would crush steel cans,|it would crush steel cans|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.10771550238132477|0.0588235294117647
+200||Nothing yet. Except that I will not detain you in prison or expel you from Scotland, on one condition. You will tell me if you find it was murder and give me the name of the murderer.|it was murder|You will not be detained in prison or expelled from Scotland, on one condition. You will tell me if you find it was murder and give me the name of the murderer.|0.2553481459617615|0.17142857142857143
+201||What on earth did I think I was playing at? The people back at the hotel didn't know me. They didn't know I wouldn't steal money like that.|she wouldn't steal money like that|"I was playing a game of poker. I had a great hand and was sure I'd win. But then I lost. I didn't know what I thought I was playing at. The people at the hotel didn't know me. They didn't know I wouldn't steal money like that.
+            What was I thinking?"|0.24761079251766205|0.1875
+202||B: like the customer is always right and you know, no matter how crabby you might be over the phone, they are very understanding and, uh, they ma- make sure things are set properly if you're any way dissatisfied with their merchandise. A: That's really good. It use to be like that. B: Uh-huh. A: But,  I don't think most places are like that anymore.|most places are like that anymore|2|0.08397111296653748|0.0
+203||A: Okay. Uh, one of the things they talked about was, uh, what do we think about a judge making the decision? B: Uh-huh. A: And I really don't agree with that. I think that the trial by jury is better, uh, you know, having a unanimous decision rather than to have one person be responsible. I don't think that they could be objective in every case, every time.|a judge could be objective in every case|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.30858466029167175|0.05405405405405405
+204||Except that his face, with those tobacco-stained looking eyes and drooping moustache, was always the same and you never knew what he was thinking. When he looked at you it was like he knew something he wasn't telling, or was laughing at you, no matter what it was he said. That's when you could tell Henry Mendez was Mexican.|Henry Mendez was Mexican|The man with the tobacco-stained looking eyes was always the same and you never knew what he was thinking. When he looked at you it was like he knew something he wasn't telling, or was laughing at you, no matter what it was he said. That's when you could tell Henry Mendez was Mexican.|0.3865741491317749|0.13114754098360656
+205||A: What do you think about Robin Hood? B: Well, I work for school district and, uh, it has hurt us a lot. Uh, there has to be some way, I think, to equalize education opportunities. But, uh, you know, I think, especially big government, tends to think that the solution to everything is to throw money at it. And I don't, you know, that's just not true. you know, I don't think money is going to take the place of intelligence or, uh, problem solving skills.|money is going to take the place of intelligence|The Robin Hood is a fictional character from a book series and movie. He is a hero character who steals from the rich and gives to the poor. The real life Robin Hood would not be a hero in the book series or movie. The real life Robin Hood would not steal from the rich and give to the poor. The real life Robin Hood would not be a hero. The real life Robin Hood would not be from a book series or movie.|0.3891025185585022|0.06451612903225806
+206||A: Is, uh, kind of fun. It's best done when you have leisure time and I had more of that in my childhood days than I have now. And I grew up in an area that, uh, was just a few feet from a rather large lake, and a few more miles from that was a even larger lake and we had a variety of boats at our disposal. Uh, I worked for a camp for a number of years. My father was on staff there, and we had every kind of things from canoes to paddle boats, sailboats, speedboats, you name it, they had it and we did a lot of, water sports. But I think, uh, the thing I liked the best was, uh, we spent about a summer couple of guys, uh, restored an old wooden boat that was built back in the mid-thirties and got a new canvas sail for it and had a real big old four- foot center board that went down in the middle to keep you upright when the waves, or the wind came from the side and we got that thing in the water and had a real good time with it. If you ever got it dumped over, though, it was a mess to get back up. It wasn't like the newer ones that have nice chambers that keep it afloat or keep it, uh, upright again. This one you had to work with. You get out of the water again and get it upright. And, uh, sailing was kind of nice to learn the maneuvers you had to make to work your way down a lake or work back up against the wind, as it were, tacking back and forth and, uh, more than once we'd get out there on a really stormy day and, uh, the storm or the wind was due to the front blowing and as soon as the front came over, it was calm. So you're out in the middle of nowhere with a paddle and you paddle your way back in and hope it doesn't start raining on you right away. And that didn't always work. We oftentimes got wet,. But, uh, it's a nice hobby to have. Nowadays I don't think I could afford the boat or the time,|he could afford the boat|1: Is, uh, kind of fun. It's best done when you have leisure time and I had more of that in my childhood days than I have now. And I grew up in an area that, uh, was just a few feet from a rather large lake, and a few more miles from that was a even larger lake and we had a variety of boats at our disposal. Uh, I worked for a camp for a number of years. My father was on|0.3206666111946106|0.0
+207||A: Not that they won't appoint them but there is no budget for them, I guess. and the courthouse that goes with them and the bailiffs and the uh, court clerks. B: Huh.  Yeah. Whatever. A: So it seems, uh, no, I do not think I would change it.|he would change it|"1: Not that they won't appoint them but there is no budget for them, I guess. and the courthouse that goes with them and the bailiffs and the uh, court clerks. 2: So it seems, uh, no, I do not think I would change it.
+            Is this sentence correct?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2730151414871216|0.09523809523809525
+208||Why should a boat be less social than a caravan, for heaven's sake? He 'd never seen Janet drinking out of a can before, either. But he mustn't forget that it was a great occasion for old Willis who must be getting on for sixty-live ready to take the knock any day now.|it was a great occasion for old Willis|"2
+            Is the hypothesis less social than the premise?"|0.01609654724597931|0.0
+209||Therese, lying on her narrow bed at the Goldener Adler, was fighting overwhelming panic. She was exhausted and she wasn't even taking the lead in tonight's performance. If she was this tired how did she think she 'd be able to survive Maritza on the following night and Luxembourg next week?|Therese 'd be able to survive Maritza on the following night|"""Therese, lying on her narrow bed at the Goldener Adler, was fighting overwhelming panic. She was exhausted and she wasn't even taking the lead in tonight's performance. If she was this tired how did she think she'd be able to survive Maritza on the following night and Luxembourg next week?""
+        }
+    }
+}"|0.17161448299884796|0.34375000000000006
+210||``Oh, yes. It's just that it would have been nice to have seen the signs,'' said Caspar, rolling the maps up and packing them in his saddle bag. He did not say that he hoped Floy and Snodgrass were all right because he did not think he had to say it.|Casper had to say he hoped Floy and Snodgrass were all right|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1310373991727829|0.04878048780487805
+211||B: uh, those Cowboys have increased their prices again this year. A: Oh yeah. B: But I didn't know, I don't think I've heard anything on the Rangers,|he has heard something on the Rangers|2: Oh yeah, the Cowboys are really expensive now. I didn't know though, I don't follow the Rangers or anything.|0.30082234740257263|0.13793103448275862
+212||I saw the American woman kiss his hand. So she was an RC, too. No refreshment was offered not because Monsignor wished to be inhospitable but because he didn't feel it was appropriate to the place and time.|refreshment was appropriate to the place and time|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17492076754570007|0.07999999999999999
+213||He had only to say he admired Grace Bird's fortitude and instantly her chin stiffened with resolve. He had but to comment favourably on the kittenish qualities of Babs Osborne for her to curl up as best she could on the plush seat beside him, her thumb in her mouth. Twenty-four hours later he admonished Babs for over-stressing the little-girl aspect of Cleopatra pointing out that childishness of character was not a question of years and that she was mistaken if she supposed the difference between folly and wisdom had anything to do with either age or youth.|the difference between folly and wisdom had anything to do with either age or youth|24 hours later he admonished Babs for over-stressing the little-girl aspect of Cleopatra pointing out that childishness of character was not a question of years and that she was mistaken if she supposed the difference between folly and wisdom had anything to do with either age or youth.|0.3205396234989166|0.4615384615384615
+214||B: You know, how can you help depending on the day care center, you know, A: Yeah. B: you got to when you hear about all the horrible things that happen in day care centers, have you ever noticed they're always like a family owned center where the mother and the daughter and the son run it, you know, kind of thing.|day care centers are always like a family owned center|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+It is not possible to tell"|0.27174875140190125|0.0
+215||A: in a lot of parts, yeah. I know Texas is supposed to be flat, but you know, down by the Denison Dam there's a lot of, uh, B: Uh-huh.  Sherman and Denison, do you know my grandparents live in Durant?|her grandparents live in Durant|"2
+            Is the following a factual statement?
+""The best place to live in Texas is Sherman.""
+Options:
+- yes
+- no"|0.1000894084572792|0.16666666666666666
+216||A: Yeah. Koontz. Uh, his last name ends in a Z, I know that. B: Yeah, oh, I think I know who you're talking about. Uh, I've seen, I don't think I can pronounce it either,|she can pronounce it|"1: Yeah. Koontz. Uh, his last name ends in a Z, I know that. B: Yeah, oh, I think I know who you're talking about. Uh, I've seen, I don't think I can pronounce it either,
+                   1: Yeah. Koontz. Uh, his last name ends in a Z, I know that. B: Yeah, oh, I think I know who you're"|0.4137105941772461|0.08955223880597014
+217||``She caught a fever in the village. Benedict had it, too.'' But I don't think Isabel wanted to live.|Isabel wanted to live|"2
+            Isabel didn't want to live with her husband and his friend, Benedict. She had a fever and so did Benedict. But they didn't want to live with each other.
+            What do you want to live with?"|0.25307196378707886|0.13953488372093026
+218||``It doesn't happen very often.'' Karen went home happy at the end of the day. She didn't think that the work was difficult.|the work was difficult|"2
+            Is the hypothesis above correct, and can it be inferred from the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17335772514343262|0.07407407407407408
+219||B: Well, that's true. A: I think that's really the only thing. I guess where I would like to see the system change is, uh, uh, there ought to be a well I guess I don't think that, uh, uh, juries need to decide sentencing all the time.|juries need to decide sentencing all the time|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.14871318638324738|0.06451612903225806
+220||He was in Radio Times as a strip cartoon for eight years and his portrait has hung in the Royal Academy. This book is intended not only for present-day children but also for all who have ever enjoyed the Captain's adventures. The story could have happened anywhere but some readers may notice that Sinkport closely resembles a well-known coastal town in East Sussex.|Sinkport closely resembles a well-known coastal town in East Sussex|"8 years ago, Captain Bligh was a strip cartoon in Radio Times. His portrait has hung in the Royal Academy and this book is intended not only for present-day children but also for all who have ever enjoyed the Captain's adventures. Some readers may notice that Sinkport closely resembles a well-known coastal town in East Sussex.
+            Is the above hypothesis plausible?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.40654897689819336|0.2619047619047619
+221||She was sick with worry about everything. It's like being caught in huge sticky web - the more you struggle, the more entangled you get. Did you ever feel that it would be nice to give up struggling and close your eyes and sleep and never wake any more?|it would be nice to give up struggling and close your eyes and sleep and never wake any more|She was sick with worry about everything. It's like being caught in huge sticky web - the more you struggle, the more entangled you get. Did you ever feel that it would be nice to give up struggling and close your eyes and sleep and never wake any more?|0.4629795551300049|0.5588235294117647
+222||B: Well, that's I meant when I said the school. A: Yeah. I don't blame it on the teachers in the school. although I think that, I do know for a fact that some of the teachers that I know personally get paid an awful lot more than, well, they do quite well for themselves. B: Huh. Well, that's odd because I don't think the teachers in my school district, uh, were well paid.|the teachers in her school district were well paid|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.21611030399799347|0.05263157894736842
+223||B: I think I've been trout fishing once. I've never fly fished. Have you fly fished? A: Uh, no I haven't. I don't know that I could do that.|she could do that|"1: I think I've been trout fishing once. I've never fly fished. Have you fly fished?
+            2: Uh, no I haven't. I don't know that I could do that."|0.2819787263870239|0.16216216216216214
+224||He didn't say he loved her but,'' I think we're going to love each other, Lyn.'' From the pulled and sagging pockets of his jacket, his Sunday-go-to-meetings suit, his only suit, Dadda produced a cairngorm and silver ring for Lyn and a pearl-handled Stilton knife for Stephen. Though they might have forgotten that the following day would be the sixth anniversary of their engagement he with his prodigious memory had not.|the following day would be the sixth anniversary of Lyn and Stephen's engagement|"He didn't say he loved her but, ""I think we're going to love each other, Lyn.""
+            From the pulled and sagging pockets of his jacket, his Sunday-go-to-meetings suit, his only suit, Dadda produced a cairngorm and silver ring for Lyn and a pearl-handled Stilton knife for Stephen. Though they might have forgotten that the following day would be the sixth anniversary of their engagement he"|0.2744409143924713|0.23529411764705882
+225||Roman settled them at one of the small tables in a garden at the side of the yard at the Crowned Head. He summoned a girl, who seemed mesmerised by his virile look, and ordered lager for them both. ``I need something stronger than coffee '' he said and Claudia could see that he was under considerable strain.|Roman was under considerable strain|"2
+            The girl looked at him with a look of pure admiration. He was a man she had always admired from a distance but had never thought she would ever get the chance to meet. She felt her heart swell at the thought of meeting him and knew she had to do something to impress him. She stood up and walked over to him, taking a few steps so that she was standing directly in front of him. She looked down at the table and then looked up at him"|0.2325114905834198|0.021052631578947368
+226||B: Yeah, it's called VCX or something like that. Also called Delta Clipper, which is a decent name for something like that. A: Wow.  Well, I don't know. you think you'd, uh, go up in space if you had a chance?|speaker B would go up in space if he had a chance|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.18245181441307068|0.04878048780487805
+227||B: That's true. A: So. B: Uh, the other argument is that the death penalty is a deterrent and I really don't, uh, agree with that. I don't think anyone who would commit uh, a crime that would get them the death penalty would stop at the moment and say, well, I was about to kill and dismember this person but, oh, if they catch me they're going to kill me so I better not do it. I just, don't think uh, that it works that way.|it works that way|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.3175102472305298|0.0909090909090909
+228||A: Not that they won't appoint them but there is no budget for them, I guess. and the courthouse that goes with them and the bailiffs and the uh, court clerks. B: Huh.  Yeah. Whatever. A: So it seems, uh, no, I do not think I would change it. The more I verbalize it, I do not think I would want to change the system.|she would want to change the system|"2
+            Is the following a factual statement?
+""The Bailiff and the Court Clerks are not being paid.""
+Options:
+- yes
+- no"|0.14716225862503052|0.07407407407407408
+229||Erlich was breaking the rules. A Fed on assignment overseas with the ranking of Assistant Legal Attache must always work through local law-enforcement agencies. Back at F.B.I.H.Q. where the book ran the show they would have been climbing the walls in the Office of Liaison and International Affairs if they had known that he was out on his own.|Erlich was out on his own|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.1491326093673706|0.0
+230||Colin hated the way he inspected the rag before folding the contents into the centre and forcing it into his trouser pocket. Smith obliged on all counts before announcing firmly, ``It was Arson.'' If Smith said it was Arson then that's what it was.|it was Arson|"1
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.04567638039588928|0.0625
+231||B: Um, in fact, Los Alamos, uh, has, uh, done a fair amount of research, uh, in recycling things in general. Um, it involves, for instance, uh, creating biological organisms which can remove heavy elements like selenium, and barium and, uh, other things from, uh, waste material in general. uh, and purify the waste of specific, uh, uh, nasty elements. A: Well, that's pretty, uh, upscale, uh, trash, uh, uh, situation. I don't think anybody around here would understand all those exotic techniques, you know, getting rid of the heavy metals.|someone around here would understand all those exotic techniques|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.1641892045736313|0.0
+232||The nurses were well trained in dealing with rich patients who were used to doing as they pleased and often disliked accepting the discipline of routine. They knew that the very old, the alcoholics, and the more than slightly batty patients (called ``eccentric'') had to be carefully supervised. This old dear who was to be kept under heavy sedation clearly didn't know that she was a long-term patient being treated for depression.|this old dear was a long-term patient|"the nurses were well trained in dealing with rich patients who were used to doing as they pleased and often disliked accepting the discipline of routine. They knew that the very old, the alcoholics, and the more than slightly batty patients (called ``eccentric'') had to be carefully supervised. This old dear who was to be kept under heavy sedation clearly didn't know that she was a long-term patient being treated for depression.
+            
+            Is the above"|0.2774902582168579|0.18823529411764706
+233||The English read: It is forbidden to cross the Toacks. That summer I came to know the Toacks - with their roots hooked under the earth's crust. On the right side of them you'd never guess they even existed but from where I was they were too deep to fathom and too tall to cross.|the Toacks even existed|"It is forbidden to cross the Toacks.
+            This summer I came to know the Toacks - with their roots hooked under the earth's crust.
+            On the right side of them you'd never guess they even existed but from where I was they were too deep to fathom and too tall to cross."|0.23706203699111938|0.14035087719298245
+234||Tonight... The cool air caressed her bare arms, and Folly shivered and turned back towards the house. What did women do, who were waiting for their lovers? How could she sit calmly and read a magazine when all the time she knew that any moment there would be a knock on the door and Luke would be standing there waiting?|any moment there would be a knock on the door|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.2254851758480072|0.07407407407407408
+235||A: Well, uh, uh, do you ever use the ATM machines? B: No, I never do. My husband does at work just to get cash out, but, uh, I take the checkbook so if I need cash, I just tell him and he gets it out and I don't even think I know my number.|he knows his number|"1: Well, uh, uh, do you ever use the ATM machines? 2: No, I never do. My husband does at work just to get cash out, but, uh, I take the checkbook so if I need cash, I just tell him and he gets it out and I don't even think I know my number.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell"|0.3068242073059082|0.05333333333333334
+236||His microphone whistled a little and Sally winced in embarrassment. The first model appeared on the catwalk looking so glamorous so unbelievably chic that Sally could scarcely believe that her very own sister could be a part of this glittering performance.|Sally's very own sister could be a part of this glittering performance|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.14001299440860748|0.0
+237||B: Yeah, and it almost seems like in order to avoid, uh, some of the scandal, you would have to have the kind of wife that you would only find, say in the Bobsy twins or, something like that. A: Right.  You know, I also think it would be funny if we could know everything about the people that were in there and throw them out. I don't think there would be too many left.|there would be too many left|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.21468892693519592|0.06896551724137931
+238||``Rather a long shot, wasn't it? Twenty years?'' How do you know the baby was born here?|the baby was born here|"20 years ago, a baby was born in this hospital.
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.3450380563735962|0.1395348837209302
+239||A: and so you just put the empty ones back out there and he took them away and you know, put another gallon of glass bottle in there. B: Yeah. A: So, uh, yeah, B: So, uh, you know, I look back at, uh, my childhood and I'd say, you know, they were doing things then that we should be doing now and so it doesn't bother me at all that we're, uh, kind of starting to put the pressure on people to get away from all this, uh, throwaway society that got developed in the sixties and seventies.|people are starting to put pressure on people to get away from all this throwaway society that got developed in the sixties and seventies|1: And so you just put the empty ones back out there and he took them away and you know, put another gallon of glass bottle in there. 2: Yeah. 1: So, uh, yeah, 2: So, uh, you know, I look back at, uh, my childhood and I'd say, you know, they were doing things then that we should be doing now and so it doesn't bother me at all that we'|0.2689604163169861|0.0816326530612245
+240||She would shake her head and deftly speak of other matters, though never about her father's past. Now, I knew some French. You may remember I spent some time in Paris - not the most pleasant of times freezing in the snow chased by wolves and being half-hanged at Montfaucon.|he spent some time in Paris|She would shake her head and speak of other matters, though never about her father's past. Now, I knew some French. You may remember I spent some time in Paris - not the most pleasant of times freezing in the snow chased by wolves and being half-hanged at Montfaucon.|0.2513485848903656|0.17857142857142858
+241||The Colonel could tell that the noise was distracting Amanda from her pamphlet, though she gave no outward sign. It was simply that he could judge such things after living so closely with her for however many years. He could tell she hadn't really got her nose in the Reverend Abraham.|Amanda hadn't really got her nose in the Reverend Abraham|"2
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.07187716662883759|0.07142857142857142
+242||I didn't say anything, but kept on eating slowly. I could tell that my father was looking at me from the other end of the table swilling his juice round in his glass and staring at my head as I bent over my plate.|his father was looking at him from the other end of the table|"1
+            The hypothesis should be such that it is possible to infer it from the premise alone."|0.10355127602815628|0.13333333333333333
+243||B: Um, gee, I don't, I mean, I guess it's the stuff that comes out of automobile exhaust, you know, they say in the paper nitrous oxides and ozone and all that. A: Right. B: So, I believe them but I'm not a chemist. A: uh, do you think that those are bigger contributors than things like acid rain and some of the pollutants that come from, uh, industrial areas, factories and so on?|nitrous oxides and ozone are bigger contributors than things like acid rain|"2
+            Is the hypothesis above correct, and can it be verified by human common sense and without a web search?
+Options:
+- yes
+- no"|0.21200093626976013|0.057142857142857134
+244||Just knowing they are there in the bag is as comforting as Victor finds his cheroots. I can already feel the shape of one resting in my palm. I could believe my first finger has threaded through the trigger-guard.|his first finger has threaded through the trigger-guard|Victor finds his cheroots in the bag and prepares to light one.|0.185581773519516|0.1904761904761905
+245||Ari felt very old as she walked back to the group. It seemed that, all around her, things were changing - old, beloved routines that had felt safe and comfortable were decaying into new patterns. If by working with Roirbak it meant she had to leave Star Eye it might be for the best.|Ari had to leave Star Eye|Ari felt very old as she walked back to the group. It seemed that, all around her, things were changing - old, beloved routines that had felt safe and comfortable were decaying into new patterns. If by working with Roirbak it meant she had to leave Star eye it might be for the best.|0.3506813645362854|0.2033898305084746
+246||A: That's okay. B: Uh, yeah, this is, the, uh, mutual defense thing was, uh, we, it was complicated, and I don't think everybody knows the whole situation.|everybody knows the whole situation|"1: That's okay. 2: Uh, yeah, this is, the, uh, mutual defense thing was, uh, we, it was complicated, and I don't think everybody knows the whole situation.
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no
+yes"|0.28589296340942383|0.1923076923076923
+247||I also see that we're about as alike as chalk and cheese, because I would never sell out a whole species for the wrongs of one group. Have you forgotten that your tribe the Efik were among the most notorious slavers on the slave coast?|the Efik were among the most notorious slavers on the slave coast|"1
+            Is the hypothesis entailed by the premise?
+Options:
+- yes
+- it is not possible to tell
+- no"|0.17409998178482056|0.13793103448275862
+248||His flat was on the top floor. Underneath was a dentist and on the ground floor an estate agent. They had arranged between themselves that if by chance Miriam was seen entering the house by day she could always pretend she was visiting the dentist.|Miriam was visiting the dentist|"2
+            MIRIAM (she entered the house by day): Hello, how can I help you today?"|0.2798583507537842|0.2
+249||I'm such a coward, I hear things that aren't there. She set her lips and dragged Adam out of the fire, hooking one of his arms round her neck. He leaned on her not wholly unconscious but she could tell he didn't know what was happening to him.|Adam didn't know what was happening to him|"I'm such a coward, I hear things that aren't there. She set her lips and dragged Adam out of the fire, hooking one of his arms round her neck. He leaned on her not wholly unconscious but she could tell he didn't know what was happening to him.
+        
+            Is the above hypothesis plausible?
+            Options:
+- yes
+- it is not possible to tell
+- no"|0.32441896200180054|0.24324324324324326
