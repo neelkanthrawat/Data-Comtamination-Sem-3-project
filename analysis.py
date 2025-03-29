@@ -302,11 +302,13 @@ def main():
                 guided_more_bl_list, num_guided_more_bl = filter_and_count(df, "BLEURT guided", "BLEURT unguided")
                 guided_more_rouge_list, num_guided_more_rouge = filter_and_count(df, "ROUGEL guided", "ROUGEL unguided")
                 
-                num_samples_list = [10, 100, df.shape[0]]
+                num_samples_list = [10, 100, 500]
                 num_resamples_list = [10000, 50000, 100000]
                 
                 if df.shape[0] > 1000:
                     num_samples_list.append(1000)
+                else:
+                    num_samples_list.append(df.shape[0])
 
                 print('seeing what is in the data frame:')
                 print(df.columns.tolist())
