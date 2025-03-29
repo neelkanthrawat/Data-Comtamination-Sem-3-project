@@ -3,6 +3,7 @@ import os
 import matplotlib.pyplot as plt
 import re
 import numpy as np
+import seaborn as sns
 
 
 def verify_or_create_dir(path: str):
@@ -133,7 +134,7 @@ def filter_and_count(df, col1, col2):
     filtered_df = df[df[col1] > df[col2]]
     return filtered_df.to_dict(orient='records'), len(filtered_df)
 
-def compute_correlations(df, task, num_samples_list):
+def compute_correlations(df, task, num_samples_list, analysis_dir):
     """
     Computes and prints Spearman correlations for different sample sizes.
     """
@@ -153,35 +154,48 @@ def compute_correlations(df, task, num_samples_list):
             print(f'unguided correlation: {sample_df["BLEURT unguided"].corr(sample_df["ROUGEL unguided"], method="spearman")}')
             print(f'guided correlation: {sample_df["BLEURT guided"].corr(sample_df["ROUGEL guided"], method="spearman")}')
 
-def parse_p_values(base_dir, task, num_samples_list, num_resample_list):
+def parse_p_values(path_list: list, num_samples_list, num_resample_list):
     """
     Reads p-values from files and creates DataFrames for ROUGE-L and BLEURT.
     """
-    df2_rouge = pd.DataFrame(index=num_samples_list, columns=num_resample_list)
-    df2_bl = pd.DataFrame(index=num_samples_list, columns=num_resample_list)
+    df2_rouge = pd.DataFrame(index=num_samples_list, columns=num_resample_list, dtype=float)
+    df2_bl = pd.DataFrame(index=num_samples_list, columns=num_resample_list, dtype=float)
     
-    for num_samples in num_samples_list:
-        for num_resample in num_resample_list:
-            path_p_vals = os.path.join(base_dir, "Data-Comtamination-Sem-3-project/llama_results_3.2_3b/Llama", task, f"{task}_Llama_differences_p_values_{num_resample}_{num_samples}.txt")
-            with open(path_p_vals, "r") as file:
-                content = file.read()
-            matches = re.findall(r"([A-Z\-]+) p-value, ([\d\.]+)", content)
-            p_values = {metric: float(value) for metric, value in matches}
-            df2_rouge.at[num_samples, num_resample] = p_values['ROUGE-L']
-            df2_bl.at[num_samples, num_resample] = p_values['BLEURT']
+    for path in path_list:
+        num_samples = int(path.split("_")[-1].split(".")[0])
+        num_resample = int(path.split("_")[-2])
+        with open(path, "r") as file:
+            content = file.read()
+
+        matches = re.findall(r"([A-Z\-]+) p-value, ([\d\.]+)", content)
+        p_values = {metric: float(value) for metric, value in matches}
+        df2_rouge.at[num_samples, num_resample] = p_values['ROUGE-L']
+        df2_bl.at[num_samples, num_resample] = p_values['BLEURT']
     
     return df2_rouge, df2_bl
 
-def plot_p_values_heatmap(df, title):
+def plot_p_values_heatmap(df, title, analysis_dir):
     """
     Plots a heatmap of p-values.
     """
-    plt.imshow(df, cmap="coolwarm", aspect="auto")
-    plt.colorbar()
-    plt.xticks(ticks=np.arange(len(df.columns)), labels=df.columns)
-    plt.yticks(ticks=np.arange(len(df.index)), labels=df.index)
+    print(df)
+    # Set up the figure size
+    plt.figure(figsize=(8, 6))
+
+    # Create the heatmap
+    sns.heatmap(df, cmap="coolwarm", annot=True, fmt=".4f", linewidths=0.5, cbar=True)
+
+    # Improve readability of axis labels
+    plt.xticks(rotation=45, ha="right")
+    plt.yticks(rotation=0)
+
+    # Set title
     plt.title(title)
-    plt.show()
+
+    # Save the heatmap
+    save_path = os.path.join(analysis_dir, f"{title}.png")
+    plt.savefig(save_path, bbox_inches="tight", dpi=300)
+    plt.close()
 
 
 def main():
@@ -266,36 +280,51 @@ def main():
         plt.show()
 
 def main_p_vals():
-    base_dir = os.path.expanduser("~")  # Get user's home directory
-    verify_or_create_dir("results_llama")
-    res_dir = "results_llama"
-    
-    for task in ["agnews", "imdb"]:
-        path_correlation = os.path.join(base_dir, "Data-Comtamination-Sem-3-project/llama_results_3.2_3b/Llama", task, f"{task}_Llama_differences.csv")
-        print(f"Reading {path_correlation}")
-        df = read_df(path=path_correlation)
-        
-        guided_more_bl_list, num_guided_more_bl = filter_and_count(df, "BLEURT guided", "BLEURT unguided")
-        guided_more_rouge_list, num_guided_more_rouge = filter_and_count(df, "ROUGEL guided", "ROUGEL unguided")
-        
-        num_samples_list = [10, 100, 1000, df.shape[0]]
-        num_resample_list = [10000, 50000, 100000]
-        
-        print('seeing what is in the data frame:')
-        print(df.columns.tolist())
-        
-        compute_correlations(df, task, num_samples_list)
-        print('_' * 100)
-        
-        df2_rouge, df2_bl = parse_p_values(base_dir, task, num_samples_list, num_resample_list)
-        
-        print('ROUGE-L p-values:')
-        print(df2_rouge)
-        print('BLEURT p-values:')
-        print(df2_bl)
-        
-        plot_p_values_heatmap(df2_bl, "BLEURT P-Values Heatmap")
+    for result_dir in ["llama_results_3.2_3b", "openllama_results_7b_v2"]: #, "openllama_results_13b"]:
+        for path, directories, files in os.walk(result_dir):
+            if files != [] and not path.endswith("analysis"):
+                analysis_dir = os.path.join(path, "analysis")
+                verify_or_create_dir(analysis_dir)
+
+                diff_file = ""
+                p_val_files = []
+
+                for file in files:
+                    if file.endswith("_differences.csv"):
+                        diff_file = file
+                    if "differences_p_values" in file:
+                        p_val_files.append(os.path.join(path, file))
+
+                differences_path = os.path.join(path, diff_file)
+                print(f"Reading {differences_path}")
+                df = read_df(path=differences_path)
+            
+                guided_more_bl_list, num_guided_more_bl = filter_and_count(df, "BLEURT guided", "BLEURT unguided")
+                guided_more_rouge_list, num_guided_more_rouge = filter_and_count(df, "ROUGEL guided", "ROUGEL unguided")
+                
+                num_samples_list = [10, 100, df.shape[0]]
+                num_resample_list = [10000, 50000, 100000]
+                
+                if df.shape[0] > 1000:
+                    num_samples_list.append(1000)
+
+                print('seeing what is in the data frame:')
+                print(df.columns.tolist())
+                
+                task = file.split("_")[0]
+                compute_correlations(df, task, num_samples_list, analysis_dir)
+                print('_' * 100)
+
+                df2_rouge, df2_bl = parse_p_values(p_val_files, num_samples_list, num_resample_list)
+                
+                print('ROUGE-L p-values:')
+                print(df2_rouge)
+                print('BLEURT p-values:')
+                print(df2_bl)
+                
+                plot_p_values_heatmap(df2_bl, "BLEURT P-Values Heatmap", analysis_dir)
+                plot_p_values_heatmap(df2_rouge, "ROUGE-L P-Values Heatmap", analysis_dir)
 
 if __name__ == "__main__":
-    main()
+    # main()
     main_p_vals()
