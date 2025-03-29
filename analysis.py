@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import re
 import numpy as np
 import seaborn as sns
+import random
 
 
 def verify_or_create_dir(path: str):
@@ -27,14 +28,14 @@ def get_highest_score(df: pd.DataFrame, column: str):
     """
     Get the highest score from a DataFrame.
     """
-    return df[df[column] == df[column].min()]
+    return df[df[column] == df[column].max()]
 
 
 def get_lowest_score(df: pd.DataFrame, column: str):
     """
     Get the lowest score from a DataFrame.
     """
-    return df[df[column] == df[column].max()]
+    return df[df[column] == df[column].min()]
 
 
 def print_min_max(df, metric, res_dir):
@@ -53,21 +54,20 @@ def print_min_max(df, metric, res_dir):
             f.write(f"Highest {metric} {type} score: {highest.to_string()} \n")
             f.write(f"Lowest {metric} {type} score: {lowest.to_string()} \n")
 
-def resample_scores(scores, num_resample, num_samples):
-    means = []
+def resample_scores(scores, guided, unguided, num_resample, num_samples):
+    unguided_means = []
+    guided_means = []
     for _ in range(num_resample):
         sample = scores.sample(n=num_samples, replace=True)
-        means.append(sample.mean())
+        unguided_means.append(sample[unguided].mean())
+        guided_means.append(sample[guided].mean())
 
-    return means
+    return unguided_means, guided_means
 
 
 def calculate_p_value(scores, num_resample, num_samples, guided, unguided):
-    guided_means = resample_scores(
-        scores[guided], num_resample=num_resample, num_samples=num_samples
-    )
-    unguided_means = resample_scores(
-        scores[unguided], num_resample=num_resample, num_samples=num_samples
+    unguided_means, guided_means = resample_scores(
+        scores, guided, unguided, num_resample=num_resample, num_samples=num_samples
     )
 
     count = 0
@@ -105,23 +105,23 @@ def plot_corr(df: pd.DataFrame, task: str, res_dir: str):
     """
     Plot the correlation of the dataframe.
     """
-    res_path = os.path.join(res_dir, f"{task}_guided_scores.png")
+    res_path = os.path.join(res_dir, f"{task}_unguided_scores.png")
     unguided_corr = df["BLEURT unguided"].corr(df["ROUGEL unguided"], method="spearman")
     plt.figure()
-    plt.scatter(df["BLEURT guided"], df["ROUGEL guided"], label="Guided")
-    plt.xlabel("BLEURT guided")
+    plt.scatter(df["BLEURT unguided"], df["ROUGEL unguided"], label="unguided")
+    plt.xlabel("BLEURT unguided")
     plt.ylabel("ROUGEL unguided")
     plt.title(f"Spearman correlation: {unguided_corr}")
     plt.legend()
     plt.savefig(res_path)
     plt.close()
 
-    res_path = os.path.join(res_dir, f"{task}_unguided_scores.png")
+    res_path = os.path.join(res_dir, f"{task}_guided_scores.png")
     guided_corr = df["BLEURT guided"].corr(df["ROUGEL guided"], method="spearman")
     plt.figure()
-    plt.scatter(df["BLEURT unguided"], df["ROUGEL unguided"], label="Unguided")
-    plt.xlabel("BLEURT unguided")
-    plt.ylabel("ROUGEL unguided")
+    plt.scatter(df["BLEURT guided"], df["ROUGEL guided"], label="guided")
+    plt.xlabel("BLEURT guided")
+    plt.ylabel("ROUGEL guided")
     plt.title(f"Spearman correlation: {guided_corr}")
     plt.legend()
     plt.savefig(res_path)
@@ -151,6 +151,7 @@ def plot_scores(df: pd.DataFrame, metric: str, task: str, res_dir: str):
     plt.ylabel(f"{metric}")
     plt.legend()
     plt.savefig(res_path)
+    plt.close()
 
 def filter_and_count(df, col1, col2):
     """
@@ -193,7 +194,7 @@ def parse_p_values(path_list: list, num_samples_list, num_resample_list):
         with open(path, "r") as file:
             content = file.read()
 
-        matches = re.findall(r"([A-Z\-]+) p-value, ([\d\.]+[e-]?[\d])", content)
+        matches = re.findall(r"([A-Z\-]+) p-value, ([\d\.e-]+)", content)
         p_values = {}
         for metric, value in matches:
             print(value)
@@ -212,6 +213,7 @@ def calculate_p_values(scores, num_resamples_list, num_samples_list, analysis_di
 
     for num_resamples in num_resamples_list:
         for num_samples in num_samples_list:
+            print(f"Calculating p-values for {num_resamples} resamples and {num_samples} samples")
             res_path = os.path.join(analysis_dir, f"p_values_{num_resamples}_{num_samples}.txt")
             # do the resampling from a dataframe that contains num_samples of instances
             sample_df = scores.sample(n=num_samples, random_state=42)
@@ -224,7 +226,6 @@ def calculate_p_values(scores, num_resamples_list, num_samples_list, analysis_di
                 guided="BLEURT guided",
                 unguided="BLEURT unguided",
             )
-            print(f"The p-value is {p_val_bleu}")
 
             p_val_rouge = calculate_p_value(
                 sample_df,
@@ -233,7 +234,6 @@ def calculate_p_values(scores, num_resamples_list, num_samples_list, analysis_di
                 guided="ROUGEL guided",
                 unguided="ROUGEL unguided",
             )
-            print(f"The p-value is {p_val_rouge}")
 
             with open(res_path, "w") as f:
                 f.write(f"Results of bootstrapping\n")
@@ -261,7 +261,7 @@ def plot_p_values_heatmap(df, title, analysis_dir):
     plt.figure(figsize=(8, 6))
 
     # Create the heatmap
-    sns.heatmap(df, cmap="coolwarm", annot=True, fmt=".4f", linewidths=0.5, cbar=True)
+    sns.heatmap(df, cmap="coolwarm", annot=True, linewidths=0.5, cbar=True)
     
     task = analysis_dir.split("/")[-2]
     # Improve readability of axis labels
@@ -279,7 +279,7 @@ def plot_p_values_heatmap(df, title, analysis_dir):
     plt.close()
 
 
-def plot_heatmap_p_vals():
+def main():
     for result_dir in ["llama_results_3.2_3b", "openllama_results_7b_v2"]: #, "openllama_results_13b"]:
         for path, directories, files in os.walk(result_dir):
             if files != [] and not path.endswith("analysis"):
@@ -327,5 +327,4 @@ def plot_heatmap_p_vals():
                 plot_p_values_heatmap(df2_rouge, "ROUGE-L p-values heatmap", analysis_dir)
 
 if __name__ == "__main__":
-    # main()
-    plot_heatmap_p_vals()
+    main()
