@@ -139,16 +139,21 @@ def plot_corr(df: pd.DataFrame, task: str, res_dir: str):
     plt.close()
 
 
-def plot_scores(df: pd.DataFrame, metric: str, task: str, res_dir: str):
+def plot_scores(df: pd.DataFrame, metric: str, task: str, model: str, analysis_dir: str):
     """
     Plot the scores of the dataframe.
     """
-    res_path = os.path.join(res_dir, f"{task}_{metric}_scores.png")
+    res_path = os.path.join(analysis_dir, f"{model}_{task}_{metric}_scores.png")
     plt.figure(figsize=(12, 6), dpi=200)
-    plt.plot(df[f"{metric} guided"], "o", label=f"Guided {metric}")
-    plt.plot(df[f"{metric} unguided"], "+", label=f"Unguided {metric}")
+    plt.plot(df[f"{metric} guided"], "o", label=f"Guided {metric}", alpha=0.3)
+    plt.plot(df[f"{metric} unguided"], "+", label=f"Unguided {metric}", alpha=0.3)
     plt.xlabel("Index")
     plt.ylabel(f"{metric}")
+
+    if metric == "ROUGE-L":
+        metric = "ROUGEL"
+    plt.plot(df.index, df[f"{metric}_diff"], color='grey', linestyle='-', linewidth=0.5, label="Difference")
+
     plt.legend()
     plt.savefig(res_path)
     plt.close()
@@ -262,7 +267,7 @@ def plot_p_values_heatmap(df, title, analysis_dir):
     plt.figure(figsize=(8, 6))
 
     # Create the heatmap
-    sns.heatmap(df, cmap="coolwarm", annot=True, linewidths=0.5, cbar=True, fmt=".5f")
+    sns.heatmap(df, cmap="coolwarm", annot=True, linewidths=0.5, cbar=True, fmt=".5f", vmin=0, vmax=1, center=0.5)
     
     # Improve readability of axis labels
     plt.xticks(rotation=45, ha="right")
@@ -283,21 +288,53 @@ def plot_p_values_heatmap(df, title, analysis_dir):
     plt.close()
 
 
-def main():
+def score_main():
     for result_dir in ["llama_results_3.2_3b", "openllama_results_7b_v2"]: #, "openllama_results_13b"]:
         for path, directories, files in os.walk(result_dir):
-            if files != [] and not path.endswith("analysis"):
+            if files != [] and not path.endswith("analysis") and files != ['.DS_Store']:
                 analysis_dir = os.path.join(path, "analysis")
-                verify_or_create_dir(analysis_dir)
-
-                diff_file = ""
+                diff_file = None
                 p_val_files = []
 
                 for file in files:
                     if file.endswith("_differences.csv"):
                         diff_file = file
+                        verify_or_create_dir(analysis_dir)
                     if "differences_p_values" in file:
                         p_val_files.append(os.path.join(path, file))
+
+                if not diff_file:
+                    print("No differences file found.")
+
+                differences_path = os.path.join(path, diff_file)
+                print(f"Reading {differences_path}")
+                df = read_df(path=differences_path)
+            
+                guided_more_bl_list, num_guided_more_bl = filter_and_count(df, "BLEURT guided", "BLEURT unguided")
+                guided_more_rouge_list, num_guided_more_rouge = filter_and_count(df, "ROUGEL guided", "ROUGEL unguided")
+
+                task = analysis_dir.split("/")[-2]
+                model = analysis_dir.split("/")[-3]
+
+                plot_scores(df, "BLEURT", task, model, analysis_dir)
+                plot_scores(df, "ROUGEL", task, model, analysis_dir)
+def main():
+    for result_dir in ["llama_results_3.2_3b", "openllama_results_7b_v2"]: #, "openllama_results_13b"]:
+        for path, directories, files in os.walk(result_dir):
+            if files != [] and not path.endswith("analysis") and files != ['.DS_Store']:
+                analysis_dir = os.path.join(path, "analysis")
+                diff_file = None
+                p_val_files = []
+
+                for file in files:
+                    if file.endswith("_differences.csv"):
+                        diff_file = file
+                        verify_or_create_dir(analysis_dir)
+                    if "differences_p_values" in file:
+                        p_val_files.append(os.path.join(path, file))
+
+                if not diff_file:
+                    print("No differences file found.")
 
                 differences_path = os.path.join(path, diff_file)
                 print(f"Reading {differences_path}")
@@ -340,3 +377,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    score_main()
