@@ -58,9 +58,9 @@ def resample_scores(scores, guided, unguided, num_resample, num_samples):
     unguided_means = []
     guided_means = []
     for _ in range(num_resample):
-        sample = scores.sample(n=num_samples, replace=True)
-        unguided_means.append(sample[unguided].mean())
-        guided_means.append(sample[guided].mean())
+        sample_df = scores.sample(n=num_samples, replace=True, random_state=random.randint(0, 10000))
+        unguided_means.append(sample_df[unguided].mean())
+        guided_means.append(sample_df[guided].mean())
 
     return unguided_means, guided_means
 
@@ -214,13 +214,14 @@ def calculate_p_values(scores, num_resamples_list, num_samples_list, analysis_di
     for num_resamples in num_resamples_list:
         for num_samples in num_samples_list:
             print(f"Calculating p-values for {num_resamples} resamples and {num_samples} samples")
-            res_path = os.path.join(analysis_dir, f"p_values_{num_resamples}_{num_samples}.txt")
-            # do the resampling from a dataframe that contains num_samples of instances
-            sample_df = scores.sample(n=num_samples, random_state=42)
+            task = analysis_dir.split("/")[-2]
+            model = analysis_dir.split("/")[-3]
+
+            res_path = os.path.join(analysis_dir, f"{model}_{task}_p_values_{num_resamples}_{num_samples}.txt")
 
             # Calculate the p-value for BLEURT and ROUGE-L
             p_val_bleu = calculate_p_value(
-                sample_df,
+                scores,
                 num_resample=num_resamples,
                 num_samples=num_samples,
                 guided="BLEURT guided",
@@ -228,7 +229,7 @@ def calculate_p_values(scores, num_resamples_list, num_samples_list, analysis_di
             )
 
             p_val_rouge = calculate_p_value(
-                sample_df,
+                scores,
                 num_resample=num_resamples,
                 num_samples=num_samples,
                 guided="ROUGEL guided",
@@ -261,20 +262,23 @@ def plot_p_values_heatmap(df, title, analysis_dir):
     plt.figure(figsize=(8, 6))
 
     # Create the heatmap
-    sns.heatmap(df, cmap="coolwarm", annot=True, linewidths=0.5, cbar=True)
+    sns.heatmap(df, cmap="coolwarm", annot=True, linewidths=0.5, cbar=True, fmt=".5f")
     
-    task = analysis_dir.split("/")[-2]
     # Improve readability of axis labels
     plt.xticks(rotation=45, ha="right")
-    plt.xlabel("Number of Resamples")
+    plt.xlabel("Bootstrap resampling rounds")
     plt.yticks(rotation=0)
-    plt.ylabel("Number of Samples")
+    plt.ylabel("Number of samples")
 
     # Set title
-    plt.title(f"{title}: {task}")
+    plt.title(f"{title}")
 
     # Save the heatmap
-    save_path = os.path.join(analysis_dir, f"{title}.png")
+    task = analysis_dir.split("/")[-2]
+    model = analysis_dir.split("/")[-3]
+    metric = title.split(" ")[0]
+
+    save_path = os.path.join(analysis_dir, f"{model}_{task}_{metric}.png")
     plt.savefig(save_path, bbox_inches="tight", dpi=300)
     plt.close()
 
@@ -329,8 +333,10 @@ def main():
                 print('BLEURT p-values:')
                 print(df2_bl)
                 
-                plot_p_values_heatmap(df2_bl, "BLEURT p-values heatmap", analysis_dir)
-                plot_p_values_heatmap(df2_rouge, "ROUGE-L p-values heatmap", analysis_dir)
+                task = analysis_dir.split("/")[-2]
+                model = analysis_dir.split("/")[-3]
+                plot_p_values_heatmap(df2_bl, f"BLEURT p-values: {model}, {task}", analysis_dir)
+                plot_p_values_heatmap(df2_rouge, f"ROUGE-L p-values: {model}, {task}", analysis_dir)
 
 if __name__ == "__main__":
     main()
