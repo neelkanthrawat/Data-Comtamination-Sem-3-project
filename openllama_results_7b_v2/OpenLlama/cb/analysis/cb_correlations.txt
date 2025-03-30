@@ -1,0 +1,8 @@
+for task: cb and num_samples: 100
+unguided correlation: 0.5493980765400515 ± 0.031025548689158924
+guided correlation: 0.35965000203445224 ± 0.07928044720784197
+
+
+
+ Latex: 
+cb  & $0.55 \pm 0.031$  &  $0.36 \pm 0.079$ \\ \hline

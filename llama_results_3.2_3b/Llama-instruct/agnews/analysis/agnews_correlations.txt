@@ -1,0 +1,8 @@
+for task: agnews and num_samples: 100
+unguided correlation: 0.35825016983450864 ± 0.02906822907248802
+guided correlation: 0.3452029584003221 ± 0.05488429594352177
+
+
+
+ Latex: 
+agnews  & $0.36 \pm 0.029$  &  $0.35 \pm 0.055$ \\ \hline

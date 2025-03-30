@@ -1,4 +1,4 @@
 Results of bootstrapping
 Number of resamples: 50000, number of samples: 100
-BLEURT p-value, 0.38036000000000003 	 Not Significant
-ROUGE-L p-value, 0.11672000000000005 	 Not Significant
+BLEURT p-value, 0.38104000000000005 	 Not Significant
+ROUGE-L p-value, 0.11248000000000002 	 Not Significant

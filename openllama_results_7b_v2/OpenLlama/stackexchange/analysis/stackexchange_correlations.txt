@@ -1,0 +1,8 @@
+for task: stackexchange and num_samples: 100
+unguided correlation: 0.29591803525201604 ± 0.08194323017911737
+guided correlation: 0.49953551697514226 ± 0.05281717960920701
+
+
+
+ Latex: 
+stackexchange  & $0.3 \pm 0.082$  &  $0.5 \pm 0.053$ \\ \hline

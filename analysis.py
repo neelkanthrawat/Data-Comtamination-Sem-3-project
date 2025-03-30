@@ -7,6 +7,12 @@ import seaborn as sns
 import random
 
 
+def rounding(x):
+    if x == 0:
+        return 0
+    else:
+        return round(x, -int(np.floor(np.log10(abs(x)))) + 1)
+
 def verify_or_create_dir(path: str):
     """
     Verify if a directory exists, if not create it.
@@ -180,6 +186,13 @@ def compute_correlations(df, task, num_samples_list, analysis_dir):
             print(f'for task: {task} and num_samples: {num_samples}')
             print(f'unguided correlation: {np.mean(mean_list_unguided)} ± {np.std(mean_list_unguided)}')
             print(f'guided correlation: {np.mean(mean_list_guided)} ± {np.std(mean_list_guided)}')
+            with open(os.path.join(analysis_dir, f"{task}_correlations.txt"), "w") as f:
+                f.write(f"for task: {task} and num_samples: {num_samples}\n")
+                f.write(f'unguided correlation: {np.mean(mean_list_unguided)} ± {np.std(mean_list_unguided)}\n')
+                f.write(f'guided correlation: {np.mean(mean_list_guided)} ± {np.std(mean_list_guided)}\n')
+
+                f.write(f"\n\n\n Latex: \n")
+                f.write(f"{task}  & ${rounding(np.mean(mean_list_unguided))} \pm {rounding(np.std(mean_list_unguided))}$  &  ${rounding(np.mean(mean_list_guided))} \pm {rounding(np.std(mean_list_guided))}$ \\\ \hline")
         else:
             sample_df = df.sample(n=num_samples, random_state=42)
             print(f'for task: {task} and num_samples: {num_samples}')
@@ -309,9 +322,23 @@ def score_main():
                 differences_path = os.path.join(path, diff_file)
                 print(f"Reading {differences_path}")
                 df = read_df(path=differences_path)
+
+                task = file.split("_")[0]
+                compute_correlations(df, task, [100], analysis_dir)
+                print('_' * 100)
+                
             
                 guided_more_bl_list, num_guided_more_bl = filter_and_count(df, "BLEURT guided", "BLEURT unguided")
                 guided_more_rouge_list, num_guided_more_rouge = filter_and_count(df, "ROUGEL guided", "ROUGEL unguided")
+
+                print(f"Number of times guided BLEURT is higher than unguided BLEURT: {num_guided_more_bl}")
+                print(f"Number of times guided ROUGE-L is higher than unguided ROUGE-L: {num_guided_more_rouge}")
+                with open(os.path.join(analysis_dir, "guided_more_than_unguided.txt"), "w") as f:
+                    f.write(f"\n\n\n Latex: \n")
+                    f.write(f"Number of times guided BLEURT is higher than unguided BLEURT: {num_guided_more_bl}\n")
+                    f.write(f"Number of times guided ROUGE-L is higher than unguided ROUGE-L: {num_guided_more_rouge}\n")
+
+                    f.write(f"{task}  & ${num_guided_more_rouge}$ & ${num_guided_more_bl}$ \\\ \hline")
 
                 task = analysis_dir.split("/")[-2]
                 model = analysis_dir.split("/")[-3]
@@ -339,9 +366,6 @@ def main():
                 differences_path = os.path.join(path, diff_file)
                 print(f"Reading {differences_path}")
                 df = read_df(path=differences_path)
-            
-                guided_more_bl_list, num_guided_more_bl = filter_and_count(df, "BLEURT guided", "BLEURT unguided")
-                guided_more_rouge_list, num_guided_more_rouge = filter_and_count(df, "ROUGEL guided", "ROUGEL unguided")
                 
                 num_samples_list = [10, 100]
                 num_resamples_list = [10000, 50000, 100000]
@@ -357,10 +381,6 @@ def main():
 
                 print('seeing what is in the data frame:')
                 print(df.columns.tolist())
-                
-                task = file.split("_")[0]
-                compute_correlations(df, task, num_samples_list, analysis_dir)
-                print('_' * 100)
 
                 # df2_rouge, df2_bl = parse_p_values(p_val_files, num_samples_list, num_resamples_list)
                 df2_rouge, df2_bl = calculate_p_values(scores=df, num_resamples_list=num_resamples_list, num_samples_list=num_samples_list, analysis_dir=analysis_dir)
@@ -376,5 +396,5 @@ def main():
                 plot_p_values_heatmap(df2_rouge, f"ROUGE-L p-values: {model}, {task}", analysis_dir)
 
 if __name__ == "__main__":
-    main()
+    # main()
     score_main()

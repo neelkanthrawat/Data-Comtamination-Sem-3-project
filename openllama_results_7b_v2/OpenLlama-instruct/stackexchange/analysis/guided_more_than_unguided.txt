@@ -1,0 +1,7 @@
+
+
+
+ Latex: 
+Number of times guided BLEURT is higher than unguided BLEURT: 398
+Number of times guided ROUGE-L is higher than unguided ROUGE-L: 397
+stackexchange  & $397$ & $398$ \\ \hline

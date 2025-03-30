@@ -1,0 +1,8 @@
+for task: imdb and num_samples: 100
+unguided correlation: 0.20495866915009983 ± 0.08817122858309658
+guided correlation: 0.20984226960401017 ± 0.0911933096999444
+
+
+
+ Latex: 
+imdb  & $0.2 \pm 0.088$  &  $0.21 \pm 0.091$ \\ \hline

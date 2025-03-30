@@ -1,0 +1,8 @@
+for task: wsc and num_samples: 100
+unguided correlation: 0.12267451792772313 ± 0.06220101060032148
+guided correlation: 0.07468853564111315 ± 0.03378622728738872
+
+
+
+ Latex: 
+wsc  & $0.12 \pm 0.062$  &  $0.075 \pm 0.034$ \\ \hline
